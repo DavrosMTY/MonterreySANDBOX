@@ -7,5 +7,6 @@
   "repository_visibility_verified": "public",
   "lfs": false,
   "actions_artifact_storage": false,
-  "persistent_actions_cache": false
+  "persistent_actions_cache": false,
+  "diagnostic_revision": 2
 }

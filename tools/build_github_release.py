@@ -13,13 +13,22 @@ import shutil
 import subprocess
 import sys
 import zipfile
+from collections import deque
 
 ROOT=Path(__file__).resolve().parents[1]
 
 
 def run(args):
     print('Executing:',str(args[0]),' '.join(str(x) for x in args[1:]),flush=True)
-    subprocess.run(list(map(str,args)),cwd=ROOT,check=True)
+    process=subprocess.Popen(list(map(str,args)),cwd=ROOT,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+    tail=deque(maxlen=25)
+    for line in process.stdout:
+        print(line,end='',flush=True);tail.append(line)
+    status=process.wait()
+    if status:
+        details=''.join(tail).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+        print('::error::Release build command failed: '+details,flush=True)
+        raise subprocess.CalledProcessError(status,list(map(str,args)))
 
 
 def acceptance(tool,prefix,city,renders):

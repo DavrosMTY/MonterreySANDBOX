@@ -7,8 +7,8 @@ visual y una base de mundo recorrible antes de incorporar tráfico, NPCs o misio
 **Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
 cubre 2 × 2 km del centro, con 1.136 edificios, 2.665 tramos OSM y 1.077.198
 triángulos. Se han generado y revisado imágenes reales en Blender. La entrega
-local GEO-003 pasó 72 pruebas y QA de GLB/407 OBJ; la suite incorpora además cuatro
-pruebas de publicación GitHub. Unreal/Windows no se compiló ni ejecutó.
+local GEO-003 pasó 72 pruebas y QA de GLB/407 OBJ; la suite incorpora además cinco
+pruebas de publicación GitHub y portabilidad. Unreal/Windows no se compiló ni ejecutó.
 
 [Diagnóstico técnico](docs/GEO003_DIAGNOSTICO.md) ·
 [Fuentes y licencias](DATA_LICENSES.md) ·

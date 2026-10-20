@@ -59,6 +59,8 @@ def main():
     a=p.parse_args()
     try:result=pull_request(Path(a.body)) if a.operation=='pr' else release(a.directory)
     except (RuntimeError,ValueError,OSError) as exc:
+        message=str(exc).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+        print('::error::GitHub publication blocked: '+message,flush=True)
         print(json.dumps({'status':'blocked','operation':a.operation,'reason':str(exc)},ensure_ascii=False));raise SystemExit(2)
     print(json.dumps(result,ensure_ascii=False))
 

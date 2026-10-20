@@ -52,3 +52,15 @@ def test_release_does_not_treat_permission_denial_as_missing_release(tmp_path,mo
     monkeypatch.setattr(publish,'invoke',invoke)
     with pytest.raises(RuntimeError,match='403'):publish.release(tmp_path)
     assert all('create' not in call for call in calls)
+
+
+def test_pilot_checksums_survive_windows_style_git_checkout(tmp_path):
+    import hashlib
+    import subprocess
+    root=Path(__file__).resolve().parents[1]
+    target=tmp_path/'checkout';target.mkdir()
+    subprocess.run(['git','-c','core.autocrlf=true','checkout-index','--all','--prefix='+target.as_posix()+'/'],cwd=root,check=True)
+    inputs=json.loads((root/'manifests/pilot-inputs.json').read_text())['files']
+    for record in inputs:
+        data=(target/record['path']).read_bytes()
+        assert hashlib.sha256(data).hexdigest()==record['sha256'],record['path']
