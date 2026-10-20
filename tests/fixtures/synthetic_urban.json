@@ -1,0 +1,22 @@
+{
+  "synthetic_fixture": true,
+  "note": "Fictional nodes around the project origin, not surveyed or OpenStreetMap geography.",
+  "elements": [
+    {"type":"node","id":1,"lat":25.667,"lon":-100.312},
+    {"type":"node","id":2,"lat":25.667,"lon":-100.310},
+    {"type":"node","id":3,"lat":25.667,"lon":-100.308},
+    {"type":"node","id":4,"lat":25.665,"lon":-100.310},
+    {"type":"node","id":5,"lat":25.669,"lon":-100.310},
+    {"type":"node","id":10,"lat":25.666,"lon":-100.311},
+    {"type":"node","id":11,"lat":25.668,"lon":-100.311},
+    {"type":"node","id":20,"lat":25.668,"lon":-100.309},
+    {"type":"node","id":21,"lat":25.668,"lon":-100.3085},
+    {"type":"node","id":22,"lat":25.6685,"lon":-100.3085},
+    {"type":"node","id":23,"lat":25.6685,"lon":-100.309},
+    {"type":"way","id":100,"nodes":[1,2,3],"tags":{"highway":"residential","lanes":"2","width":"7 m"}},
+    {"type":"way","id":101,"nodes":[4,2,5],"tags":{"highway":"secondary"}},
+    {"type":"way","id":102,"nodes":[10,11],"tags":{"highway":"primary","bridge":"yes","layer":"1","oneway":"-1"}},
+    {"type":"way","id":200,"nodes":[20,21,22,23,20],"tags":{"building":"yes","height":"12 m","building:levels":"4"}},
+    {"type":"relation","id":300,"members":[],"tags":{"type":"multipolygon","building":"yes"}}
+  ]
+}

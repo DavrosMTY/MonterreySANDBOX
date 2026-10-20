@@ -1,0 +1,66 @@
+{
+  "scope": "Small license-reviewed reproducible pilot; no full-degree DEM or proprietary assets",
+  "notices": "DATA_LICENSES.md",
+  "files": [
+    {
+      "path": "Data/raw/copernicus_reviewed.source.json",
+      "bytes": 1720,
+      "sha256": "4888171ffeae80e56102242542308bb621c792bd0e6ca32935621928ee4844f6",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/raw/osm.json",
+      "bytes": 1378584,
+      "sha256": "677dbb69a0c1964f5925283c5181764d4178412fd61735dd88c4441778e00cf0",
+      "license": "ODbL-1.0"
+    },
+    {
+      "path": "Data/raw/osm.json.source.json",
+      "bytes": 721,
+      "sha256": "10a9f8b2672962270daecfbcab2e642ea719958bc2c31f7b2211f15b2a231189",
+      "license": "ODbL-1.0"
+    },
+    {
+      "path": "Data/unreal/monterrey_centro_single_v3/DATA_LICENSES.txt",
+      "bytes": 710,
+      "sha256": "224947c92354a97cb3a2e1ea8bfb76f452225822a8c5d1241d7002ab46800134",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/unreal/monterrey_centro_single_v3/manifest.json",
+      "bytes": 5795,
+      "sha256": "970f4510feaeeaf8b623639d15eed7d69d5650f4d8d3d95d23abda303ccf7976",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/unreal/monterrey_centro_single_v3/terrain_505.png",
+      "bytes": 350754,
+      "sha256": "20a1edc2ccb51c343edf8bb9eb5c2a59b493e8b656593690d3cdb2ba85d1edfb",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/unreal/monterrey_centro_single_v3/terrain_505.r16",
+      "bytes": 510050,
+      "sha256": "96673270e1b8b9011c1b05848f216e6635933171c788789512140e12afa1aa87",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/unreal/monterrey_centro_single_v3/terrain_reference.tif",
+      "bytes": 755588,
+      "sha256": "98fb0a8d9b7cac98a4cf492eebc8900bc4b41f9ed8cdc8819391c8c3c30f5d07",
+      "license": "Copernicus-GLO-30-F"
+    },
+    {
+      "path": "Data/urban/monterrey_centro_v3/buildings.geojson",
+      "bytes": 2096803,
+      "sha256": "1705535c288d0eafa814d219acef39088b21a084a35ae7d2bbc73a0551242c07",
+      "license": "ODbL-1.0"
+    },
+    {
+      "path": "Data/urban/monterrey_centro_v3/urban.json",
+      "bytes": 2621462,
+      "sha256": "84425c0e097ff1e21831a620f3524f1caf266f46817e35b31919771cc25b116e",
+      "license": "ODbL-1.0"
+    }
+  ]
+}

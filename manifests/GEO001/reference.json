@@ -1,0 +1,164 @@
+{
+  "schema_version": 3,
+  "project": "MonterreyOpenWorld",
+  "milestone": "GEO-001.1",
+  "synthetic_demo_not_geographic_truth": false,
+  "source_dem": "/workspace/MonterreySANDBOX/artifacts/geo001_1-2g9pdv5u/real/copernicus.tif",
+  "source_dem_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8",
+  "source_record": {
+    "source": "Copernicus DEM GLO-30 2021",
+    "surface_model": "DSM",
+    "native_resolution_approx_m": 30,
+    "vertical_datum": "EGM2008",
+    "units": "metres",
+    "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
+    "license_full_text_reviewed": true,
+    "catalog": "https://registry.opendata.aws/copernicus-dem/",
+    "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N25_00_W101_00_DEM/Copernicus_DSM_COG_10_N25_00_W101_00_DEM.tif",
+    "retrieved_at_utc": "2026-10-20T20:09:54.360114+00:00",
+    "bytes": 41195631,
+    "etag": "\"27d26f8a060dcb5fe3a3def3dc4c030f\"",
+    "sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8",
+    "raster_crs": "EPSG:4326",
+    "raster_resolution": [
+      0.0002777777777777778,
+      0.0002777777777777778
+    ],
+    "license_review_date": "2026-10-20",
+    "license_evidence": "docs/sources/legal-evidence.json",
+    "license_text_sha256": "452f6769237ae0d6ee3b1aa2e0321f1ce9147fcadf5c24235b58a15046dbc879",
+    "derived_notice": "produced using Copernicus WorldDEM-30 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+    "liability_notice": "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30",
+    "distribution_obligations": "No endorsement by Copernicus, ESA, the European Union or the provider is implied. Subsequent distribution must retain the source/modified-data notice, liability notice and obligations in article 6 of the accompanying GLO-30 licence."
+  },
+  "source_vertical_datum": "EGM2008",
+  "vertical_units": "metres",
+  "vertical_datum_conversion_applied": false,
+  "crs": "EPSG:32614",
+  "center_lat_lon": [
+    25.667,
+    -100.31
+  ],
+  "projection_scale_at_center": 0.9998134481110296,
+  "grid_convergence_at_center_degrees": -0.5674950985248902,
+  "distance_basis": "UTM grid metres; no ground-scale correction applied",
+  "center_easting_northing_m": [
+    368523.6419988461,
+    2839458.1365162465
+  ],
+  "extent_m": 2000.0,
+  "resolution_vertices": [
+    505,
+    505
+  ],
+  "mosaic_resolution_vertices": [
+    505,
+    505
+  ],
+  "sample_spacing_m": 3.9682539682539684,
+  "tiles_per_axis": 1,
+  "unreal_x_scale_cm": 396.82539682539687,
+  "unreal_y_scale_cm": 396.82539682539687,
+  "unreal_z_scale_cm": 11.310453414916994,
+  "unreal_landscape_actor_z_cm": 54151.953125,
+  "unreal_topology": {
+    "components_per_axis": 4,
+    "sections_per_component_axis": 2,
+    "quads_per_section": 63
+  },
+  "coordinate_convention": {
+    "x": "east",
+    "y": "south",
+    "z": "up",
+    "units": "centimetres",
+    "horizontal_origin": "project center",
+    "vertical_origin": "source datum zero",
+    "rows": "north to south; positive Unreal Y",
+    "flip_rows": false
+  },
+  "engine_import_verified": false,
+  "height_min_m": 515.197021484375,
+  "height_max_m": 567.842041015625,
+  "max_quantization_error_m": 0.0004418119788169861,
+  "r16_endianness": "little",
+  "tiles": [
+    {
+      "x": 0,
+      "y": 0,
+      "png": "terrain_505.png",
+      "r16": "terrain_505.r16",
+      "heightmap_png_sha256": "20a1edc2ccb51c343edf8bb9eb5c2a59b493e8b656593690d3cdb2ba85d1edfb",
+      "r16_sha256": "96673270e1b8b9011c1b05848f216e6635933171c788789512140e12afa1aa87",
+      "actor_location_cm": [
+        -100000.0,
+        -100000.0,
+        54151.953125
+      ],
+      "control_points": [
+        {
+          "corner": "NW",
+          "utm_m": [
+            367523.6419988461,
+            2840458.1365162465
+          ],
+          "source_height_m": 540.5828857421875,
+          "encoded_uint16": 31708,
+          "unreal_cm": [
+            -100000.0,
+            -100000.0,
+            54058.28857421875
+          ]
+        },
+        {
+          "corner": "NE",
+          "utm_m": [
+            369523.6419988461,
+            2840458.1365162465
+          ],
+          "source_height_m": 527.8544921875,
+          "encoded_uint16": 17303,
+          "unreal_cm": [
+            100000.0,
+            -100000.0,
+            52785.44921875
+          ]
+        },
+        {
+          "corner": "SW",
+          "utm_m": [
+            367523.6419988461,
+            2838458.1365162465
+          ],
+          "source_height_m": 567.842041015625,
+          "encoded_uint16": 62557,
+          "unreal_cm": [
+            -100000.0,
+            100000.0,
+            56784.2041015625
+          ]
+        },
+        {
+          "corner": "SE",
+          "utm_m": [
+            369523.6419988461,
+            2838458.1365162465
+          ],
+          "source_height_m": 538.146484375,
+          "encoded_uint16": 28951,
+          "unreal_cm": [
+            100000.0,
+            100000.0,
+            53814.6484375
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "Resampling does not increase source ground resolution. DSM may include buildings/vegetation. Engine orientation requires control-point validation.",
+  "reference_geotiff": "terrain_reference.tif",
+  "reference_geotiff_sha256": "98fb0a8d9b7cac98a4cf492eebc8900bc4b41f9ed8cdc8819391c8c3c30f5d07",
+  "r16_sha256": "96673270e1b8b9011c1b05848f216e6635933171c788789512140e12afa1aa87",
+  "heightmap_png_sha256": "20a1edc2ccb51c343edf8bb9eb5c2a59b493e8b656593690d3cdb2ba85d1edfb",
+  "archived_local_manifest_sha256": "970f4510feaeeaf8b623639d15eed7d69d5650f4d8d3d95d23abda303ccf7976",
+  "publication_note": "Reference from the preserved local delivery. A GitHub rebuild has its own generation timestamp, receipt and package hashes."
+}

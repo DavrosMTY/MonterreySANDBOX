@@ -1,0 +1,16 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.geojson text eol=lf
+*.cs text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.ini text eol=lf
+*.png -text
+*.tif -text
+*.r16 -text
+# LFS filters are deliberately inactive until account quotas are verified.
+# Large deliverables are published as GitHub Release assets instead.

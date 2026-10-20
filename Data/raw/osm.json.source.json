@@ -1,0 +1,13 @@
+{
+  "source": "OpenStreetMap",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "query": "[out:json][timeout:60];(way[\"highway\"](25.65788237,-100.32006112,25.67611702,-100.29994038);way[\"building\"](25.65788237,-100.32006112,25.67611702,-100.29994038);relation[\"building\"](25.65788237,-100.32006112,25.67611702,-100.29994038););out body;>;out skel qt;",
+  "url": "https://overpass-api.de/api/interpreter",
+  "retrieved_at_utc": "2026-10-20T20:10:35.646778+00:00",
+  "bytes": 1378584,
+  "etag": null,
+  "sha256": "677dbb69a0c1964f5925283c5181764d4178412fd61735dd88c4441778e00cf0",
+  "osm_timestamp": "2026-10-20T20:08:43Z"
+}

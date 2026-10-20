@@ -1,0 +1,6 @@
+{
+  "url": "https://raw.githubusercontent.com/awslabs/open-data-registry/main/datasets/copernicus-dem.yaml",
+  "sha256": "575f3ff639f223fd50238b6a91933b9c37864f4a24f625acb399a30526ff5a51",
+  "verified_on": "2026-10-20",
+  "scope": "Registry description retrieved; official full DEM licence and DEM tile blocked by network proxy"
+}

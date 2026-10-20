@@ -1,0 +1,26 @@
+{
+  "source": "Copernicus DEM GLO-30 2021",
+  "surface_model": "DSM",
+  "native_resolution_approx_m": 30,
+  "vertical_datum": "EGM2008",
+  "units": "metres",
+  "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
+  "license_full_text_reviewed": true,
+  "catalog": "https://registry.opendata.aws/copernicus-dem/",
+  "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N25_00_W101_00_DEM/Copernicus_DSM_COG_10_N25_00_W101_00_DEM.tif",
+  "retrieved_at_utc": "2026-10-20T20:09:54.360114+00:00",
+  "bytes": 41195631,
+  "etag": "\"27d26f8a060dcb5fe3a3def3dc4c030f\"",
+  "sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8",
+  "raster_crs": "EPSG:4326",
+  "raster_resolution": [
+    0.0002777777777777778,
+    0.0002777777777777778
+  ],
+  "license_review_date": "2026-10-20",
+  "license_evidence": "docs/sources/legal-evidence.json",
+  "license_text_sha256": "452f6769237ae0d6ee3b1aa2e0321f1ce9147fcadf5c24235b58a15046dbc879",
+  "derived_notice": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+  "liability_notice": "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30",
+  "distribution_obligations": "No endorsement by Copernicus, ESA, the European Union or the provider is implied. Subsequent distribution must retain the source/modified-data notice, liability notice and obligations in article 6 of the accompanying GLO-30 licence."
+}
