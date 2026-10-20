@@ -1,0 +1,252 @@
+{
+  "status": "geospatial_and_3d_acceptance_passed",
+  "generated_at_utc": "2026-10-20T21:06:30.857505+00:00",
+  "steps": [
+    {
+      "name": "pytest",
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "geometry",
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "geography",
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "unreal",
+      "exit_code": 2,
+      "expected_exit_codes": [
+        0,
+        2
+      ]
+    }
+  ],
+  "run_directory": "artifacts/geo002-acceptance-ybk7ihyf",
+  "unreal_executed": false,
+  "windows_build": false,
+  "tests": {
+    "tests": 60,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "city_directory": "/workspace/MonterreySANDBOX/Data/city/geo002_v4",
+  "renders_directory": "/workspace/MonterreySANDBOX/artifacts/geo002_renders_v4",
+  "model_sha256": "c432dab044681ea4d54316da1cffc1a2d08c6205edc0bd13c2a7d6ab178bf3f0",
+  "summary": {
+    "mesh_parts": 2576,
+    "building_parts": 1136,
+    "building_features": 1136,
+    "building_height_sources": {
+      "osm_levels_times_procedural_floor_height": 169,
+      "procedural_class_default": 963,
+      "osm_height_tag": 4
+    },
+    "building_categories": {
+      "unknown": 789,
+      "civic": 49,
+      "commercial": 92,
+      "residential": 115,
+      "canopy": 18,
+      "industrial": 73
+    },
+    "building_courtyards": 4,
+    "road_segments": 2665,
+    "road_grade_segments": {
+      "surface": 2475,
+      "depressed_inferred": 4,
+      "tunnel": 110,
+      "bridge": 63,
+      "elevated_inferred": 13
+    },
+    "triangles": 1895648,
+    "vertices": 960342,
+    "closed_solids": 2512,
+    "terrain_open_surfaces": 64,
+    "road_building_overlap_removed_m2": 8038.313390204338,
+    "clearance_constraint_audit": {
+      "crossings": 201,
+      "constraint_updates": 154,
+      "required_top_separation_estimate_m": 6.1,
+      "unresolved_endpoint_cases": [],
+      "surveyed_elevations_used": false,
+      "engineering_gradients_validated": false,
+      "source_xy_or_graph_edges_changed": false
+    },
+    "roads_with_sampled_grade_over_15_percent": 365,
+    "remaining_ground_road_building_overlap_m2": 0,
+    "geometry_seconds": 34.21388281600002,
+    "total_seconds": 47.221930887000326,
+    "glb_bytes": 32894836
+  },
+  "geometry": {
+    "status": "passed",
+    "glb_nodes_verified": 2576,
+    "closed_solids_verified": 2512,
+    "triangles_verified": 1895648,
+    "obj_cells_read_back": 128,
+    "max_coordinate_roundtrip_error_m": 3.784179739341198e-06,
+    "elapsed_seconds": 6.10032351100017,
+    "engine_import_verified": false,
+    "limits": [
+      "Does not certify survey accuracy, ground datum alignment, or physical collision of all mesh pairs",
+      "Terrain is intentionally an open sampled surface; other parts are closed solids after position welding"
+    ]
+  },
+  "geography": {
+    "status": "coordinate_consistency_passed",
+    "building_features_checked": 1136,
+    "max_wgs84_vs_local_footprint_disagreement_m": 1.896908164203429e-09,
+    "utm_grid_edge_length_m": 2000.0,
+    "geodesic_north_and_west_edges_m": [
+      2000.3731659284547,
+      2000.366652215611
+    ],
+    "projection_scale_at_center": 0.9998134481110296,
+    "independent_survey_accuracy_verified": false,
+    "source_dsm_native_resolution_approx_m": 30,
+    "max_bilinear_vs_mesh_triangle_height_difference_at_cell_center_m": 0.0546875,
+    "different_grade_crossings_audited": 201,
+    "potential_grade_solid_overlaps": 0,
+    "grade_crossings_below_nominal_5m_clearance": 0,
+    "exported_mesh_crossings_with_both_surfaces": 186,
+    "exported_mesh_crossings_missing_surface": 15,
+    "missing_crossings_inside_blocking_buildings": 3,
+    "exported_mesh_crossings_potential_solid_overlap": 0,
+    "exported_mesh_crossings_below_5m": 0,
+    "minimum_exported_mesh_top_separation_m": 6.0198404611098795,
+    "physical_clearances_validated": false,
+    "notes": [
+      "Crossings use procedural top-surface estimates, not surveyed engineering heights.",
+      "Potential collisions and low clearances remain explicit; no road is moved to hide them.",
+      "Absolute vertical/horizontal accuracy requires independent control points and bare-earth DTM."
+    ]
+  },
+  "render": {
+    "milestone": "GEO-002",
+    "renderer": "Blender Cycles CPU",
+    "blender_version": "4.3.2",
+    "generated_at_utc": "2026-10-20T21:03:41.389684+00:00",
+    "input_glb_sha256": "c432dab044681ea4d54316da1cffc1a2d08c6205edc0bd13c2a7d6ab178bf3f0",
+    "imported_triangle_count": 1895648,
+    "bounds_enu_m": [
+      [
+        -1000.0,
+        -1000.0000610351562,
+        515.197021484375
+      ],
+      [
+        1000.0,
+        1000.0000610351562,
+        744.2034301757812
+      ]
+    ],
+    "synthetic_input": false,
+    "views": [
+      {
+        "name": "aerial",
+        "file": "aerial.png",
+        "sha256": "49e920c4a276e629e2ab0c6eced99bfdd0a7cf5381590d3e368766d9318fa403",
+        "camera_enu_m": [
+          2100.0,
+          -2400.0,
+          2847.5986328125
+        ],
+        "target_enu_m": [
+          0.0,
+          0.0,
+          572.5985107421875
+        ],
+        "lens_mm": 38.0,
+        "samples": 64,
+        "resolution": [
+          1440,
+          960
+        ],
+        "road_id": null,
+        "render_seconds": 19.47588566400009
+      },
+      {
+        "name": "street",
+        "file": "street.png",
+        "sha256": "1aff6be9314359cd81723cdd1b60fc1354c8736772ed518613bf93eb35798e57",
+        "camera_enu_m": [
+          -575.7613525390625,
+          619.2381591796875,
+          537.4768676757812
+        ],
+        "target_enu_m": [
+          -570.735595703125,
+          663.9560546875,
+          537.5768432617188
+        ],
+        "lens_mm": 24.0,
+        "samples": 64,
+        "resolution": [
+          1440,
+          960
+        ],
+        "road_id": "way/158242443/437",
+        "render_seconds": 85.33995578600025
+      },
+      {
+        "name": "elevated",
+        "file": "elevated.png",
+        "sha256": "960e0683dece1ec4a2916e974949d6590d621e9549a47a3baef011b626cd715a",
+        "camera_enu_m": [
+          190.0,
+          -350.0,
+          697.5985107421875
+        ],
+        "target_enu_m": [
+          30.0,
+          150.0,
+          567.5985107421875
+        ],
+        "lens_mm": 26.0,
+        "samples": 64,
+        "resolution": [
+          1440,
+          960
+        ],
+        "road_id": null,
+        "render_seconds": 42.66655965300015
+      }
+    ],
+    "unreal_executed": false,
+    "ai_generated_images": false,
+    "denoising_enabled": false,
+    "material_source": "exported GLB COLOR_0 vertex attributes",
+    "blend_sha256": "96e501deff9db6f5f893d8dc6e19051313a7522ddc3935759552cefda1ac1ebb",
+    "total_seconds": 154.30500485699986
+  },
+  "unreal": {
+    "status": "blocked",
+    "editor_executed": false,
+    "native_module_compiled": false,
+    "landscape_imported": false,
+    "world_partition_validated": false,
+    "hlod_built": false,
+    "reason": "A licensed Windows UE5.6 editor and C++ build toolchain are required; unavailable here"
+  },
+  "engine_integration_status": "blocked_pending_UE5_Windows_runner",
+  "publication_or_push_performed": false,
+  "configuration_fields_to_preserve": [
+    "install_script",
+    "start_skill",
+    "network.allowed_domains"
+  ],
+  "environment_published": false,
+  "new_task_restoration_validated": false
+}

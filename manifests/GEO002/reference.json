@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "milestone": "GEO-002",
+  "generated_at_utc": "2026-10-20T21:03:10.953126+00:00",
+  "synthetic": false,
+  "source_crs": "EPSG:32614",
+  "source_vertical_datum": "EGM2008",
+  "center_easting_northing_m": [
+    368523.6419988461,
+    2839458.1365162465
+  ],
+  "extent_m": 2000.0,
+  "coordinates_internal": "right-handed East North Up metres; Z=source datum",
+  "gltf_coordinates": "right-handed X=east Y=up Z=south, metres; source datum zero",
+  "obj_coordinates": "Unreal numerical X=east Y=south Z=up, centimetres; cell-relative vertices",
+  "projection_scale_at_center": 0.9998134481110296,
+  "grid_convergence_at_center_degrees": -0.5674950985248902,
+  "scale_note": "1 metre of projected grid = 100 Unreal units; UTM is not exact ground-distance scale",
+  "summary": {
+    "mesh_parts": 2576,
+    "building_parts": 1136,
+    "building_features": 1136,
+    "building_height_sources": {
+      "osm_levels_times_procedural_floor_height": 169,
+      "procedural_class_default": 963,
+      "osm_height_tag": 4
+    },
+    "building_categories": {
+      "unknown": 789,
+      "civic": 49,
+      "commercial": 92,
+      "residential": 115,
+      "canopy": 18,
+      "industrial": 73
+    },
+    "building_courtyards": 4,
+    "road_segments": 2665,
+    "road_grade_segments": {
+      "surface": 2475,
+      "depressed_inferred": 4,
+      "tunnel": 110,
+      "bridge": 63,
+      "elevated_inferred": 13
+    },
+    "triangles": 1895648,
+    "vertices": 960342,
+    "closed_solids": 2512,
+    "terrain_open_surfaces": 64,
+    "road_building_overlap_removed_m2": 8038.313390204338,
+    "clearance_constraint_audit": {
+      "crossings": 201,
+      "constraint_updates": 154,
+      "required_top_separation_estimate_m": 6.1,
+      "unresolved_endpoint_cases": [],
+      "surveyed_elevations_used": false,
+      "engineering_gradients_validated": false,
+      "source_xy_or_graph_edges_changed": false
+    },
+    "roads_with_sampled_grade_over_15_percent": 365,
+    "remaining_ground_road_building_overlap_m2": 0,
+    "geometry_seconds": 34.21388281600002,
+    "total_seconds": 47.221930887000326,
+    "glb_bytes": 32894836
+  },
+  "glb": "monterrey_city.glb",
+  "glb_sha256": "c432dab044681ea4d54316da1cffc1a2d08c6205edc0bd13c2a7d6ab178bf3f0",
+  "input_terrain_manifest_sha256": "970f4510feaeeaf8b623639d15eed7d69d5650f4d8d3d95d23abda303ccf7976",
+  "input_urban_sha256": "84425c0e097ff1e21831a620f3524f1caf266f46817e35b31919771cc25b116e",
+  "input_buildings_sha256": "1705535c288d0eafa814d219acef39088b21a084a35ae7d2bbc73a0551242c07",
+  "engine_validation": {
+    "editor_executed": false,
+    "landscape_imported": false,
+    "windows_build": false
+  },
+  "limitations": [
+    "DSM is not bare-earth DTM; all foundations and road elevations are proxies",
+    "Estimated facade heights, floor sizes, widths, sidewalks and grade profiles are procedural blockout",
+    "No terrain excavation at tunnel portals, bridge engineering, lane graph or turn restrictions",
+    "Flat roofs and repeating panels do not reproduce real facades or monuments",
+    "Same-grade surface unions are geometric; logical graph retains only original OSM edges",
+    "UE import, World Partition, Nanite, Lumen, PCG and HLOD require editor execution"
+  ],
+  "archived_local_manifest_sha256": "4fd7da5f7ce6a906e123a1d355a35a8c4334aa34086675902d6e6d6cae178ce6",
+  "publication_note": "Reference from the preserved local delivery. A GitHub rebuild has its own generation timestamp, receipt and package hashes."
+}
