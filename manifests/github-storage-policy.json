@@ -1,0 +1,35 @@
+{
+  "checked_on_local_date": "2026-10-20",
+  "timezone": "America/Mexico_City",
+  "repository": "DavrosMTY/MonterreySANDBOX",
+  "visibility": "public",
+  "anonymous_web_status": 200,
+  "visibility_evidence": "octolytics-dimension-repository_public=true",
+  "standard_public_actions_compute": "free",
+  "actions_cache_enabled": false,
+  "actions_artifact_uploads_enabled_by_default": false,
+  "release_max_asset_bytes_exclusive": 2147483648,
+  "release_max_assets": 1000,
+  "release_total_size_or_bandwidth_limit": "none stated in official GitHub documentation",
+  "lfs_account_quota_verified": false,
+  "lfs_uploads_authorized_for_this_sync": false,
+  "account_storage_quota_status": "not queried successfully: API proxy CONNECT 403",
+  "docs": [
+    {
+      "url": "https://github.com/github/docs/blob/main/content/billing/concepts/product-billing/github-actions.md",
+      "sha256": "a40dc1897d605b0c6b3780523260180780649741a27ce47ce12b8e964e14342c"
+    },
+    {
+      "url": "https://github.com/github/docs/blob/main/content/repositories/releasing-projects-on-github/about-releases.md",
+      "sha256": "4feedd93b6247e24cc148937348910ff5f3a0506d165821ae187557b5d11904c"
+    },
+    {
+      "url": "https://github.com/github/docs/blob/main/data/variables/releases.yml",
+      "sha256": "46b1f123f8895090ebe5fb5882a1da1b8730faaddcc36ea163cc3e50ebe5055e"
+    },
+    {
+      "url": "https://github.com/github/docs/blob/main/data/variables/large_files.yml",
+      "sha256": "c929ab70d3ae9b8ed6451670940f4f286320e65956410768f639dfc84ebfc7be"
+    }
+  ]
+}

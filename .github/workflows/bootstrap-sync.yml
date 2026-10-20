@@ -1,0 +1,67 @@
+name: Initial GitHub synchronization
+on:
+  push:
+    branches: [development]
+    paths: [.github/publication/bootstrap.json]
+permissions:
+  contents: read
+concurrency:
+  group: initial-sync-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  pull-request:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Open development to main without merging
+        shell: bash
+        id: pr
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/publish_github.py pr | tee /tmp/pr-result.json
+      - name: Record result and any missing repository permission
+        env:
+          PR_OUTCOME: ${{ steps.pr.outcome }}
+        run: |
+          echo '## Pull Request' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/pr-result.json >> "$GITHUB_STEP_SUMMARY"
+          if [ "$PR_OUTCOME" != success ]; then
+            echo 'PR creation is blocked. The owner may need to enable Settings > Actions > General > Allow GitHub Actions to create and approve pull requests. No PR has been merged.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+  release:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned tools without persistent cache or artifact storage
+        run: |
+          python -m pip install --no-cache-dir -r requirements.lock.txt
+          python -m pip check
+          sudo apt-get update
+          sudo apt-get install --yes blender
+      - name: Rebuild and validate real pilot deliveries
+        env:
+          XDG_CACHE_HOME: /tmp/monterrey-blender-cache
+        run: python tools/build_github_release.py
+      - name: Publish a prerelease on this exact development commit
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/publish_github.py release artifacts/github-release | tee /tmp/release-result.json
+      - name: Record downloadable release
+        if: always()
+        run: |
+          echo '## Reproducible pilot Release' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/release-result.json ]; then cat /tmp/release-result.json >> "$GITHUB_STEP_SUMMARY"; fi
+          echo 'No merge, LFS upload, Actions cache or upload-artifact step was performed.' >> "$GITHUB_STEP_SUMMARY"
