@@ -16,6 +16,15 @@ pruebas de publicación GitHub y portabilidad. Unreal/Windows no se compiló ni 
 [Releases descargables](https://github.com/DavrosMTY/MonterreySANDBOX/releases) ·
 [Validación CI](https://github.com/DavrosMTY/MonterreySANDBOX/actions)
 
+## Infraestructura Unreal: INFRA-001
+
+[Comparativa técnica y económica](docs/infra001/COMPARATIVA.md) de AWS, Azure y
+Vagon, con precios oficiales consultados el 21 de octubre de 2026, almacenamiento,
+transferencia y licencias pendientes. Incluye [arquitectura segura](docs/infra001/ARQUITECTURA.md)
+y [PoC de seis horas / US$50 propuesta](docs/infra001/POC.md), todavía sin autorizar.
+No se contrató infraestructura ni se ejecutó Unreal. UE-001 permanece en
+[PR #2 hacia development](https://github.com/DavrosMTY/MonterreySANDBOX/pull/2), sin fusionar.
+
 ## Objetivo y alcance actual
 
 El objetivo del juego es recrear Monterrey a escala 1:1. El piloto utiliza
