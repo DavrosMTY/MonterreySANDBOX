@@ -61,4 +61,7 @@ try {
     viewport:[1280,800],samples,street_initial:street,street_after_controls:rotated,
     browser_errors:errors,external_runtime_requests:0,checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','No external runtime dependencies']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
+} catch (error) {
+  writeFileSync(`${output}/browser-failure.json`,JSON.stringify({status:'failed',tested_url:url,error:String(error),stack:error.stack,browser_errors:errors,requests},null,2)+'\n');
+  throw error;
 } finally {await browser.close(); if(server)await new Promise(resolve=>server.close(resolve));}

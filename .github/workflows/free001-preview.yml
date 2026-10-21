@@ -25,7 +25,11 @@ jobs:
           from pathlib import Path
           records=[]
           for name,url in [('cdn','https://raw.githack.com'),('pages_api','https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#create-a-github-pages-site')]:
-              with urllib.request.urlopen(url,timeout=30) as r:body=r.read();status=r.status
+              try:
+                  request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                  with urllib.request.urlopen(request,timeout=30) as r:body=r.read();status=r.status
+              except Exception as error:
+                  records.append({'url':url,'error':str(error)});continue
               text=re.sub(r'\s+',' ',re.sub('<[^>]+>',' ',body.decode(errors='replace')))
               patterns=['free service','no formal','Development URLs','CDN URLs'] if name=='cdn' else ['Administration','Pages&quot; repository permissions','write']
               findings=[]
@@ -41,13 +45,16 @@ jobs:
         run: |
           MOW_URL="$(node -p "JSON.parse(require('fs').readFileSync('../.github/publication/free001-preview.json')).url")" MOW_EVIDENCE=../artifacts/free001-public npm run test:browser
       - name: Save compact reproducible public verification to task branch
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python - <<'PY'
           import json,os
           from pathlib import Path
-          report=json.loads(Path('artifacts/free001-public/browser-report.json').read_text())
+          path=Path('artifacts/free001-public/browser-report.json')
+          if not path.exists():path=Path('artifacts/free001-public/browser-failure.json')
+          report=json.loads(path.read_text()) if path.exists() else {'status':'blocked_before_browser'}
           report['workflow_url']='https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']
           report['free_service_sources']=json.loads(Path('/tmp/free001-public-sources.json').read_text())
           report['pages_not_enabled']=True
