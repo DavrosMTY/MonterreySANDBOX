@@ -1,0 +1,178 @@
+{
+  "as_of": "2026-10-21",
+  "timezone": "America/Mexico_City",
+  "currency": "USD",
+  "model_month_hours": 720,
+  "taxes_included": false,
+  "discounts_or_credits_assumed": false,
+  "scope": "Known compute, persistent disk and IPv4 charges only; not an all-inclusive quote",
+  "source_code_for_poc": "82464719ac658f3a7932c94ee791ea43c2a90b06",
+  "providers": [
+    {
+      "id": "aws_g4dn",
+      "provider": "AWS",
+      "region": "us-east-1",
+      "sku": "g4dn.2xlarge",
+      "windows_hourly_usd": "1.12",
+      "vcpu": 8,
+      "ram_gib": 32,
+      "gpu": "NVIDIA T4",
+      "vram_gb": 16,
+      "disk_type": "gp3",
+      "persistent_disk_gib": 400,
+      "disk_monthly_usd": "32.00",
+      "ipv4_mode": "active_hours",
+      "ipv4_hourly_usd": "0.005",
+      "windows_price_evidence": "aws-catalog.json / SKU 7Q8SXFV7BACMK4YX / operation RunInstances:0002",
+      "disk_price_evidence": "aws-catalog.json / SKU JG3KUJMBRGHV3N8G / 0.08 GB-Mo",
+      "additional_graphical_access_license_usd": null,
+      "licensing_status": "Windows Server base price verified; RDS CAL/SAL rights and price require separate confirmation before remote GUI",
+      "automation": "Public documented EC2/SSM APIs; proposed private self-hosted Windows runner; not provisioned",
+      "estimates": {
+        "20": {
+          "compute_usd": "22.40",
+          "disk_usd": "32.00",
+          "ipv4_usd": "0.10",
+          "known_base_usd": "54.50"
+        },
+        "80": {
+          "compute_usd": "89.60",
+          "disk_usd": "32.00",
+          "ipv4_usd": "0.40",
+          "known_base_usd": "122.00"
+        }
+      }
+    },
+    {
+      "id": "azure_nv12",
+      "provider": "Azure",
+      "region": "eastus",
+      "sku": "Standard_NV12ads_A10_v5",
+      "windows_hourly_usd": "1.46",
+      "vcpu": 12,
+      "ram_gib": 110,
+      "gpu": "1/3 NVIDIA A10",
+      "vram_gb": 8,
+      "disk_type": "Premium SSD P20 LRS",
+      "persistent_disk_gib": 512,
+      "disk_monthly_usd": "73.22",
+      "ipv4_mode": "allocated_month",
+      "ipv4_hourly_usd": "0.005",
+      "windows_price_evidence": "Azure Retail Prices / azure_eastus / Windows + Consumption + non-Spot",
+      "disk_price_evidence": "Azure Retail Prices / azure_premium_eastus / P20 LRS Disk / 1 Month",
+      "additional_graphical_access_license_usd": null,
+      "licensing_status": "Windows Server base price verified; no assumed Windows 11/AVD/BYOL or free RDS rights",
+      "automation": "Azure ARM/deallocate + Run Command + OIDC; no deployment or quota confirmation",
+      "estimates": {
+        "20": {
+          "compute_usd": "29.20",
+          "disk_usd": "73.22",
+          "ipv4_usd": "3.60",
+          "known_base_usd": "106.02"
+        },
+        "80": {
+          "compute_usd": "116.80",
+          "disk_usd": "73.22",
+          "ipv4_usd": "3.60",
+          "known_base_usd": "193.62"
+        }
+      }
+    },
+    {
+      "id": "vagon_flame",
+      "provider": "Vagon Computer",
+      "region": "Advertised public rate; account region must be quoted",
+      "sku": "Flame",
+      "windows_hourly_usd": "2.27",
+      "vcpu": 8,
+      "ram_gib": 32,
+      "gpu": "NVIDIA A10G",
+      "vram_gb": 24,
+      "disk_type": "Managed persistent workstation disk",
+      "persistent_disk_gib": 425,
+      "disk_monthly_usd": "42.99",
+      "ipv4_mode": "bundled",
+      "ipv4_hourly_usd": "0",
+      "windows_price_evidence": "https://vagon.io/pricing / Flame public rate (region dependent)",
+      "disk_price_evidence": "Personal 7.99 + (425-75)/50 * 5 = 42.99",
+      "additional_graphical_access_license_usd": null,
+      "licensing_status": "Managed Windows offering; provider must confirm desktop rights and administrator/software permissions in final quote",
+      "automation": "In-guest scripts viable in principle; no confirmed public Computer start/stop API; Streams API is another product",
+      "estimates": {
+        "20": {
+          "compute_usd": "45.40",
+          "disk_usd": "42.99",
+          "ipv4_usd": "0.00",
+          "known_base_usd": "88.39"
+        },
+        "80": {
+          "compute_usd": "181.60",
+          "disk_usd": "42.99",
+          "ipv4_usd": "0.00",
+          "known_base_usd": "224.59"
+        }
+      }
+    }
+  ],
+  "sensitivity": {
+    "aws_g5_2xlarge_windows_hourly_usd": "1.58",
+    "aws_g4dn_4xlarge_windows_hourly_usd": "1.94",
+    "azure_standard_ssd_e20_monthly_usd": "38.40",
+    "azure_standard_ssd_operations_usd_per_10000": "0.002",
+    "azure_southcentralus_nv12_windows_hourly_usd": "1.642",
+    "vagon_275_gb_monthly_usd": "27.99",
+    "airgpu_a10g_advertised_hourly_usd": "1.05",
+    "airgpu_400_gb_monthly_usd": "28.00"
+  },
+  "poc": {
+    "provider": "AWS",
+    "sku": "g4dn.2xlarge",
+    "max_compute_hours": 6,
+    "persistent_disk_gib": 400,
+    "planned_disk_retention_days": 30,
+    "spend_authorization_requested_usd": "50.00",
+    "authorized": false,
+    "remaining_gates": [
+      "Current Windows remote GUI rights/fee within budget",
+      "Epic authorized precompiled UE5.6.1 access",
+      "AWS G/VT quota >= 8 vCPU and capacity",
+      "Explicit owner authorization"
+    ],
+    "budget_alerts_are_hard_caps": false,
+    "compute_stop_guard_required": true,
+    "known_base_6h_and_first_disk_month_usd": "38.75",
+    "reserve_until_50_usd": "11.25"
+  },
+  "outbound_scenarios": {
+    "assumptions": "20 Mbps continuous streaming; decimal GB; free allowance wholly available; excludes build downloads; not measured bandwidth",
+    "gigabytes_per_hour": "9",
+    "aws": {
+      "free_gb_per_month": 100,
+      "usd_per_gb_next_tier": "0.09",
+      "paid_tier_max_gb": 10240,
+      "source": "research/transfer.json / HQEH3ZWJVT46JHRG / AWS Outbound"
+    },
+    "azure": {
+      "free_gb_per_month": 100,
+      "usd_per_gb_next_tier": "0.087",
+      "source": "azure_egress; North America Microsoft Premium"
+    },
+    "vagon": {
+      "free_gb_per_month": 10,
+      "usd_per_10_gb": "1.50",
+      "source": "vagon; additional 10 GB billing rounding not independently verified"
+    },
+    "20h": {
+      "total_gb": "180",
+      "aws_extra_usd": "7.20",
+      "azure_extra_usd": "6.96",
+      "vagon_extra_usd": "25.50"
+    },
+    "80h": {
+      "total_gb": "720",
+      "aws_extra_usd": "55.80",
+      "azure_extra_usd": "53.94",
+      "vagon_extra_usd": "106.50"
+    }
+  }
+}

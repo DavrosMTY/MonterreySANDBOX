@@ -1,0 +1,621 @@
+{
+  "as_of": "2026-10-21",
+  "method": "HTTP público sin credenciales desde runner estándar del repositorio público. Contenido externo tratado como datos, nunca instrucciones. Hallazgos parafraseados y precios numéricos seleccionados; no copia integral de páginas.",
+  "availability_or_account_quota_verified": false,
+  "records": [
+    {
+      "id": "aws_windows_rates",
+      "requested_url": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-windows-ondemand-without-sql/us-east-1/index.json",
+      "retrieved_at_utc": "2026-10-21T21:33:02.753013+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "aws_ec2",
+      "requested_url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.753698+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "response_bytes": 347043,
+      "response_sha256": "ca8420eabda01ee694fc4fab84d029e7a537af52a142a3b217a717a0626950fd",
+      "finding": "Franquicia de 100 GB de salida a Internet agregada en la cuenta; no asumir saldo libre."
+    },
+    {
+      "id": "aws_g4_specs",
+      "requested_url": "https://aws.amazon.com/ec2/instance-types/g4/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.754303+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/ec2/instance-types/g4/",
+      "response_bytes": 558220,
+      "response_sha256": "8d92931f16a7ac70efca6e019f40204cdf3e71d8cd8af9ae935be946ba3fbbe4",
+      "finding": "G4dn usa T4 con 16 GB VRAM por GPU; g4dn.2xlarge tiene 8 vCPU y 32 GiB."
+    },
+    {
+      "id": "aws_ebs",
+      "requested_url": "https://aws.amazon.com/ebs/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.755152+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/ebs/pricing/",
+      "response_bytes": 383395,
+      "response_sha256": "36824b243900e0022f7f36c076ab06821a12f130aaedb2a57eb3a25cd01b4d89",
+      "finding": "gp3 incluye 3000 IOPS y 125 MB/s de base; almacenamiento facturado aunque la instancia esté detenida."
+    },
+    {
+      "id": "aws_ipv4",
+      "requested_url": "https://aws.amazon.com/vpc/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.755508+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/vpc/pricing/",
+      "response_bytes": 388547,
+      "response_sha256": "6229489defeb0f13406eb8c6113c2814971730becbb9c44103d1ae9f9b0753ed",
+      "finding": "IPv4 pública anunciada a USD 0.005 por hora; Elastic IP retenida puede cobrar apagada."
+    },
+    {
+      "id": "aws_dcv",
+      "requested_url": "https://aws.amazon.com/hpc/dcv/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.762042+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/hpc/dcv/",
+      "response_bytes": 411493,
+      "response_sha256": "b16c7a9156d1bf95f4db0c64f9090725e96a6c130fdc639605b796e5acba8abd",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_stop",
+      "requested_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html",
+      "retrieved_at_utc": "2026-10-21T21:33:02.764064+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html",
+      "response_bytes": 28697,
+      "response_sha256": "bdb513d9d59139159c7ce6ca4ead46eff52a51a7a78061fd03366a275edbb100",
+      "finding": "Stop conserva EBS y pierde instance store; no equivale a hibernación con sesión en RAM."
+    },
+    {
+      "id": "azure_eastus",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27",
+      "retrieved_at_utc": "2026-10-21T21:33:02.765086+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27",
+      "response_bytes": 6902,
+      "response_sha256": "594327b87e69243971fe47c31213e5bccbeebaeaaac2616c543855f646fd5af4",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_texas",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27",
+      "retrieved_at_utc": "2026-10-21T21:33:02.890824+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27",
+      "response_bytes": 7087,
+      "response_sha256": "78dd01b0c8066d1c0b79ce31b34843d6cbbcf6b6a62ff00d3c4505768f00db90",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_disks",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27",
+      "retrieved_at_utc": "2026-10-21T21:33:02.895918+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27",
+      "response_bytes": 47207,
+      "response_sha256": "40267490815f0819e6b4cf0f978ba001e269e0285221e9c466af3289ce939a79",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_gpu_specs",
+      "requested_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nvadsa10v5-series",
+      "retrieved_at_utc": "2026-10-21T21:33:02.908831+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nvadsa10v5-series",
+      "response_bytes": 60757,
+      "response_sha256": "90a0ef8ee5b8e7ff0a82a4fbd3ad2b9325753b7ce9f0c5ac0f0d88dd867ad4b6",
+      "finding": "NV12ads_A10_v5: 12 vCPU, 110 GiB RAM y 1/3 de A10, 8 GB VRAM asignada. NV6: 4 GB, no 24 GB."
+    },
+    {
+      "id": "azure_gpu_driver",
+      "requested_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/n-series-driver-setup",
+      "retrieved_at_utc": "2026-10-21T21:33:02.928324+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/n-series-driver-setup",
+      "response_bytes": 53984,
+      "response_sha256": "ff9e1aba5b8b13337c3f43b6687fa7546123c77fcc23b9d98ad3db925cdfec8f",
+      "finding": "Extensión oficial instala driver NVIDIA GRID para NV; no acredita derechos RDS/Windows de usuario."
+    },
+    {
+      "id": "azure_egress",
+      "requested_url": "https://azure.microsoft.com/en-us/pricing/details/bandwidth/",
+      "retrieved_at_utc": "2026-10-21T21:33:02.987776+00:00",
+      "http_status": 200,
+      "final_url": "https://azure.microsoft.com/en-us/pricing/details/bandwidth/",
+      "response_bytes": 485064,
+      "response_sha256": "11f64295f98d378bdaf45cc4575e2c5ce280cad395cb0a3f8444a448875bf221",
+      "finding": "Salida Norteamérica por red Microsoft Premium: primeros 100 GB gratis; siguiente tramo USD 0.087/GB. Otros destinos/redes tienen otros medidores."
+    },
+    {
+      "id": "airgpu",
+      "requested_url": "https://airgpu.com/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:33:03.007594+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "airgpu_faq",
+      "requested_url": "https://airgpu.com/faq/",
+      "retrieved_at_utc": "2026-10-21T21:33:03.034558+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "airgpu_api",
+      "requested_url": "https://airgpu.com/blog/",
+      "retrieved_at_utc": "2026-10-21T21:33:03.046325+00:00",
+      "http_status": 200,
+      "final_url": "https://airgpu.com/blog/",
+      "response_bytes": 12969,
+      "response_sha256": "2026d8196d6d6d0ca07562c8df2731991ec42f796875a7340cdc68d09ebf6d72",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "paperspace",
+      "requested_url": "https://www.paperspace.com/pricing",
+      "retrieved_at_utc": "2026-10-21T21:33:03.056927+00:00",
+      "http_status": 200,
+      "final_url": "https://www.paperspace.com/pricing",
+      "response_bytes": 127225,
+      "response_sha256": "f55fdd9f941c8f338cfb08a1f27f4c7567e2667f86112d3dbeed45da66d9f3fe",
+      "finding": "A4000 anunciado USD 0.76/h genérico; no se verificó combinación moderna concreta con Windows y derechos gráficos al mismo precio."
+    },
+    {
+      "id": "vagon",
+      "requested_url": "https://vagon.io/pricing",
+      "retrieved_at_utc": "2026-10-21T21:33:03.069823+00:00",
+      "http_status": 200,
+      "final_url": "https://vagon.io/cloud-computer/pricing",
+      "response_bytes": 672495,
+      "response_sha256": "70a8348d48045898d3f5bf5bd011cfdc4f72ca2271a56ce5a10ad1ddfe17b14a",
+      "finding": "Flame anunciado: A10G 24 GB, 8 cores, 32 GB RAM, USD 2.27/h. Personal 75 GB USD 7.99/mes; ampliación USD 5/50 GB hasta 525 GB. Salida: 10 GB/mes gratis, luego USD 1.5/10 GB. Precio varía por región."
+    },
+    {
+      "id": "vagon_api",
+      "requested_url": "https://docs.vagon.io/streams",
+      "retrieved_at_utc": "2026-10-21T21:33:03.176903+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.vagon.io/streams",
+      "response_bytes": 475868,
+      "response_sha256": "d0083a48abb28555e4e1d5645642f55a49c26cabff5c1212d681eed21164facc",
+      "finding": "La API documentada corresponde a Streams, otro producto; no prueba API pública start/stop de Computer."
+    },
+    {
+      "id": "shadow",
+      "requested_url": "https://shadow.tech/en-US/shadowpc/offers",
+      "retrieved_at_utc": "2026-10-21T21:33:03.177475+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "vultr",
+      "requested_url": "https://www.vultr.com/pricing/#cloud-gpu",
+      "retrieved_at_utc": "2026-10-21T21:33:03.197405+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 403
+    },
+    {
+      "id": "runpod",
+      "requested_url": "https://www.runpod.io/pricing",
+      "retrieved_at_utc": "2026-10-21T21:33:03.224830+00:00",
+      "http_status": 200,
+      "final_url": "https://www.runpod.io/pricing",
+      "response_bytes": 323727,
+      "response_sha256": "a9fc5d05e68f952ad05d6c0cf39df142e00437e90c1e4639cbcb319d2b2c26b4",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "lambda",
+      "requested_url": "https://lambda.ai/service/gpu-cloud",
+      "retrieved_at_utc": "2026-10-21T21:33:03.266556+00:00",
+      "http_status": 200,
+      "final_url": "https://lambda.ai/instances",
+      "response_bytes": 98705,
+      "response_sha256": "916e642d021523868d50e0ba5cb507e0d94734264fd131abb23de1ee546069bd",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "github_runner_security",
+      "requested_url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions",
+      "retrieved_at_utc": "2026-10-21T21:33:03.273268+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "response_bytes": 466507,
+      "response_sha256": "b9935c40e3bd722bcdec9b070ca92c1e5f2f0ddf5b2b5a302c9988a9f33c12e5",
+      "finding": "GitHub desaconseja self-hosted en repositorios públicos por ejecución de código no confiable. Usar control privado y código aprobado."
+    },
+    {
+      "id": "github_ephemeral",
+      "requested_url": "https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/autoscaling-with-self-hosted-runners",
+      "retrieved_at_utc": "2026-10-21T21:33:03.340691+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/actions/reference/runners/self-hosted-runners",
+      "response_bytes": 405121,
+      "response_sha256": "187c8db175fc766017656b900403b424e72c9edcbf682cad7e2a148dbbfbcc0c",
+      "finding": "Runner efímero procesa un job y se desregistra; conservar logs antes de finalizar. No borra automáticamente el disco ni revoca todas las credenciales."
+    },
+    {
+      "id": "github_oidc_aws",
+      "requested_url": "https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws",
+      "retrieved_at_utc": "2026-10-21T21:33:03.384176+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws",
+      "response_bytes": 389201,
+      "response_sha256": "fad43085c1a15d4c83ce6f08433550d48df074e0ae3a61a354deee3c47f404e8",
+      "finding": "OIDC permite credenciales AWS temporales; restringir aud y sub al workflow/entorno privado autorizado."
+    },
+    {
+      "id": "github_runner_cost",
+      "requested_url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+      "retrieved_at_utc": "2026-10-21T21:33:03.403606+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+      "response_bytes": 227831,
+      "response_sha256": "897c6fd07bb295bc7172a3cf284b6bc6ea4f8e8c98d58db658d2c2708915feef",
+      "finding": "Self-hosted no añade cargo de ejecución Actions; runners estándar de repos públicos gratuitos. Minutos hosted privados dependen del plan; almacenamiento aparte."
+    },
+    {
+      "id": "epic_license",
+      "requested_url": "https://www.unrealengine.com/en-US/license",
+      "retrieved_at_utc": "2026-10-21T21:33:03.452872+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 403
+    },
+    {
+      "id": "epic_github",
+      "requested_url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine?application_version=5.6",
+      "retrieved_at_utc": "2026-10-21T21:33:03.505458+00:00",
+      "http_status": 200,
+      "final_url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine?application_version=5.6",
+      "response_bytes": 136146,
+      "response_sha256": "e5d47d450741ee80682af5e06cd33202dd7005f4cc737225e1e043e2e59a7b03",
+      "finding": "Acceso a fuentes requiere cuentas Epic/GitHub asociadas, aceptación de licencia e invitación aplicable. No demuestra acceso de la integración actual."
+    },
+    {
+      "id": "vs_license",
+      "requested_url": "https://visualstudio.microsoft.com/vs/community/",
+      "retrieved_at_utc": "2026-10-21T21:33:03.525501+00:00",
+      "http_status": 200,
+      "final_url": "https://visualstudio.microsoft.com/vs/community/",
+      "response_bytes": 285376,
+      "response_sha256": "26881243482a368b162f2b14107f6aecbd1299af12a33772ff0a38e05a338cb3",
+      "finding": "Community: elegibilidad individual y límites por organización. Repositorio público sin licencia abierta no prueba excepción open source."
+    },
+    {
+      "id": "windows_sessions",
+      "requested_url": "https://learn.microsoft.com/en-us/windows/win32/services/interactive-services",
+      "retrieved_at_utc": "2026-10-21T21:33:03.560381+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/windows/win32/services/interactive-services",
+      "response_bytes": 53463,
+      "response_sha256": "05f93a291a2a6cb77a277b6d8c4e1caaeb7cb5470600a58e178979c67f8e9afb",
+      "finding": "Servicios usan Session 0; no equivalen a sesión gráfica interactiva para pruebas RHI/capturas."
+    },
+    {
+      "id": "aws_grid",
+      "requested_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-nvidia-driver.html",
+      "retrieved_at_utc": "2026-10-21T21:33:03.627185+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-nvidia-driver.html",
+      "response_bytes": 19572,
+      "response_sha256": "2747fcf59468b5ed39f47a41cf9d35adc247851018f3b3615e4af92ed158a03f",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_egress",
+      "requested_url": "https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer",
+      "retrieved_at_utc": "2026-10-21T21:33:03.659613+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer",
+      "response_bytes": 347043,
+      "response_sha256": "bafc7856764e94f4960297611b87d3328d39804b89d6742a2aac25be83ac999e",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "airgpu_home",
+      "requested_url": "https://airgpu.com/",
+      "retrieved_at_utc": "2026-10-21T21:38:08.209739+00:00",
+      "http_status": 200,
+      "final_url": "https://airgpu.com/",
+      "response_bytes": 28750,
+      "response_sha256": "3455a7e4b053e7ffdfff46def3184a4de1058c08634ee7c905d23c0820064319",
+      "finding": "A10G anunciado 8 vCPU/32 GB a USD 1.05/h; almacenamiento USD 3.50/50 GB-mes. Faltan confirmaciones de Windows, VRAM asignada, salida y API de ciclo de vida."
+    },
+    {
+      "id": "airgpu_help",
+      "requested_url": "https://help.airgpu.com/",
+      "retrieved_at_utc": "2026-10-21T21:38:08.210364+00:00",
+      "http_status": 200,
+      "final_url": "https://help.airgpu.com/",
+      "response_bytes": 13843,
+      "response_sha256": "df9aaba4a51b70be84a4943cf03041e478cb16d8ecb855cca0f73eb19b33baf5",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_disks_eastus",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27",
+      "retrieved_at_utc": "2026-10-21T21:38:08.210787+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27",
+      "response_bytes": 45760,
+      "response_sha256": "5badec666d1dfc25b79a767e69f34e9728610b971666d8229badb14dc7154497",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_premium_eastus",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Premium%20SSD%20Managed%20Disks%27",
+      "retrieved_at_utc": "2026-10-21T21:38:08.211189+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Premium%20SSD%20Managed%20Disks%27",
+      "response_bytes": 39557,
+      "response_sha256": "7b7213b295f8ba92d2fec9cbdc058ed0ffee7b24d9da3e4021f4f508637efa02",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_ip",
+      "requested_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Network%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27IP%20Addresses%27",
+      "retrieved_at_utc": "2026-10-21T21:38:08.211597+00:00",
+      "http_status": 200,
+      "final_url": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Network%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27IP%20Addresses%27",
+      "response_bytes": 4536,
+      "response_sha256": "6e876acd51996cfce995957074811f3359f4c05e065130f85e8810c54d20e9ba",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_shutdown",
+      "requested_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing",
+      "retrieved_at_utc": "2026-10-21T21:38:08.212384+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing",
+      "response_bytes": 55364,
+      "response_sha256": "b3252adfc12457d87a0154341303d9eb07d0c4c7b391a0d981a5229ffeb1c860",
+      "finding": "Stopped/Allocated puede facturar cómputo; deallocate es la operación que libera la asignación. Discos persistentes siguen cobrando."
+    },
+    {
+      "id": "vagon_help",
+      "requested_url": "https://docs.vagon.io/computer",
+      "retrieved_at_utc": "2026-10-21T21:38:08.217719+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.vagon.io/computer",
+      "response_bytes": 428698,
+      "response_sha256": "a6be6f9551df7b687bc11fb20d4ee25b4fe430ce1fb91a2fefaa32d6ffd5c4af",
+      "finding": "Computer se ofrece como Windows aislado persistente con aplicaciones instalables; confirmar administración, derechos y región antes de pagar."
+    },
+    {
+      "id": "vagon_os",
+      "requested_url": "https://vagon.io/computer",
+      "retrieved_at_utc": "2026-10-21T21:38:08.219709+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "paperspace_windows",
+      "requested_url": "https://docs.digitalocean.com/products/paperspace/machines/details/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:38:08.301488+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.digitalocean.com/products/paperspace/machines/details/pricing/",
+      "response_bytes": 41307,
+      "response_sha256": "f5c1c8cefff6b7ba945ab3fa96228b25371f87af376dc27adaf4206b37f4c42b",
+      "finding": "Documentación pública contempla máquinas Windows/Linux y almacenamiento persistente; no garantiza disponibilidad ni GPU/OS particular."
+    },
+    {
+      "id": "epic_eula",
+      "requested_url": "https://www.unrealengine.com/en-US/eula/unreal",
+      "retrieved_at_utc": "2026-10-21T21:38:08.307089+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 403
+    },
+    {
+      "id": "epic_faq",
+      "requested_url": "https://www.unrealengine.com/en-US/faq",
+      "retrieved_at_utc": "2026-10-21T21:38:08.329759+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 403
+    },
+    {
+      "id": "aws_dcv_price",
+      "requested_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "retrieved_at_utc": "2026-10-21T21:38:08.331191+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "response_bytes": 24141,
+      "response_sha256": "fe85468e1c3bd2096ff783ec4e11b2c31a61507597a2d4336bfb3b6f565991e9",
+      "finding": "DCV en EC2 no tiene cargo separado por licencia DCV; esto no resuelve derechos Microsoft de acceso gráfico."
+    },
+    {
+      "id": "aws_scheduler",
+      "requested_url": "https://aws.amazon.com/eventbridge/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:38:08.336163+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/eventbridge/pricing/",
+      "response_bytes": 353159,
+      "response_sha256": "1ba69f64414e62b17fa7fb3e7f46b75ccc89ae47056e0be357900fcc69aed20a",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "airgpu_terms",
+      "requested_url": "https://airgpu.com/",
+      "retrieved_at_utc": "2026-10-21T21:43:56.115652+00:00",
+      "http_status": 200,
+      "final_url": "https://airgpu.com/",
+      "response_bytes": 28750,
+      "response_sha256": "3455a7e4b053e7ffdfff46def3184a4de1058c08634ee7c905d23c0820064319",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "vagon_api_info",
+      "requested_url": "https://docs.vagon.io/streams",
+      "retrieved_at_utc": "2026-10-21T21:43:56.116327+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.vagon.io/streams",
+      "response_bytes": 475868,
+      "response_sha256": "d0083a48abb28555e4e1d5645642f55a49c26cabff5c1212d681eed21164facc",
+      "finding": "Streams no debe confundirse con Computer. Sin control de ciclo de vida confirmado para Computer."
+    },
+    {
+      "id": "vagon_win",
+      "requested_url": "https://docs.vagon.io/computer",
+      "retrieved_at_utc": "2026-10-21T21:43:56.116852+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.vagon.io/computer",
+      "response_bytes": 428698,
+      "response_sha256": "a6be6f9551df7b687bc11fb20d4ee25b4fe430ce1fb91a2fefaa32d6ffd5c4af",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_license",
+      "requested_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "retrieved_at_utc": "2026-10-21T21:43:56.117324+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "response_bytes": 24141,
+      "response_sha256": "fe85468e1c3bd2096ff783ec4e11b2c31a61507597a2d4336bfb3b6f565991e9",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_dto_rates",
+      "requested_url": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-os-license/us-east-1/index.json",
+      "retrieved_at_utc": "2026-10-21T21:43:56.117945+00:00",
+      "error": "HTTP Error 404: Not Found",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 404
+    },
+    {
+      "id": "epic_royalty",
+      "requested_url": "https://www.unrealengine.com/en-US/release",
+      "retrieved_at_utc": "2026-10-21T21:43:56.122942+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión.",
+      "http_status": 403
+    },
+    {
+      "id": "github_autologon",
+      "requested_url": "https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/configure-the-application",
+      "retrieved_at_utc": "2026-10-21T21:43:56.123788+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/configure-the-application",
+      "response_bytes": 323473,
+      "response_sha256": "334124ebfb57400b9756795e24c6bb71dd8d2dd7cf197218dbca79101537e331",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "windows_autologon",
+      "requested_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autologon",
+      "retrieved_at_utc": "2026-10-21T21:43:56.125924+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autologon",
+      "response_bytes": 38656,
+      "response_sha256": "1ab08704f288303d04ff9bdd323523da90be13a2e63c101751b531475702d95f",
+      "finding": "Autologon guarda secreto LSA recuperable por administradores; no constituye autenticación sin secreto."
+    },
+    {
+      "id": "dcv_microsoft_licensing",
+      "requested_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "retrieved_at_utc": "2026-10-21T21:47:39.703477+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html",
+      "response_bytes": 24141,
+      "response_sha256": "fe85468e1c3bd2096ff783ec4e11b2c31a61507597a2d4336bfb3b6f565991e9",
+      "finding": "AWS documenta RDS CAL adicional para cada usuario que accede remotamente a GUI Windows Server, independientemente del protocolo. No se verificó precio ni derecho concreto de esta cuenta."
+    },
+    {
+      "id": "aws_rds_sal_pricing",
+      "requested_url": "https://aws.amazon.com/license-manager/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:47:39.704113+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/license-manager/pricing/",
+      "response_bytes": 346151,
+      "response_sha256": "a6be90044d5332d985ec734ffa774ec700e40c0aa65e5ceefd77e608e575a0de",
+      "finding": "No se obtuvo una cotización completa de derechos RDS utilizable por esta cuenta; costo desconocido, no cero."
+    },
+    {
+      "id": "aws_rds_sal_requirements",
+      "requested_url": "https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html",
+      "retrieved_at_utc": "2026-10-21T21:47:39.704561+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html",
+      "response_bytes": 76461,
+      "response_sha256": "63c8cd34c8bcc9bbfb732860a5f95d8a428cee77222d59686777c4e27557822a",
+      "finding": "La vía License Manager User-based Subscriptions tiene requisitos de Active Directory. No se incluye ni aprovisiona ese servicio automáticamente."
+    },
+    {
+      "id": "aws_public_service_index",
+      "requested_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json",
+      "retrieved_at_utc": "2026-10-21T21:47:39.705176+00:00",
+      "http_status": 200,
+      "final_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json",
+      "response_bytes": 90629,
+      "response_sha256": "9691bed4d20629f03b97317acc7a7e57c0574996a81970b86cd1838945963247",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_data_transfer_catalog",
+      "requested_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+      "retrieved_at_utc": "2026-10-21T21:47:39.705552+00:00",
+      "http_status": 200,
+      "final_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+      "error": "Response exceeds research size cap",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "vagon_windows_licensing",
+      "requested_url": "https://docs.vagon.io/computer/troubleshooting/subscription-and-pricing",
+      "retrieved_at_utc": "2026-10-21T21:47:39.706315+00:00",
+      "http_status": 200,
+      "final_url": "https://docs.vagon.io/computer/troubleshooting/subscription-and-pricing",
+      "response_bytes": 460771,
+      "response_sha256": "ea3247b5a9ffd8d8aad16067f17b366ed0039d2c40ee760168f2b4ed313de936",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "azure_premium_specs",
+      "requested_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types",
+      "retrieved_at_utc": "2026-10-21T21:47:39.708125+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types",
+      "response_bytes": 91985,
+      "response_sha256": "1418f4c738d283c8aba0795b9c74b6d9e645127c82ac6df378f10c401cd2073a",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_secrets_pricing",
+      "requested_url": "https://aws.amazon.com/secrets-manager/pricing/",
+      "retrieved_at_utc": "2026-10-21T21:47:39.711742+00:00",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/secrets-manager/pricing/",
+      "response_bytes": 355246,
+      "response_sha256": "6bdbe691f621179c16cbfd68f22d9382e56ef299b885d010f98dbca633a9052f",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_data_transfer_catalog",
+      "requested_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json",
+      "retrieved_at_utc": "2026-10-21T21:52:01.110684+00:00",
+      "http_status": 200,
+      "final_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json",
+      "response_bytes": 1468865,
+      "response_sha256": "00f81657d01946d02c905e32ca87cc6c23720b5de079b90fef5775243abcee80",
+      "finding": "Consulta auxiliar; no constituye cotización ni permiso de provisión."
+    },
+    {
+      "id": "aws_ec2_regional_csv",
+      "requested_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
+      "retrieved_at_utc": "2026-10-21T21:43:56.743304+00:00",
+      "http_status": 200,
+      "finding": "Registros OnDemand Windows operación RunInstances:0002, sin SQL, Shared; gp3 GB-Mo. Filtro y registros en aws_catalog.py y aws-catalog.json."
+    }
+  ]
+}

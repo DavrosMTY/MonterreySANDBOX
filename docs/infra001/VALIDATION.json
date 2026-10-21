@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-21T22:02:36.179574+00:00",
+  "scope": "INFRA001 documentation/pricing checks; not engine execution",
+  "checks": [
+    "Six monthly base totals recomputed with Decimal; unknown licensing remains null",
+    "AWS Windows operation/OnDemand/SKU rates and gp3 match selected official records",
+    "Azure non-Spot Windows Consumption, disk capacity meters and IPv4 match API records",
+    "Ordinary AWS Internet tier and all streaming sensitivity amounts verified",
+    "PoC six-hour/first-month arithmetic verified; authorization false",
+    "11 relative documentation links resolve",
+    "All delivery JSON files parse"
+  ],
+  "cloud_resources_created": false,
+  "paid_services_started": false,
+  "unreal_installed": false,
+  "unreal_executed": false,
+  "engine_validation": {
+    "C": "blocked_no_engine",
+    "D": "blocked_no_engine",
+    "E": "blocked_no_engine"
+  },
+  "approved_poc": false
+}
