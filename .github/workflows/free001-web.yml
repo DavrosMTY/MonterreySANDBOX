@@ -74,29 +74,9 @@ jobs:
           Path('artifacts/free001-site/evidence/hosting.json').write_text(json.dumps({'checked_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'records':records},indent=2))
           print(json.dumps(records,indent=2))
           PY
+      - name: Record Pages activation result before publication
+        if: github.event_name == 'push'
+        run: python tools/configure_free_pages.py
       - name: Publish only generated small assets on isolated hosting branch
         if: github.event_name == 'push'
         run: python tools/publish_web_viewer.py --site artifacts/free001-site
-      - name: Enable/request free Pages build using permitted repository token
-        if: github.event_name == 'push'
-        run: |
-          python - <<'PY'
-          import json,os,subprocess
-          from pathlib import Path
-          repo='repos/'+os.environ['GITHUB_REPOSITORY']
-          def api(path,body=None):
-              args=['gh','api',repo+path]
-              if body is not None:args+=['--method','POST','--input','-']
-              return subprocess.run(args,input=json.dumps(body) if body is not None else None,text=True,capture_output=True)
-          current=api('/pages')
-          if current.returncode:
-              current=api('/pages',{'source':{'branch':'gh-pages','path':'/'},'build_type':'legacy'})
-          print(current.stdout or current.stderr)
-          if current.returncode:
-              print('Pages activation blocked by repository permission; real viewer remains preserved on gh-pages. No paid fallback.')
-          else:
-              build=api('/pages/builds',{})
-              print(build.stdout or build.stderr)
-              if build.returncode:raise SystemExit(build.returncode)
-          Path('artifacts/pages-result.json').write_text(json.dumps({'activation_code':current.returncode,'stdout':current.stdout,'stderr':current.stderr},indent=2))
-          PY
