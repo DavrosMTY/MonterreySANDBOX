@@ -13,19 +13,14 @@ import re
 import urllib.request
 
 URLS={
- 'airgpu_home':'https://airgpu.com/',
- 'airgpu_help':'https://help.airgpu.com/',
- 'azure_disks_eastus':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27',
- 'azure_premium_eastus':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Premium%20SSD%20Managed%20Disks%27',
- 'azure_ip':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Network%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27IP%20Addresses%27',
- 'azure_shutdown':'https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing',
- 'vagon_help':'https://docs.vagon.io/computer',
- 'vagon_os':'https://vagon.io/computer',
- 'paperspace_windows':'https://docs.digitalocean.com/products/paperspace/machines/details/pricing/',
- 'epic_eula':'https://www.unrealengine.com/en-US/eula/unreal',
- 'epic_faq':'https://www.unrealengine.com/en-US/faq',
- 'aws_dcv_price':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
- 'aws_scheduler':'https://aws.amazon.com/eventbridge/pricing/'
+ 'airgpu_terms':'https://airgpu.com/',
+ 'vagon_api_info':'https://docs.vagon.io/streams',
+ 'vagon_win':'https://docs.vagon.io/computer',
+ 'aws_license':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
+ 'aws_dto_rates':'https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-os-license/us-east-1/index.json',
+ 'epic_royalty':'https://www.unrealengine.com/en-US/release',
+ 'github_autologon':'https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/configure-the-application',
+ 'windows_autologon':'https://learn.microsoft.com/en-us/sysinternals/downloads/autologon'
 }
 
 
@@ -70,7 +65,9 @@ def fetch(item):
    selected=set()
    for i,line in enumerate(lines):
     if re.search(keywords,line,re.I):selected.update(range(max(0,i-2),min(len(lines),i+4)))
-   record['text_excerpt']=' '.join((' '.join(lines[i] for i in sorted(selected))).split()[:80])
+   relevant=[line for line in lines if re.search(r'Windows Server|license|licensing|session 0|API|50.?GB|100.?GB|3.50|traffic|transfer|shutdown|stop|billing|EC2|AppStream',line,re.I)]
+   record['text_excerpt']=' '.join((' '.join(relevant)).split()[:85])
+   record['links']=[{'url':link,'label':label[:80]} for link,label in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>([^<]{0,80})',value) if any(word in (link+' '+label).lower() for word in ('pricing','license','admin','api','software','shutdown','windows'))][:25]
    numeric=re.compile(r'\$|GB|TB|VRAM|vCPU|cores|A10|T4|RTX|P5000|P6000|g4dn|g5\.|NV12',re.I)
    record['fact_rows']=[{'line':i,'fact_tokens':re.findall(r'\$?\d+(?:[.,]\d+)?(?:/hour|/hr|/month)?|GB|TB|VRAM|vCPU|cores|A10G?|T4|RTX\d*|P5000|P6000|g4dn\.[A-Za-z0-9]+|NV12ads_A10_v5',line,re.I)} for i,line in enumerate(lines) if numeric.search(line)][:250]
 
@@ -80,7 +77,7 @@ def fetch(item):
 
 def main():
  with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:records=list(pool.map(fetch,URLS.items()))
- out=Path(__file__).with_name('supplement.json')
+ out=Path(__file__).with_name('conditions.json')
  out.write_text(json.dumps({'collected_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'method':'Unauthenticated official public URLs, read-only, no provisioning','records':records},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({r['id']:{'status':r.get('http_status'),'error':r.get('error'),'bytes':r.get('response_bytes')} for r in records},indent=2))
 

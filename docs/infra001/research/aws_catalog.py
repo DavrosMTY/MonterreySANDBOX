@@ -17,7 +17,7 @@ def main():
    for i,row in enumerate(rows):
     if row.get('TermType')!='OnDemand':continue
     instance=row.get('Instance Type')
-    wanted=instance in ('g4dn.2xlarge','g4dn.4xlarge','g5.2xlarge') and row.get('Operating System')=='Windows' and row.get('Tenancy')=='Shared' and row.get('Pre Installed S/W')=='NA' and row.get('CapacityStatus')=='Used'
+    wanted=instance in ('g4dn.2xlarge','g4dn.4xlarge','g5.2xlarge') and row.get('Operating System')=='Windows' and row.get('Tenancy')=='Shared' and row.get('Pre Installed S/W')=='NA' and row.get('CapacityStatus')=='Used' and row.get('operation')=='RunInstances:0002'
     storage=row.get('Volume API Name')=='gp3' and row.get('Unit')=='GB-Mo' and row.get('Location')=='US East (N. Virginia)'
     if wanted or storage:
      result['records'].append({k:v for k,v in row.items() if v})
