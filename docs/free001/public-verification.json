@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "tested_url": "https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/dd44f8e0a6eccf8be3362685a2ab847758fb38bb/index.html",
+  "error": "TimeoutError: page.waitForFunction: Timeout 60000ms exceeded.",
+  "stack": "page.waitForFunction: Timeout 60000ms exceeded.\n    at /home/runner/work/MonterreySANDBOX/MonterreySANDBOX/WebViewer/tests/browser.mjs:32:14",
+  "entry_title": "External Content Notice | rawgit.hack",
+  "entry_text": " rawgit.hack\nStatus Source code Report abuse\nSecure humans, AI agents, & whatever is next\nAuth0 provides a secure, reliable, and scalable identity foundation, so you can focus on building what's next.\nads via Carbon\n\nOne more step\nThis HTML page is hosted on raw.githubusercontent.com and proxied as-is.\nrawgit.hack does not review third-party content.\n\nYou're going to open: \nOpen the page\nGo to hom",
+  "browser_errors": [],
+  "requests": [
+    "https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/dd44f8e0a6eccf8be3362685a2ab847758fb38bb/index.html",
+    "https://cdn.carbonads.com/carbon.js?serve=CEADPK3U&placement=rawgithackcom&format=responsive",
+    "https://srv.carbonads.net/ads/CEADPK3U.json?segment=placement:rawgithackcom&v=true",
+    "https://rawcdn.githack.com/neoascetic/rawgithack/2358462/web/internal/sushi.svg",
+    "https://srv.carbonads.net/static/30242/fb5f765448d0433a63a5d74bab7c862cddd061cc",
+    "https://srv.carbonads.net/static/30242/2225443300037de2b6936e88f489d946d41150f7",
+    "https://srv.carbonads.net/ads/viewable/x/GTND4277CVSDVKQJCAALYKQUF67DT53EC6SI6Z3JCAAI6KQ7CABDK2QKCWSI52JEF6AIEK3ECK7DE2QUCVSDE27KC6SILKJNCVYDTK3EHJSCL7ZUKHJCY7V?segment=placement:rawgithackcom"
+  ],
+  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39687768846",
+  "free_service_sources": [
+    {
+      "url": "https://raw.githack.com",
+      "http_status": 200,
+      "sha256": "117f1e9c13dac05a0f96a05bafe84ada2b747649376bbbc24b0cffc6e848a09a",
+      "findings": [
+        "100% uptime? rawgit.hack is a free service with no formal uptime or support guarantees \u2014 network issues and the occasional outage are real possibilities. That said, URLs are backed by Cloudflare's glo",
+        "t.hack is a free service with no formal uptime or support guarantees \u2014 network issues and the occasional outage are real possibilities. That said, URLs are backed by Cloudflare's global cache, so even",
+        "r in how long they're cached. Development URLs are cached for a short time, so changes in your repo show up within minutes. They're designed for local testing and demos where you need fresh content. I",
+        "lopment URLs, permanently for CDN URLs. The result is quick and easy static file hosting right from a repo. How are HTML files handled? rawgit.hack serves HTML as-is, without any filtering. This has b"
+      ]
+    },
+    {
+      "url": "https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#create-a-github-pages-site",
+      "http_status": 200,
+      "sha256": "7b0f352efd60b2b4759f3a9aa26f6c53391dba4961745c66c717cbd2aeaf27cb",
+      "findings": [
+        "permissions (write) and &quot;Administration&quot; repository permissions (write) Parameters for &quot;Create a GitHub Pages site&quot; Headers Name, Type, Description accept string Setting to applica",
+        "llowing permission set: &quot;Pages&quot; repository permissions (read) This endpoint can be used without authentication or the aforementioned permissions if only public resources are requested. Param",
+        "quot; repository permissions (write) and &quot;Administration&quot; repository permissions (write) Parameters for &quot;Create a GitHub Pages site&quot; Headers Name, Type, Description accept string S"
+      ]
+    }
+  ],
+  "pages_not_enabled": true
+}
