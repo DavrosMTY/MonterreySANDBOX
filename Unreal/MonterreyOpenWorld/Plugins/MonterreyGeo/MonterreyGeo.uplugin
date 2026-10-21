@@ -1,0 +1,10 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "GEO-002",
+  "FriendlyName": "Monterrey Geospatial Editor Tools",
+  "Description": "Editor-only Landscape and georeference validation bridge. Target UE 5.6; not compiled in cloud.",
+  "Category": "Editor",
+  "CanContainContent": false,
+  "Modules": [{"Name": "MonterreyGeoEditor", "Type": "Editor", "LoadingPhase": "Default"}]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "landscape_proxy",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Landscape/ALandscapeProxy/Import?application_version=5.6",
+    "sha256": "8217f4519bf9bc19fe557a005569c769bc410c5396da00e557e02138b2a0e73a",
+    "bytes": 74910,
+    "text_bytes": 5141,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "wp",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine?application_version=5.6",
+    "sha256": "fbba3f33379f65874e86d6b9277eeb5533e3271b79a0fbfdf695a45995fcee8e",
+    "bytes": 275591,
+    "text_bytes": 19746,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "asset_import",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/AssetImportTask?application_version=5.6",
+    "sha256": "5643b5c27166e04616d3ab7e5a61f532b68cba1bd2a65dc0a9ddee60dbfbd503",
+    "bytes": 28637,
+    "text_bytes": 4083,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "nanite",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-virtualized-geometry-in-unreal-engine?application_version=5.6",
+    "sha256": "22e9f0c26f2f94bb87e6fc3d303160486985d33f04f9edeacd7461b643f937c8",
+    "bytes": 564424,
+    "text_bytes": 60773,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "pcg",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/procedural-content-generation-overview?application_version=5.6",
+    "sha256": "e366212aacc4c7900c20c65aa2504a9634738aa90ac0aed2c4f4db5041e8788e",
+    "bytes": 366035,
+    "text_bytes": 22250,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "hlod",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition---hierarchical-level-of-detail-in-unreal-engine?application_version=5.6",
+    "sha256": "d4386ab7c5bf2d08a96b53accfb53751314e0ba3eab643e831b40447ed2141dd",
+    "bytes": 102186,
+    "text_bytes": 14575,
+    "reviewed_on": "2026-10-20"
+  },
+  {
+    "name": "lumen",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine?application_version=5.6",
+    "sha256": "07f74f92c4356996c67cee03e55238a6eeb73e929a08b0c5c1f2eddc062fb3c6",
+    "bytes": 211867,
+    "text_bytes": 16791,
+    "reviewed_on": "2026-10-20"
+  }
+]

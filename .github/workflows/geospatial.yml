@@ -1,0 +1,44 @@
+name: Geospatial and procedural 3D pipeline (no Unreal build)
+on:
+  push:
+    branches: [development, main, 'feature/**', 'fix/**']
+  pull_request:
+    branches: [main, development]
+  workflow_dispatch:
+    inputs:
+      artifact_quota_verified:
+        description: 'Enable artifact upload only after independently checking account storage quota'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  geo:
+    if: ${{ !github.event.repository.private }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --no-cache-dir -r requirements.lock.txt
+      - run: python -m pip check
+      - run: python tools/check_publication.py
+      - run: python -m pytest -q --junitxml=artifacts/tests.xml
+      - run: python -m GeoPipeline.geo001 --demo --output artifacts/terrain
+      - run: python -m GeoPipeline.validate artifacts/terrain
+      - run: python -m GeoPipeline.urban --osm tests/fixtures/synthetic_urban.json --output artifacts/urban
+      - run: python -m GeoPipeline.city --terrain artifacts/terrain --urban artifacts/urban --output artifacts/city
+      - run: python -m GeoPipeline.qa3d artifacts/city --output artifacts/city-qa.json
+      - run: python -m GeoPipeline.world --terrain artifacts/terrain --urban artifacts/urban --output artifacts/world001
+      - run: python -m GeoPipeline.qa3d artifacts/world001 --output artifacts/world001-export-qa.json
+      - run: python -m GeoPipeline.qa_world --city artifacts/world001 --terrain artifacts/terrain --urban artifacts/urban --output artifacts/world001-qa.json
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && inputs.artifact_quota_verified }}
+        with:
+          name: geo-validation-${{ matrix.os }}
+          path: artifacts/
+          retention-days: 3

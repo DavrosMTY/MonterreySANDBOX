@@ -1,0 +1,27 @@
+{
+  "file": "/workspace/MonterreySANDBOX/artifacts/MonterreyOpenWorld_GEO003_WORLD001.zip",
+  "bytes": 68820979,
+  "entries": 941,
+  "sha256": "ee5e358d0d828bea44950ad0ea8483e36bf36ec0f394d9d6f38abacfaa2de80a",
+  "all_file_hashes_verified": true,
+  "extracted_copy_verification": {
+    "tests_passed": 72,
+    "tests_failed": 0,
+    "geometry_qa": {
+      "status": "passed",
+      "glb_nodes_verified": 2673,
+      "closed_solids_verified": 2609,
+      "triangles_verified": 1077198,
+      "obj_cells_read_back": 407,
+      "max_coordinate_roundtrip_error_m": 3.784179739341198e-06,
+      "elapsed_seconds": 8.646118319999914,
+      "engine_import_verified": false,
+      "limits": [
+        "Does not certify survey accuracy, ground datum alignment, or physical collision of all mesh pairs",
+        "Terrain is intentionally an open sampled surface; other parts are closed solids after position welding"
+      ]
+    },
+    "world_qa_status": "offline_world_audit_completed",
+    "scope": "Same Linux machine, separate extracted directory, existing pinned Python environment; no Windows/UE/fresh-task execution"
+  }
+}

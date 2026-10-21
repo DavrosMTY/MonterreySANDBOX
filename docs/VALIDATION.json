@@ -1,0 +1,109 @@
+{
+  "generated_at_utc": "2026-10-20T20:17:24.084136+00:00",
+  "run_directory": "artifacts/geo001_1-19zk9t3x",
+  "local_pipeline_status": "passed",
+  "test_counts": {
+    "tests": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "commands": [
+    {
+      "name": "pytest",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "export-single",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "validate-single",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "export-tiles",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "validate-tiles",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "urban",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "unreal",
+      "exit_code": 2,
+      "required": false
+    },
+    {
+      "name": "export-real",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "validate-real",
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "name": "urban-real",
+      "exit_code": 0,
+      "required": true
+    }
+  ],
+  "real_terrain_produced": true,
+  "real_osm_processed": true,
+  "unreal": {
+    "host_platform": "Linux",
+    "target_platform": "Windows PC",
+    "editor": null,
+    "project_descriptor_valid_json": true,
+    "engine_executed": false,
+    "project_compiled": false,
+    "landscape_import_verified": false,
+    "status": "blocked_no_unreal_editor",
+    "next_requirement": "Licensed UE5 editor and Windows build environment for target validation"
+  },
+  "ci_windows_executed": false,
+  "published_or_pushed": false,
+  "real_pilot": {
+    "single": {
+      "tiles_verified": 1,
+      "shared_borders_verified": 0,
+      "synthetic": false,
+      "engine_import_verified": false,
+      "status": "passed"
+    },
+    "tiles": {
+      "tiles_verified": 4,
+      "shared_borders_verified": 4,
+      "synthetic": false,
+      "engine_import_verified": false,
+      "status": "passed"
+    },
+    "urban_directory": "Data/urban/monterrey_centro_v3",
+    "road_segments": 2665,
+    "graph_nodes": 1903,
+    "directed_edges": 4194,
+    "buildings": 1136,
+    "skipped": {},
+    "buildings_with_metric_height": 4,
+    "osm_timestamp": "2026-10-20T20:08:43Z"
+  },
+  "configuration_saved_fields": [
+    "install_script",
+    "start_skill",
+    "network.allowed_domains"
+  ],
+  "environment_published": false,
+  "new_task_restoration_validated": false
+}

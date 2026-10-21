@@ -1,0 +1,146 @@
+{
+  "source_commit": "3f5c050a07c622262ad4f54a66c8063e733b9a20",
+  "assets_downloaded": 11,
+  "payload_files": [
+    {
+      "file": "DATA_LICENSES.md",
+      "bytes": 2069,
+      "sha256": "72fb391f31e4d8345aed0b00fd3e77ea140a93aac657765ff7f779dd6a3c82f2",
+      "match": true
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO001_pilot.zip",
+      "bytes": 2371996,
+      "sha256": "5d172926d364fd8838c18488e82ad7f9e5c06fbe252fe9e99c13482b129990b7",
+      "match": true
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO002.zip",
+      "bytes": 56291729,
+      "sha256": "1c3262a3462e898056e52be3e8b73f4e55d05dc94535b999bb42de7e43f9c853",
+      "match": true
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO003_WORLD001.zip",
+      "bytes": 69133118,
+      "sha256": "9ddc39d80f91b86794629f24b836c74ae64defdfb1f0729143750fbf566def4e",
+      "match": true
+    },
+    {
+      "file": "Monterrey_WORLD001.blend",
+      "bytes": 20801305,
+      "sha256": "ba8fc8ccd73e855fce434dd769572d1b6d82daa63da9dab498c309db22523c77",
+      "match": true
+    },
+    {
+      "file": "Monterrey_WORLD001.glb",
+      "bytes": 24161568,
+      "sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+      "match": true
+    },
+    {
+      "file": "WORLD001_aerial.png",
+      "bytes": 1368819,
+      "sha256": "69e7f3d39a6e67088a92f88c35b772b022a7c2cf1dab98901ea68fcaca2e9c60",
+      "match": true
+    },
+    {
+      "file": "WORLD001_bridge.png",
+      "bytes": 1411480,
+      "sha256": "31dd1045ac478e31902527703596e3d9812cb1340b06c2d20fb80f96fe658e22",
+      "match": true
+    },
+    {
+      "file": "WORLD001_street.png",
+      "bytes": 1895085,
+      "sha256": "825fc0f904b766b19c3979c7c11d8374d4b0ea74c65a1eb3363189ca4a5cb3f8",
+      "match": true
+    }
+  ],
+  "all_hashes_match": true,
+  "zip_integrity": "pass",
+  "total_downloaded_bytes": 177450136,
+  "assets": [
+    {
+      "file": "DATA_LICENSES.md",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/DATA_LICENSES.md",
+      "anonymous_status": 200,
+      "bytes": 2069,
+      "sha256": "72fb391f31e4d8345aed0b00fd3e77ea140a93aac657765ff7f779dd6a3c82f2"
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO001_pilot.zip",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/MonterreyOpenWorld_GEO001_pilot.zip",
+      "anonymous_status": 200,
+      "bytes": 2371996,
+      "sha256": "5d172926d364fd8838c18488e82ad7f9e5c06fbe252fe9e99c13482b129990b7"
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO002.zip",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/MonterreyOpenWorld_GEO002.zip",
+      "anonymous_status": 200,
+      "bytes": 56291729,
+      "sha256": "1c3262a3462e898056e52be3e8b73f4e55d05dc94535b999bb42de7e43f9c853"
+    },
+    {
+      "file": "MonterreyOpenWorld_GEO003_WORLD001.zip",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/MonterreyOpenWorld_GEO003_WORLD001.zip",
+      "anonymous_status": 200,
+      "bytes": 69133118,
+      "sha256": "9ddc39d80f91b86794629f24b836c74ae64defdfb1f0729143750fbf566def4e"
+    },
+    {
+      "file": "Monterrey_WORLD001.blend",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/Monterrey_WORLD001.blend",
+      "anonymous_status": 200,
+      "bytes": 20801305,
+      "sha256": "ba8fc8ccd73e855fce434dd769572d1b6d82daa63da9dab498c309db22523c77"
+    },
+    {
+      "file": "Monterrey_WORLD001.glb",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/Monterrey_WORLD001.glb",
+      "anonymous_status": 200,
+      "bytes": 24161568,
+      "sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/SHA256SUMS.txt",
+      "anonymous_status": 200,
+      "bytes": 824,
+      "sha256": "4ededb6388eab457e165f509a7373611b7873aaaae1531e994cd750e88b3317e"
+    },
+    {
+      "file": "WORLD001_aerial.png",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/WORLD001_aerial.png",
+      "anonymous_status": 200,
+      "bytes": 1368819,
+      "sha256": "69e7f3d39a6e67088a92f88c35b772b022a7c2cf1dab98901ea68fcaca2e9c60"
+    },
+    {
+      "file": "WORLD001_bridge.png",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/WORLD001_bridge.png",
+      "anonymous_status": 200,
+      "bytes": 1411480,
+      "sha256": "31dd1045ac478e31902527703596e3d9812cb1340b06c2d20fb80f96fe658e22"
+    },
+    {
+      "file": "WORLD001_street.png",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/WORLD001_street.png",
+      "anonymous_status": 200,
+      "bytes": 1895085,
+      "sha256": "825fc0f904b766b19c3979c7c11d8374d4b0ea74c65a1eb3363189ca4a5cb3f8"
+    },
+    {
+      "file": "release-manifest.json",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo003-world001-3f5c050a07c6/release-manifest.json",
+      "anonymous_status": 200,
+      "bytes": 12143,
+      "sha256": "2d3ee412f81dcc2dd7daa8abaaf635adf363d77da2c5b46be2ed326af196fe0d"
+    }
+  ],
+  "checked_at_utc": "2026-10-21T20:35:12.491382+00:00",
+  "release_url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo003-world001-3f5c050a07c6",
+  "pull_request_url": "https://github.com/DavrosMTY/MonterreySANDBOX/pull/1",
+  "all_assets_anonymously_accessible": true
+}

@@ -1,0 +1,162 @@
+{
+  "status": "offline_acceptance_passed_with_world_refinement_required",
+  "generated_at_utc": "2026-10-20T21:40:55.014551+00:00",
+  "unreal_executed": false,
+  "windows_build": false,
+  "full_world_drivable_certified": false,
+  "steps": [
+    {
+      "name": "tests",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "exports",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "world",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "routes",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "name": "unreal",
+      "exit_code": 2,
+      "allowed_exit_codes": [
+        0,
+        2
+      ]
+    }
+  ],
+  "tests": {
+    "tests": 72,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "model_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+  "city_directory": "/workspace/MonterreySANDBOX/Data/city/geo003_world001",
+  "renders_directory": "/workspace/MonterreySANDBOX/artifacts/geo003_renders",
+  "unreal": {
+    "status": "blocked",
+    "editor_executed": false,
+    "native_module_compiled": false,
+    "landscape_imported": false,
+    "world_partition_validated": false,
+    "hlod_built": false,
+    "reason": "A licensed Windows UE5.6 editor and C++ build toolchain are required; unavailable here"
+  },
+  "motorized_roads_requiring_refinement": 97,
+  "road_readiness_counts": {
+    "offline_geometry_candidate": 2267,
+    "requires_refinement": 398
+  },
+  "remaining": "See per-road QA and diagnosis. Offline candidate is not runtime traversal approval.",
+  "export_qa": {
+    "status": "passed",
+    "glb_nodes_verified": 2673,
+    "closed_solids_verified": 2609,
+    "triangles_verified": 1077198,
+    "obj_cells_read_back": 407,
+    "max_coordinate_roundtrip_error_m": 3.784179739341198e-06,
+    "elapsed_seconds": 5.616344074999688,
+    "engine_import_verified": false,
+    "limits": [
+      "Does not certify survey accuracy, ground datum alignment, or physical collision of all mesh pairs",
+      "Terrain is intentionally an open sampled surface; other parts are closed solids after position welding"
+    ]
+  },
+  "world_summary": {
+    "status": "offline_world_audit_completed",
+    "model_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+    "source_xy_max_change_m": 0.0,
+    "source_graph_edges_preserved": 4194,
+    "new_false_grade_connections": 0,
+    "shared_endpoint_max_vertical_gap_m": 0.0,
+    "profile_grade_violations": [],
+    "max_profile_grade_percent_by_highway": {
+      "residential": 12.00000000016547,
+      "pedestrian": 35.00000023345805,
+      "tertiary": 12.000000002260624,
+      "secondary": 10.000000001980096,
+      "footway": 35.0000000262056,
+      "steps": 100.00000029297713,
+      "trunk_link": 8.000000002051353,
+      "trunk": 8.00000000012296,
+      "tertiary_link": 12.000000000083952,
+      "primary": 10.000000000006445,
+      "living_street": 11.999999999999764,
+      "service": 12.000000076100662,
+      "secondary_link": 10.000000000568958,
+      "cycleway": 35.00000003837266
+    },
+    "road_readiness_counts": {
+      "offline_geometry_candidate": 2267,
+      "requires_refinement": 398
+    },
+    "road_refinement_reason_counts": {
+      "missing_centerline_surface_or_building_trim": 336,
+      "crossing_counterpart_surface_missing": 24,
+      "exported_centerline_grade_above_limit": 23,
+      "exported_surface_profile_deviation_over_8cm": 30,
+      "nominal_clearance_constraint_deficit": 2
+    },
+    "motorized_roads_requiring_refinement": 97,
+    "crossings_checked": 201,
+    "crossings_missing_surface": 15,
+    "crossings_potential_center_solid_overlap": 0,
+    "minimum_present_crossing_top_separation_m": 7.119960996473083,
+    "crossings_estimated_under_deck_clearance_below_5m": 0,
+    "terrain_correction_reconstruction_error_m": 3.0517578125e-05,
+    "terrain_over_tunnel_mask_area_m2": 0.22121561065647297,
+    "excavation_boundary_interchange_tolerance_m": 0.001,
+    "terrain_over_tunnel_mask_core_area_m2": 0.0,
+    "terrain_over_ground_road_replacement_core_area_m2": 0.0,
+    "terrain_unmatched_seam_vertices_at_mm_precision": 0,
+    "terrain_cells": 64,
+    "triangles_by_system": {
+      "Tunnels": 24364,
+      "Sidewalks": 255860,
+      "Roads": 230924,
+      "Bridges": 14180,
+      "Buildings": 20636,
+      "Landscape": 531234
+    },
+    "triangles_total": 1077198,
+    "engine_executed": false,
+    "full_world_drivable_certified": false,
+    "limits": [
+      "Samples test centerline elevations, not continuous wheel/capsule swept volumes or engineering clearance",
+      "No survey, UE collision cooking, navigation, PIE traversal or streaming benchmark executed",
+      "Walkway grade bounds do not imply accessibility; steps remain ramp approximations"
+    ]
+  },
+  "synthetic_CI_smoke": {
+    "status": "passed",
+    "platform": "Linux",
+    "evidence_directory": "/tmp/geo003-ci-gy788we0",
+    "Windows_or_remote_CI_executed": false
+  },
+  "cloud_environment_published": false,
+  "fresh_task_restore_verified": false,
+  "cloud_config_draft": {
+    "status": "saved",
+    "requires_publish": true,
+    "install_script": "unchanged tested tools/setup.sh",
+    "start_skill": "updated for WORLD001"
+  }
+}
