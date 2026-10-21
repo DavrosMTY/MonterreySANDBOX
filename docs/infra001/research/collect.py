@@ -13,14 +13,7 @@ import re
 import urllib.request
 
 URLS={
- 'dcv_microsoft_licensing':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
- 'aws_rds_sal_pricing':'https://aws.amazon.com/license-manager/pricing/',
- 'aws_rds_sal_requirements':'https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html',
- 'aws_public_service_index':'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json',
- 'aws_data_transfer_catalog':'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json',
- 'vagon_windows_licensing':'https://docs.vagon.io/computer/troubleshooting/subscription-and-pricing',
- 'azure_premium_specs':'https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types',
- 'aws_secrets_pricing':'https://aws.amazon.com/secrets-manager/pricing/'
+ 'aws_data_transfer_catalog':'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json'
 }
 
 
@@ -93,7 +86,7 @@ def fetch(item):
 
 def main():
  with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:records=list(pool.map(fetch,URLS.items()))
- out=Path(__file__).with_name('licensing.json')
+ out=Path(__file__).with_name('transfer.json')
  out.write_text(json.dumps({'collected_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'method':'Unauthenticated official public URLs, read-only, no provisioning','records':records},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({r['id']:{'status':r.get('http_status'),'error':r.get('error'),'bytes':r.get('response_bytes')} for r in records},indent=2))
 
