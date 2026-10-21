@@ -1,6 +1,6 @@
 """Idempotent PR creation and append-only Release publishing via existing gh auth.
 
-Executed by the repository's GitHub Actions runner when the cloud API is blocked.
+PR operations use authenticated direct GitHub access; Actions only publishes Releases.
 No merge, force-push, credential export or replacement of existing Release assets.
 """
 import argparse

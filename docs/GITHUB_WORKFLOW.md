@@ -44,11 +44,12 @@ renders y ZIP están ignorados en Git y se publican como Release assets.
 
 ## Automatización inicial
 
-`.github/workflows/bootstrap-sync.yml` se activa una vez al incorporar el marcador
+`.github/workflows/bootstrap-sync.yml` se activa al cambiar el marcador
 `.github/publication/bootstrap.json` en development. Sólo opera en este repositorio
-público. Sus jobs independientes intentan abrir el PR development → main y reconstruir
-los entregables desde los inputs versionados, ejecutar QA, renderizar en Blender y
-publicar una prerelease asociada al commit exacto. No fusiona el PR.
+público: reconstruye los entregables desde los inputs versionados, ejecuta QA,
+renderiza en Blender y publica una prerelease asociada al commit exacto.
+No crea ni aprueba PR. La apertura/reutilización del PR se realiza con el acceso
+directo autenticado mediante `tools/publish_github.py pr`; nunca lo fusiona.
 
 Nombre de tag: `geo003-world001-<primeros 12 caracteres del commit>`.
 El publicador rechaza reemplazar Releases existentes o sobrescribir assets. Cada
@@ -59,20 +60,18 @@ El README describe los resultados locales. Los recibos de la Release describen
 las pruebas, versiones y hashes del runner GitHub. Unreal no se instala ni ejecuta;
 los recibos permanecen explícitos sobre ese bloqueo.
 
-## Permisos y bloqueos diagnosticados
+## Permisos y política de PR
 
-Git HTTPS funciona mediante la autenticación de plataforma. La ruta API desde el
-entorno cloud devolvió CONNECT 403 del proxy; no es evidencia de token inválido.
-Se conservaron las credenciales existentes. api.github.com y uploads.github.com
-se añadieron al borrador de red, sin afirmar que guardar lo active en runtime.
+Se verificó acceso Git HTTPS y acceso directo autenticado a la API de GitHub con
+permisos de lectura y escritura. Se conservan las credenciales de plataforma;
+no se publican secretos ni se solicitan tokens en el chat.
 
-La automatización remota usa el GITHUB_TOKEN acotado de Actions, con contents:write
-para Release y pull-requests:write para PR. GitHub puede bloquear la creación de
-PR por una política del repositorio. En ese caso el job summary identifica el
-ajuste necesario: Settings → Actions → General → Allow GitHub Actions to create
-and approve pull requests. Ese permiso no autoriza fusiones; el flujo no las ejecuta.
-La publicación de workflows mediante Git también requiere el permiso Workflows
-write de la integración si GitHub lo restringe; se informa cualquier rechazo real.
+El intento inicial de PR mediante GITHUB_TOKEN fue rechazado por la política de
+Actions. El propietario ha decidido mantener esa restricción. No se cambia el
+ajuste “Allow GitHub Actions to create and approve pull requests”, y el workflow
+de publicación ya no contiene un job de creación de PR. Las operaciones de PR usan
+la integración directa autorizada; las Releases usan contents:write en Actions.
 
-No se publican secretos ni se solicitan tokens en el chat. Un bloqueo se reporta
-con la operación y el permiso exacto; los pasos independientes continúan.
+Si una operación futura se bloquea, se informa el permiso exacto y se continúa
+con el trabajo independiente. No se sustituye un PR real por un enlace a un
+formulario de comparación. No se fusiona ni reescribe main automáticamente.

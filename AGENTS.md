@@ -27,3 +27,10 @@ The geospatial contract is EPSG:32614 / EGM2008, ENU metres internally, Unreal
 X=east/Y=south/Z=up in cm. Corrected DSM is procedural, not a measured DTM. WORLD001
 uses excavated static terrain, not the original uncut Landscape. Follow per-road
 QA exclusions; offline acceptance does not certify a fully drivable world.
+
+
+The owner has chosen to keep the restriction on Actions creating/approving PRs.
+Do not enable that repository setting or retry PR creation through Actions. Use
+existing authenticated direct GitHub access for authorized PR operations. If it
+is unavailable, report the precise blocker without requesting tokens in chat.
+Verify that an actual PR exists before reporting a PR URL; a compare form is not a PR.

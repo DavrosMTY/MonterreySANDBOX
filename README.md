@@ -10,6 +10,7 @@ triángulos. Se han generado y revisado imágenes reales en Blender. La entrega
 local GEO-003 pasó 72 pruebas y QA de GLB/407 OBJ; la suite incorpora además cinco
 pruebas de publicación GitHub y portabilidad. Unreal/Windows no se compiló ni ejecutó.
 
+[Pull Request #1](https://github.com/DavrosMTY/MonterreySANDBOX/pull/1) ·
 [Diagnóstico técnico](docs/GEO003_DIAGNOSTICO.md) ·
 [Fuentes y licencias](DATA_LICENSES.md) ·
 [Releases descargables](https://github.com/DavrosMTY/MonterreySANDBOX/releases) ·
@@ -104,7 +105,12 @@ El código y el piloto se descargan desde la rama `development` o su ZIP de cód
 Los modelos grandes, ZIP y renders se publican como assets de una **prerelease**
 `geo003-world001-<commit>`, asociada al commit exacto y sin fusionar el PR.
 
-Assets preparados por la automatización:
+La [prerelease GEO-003 / WORLD-001](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo003-world001-3f5c050a07c6)
+se reconstruyó en GitHub desde `3f5c050a07c6`. Se descargaron sus 11 assets y se
+comprobaron SHA256, integridad de los tres ZIP y acceso público sin autenticación.
+Evidencia en [el manifest de verificación](manifests/github-release-verification.json).
+
+Assets publicados:
 
 - `MonterreyOpenWorld_GEO001_pilot.zip`: inputs del piloto, avisos y manifest.
 - `MonterreyOpenWorld_GEO002.zip` y `MonterreyOpenWorld_GEO003_WORLD001.zip`: código,
@@ -114,7 +120,9 @@ Assets preparados por la automatización:
 
 Las reconstrucciones tienen sus propios hashes y recibos. Las referencias de los
 ZIP históricos locales se conservan en manifests; no se afirma identidad binaria.
-Consultar la página de Actions/Release para el estado efectivo de cada publicación.
+La matriz de Python 3.12 aprobó 77 pruebas tanto en Linux como en Windows; la
+reconstrucción real de la Release también aprobó 77 pruebas y QA por hito.
+Consultar [el recibo de sincronización](docs/GITHUB_SYNC_RESULTADO.md).
 
 Se comprobó la política oficial: runners estándar gratuitos en repositorios
 públicos; Releases admite 1.000 assets menores de 2 GiB por archivo y no limita
@@ -125,7 +133,9 @@ de artifacts de Actions mientras sus cuotas de cuenta no estén verificadas.
 
 GitHub es el repositorio principal. `development` incorpora el trabajo previo desde
 el main existente; los avances posteriores se desarrollan mediante ramas, commits
-y Pull Requests. No se reescribe el historial ni se fusiona automáticamente.
+y Pull Requests. Se conserva la restricción de Actions para crear o aprobar PR;
+los agentes usan el acceso directo autenticado. No se reescribe el historial ni
+se fusiona automáticamente.
 Véanse [AGENTS.md](AGENTS.md) y [flujo GitHub](docs/GITHUB_WORKFLOW.md).
 
 La sincronización conserva los archivos e historial locales. Se excluyen dependencias
