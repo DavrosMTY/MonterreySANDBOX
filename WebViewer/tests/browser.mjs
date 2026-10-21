@@ -23,7 +23,8 @@ const browser = await chromium.launch({executablePath,headless:true,args:['--no-
 const errors = [], requests = [];
 let activePage;
 try {
-  let page = await browser.newPage({viewport:{width:1280,height:800}}); activePage=page;
+  const browserContext = await browser.newContext({viewport:{width:1280,height:800}});
+  let page = await browserContext.newPage(); activePage=page;
   let hostingInterstitial = false;
   function observe(page) {
   page.on('pageerror', error => errors.push(error.message));
