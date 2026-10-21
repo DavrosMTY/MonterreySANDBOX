@@ -1,0 +1,44 @@
+name: UE-001 source and evidence prerelease (no engine)
+on:
+  push:
+    branches: [feature/ue001-first-playable]
+    paths: [.github/publication/ue001-release.json]
+permissions:
+  contents: read
+concurrency:
+  group: ue001-source-prerelease
+  cancel-in-progress: false
+jobs:
+  source-release:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --no-cache-dir -r requirements.lock.txt
+      - run: python -m pip check
+      - run: python tools/check_publication.py
+      - name: Fetch immutable project data (no UE download)
+        run: python tools/fetch_ue001_world.py --output artifacts/ue001-input
+      - name: Execute real external pipeline and require explicit engine blocker
+        shell: bash
+        run: |
+          set +e
+          python tools/run_ue001.py --city artifacts/ue001-input/world --probes artifacts/ue001-input/traversal_probes.json --output artifacts/ue001-validation
+          result=$?
+          set -e
+          if [ "$result" != 2 ]; then echo 'Expected source-preflight only: exit 2 with C/D/E blocked'; exit 1; fi
+      - name: Package source and actual runner evidence; refuse existing Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/package_ue001_release.py --evidence artifacts/ue001-validation --output artifacts/ue001-release --publish
+      - name: Record levels and immutable downloads
+        if: always()
+        run: |
+          if [ -f artifacts/ue001-validation/validation.json ]; then cat artifacts/ue001-validation/validation.json >> "$GITHUB_STEP_SUMMARY"; fi
+          echo 'No Unreal installation/execution, PR creation, merge, LFS, cache or Actions artifact storage.' >> "$GITHUB_STEP_SUMMARY"

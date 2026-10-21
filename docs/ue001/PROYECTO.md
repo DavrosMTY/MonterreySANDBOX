@@ -67,6 +67,12 @@ la UI de dispatch de GitHub el workflow debe existir en la rama predeterminada t
 la revisión correspondiente; mientras tanto, el agente puede ejecutar el script
 en el runner adjunto. No se dispara ahora: no hay runner autorizado disponible.
 
+La publicación de fuentes usa un workflow separado, `ue001-release.yml`: runner
+Ubuntu estándar público, 99 pruebas/QA reales, bloqueo C/D/E exigido, paquete con
+hashes y prerelease inmutable. No descarga UE ni ejecuta el workflow de motor.
+Permite publicar sin usar el canal de subida de la integración cloud, que devolvió
+401 en uploads.github.com aunque Git/API/PR funcionaban. No se piden credenciales.
+
 ## Niveles de aprobación
 
 | Nivel | Evidencia necesaria |
