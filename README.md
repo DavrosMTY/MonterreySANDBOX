@@ -25,7 +25,8 @@ build/importación/juego/cooking. No hay editor instalado en el cloud actual;
 **no se afirma compilación, mapa importado ni ejecutable**.
 
 [Infraestructura real](docs/ue001/INFRAESTRUCTURA.md) ·
-[Proyecto y niveles A–E](docs/ue001/PROYECTO.md).
+[Proyecto y niveles A–E](docs/ue001/PROYECTO.md) ·
+[Resultados: 99 pruebas; A/B externas, C/D/E bloqueadas](docs/ue001/RESULTADOS.md).
 
 ## Objetivo y alcance actual
 
