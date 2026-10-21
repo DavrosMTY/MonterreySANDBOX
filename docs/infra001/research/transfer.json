@@ -1,0 +1,235 @@
+{
+  "collected_at_utc": "2026-10-21T21:52:01.284919+00:00",
+  "method": "Unauthenticated official public URLs, read-only, no provisioning",
+  "records": [
+    {
+      "id": "aws_data_transfer_catalog",
+      "requested_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json",
+      "retrieved_at_utc": "2026-10-21T21:52:01.110684+00:00",
+      "http_status": 200,
+      "final_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json",
+      "response_bytes": 1468865,
+      "response_sha256": "00f81657d01946d02c905e32ca87cc6c23720b5de079b90fef5775243abcee80",
+      "data": [
+        {
+          "sku": "GRMY773FUAW94HKK",
+          "attributes": {
+            "servicecode": "AWSDataTransfer",
+            "transferType": "Accelerated AWS Outbound using edge locations outside US, Europe or Japan",
+            "fromLocation": "US East (N. Virginia)",
+            "fromLocationType": "AWS Region",
+            "toLocation": "External",
+            "toLocationType": "Other",
+            "usagetype": "DataTransfer-Out-ABytes-T2",
+            "operation": "",
+            "fromRegionCode": "us-east-1",
+            "servicename": "AWS Data Transfer",
+            "toRegionCode": ""
+          },
+          "prices": {
+            "GRMY773FUAW94HKK.JRTCKXETXF": {
+              "offerTermCode": "JRTCKXETXF",
+              "sku": "GRMY773FUAW94HKK",
+              "effectiveDate": "2026-06-01T00:00:00Z",
+              "priceDimensions": {
+                "GRMY773FUAW94HKK.JRTCKXETXF.6YS6EN2CT7": {
+                  "rateCode": "GRMY773FUAW94HKK.JRTCKXETXF.6YS6EN2CT7",
+                  "description": "$0.040 per GB - Amazon S3 accelerated data transfer out (to outside US, Europe or Japan)",
+                  "beginRange": "0",
+                  "endRange": "Inf",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0400000000"
+                  },
+                  "appliesTo": []
+                }
+              },
+              "termAttributes": {}
+            }
+          }
+        },
+        {
+          "sku": "B75HUAKSUPHX3NWU",
+          "attributes": {
+            "servicecode": "AWSDataTransfer",
+            "transferType": "Inter Region Peering Data Transfer Outbound",
+            "fromLocation": "US East (N. Virginia)",
+            "fromLocationType": "AWS Region",
+            "toLocation": "External",
+            "toLocationType": "Other",
+            "usagetype": "USE1-AWS-Out-Bytes",
+            "operation": "",
+            "fromRegionCode": "us-east-1",
+            "servicename": "AWS Data Transfer",
+            "toRegionCode": ""
+          },
+          "prices": {
+            "B75HUAKSUPHX3NWU.JRTCKXETXF": {
+              "offerTermCode": "JRTCKXETXF",
+              "sku": "B75HUAKSUPHX3NWU",
+              "effectiveDate": "2026-06-01T00:00:00Z",
+              "priceDimensions": {
+                "B75HUAKSUPHX3NWU.JRTCKXETXF.6YS6EN2CT7": {
+                  "rateCode": "B75HUAKSUPHX3NWU.JRTCKXETXF.6YS6EN2CT7",
+                  "description": "$0.020 per GB - Data transfer from US East (N. Virginia)",
+                  "beginRange": "0",
+                  "endRange": "Inf",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0200000000"
+                  },
+                  "appliesTo": []
+                }
+              },
+              "termAttributes": {}
+            }
+          }
+        },
+        {
+          "sku": "SYWH8GEYJAX6NB9S",
+          "attributes": {
+            "servicecode": "AWSDataTransfer",
+            "transferType": "Accelerated AWS Outbound from close by location",
+            "fromLocation": "US East (N. Virginia)",
+            "fromLocationType": "AWS Region",
+            "toLocation": "External",
+            "toLocationType": "Other",
+            "usagetype": "DataTransfer-Out-ABytes",
+            "operation": "",
+            "fromRegionCode": "us-east-1",
+            "servicename": "AWS Data Transfer",
+            "toRegionCode": ""
+          },
+          "prices": {
+            "SYWH8GEYJAX6NB9S.JRTCKXETXF": {
+              "offerTermCode": "JRTCKXETXF",
+              "sku": "SYWH8GEYJAX6NB9S",
+              "effectiveDate": "2026-06-01T00:00:00Z",
+              "priceDimensions": {
+                "SYWH8GEYJAX6NB9S.JRTCKXETXF.6YS6EN2CT7": {
+                  "rateCode": "SYWH8GEYJAX6NB9S.JRTCKXETXF.6YS6EN2CT7",
+                  "description": "$0.040 per GB - Amazon S3 accelerated data transfer out",
+                  "beginRange": "0",
+                  "endRange": "Inf",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0400000000"
+                  },
+                  "appliesTo": []
+                }
+              },
+              "termAttributes": {}
+            }
+          }
+        },
+        {
+          "sku": "HQEH3ZWJVT46JHRG",
+          "attributes": {
+            "servicecode": "AWSDataTransfer",
+            "transferType": "AWS Outbound",
+            "fromLocation": "US East (N. Virginia)",
+            "fromLocationType": "AWS Region",
+            "toLocation": "External",
+            "toLocationType": "Other",
+            "usagetype": "DataTransfer-Out-Bytes",
+            "operation": "",
+            "fromRegionCode": "us-east-1",
+            "servicename": "AWS Data Transfer",
+            "toRegionCode": ""
+          },
+          "prices": {
+            "HQEH3ZWJVT46JHRG.JRTCKXETXF": {
+              "offerTermCode": "JRTCKXETXF",
+              "sku": "HQEH3ZWJVT46JHRG",
+              "effectiveDate": "2026-06-01T00:00:00Z",
+              "priceDimensions": {
+                "HQEH3ZWJVT46JHRG.JRTCKXETXF.Q3Z75P77EN": {
+                  "rateCode": "HQEH3ZWJVT46JHRG.JRTCKXETXF.Q3Z75P77EN",
+                  "description": "$0.090 per GB - first 10 TB / month data transfer out beyond the global free tier",
+                  "beginRange": "0",
+                  "endRange": "10240",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0900000000"
+                  },
+                  "appliesTo": []
+                },
+                "HQEH3ZWJVT46JHRG.JRTCKXETXF.VF6T3GAUKQ": {
+                  "rateCode": "HQEH3ZWJVT46JHRG.JRTCKXETXF.VF6T3GAUKQ",
+                  "description": "$0.085 per GB - next 40 TB / month data transfer out",
+                  "beginRange": "10240",
+                  "endRange": "51200",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0850000000"
+                  },
+                  "appliesTo": []
+                },
+                "HQEH3ZWJVT46JHRG.JRTCKXETXF.N9EW5UVVPA": {
+                  "rateCode": "HQEH3ZWJVT46JHRG.JRTCKXETXF.N9EW5UVVPA",
+                  "description": "$0.070 per GB - next 100 TB / month data transfer out",
+                  "beginRange": "51200",
+                  "endRange": "153600",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0700000000"
+                  },
+                  "appliesTo": []
+                },
+                "HQEH3ZWJVT46JHRG.JRTCKXETXF.GPHXDESFBB": {
+                  "rateCode": "HQEH3ZWJVT46JHRG.JRTCKXETXF.GPHXDESFBB",
+                  "description": "$0.050 per GB - greater than 150 TB / month data transfer out",
+                  "beginRange": "153600",
+                  "endRange": "Inf",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0500000000"
+                  },
+                  "appliesTo": []
+                }
+              },
+              "termAttributes": {}
+            }
+          }
+        },
+        {
+          "sku": "FFSGCWMNUVR5NSUX",
+          "attributes": {
+            "servicecode": "AWSDataTransfer",
+            "transferType": "Accelerated AWS Outbound using edge locations within US, Europe or Japan",
+            "fromLocation": "US East (N. Virginia)",
+            "fromLocationType": "AWS Region",
+            "toLocation": "External",
+            "toLocationType": "Other",
+            "usagetype": "DataTransfer-Out-ABytes-T1",
+            "operation": "",
+            "fromRegionCode": "us-east-1",
+            "servicename": "AWS Data Transfer",
+            "toRegionCode": ""
+          },
+          "prices": {
+            "FFSGCWMNUVR5NSUX.JRTCKXETXF": {
+              "offerTermCode": "JRTCKXETXF",
+              "sku": "FFSGCWMNUVR5NSUX",
+              "effectiveDate": "2026-06-01T00:00:00Z",
+              "priceDimensions": {
+                "FFSGCWMNUVR5NSUX.JRTCKXETXF.6YS6EN2CT7": {
+                  "rateCode": "FFSGCWMNUVR5NSUX.JRTCKXETXF.6YS6EN2CT7",
+                  "description": "$0.040 per GB - Amazon S3 accelerated data transfer out (to within US, Europe or Japan)",
+                  "beginRange": "0",
+                  "endRange": "Inf",
+                  "unit": "GB",
+                  "pricePerUnit": {
+                    "USD": "0.0400000000"
+                  },
+                  "appliesTo": []
+                }
+              },
+              "termAttributes": {}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
