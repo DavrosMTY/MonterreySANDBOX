@@ -10,6 +10,7 @@
     "index.html",
     "style.css",
     "about.html",
+    "evidence/pages.json",
     "evidence/street.png",
     "evidence/geometry.json",
     "evidence/hosting.json",

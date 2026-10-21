@@ -38,7 +38,10 @@ async function start() {
   const camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, .15, 6000);
   camera.rotation.order = 'YXZ';
   const loader = new GLTFLoader();
-  let profileName = matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced';
+  const context = renderer.getContext();
+  const debug = context.getExtension('WEBGL_debug_renderer_info');
+  const device = debug ? context.getParameter(debug.UNMASKED_RENDERER_WEBGL) : context.getParameter(context.RENDERER);
+  let profileName = matchMedia('(max-width: 700px)').matches || /swiftshader|llvmpipe|software/i.test(device) ? 'low' : 'balanced';
   let mode = 'aerial', focus = new THREE.Vector3(0, 535, 0), lastSectorUpdate = -1;
   let speed = 35, dragging = false, pointerX = 0, pointerY = 0;
   const keys = new Set(), ray = new THREE.Raycaster(), down = new THREE.Vector3(0, -1, 0);
@@ -90,9 +93,9 @@ async function start() {
     if (next === 'aerial') {
       focus.set(0, 535, 0); camera.position.set(410, 1050, 580); camera.lookAt(focus);
     } else {
-      // A real source road centerline: Calle Padre Raymundo Jardón, way/26777535/0.
-      camera.position.set(-18.757312, 540.10, 196.642816);
-      camera.lookAt(55, 540, 100); focus.copy(camera.position);
+      // Real GEO-003 centerline: Calle Ignacio Zaragoza, way/801774599/1687.
+      camera.position.set(-76.36123249, 539.05541892, -48.25964916);
+      camera.lookAt(-80.70601185, 540.01604524, -23.73362797); focus.copy(camera.position);
     }
     for (const id of ['aerial', 'street']) {
       $(id).classList.toggle('active', id === next); $(id).setAttribute('aria-pressed', String(id === next));
@@ -151,7 +154,7 @@ async function start() {
       geometry_bytes: bytes, heap_bytes: performance.memory?.usedJSHeapSize ?? null,
       triangles: renderer.info.render.triangles, draw_calls: renderer.info.render.calls,
       geometries: renderer.info.memory.geometries, downloaded_bytes: stream.downloadedBytes,
-      drawing_buffer: [canvas.width, canvas.height], renderer: renderer.getContext().getParameter(renderer.getContext().RENDERER),
+      drawing_buffer: [canvas.width, canvas.height], renderer: device,
       source_glb_sha256: world.source_glb_sha256};
   }
   // Read-only diagnostics, used by the browser tests and downloadable evidence.

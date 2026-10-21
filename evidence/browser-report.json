@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "tested_url": "http://127.0.0.1:44757/",
+  "tested_url": "http://127.0.0.1:46339/",
   "renderer": "Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance",
   "viewport": [
     1280,
@@ -28,14 +28,14 @@
         "4_4",
         "4_2",
         "2_3",
-        "2_4",
         "3_5",
+        "2_4",
         "3_2",
         "4_5",
         "5_3",
         "5_4",
-        "2_5",
         "5_2",
+        "2_5",
         "2_2",
         "5_5",
         "1_3",
@@ -91,10 +91,10 @@
       ],
       "pending": 0,
       "errors": [],
-      "fps": 1.9782393669634026,
-      "frame_ms": 504.15,
+      "fps": 2.7777777777777777,
+      "frame_ms": 344.43333333333334,
       "geometry_bytes": 8853048,
-      "heap_bytes": 17897397,
+      "heap_bytes": 24051905,
       "triangles": 552192,
       "draw_calls": 142,
       "geometries": 142,
@@ -103,7 +103,7 @@
         1280,
         800
       ],
-      "renderer": "WebKit WebGL",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
       "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc"
     },
     {
@@ -127,8 +127,8 @@
         "4_4",
         "4_2",
         "2_3",
-        "2_4",
         "3_5",
+        "2_4",
         "3_2",
         "4_5",
         "5_3",
@@ -150,10 +150,10 @@
       ],
       "pending": 0,
       "errors": [],
-      "fps": 5.128468126570589,
-      "frame_ms": 215.14545454545458,
+      "fps": 7.826359177710528,
+      "frame_ms": 127.08124999999995,
       "geometry_bytes": 3763332,
-      "heap_bytes": 19066833,
+      "heap_bytes": 25674534,
       "triangles": 246686,
       "draw_calls": 59,
       "geometries": 59,
@@ -162,7 +162,7 @@
         896,
         560
       ],
-      "renderer": "WebKit WebGL",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
       "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc"
     }
   ],
@@ -171,14 +171,14 @@
     "quality": "low",
     "mode": "street",
     "camera": [
-      -18.757312,
-      540.1,
-      196.642816
+      -76.36123249,
+      539.05541892,
+      -48.25964916
     ],
     "rotation": [
-      -0.0008225514133780875,
-      -0.6518925496664971,
-      5.421012696331152e-20
+      0.03854804974037655,
+      2.966261847940385,
+      4.340032831203018e-19
     ],
     "resident": [
       "3_3",
@@ -187,44 +187,40 @@
       "4_4",
       "4_2",
       "2_3",
+      "3_5",
       "2_4",
       "3_2",
-      "5_3",
-      "2_2",
-      "5_2",
-      "3_1",
-      "4_1"
+      "4_5",
+      "2_5"
     ],
     "wanted": [
-      "3_3",
-      "4_2",
-      "4_3",
-      "3_2",
       "3_4",
+      "3_3",
       "4_4",
+      "4_3",
       "2_3",
-      "2_2",
       "2_4",
-      "5_3",
-      "5_2",
-      "3_1",
-      "4_1"
+      "3_5",
+      "4_5",
+      "2_5",
+      "4_2",
+      "3_2"
     ],
     "pending": 0,
     "errors": [],
-    "fps": 7.579106928566921,
-    "frame_ms": 156.40769230769226,
-    "geometry_bytes": 3579912,
-    "heap_bytes": 20911379,
-    "triangles": 101827,
-    "draw_calls": 23,
-    "geometries": 43,
-    "downloaded_bytes": 5475394,
+    "fps": 9.310023792283017,
+    "frame_ms": 108.7684210526316,
+    "geometry_bytes": 3656878,
+    "heap_bytes": 23646674,
+    "triangles": 119037,
+    "draw_calls": 28,
+    "geometries": 51,
+    "downloaded_bytes": 5155613,
     "drawing_buffer": [
       896,
       560
     ],
-    "renderer": "WebKit WebGL",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
     "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc"
   },
   "street_after_controls": {
@@ -232,14 +228,14 @@
     "quality": "low",
     "mode": "street",
     "camera": [
-      -6.369269090245791,
-      540.1045282665849,
-      180.410996820805
+      -81.04085743690884,
+      540.3122782173023,
+      -21.84344453847515
     ],
     "rotation": [
-      -0.050822551413378096,
-      -0.8768925496664973,
-      5.421012696331152e-20
+      -0.011451950259623452,
+      2.741261847940385,
+      4.340032831203018e-19
     ],
     "resident": [
       "3_3",
@@ -248,40 +244,40 @@
       "4_4",
       "4_2",
       "2_3",
+      "3_5",
       "2_4",
       "3_2",
-      "5_3",
-      "2_2",
-      "5_2"
+      "4_5",
+      "2_5"
     ],
     "wanted": [
+      "3_4",
       "3_3",
       "4_3",
-      "4_2",
-      "3_2",
-      "3_4",
       "4_4",
       "2_3",
-      "2_2",
-      "5_3",
       "2_4",
-      "5_2"
+      "3_5",
+      "4_2",
+      "4_5",
+      "3_2",
+      "2_5"
     ],
     "pending": 0,
     "errors": [],
-    "fps": 9.230769230769232,
-    "frame_ms": 107.8894736842106,
-    "geometry_bytes": 3063378,
-    "heap_bytes": 21501245,
-    "triangles": 101435,
-    "draw_calls": 22,
-    "geometries": 43,
-    "downloaded_bytes": 5475394,
+    "fps": 13.729278958608765,
+    "frame_ms": 72.61428571428574,
+    "geometry_bytes": 3656878,
+    "heap_bytes": 24596784,
+    "triangles": 119037,
+    "draw_calls": 28,
+    "geometries": 51,
+    "downloaded_bytes": 5155613,
     "drawing_buffer": [
       896,
       560
     ],
-    "renderer": "WebKit WebGL",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
     "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc"
   },
   "browser_errors": [],
