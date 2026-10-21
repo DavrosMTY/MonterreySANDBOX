@@ -34,3 +34,12 @@ Do not enable that repository setting or retry PR creation through Actions. Use
 existing authenticated direct GitHub access for authorized PR operations. If it
 is unavailable, report the precise blocker without requesting tokens in chat.
 Verify that an actual PR exists before reporting a PR URL; a compare form is not a PR.
+
+
+For UE-001 read docs/ue001/RESULTADOS.md, INFRAESTRUCTURA.md and PROYECTO.md.
+The native project targets UE5.6.1 exactly. A/B are external/static checks only;
+C/D/E need real UBT/UHT, editor gameplay and a launched packaged game. Never
+approve them from descriptor existence, mocks, Blender images or NullRHI.
+Do not install/download Unreal or provision external infrastructure without the
+owner's concrete authorization. Use tools/run_ue001.py in a licensed attached
+runner; retain fresh logs, nonces and screenshots and preserve existing UE assets.

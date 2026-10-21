@@ -14,8 +14,52 @@
 #include "Engine/StaticMesh.h"
 #include "PhysicsEngine/BodySetup.h"
 #include "CollisionQueryParams.h"
+#include "CollisionShape.h"
+#include "MonterreySectorMetadata.h"
 
 IMPLEMENT_MODULE(FDefaultModuleImpl, MonterreyGeoEditor)
+
+bool UMonterreyGeoLibrary::SetSectorProvenance(UStaticMesh* Mesh, const FString& ProvenanceJSON)
+{
+    TSharedPtr<FJsonObject> Parsed;
+    if (!Mesh || !FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(ProvenanceJSON), Parsed)) return false;
+    Mesh->Modify();
+    auto* Data = NewObject<UMonterreySectorMetadata>(Mesh);
+    Data->ProvenanceJSON = ProvenanceJSON;
+    Mesh->AddAssetUserData(Data);
+    Mesh->MarkPackageDirty();
+    return true;
+}
+
+FString UMonterreyGeoLibrary::FindExplorerSpawn(const FString& CandidatesPath)
+{
+    UWorld* World = GEditor ? GEditor->GetEditorWorldContext().World() : nullptr;
+    FString Text;
+    TSharedPtr<FJsonObject> Root;
+    if (!World || !FFileHelper::LoadFileToString(Text, *CandidatesPath) ||
+        !FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Text), Root) || !Root.IsValid())
+        return TEXT("{\"passed\":false,\"reason\":\"no_world_or_candidates\"}");
+    FCollisionQueryParams Params(SCENE_QUERY_STAT(UE001Spawn), true);
+    int32 Index = 0;
+    for (const auto& Value : Root->GetArrayField(TEXT("probes")))
+    {
+        const auto& P = Value->AsObject()->GetArrayField(TEXT("position_unreal_cm"));
+        if (P.Num() != 3) { ++Index; continue; }
+        const FVector Expected(P[0]->AsNumber(), P[1]->AsNumber(), P[2]->AsNumber());
+        FHitResult Hit;
+        if (World->LineTraceSingleByChannel(Hit, Expected + FVector(0, 0, 100),
+            Expected - FVector(0, 0, 50), ECC_Visibility, Params) &&
+            FMath::Abs(Hit.ImpactPoint.Z - Expected.Z) <= 8. && Hit.ImpactNormal.Z >= .7f)
+        {
+            const FVector Centre = Hit.ImpactPoint + FVector(0, 0, 91);
+            if (!World->OverlapBlockingTestByChannel(Centre, FQuat::Identity, ECC_Pawn,
+                FCollisionShape::MakeCapsule(34.f, 88.f), Params))
+                return FString::Printf(TEXT("{\"passed\":true,\"candidate_index\":%d,\"capsule_overlap_checked\":true,\"position_unreal_cm\":[%.9f,%.9f,%.9f]}"), Index, Centre.X, Centre.Y, Centre.Z);
+        }
+        ++Index;
+    }
+    return TEXT("{\"passed\":false,\"reason\":\"no_collision_validated_spawn\"}");
+}
 
 bool UMonterreyGeoLibrary::ConfigureStaticWorldCollision(UStaticMesh* Mesh)
 {

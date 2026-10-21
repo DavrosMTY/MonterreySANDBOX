@@ -7,25 +7,20 @@
 
 class UStaticMesh;
 
-USTRUCT(BlueprintType)
-struct MONTERREYGEOEDITOR_API FMonterreyBuildingRow : public FTableRowBase
-{
-    GENERATED_BODY()
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString SourceId;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector PositionCm = FVector::ZeroVector;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector SizeCm = FVector::ZeroVector;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString BuildingClass;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) double HeightM = 0.;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) bool HeightEstimated = true;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString HeightSource;
-};
-
 /** Prepared against UE 5.6 API documentation; compilation/editor QA remain required. */
 UCLASS()
 class MONTERREYGEOEDITOR_API UMonterreyGeoLibrary : public UBlueprintFunctionLibrary
 {
     GENERATED_BODY()
 public:
+    /** Serialized runtime user data, retained when cooking sector meshes. */
+    UFUNCTION(BlueprintCallable, Category="Monterrey|World")
+    static bool SetSectorProvenance(UStaticMesh* Mesh, const FString& ProvenanceJSON);
+
+    /** Vertical ray plus capsule overlap; valid only after this code runs in UE. */
+    UFUNCTION(BlueprintCallable, Category="Monterrey|World")
+    static FString FindExplorerSpawn(const FString& CandidatesPath);
+
     /** Static environment only. Nanite rendering does not validate collision. */
     UFUNCTION(BlueprintCallable, Category="Monterrey|World")
     static bool ConfigureStaticWorldCollision(UStaticMesh* Mesh);

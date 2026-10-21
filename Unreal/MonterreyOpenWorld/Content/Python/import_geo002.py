@@ -114,7 +114,7 @@ def main():
             if not controls.get('passed'): raise RuntimeError('Landscape control points failed')
             result.update(landscape_imported=True,landscape_controls=controls)
         factory = unreal.DataTableFactory()
-        factory.set_editor_property('struct',unreal.load_object(None,'/Script/MonterreyGeoEditor.MonterreyBuildingRow'))
+        factory.set_editor_property('struct',unreal.load_object(None,'/Script/MonterreyOpenWorld.MonterreyBuildingRow'))
         table = asset_tools.create_asset('WORLD001_BuildingPoints' if is_world else 'GEO002_BuildingPoints',asset_root+'/PCG' if is_world else asset_root,unreal.DataTable,factory)
         if table is None or not unreal.DataTableFunctionLibrary.fill_data_table_from_csv_file(table,str(city/m['pcg_buildings_csv'])):
             raise RuntimeError('Could not import PCG source DataTable')

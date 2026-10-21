@@ -1,0 +1,23 @@
+{
+  "engine_version": "5.6.1",
+  "engine_association": "5.6",
+  "commercial_target": "Win64",
+  "native_validation_hosts": [
+    "Windows",
+    "Linux"
+  ],
+  "windows_toolchain": {
+    "visual_studio": "2022 17.8 minimum; 17.14 recommended",
+    "msvc": "14.38.33130",
+    "windows_sdk": "10.0.22621.0 recommended (10.0.19041.0 minimum)"
+  },
+  "linux_toolchain": {
+    "recommended_distribution": "Ubuntu 22.04 / Rocky Linux 8",
+    "compiler": "Epic SDK clang 18.1.0"
+  },
+  "engine_installation_authorized": false,
+  "engine_installed_in_cloud": false,
+  "engine_download_automatic": false,
+  "source_assets_generated_only_in_engine": true,
+  "references": "docs/ue001/official-references.json"
+}

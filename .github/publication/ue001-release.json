@@ -1,0 +1,6 @@
+{
+  "revision": 1,
+  "artifact_kind": "source_project_and_external_evidence_only",
+  "engine_installation_authorized": false,
+  "create_pull_request_via_actions": false
+}

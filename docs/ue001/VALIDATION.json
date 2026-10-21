@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "run_id": "010a1855d40b4b10923d8308f8cf3efd",
+  "started_at_utc": "2026-10-21T21:09:58.753893+00:00",
+  "source_commit": "6069021674ef09fc8ac31248d5fa16c9080a6116",
+  "source_dirty": false,
+  "levels": {
+    "A": {
+      "status": "passed",
+      "tests": {
+        "tests": 99,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "plan_sha256": "7aeb14f6be4adc8cd26c72601e63a3723f30007599bda06c9c7f349fb97219cc",
+      "cells": 279,
+      "source_parts": 2673,
+      "engine_executed": false,
+      "geometry_qa_sha256": "ac7716a2530d3da90ad08f17e4b12cfd97545a3e08ea778f0150f89495c9290f",
+      "world_qa_sha256": "7b0e69e5acac9cd392f2a4ae42bf77569175b1db711fbbdd6eae8b63ff45cc2c",
+      "scope": "External tests, numeric/provenance preflight and GLB/OBJ/world audits; known WORLD-001 issues remain"
+    },
+    "B": {
+      "status": "passed_static_structure",
+      "descriptor": "Unreal/MonterreyOpenWorld/MonterreyOpenWorld.uproject",
+      "engine_version": "5.6.1",
+      "editor_executed": false,
+      "uht_executed": false,
+      "cpp_compiled": false,
+      "maps_generated": false,
+      "scope": "Descriptor, files, plugin boundaries, generated-header order and startup configuration; not UE API validation"
+    },
+    "C": {
+      "status": "blocked",
+      "reason": "No licensed UE_ROOT supplied; no engine is downloaded automatically"
+    },
+    "D": {
+      "status": "blocked",
+      "reason": "No licensed UE_ROOT supplied; no engine is downloaded automatically"
+    },
+    "E": {
+      "status": "blocked",
+      "reason": "No licensed UE_ROOT supplied; no engine is downloaded automatically"
+    }
+  },
+  "steps": [
+    {
+      "step": "external-tests",
+      "exit_code": 0,
+      "log": "external-tests.log",
+      "log_sha256": "b08de61b7c3b81d71d40f706055cbdca4e007402c0ff0c2fb0310cb52cc26a52"
+    },
+    {
+      "step": "geometry-qa",
+      "exit_code": 0,
+      "log": "geometry-qa.log",
+      "log_sha256": "ac7716a2530d3da90ad08f17e4b12cfd97545a3e08ea778f0150f89495c9290f"
+    },
+    {
+      "step": "world-qa",
+      "exit_code": 0,
+      "log": "world-qa.log",
+      "log_sha256": "dd4bbf642d05f8a6097b24573f62d8d68913d19c9060fb1ed77137fa70492953"
+    }
+  ],
+  "commercial_target": "Win64",
+  "engine_executed": false,
+  "windows_executable_tested": false,
+  "finished_at_utc": "2026-10-21T21:10:14.645282+00:00"
+}
