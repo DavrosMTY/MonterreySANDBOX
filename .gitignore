@@ -48,3 +48,8 @@ Data/urban/*
 Data/urban/monterrey_centro_v3/*
 !Data/urban/monterrey_centro_v3/urban.json
 !Data/urban/monterrey_centro_v3/buildings.geojson
+
+# FREE-001: dependencies and generated static deployment/evidence stay out of source.
+node_modules/
+WebViewer/dist/
+WebViewer/test-results/
