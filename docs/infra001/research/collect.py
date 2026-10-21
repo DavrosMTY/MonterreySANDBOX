@@ -13,14 +13,14 @@ import re
 import urllib.request
 
 URLS={
- 'airgpu_terms':'https://airgpu.com/',
- 'vagon_api_info':'https://docs.vagon.io/streams',
- 'vagon_win':'https://docs.vagon.io/computer',
- 'aws_license':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
- 'aws_dto_rates':'https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-os-license/us-east-1/index.json',
- 'epic_royalty':'https://www.unrealengine.com/en-US/release',
- 'github_autologon':'https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/configure-the-application',
- 'windows_autologon':'https://learn.microsoft.com/en-us/sysinternals/downloads/autologon'
+ 'dcv_microsoft_licensing':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
+ 'aws_rds_sal_pricing':'https://aws.amazon.com/license-manager/pricing/',
+ 'aws_rds_sal_requirements':'https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html',
+ 'aws_public_service_index':'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json',
+ 'aws_data_transfer_catalog':'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json',
+ 'vagon_windows_licensing':'https://docs.vagon.io/computer/troubleshooting/subscription-and-pricing',
+ 'azure_premium_specs':'https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types',
+ 'aws_secrets_pricing':'https://aws.amazon.com/secrets-manager/pricing/'
 }
 
 
@@ -58,6 +58,14 @@ def fetch(item):
       for v in value:visit(v,path)
     visit(data);record['matching_rates']=matches;record['top_keys']=list(data)[:15]
     if not matches:record['json_excerpt']=value[:14000]
+   elif key=='aws_public_service_index':record['data']={k:v for k,v in data.get('offers',{}).items() if any(t in k.lower() for t in ('license','workspaces','transfer'))}
+   elif key=='aws_data_transfer_catalog':
+    found=[]
+    for sku,p in data.get('products',{}).items():
+     a=p.get('attributes',{})
+     if (a.get('fromLocation')=='US East (N. Virginia)' and a.get('toLocation')=='External') or a.get('usagetype')=='DataTransfer-Out-Bytes':
+      found.append({'sku':sku,'attributes':a,'prices':data.get('terms',{}).get('OnDemand',{}).get(sku,{})})
+    record['data']=found
    else:record['data']=data
   else:
    parser=Text();parser.feed(value);lines=[re.sub(r'\s+',' ',s).strip() for s in ''.join(parser.fragments).splitlines()];lines=[s for s in lines if s]
@@ -65,7 +73,15 @@ def fetch(item):
    selected=set()
    for i,line in enumerate(lines):
     if re.search(keywords,line,re.I):selected.update(range(max(0,i-2),min(len(lines),i+4)))
-   relevant=[line for line in lines if re.search(r'Windows Server|license|licensing|session 0|API|50.?GB|100.?GB|3.50|traffic|transfer|shutdown|stop|billing|EC2|AppStream',line,re.I)]
+   patterns={'dcv_microsoft_licensing':r'RDS CAL|RDS SAL|Subscriber Access|Remote Desktop Services',
+    'aws_rds_sal_pricing':r'RDS|Desktop Services|Microsoft Managed AD|directory',
+    'aws_rds_sal_requirements':r'RDS|directory|Active Directory',
+    'vagon_windows_licensing':r'Windows|license|billing',
+    'azure_premium_specs':r'P20|512|2,300',
+    'aws_secrets_pricing':r'0.40|per secret|0.05'}
+   hits=[i for i,line in enumerate(lines) if re.search(patterns.get(key,r'RDS|license'),line,re.I)]
+   relevant=[]
+   for i in hits:relevant.extend(lines[max(0,i-1):min(len(lines),i+4)])
    record['text_excerpt']=' '.join((' '.join(relevant)).split()[:85])
    record['links']=[{'url':link,'label':label[:80]} for link,label in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>([^<]{0,80})',value) if any(word in (link+' '+label).lower() for word in ('pricing','license','admin','api','software','shutdown','windows'))][:25]
    numeric=re.compile(r'\$|GB|TB|VRAM|vCPU|cores|A10|T4|RTX|P5000|P6000|g4dn|g5\.|NV12',re.I)
@@ -77,7 +93,7 @@ def fetch(item):
 
 def main():
  with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:records=list(pool.map(fetch,URLS.items()))
- out=Path(__file__).with_name('conditions.json')
+ out=Path(__file__).with_name('licensing.json')
  out.write_text(json.dumps({'collected_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'method':'Unauthenticated official public URLs, read-only, no provisioning','records':records},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({r['id']:{'status':r.get('http_status'),'error':r.get('error'),'bytes':r.get('response_bytes')} for r in records},indent=2))
 
