@@ -23,12 +23,29 @@ const browser = await chromium.launch({executablePath,headless:true,args:['--no-
 const errors = [], requests = [];
 let activePage;
 try {
-  const page = await browser.newPage({viewport:{width:1280,height:800}}); activePage=page;
+  let page = await browser.newPage({viewport:{width:1280,height:800}}); activePage=page;
+  let hostingInterstitial = false;
+  function observe(page) {
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => {if (response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
   page.on('request', request => requests.push(request.url()));
+  }
+  observe(page);
   const main = await page.goto(url);
   assert(main.ok(), `Public entry HTTP ${main.status()}`);
+  if ((await page.title()).startsWith('External Content Notice')) {
+    hostingInterstitial = true;
+    assert.equal(new URL(await page.locator('#phish-dest').inputValue()).href, new URL(url).href, 'The notice must lead to our exact immutable URL');
+    await Promise.all([page.waitForNavigation(), page.getByRole('button',{name:'Open the page',exact:true}).click()]);
+    // The free service's notice has advertising. Test the actual application in
+    // a fresh page with the normal consent cookie, separately from that notice.
+    const context = page.context();
+    for (const event of ['pageerror','response','request']) page.removeAllListeners(event);
+    await page.goto('about:blank');
+    page = await context.newPage(); activePage = page; errors.length=0; requests.length=0;
+    observe(page);
+    const entry = await page.goto(url); assert(entry.ok(),`Application entry HTTP ${entry.status()}`);
+  }
   await page.waitForFunction(() => window.__MOW__?.snapshot().ready, null, {timeout:60000});
   const samples = [];
   for (const quality of ['balanced','low']) {
@@ -61,7 +78,7 @@ try {
   assert.equal(errors.length,0,errors.join('\n'));
   const origin=new URL(url).origin; assert(requests.every(x=>new URL(x).origin===origin),'No external runtime services');
   const report={status:'passed',tested_url:url,renderer:'Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance',
-    viewport:[1280,800],samples,street_initial:street,street_after_controls:rotated,
+    viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
     browser_errors:errors,external_runtime_requests:0,checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','No external runtime dependencies']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
 } catch (error) {
