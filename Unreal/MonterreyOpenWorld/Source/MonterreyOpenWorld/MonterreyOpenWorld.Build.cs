@@ -4,6 +4,7 @@ public class MonterreyOpenWorld : ModuleRules
     public MonterreyOpenWorld(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-        PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine" });
+        PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities" });
     }
 }

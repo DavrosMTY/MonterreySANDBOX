@@ -6,6 +6,6 @@ public class MonterreyGeoEditor : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine" });
-        PrivateDependencyModuleNames.AddRange(new[] { "UnrealEd", "Landscape", "Json", "JsonUtilities", "PhysicsCore" });
+        PrivateDependencyModuleNames.AddRange(new[] { "UnrealEd", "Landscape", "Json", "JsonUtilities", "PhysicsCore", "MonterreyOpenWorld" });
     }
 }

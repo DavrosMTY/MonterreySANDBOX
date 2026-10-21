@@ -1,0 +1,61 @@
+{
+  "checked_on": "2026-10-21",
+  "timezone": "America/Mexico_City",
+  "references": [
+    {
+      "name": "windows",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine?application_version=5.6",
+      "http_status": 200,
+      "response_sha256": "c45a2beefe6ec2bf9f24d6a622611f0806d9c3ab0dfbac198838134ee87035fb",
+      "bytes": 161236
+    },
+    {
+      "name": "linux_quickstart",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/linux-development-quickstart-for-unreal-engine?application_version=5.6",
+      "http_status": 200,
+      "response_sha256": "2aa9279f7dc0f9943845b67fc091ae2f5dc44d50839c928444a17f93137a9aaf",
+      "bytes": 128726
+    },
+    {
+      "name": "github_access",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine?application_version=5.6",
+      "http_status": 200,
+      "response_sha256": "4c3febb46bc46905971cc97a7bed02843a7efee84fbd0d2042127a4f608f7021",
+      "bytes": 135324
+    },
+    {
+      "name": "windows_toolchain",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine?application_version=5.6",
+      "http_status": 200,
+      "response_sha256": "5a810a28658a381e1d2637180d497cd132958615b06c2d2395db7043fc34da72",
+      "bytes": 121847
+    },
+    {
+      "name": "packaging",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/packaging-your-project?application_version=5.6",
+      "http_status": 200,
+      "response_sha256": "9af6c7d5db6a4586f41a407df8dfcc08fc63bcb72ed24e01aea31ce65432021e",
+      "bytes": 340002
+    }
+  ],
+  "blocked_urls": [
+    {
+      "url": "https://www.unrealengine.com/en-US/linux",
+      "reason": "proxy CONNECT 403"
+    },
+    {
+      "url": "https://www.unrealengine.com/en-US/ue-on-github",
+      "reason": "proxy CONNECT 403"
+    }
+  ],
+  "access_checks": [
+    {
+      "resource": "EpicGames/UnrealEngine",
+      "result": "GitHub API 404; current integration cannot access it; account linking not established by this result"
+    },
+    {
+      "resource": "DavrosMTY/MonterreySANDBOX/actions/runners",
+      "result": "GitHub API 403 Resource not accessible by integration; runner inventory unknown"
+    }
+  ]
+}

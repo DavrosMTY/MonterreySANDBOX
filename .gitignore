@@ -48,3 +48,12 @@ Data/urban/*
 Data/urban/monterrey_centro_v3/*
 !Data/urban/monterrey_centro_v3/urban.json
 !Data/urban/monterrey_centro_v3/buildings.geojson
+
+# Generated UE-001 content is delivered only after engine validation/storage review.
+.vs/
+*.sln
+*.vcxproj*
+Unreal/MonterreyOpenWorld/Content/UE001/
+Unreal/MonterreyOpenWorld/Content/Maps/*.umap
+Unreal/MonterreyOpenWorld/Content/__ExternalActors__/
+Unreal/MonterreyOpenWorld/Content/__ExternalObjects__/

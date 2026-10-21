@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-21T20:54:09.135399+00:00",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.6\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"",
+  "logical_cpu_visible": 5,
+  "effective_cpu_quota": 4.0,
+  "memory": {
+    "MemTotal": 35743760384,
+    "MemAvailable": 33384992768,
+    "SwapTotal": 0
+  },
+  "cgroup_memory_limit_bytes": 34359738368,
+  "workspace_disk": {
+    "total_bytes": 33770192896,
+    "free_bytes": 29983076352
+  },
+  "gpu_device_nodes": [],
+  "display_configured": false,
+  "tools": {
+    "g++": "/usr/bin/g++",
+    "clang++": null,
+    "cl": null,
+    "cmake": null,
+    "dotnet": null,
+    "wine": null,
+    "docker": "/usr/local/bin/docker",
+    "vulkaninfo": null,
+    "nvidia-smi": null,
+    "gh": "/usr/bin/gh"
+  },
+  "detected_editor_candidates": [],
+  "editor_executed": false,
+  "engine_functional_test": "not_attempted_by_inventory",
+  "target": "Windows PC",
+  "engine_contract": "5.6.1"
+}

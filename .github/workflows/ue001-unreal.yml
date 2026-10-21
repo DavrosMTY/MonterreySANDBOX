@@ -1,0 +1,47 @@
+name: UE-001 licensed engine validation (explicit dispatch only)
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'Type LICENSED_RUNNER_READY after the owner authorizes this installed Windows runner'
+        required: true
+        type: string
+      through:
+        type: choice
+        options: [compile, import, play, package, all]
+        default: all
+permissions:
+  contents: read
+jobs:
+  unreal:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && inputs.confirmation == 'LICENSED_RUNNER_READY'
+    runs-on: [self-hosted, Windows, X64, ue-5.6.1]
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install small pinned project dependencies (no Unreal installation)
+        run: python -m pip install --no-cache-dir -r requirements.lock.txt
+      - name: Retrieve checksum-pinned licensed WORLD-001 data
+        shell: pwsh
+        run: python tools/fetch_ue001_world.py --output "${{ runner.temp }}/ue001-input-${{ github.run_id }}-${{ github.run_attempt }}"
+      - name: Execute real engine pipeline
+        shell: pwsh
+        env:
+          UE001_THROUGH: ${{ inputs.through }}
+        run: |
+          if (-not $env:UE_ROOT) { throw 'A licensed UE 5.6.1 install must already exist in UE_ROOT. No download is authorized here.' }
+          $mowInput = "${{ runner.temp }}/ue001-input-${{ github.run_id }}-${{ github.run_attempt }}"
+          $mowOutput = "${{ runner.temp }}/ue001-output-${{ github.run_id }}-${{ github.run_attempt }}"
+          python tools/run_ue001.py --city "$mowInput/world" --probes "$mowInput/traversal_probes.json" --output "$mowOutput" --through "$env:UE001_THROUGH"
+      - name: Record evidence location without uploading paid/quota-limited artifacts
+        if: always()
+        shell: pwsh
+        run: |
+          "Evidence remains on the licensed runner: ${{ runner.temp }}/ue001-output-${{ github.run_id }}-${{ github.run_attempt }}" >> $env:GITHUB_STEP_SUMMARY
+          "No automatic Release, PR creation, cache or Actions artifact upload." >> $env:GITHUB_STEP_SUMMARY

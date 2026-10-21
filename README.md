@@ -16,6 +16,17 @@ pruebas de publicación GitHub y portabilidad. Unreal/Windows no se compiló ni 
 [Releases descargables](https://github.com/DavrosMTY/MonterreySANDBOX/releases) ·
 [Validación CI](https://github.com/DavrosMTY/MonterreySANDBOX/actions)
 
+## UE-001 — primer proyecto nativo
+
+La rama `feature/ue001-first-playable` prepara **UE5.6.1**: personaje C++ en tercera
+persona, cámara, caminar/correr/saltar, spawn comprobado con colisión, iluminación,
+importación con procedencia por sector, World Partition y automatización de
+build/importación/juego/cooking. No hay editor instalado en el cloud actual;
+**no se afirma compilación, mapa importado ni ejecutable**.
+
+[Infraestructura real](docs/ue001/INFRAESTRUCTURA.md) ·
+[Proyecto y niveles A–E](docs/ue001/PROYECTO.md).
+
 ## Objetivo y alcance actual
 
 El objetivo del juego es recrear Monterrey a escala 1:1. El piloto utiliza
