@@ -1,8 +1,14 @@
 # Monterrey Open World
 
 Mundo abierto georreferenciado de la Zona Metropolitana de Monterrey, México,
-para **Unreal Engine 5 y Windows PC**. Prioridades: fidelidad geográfica, coherencia
+para **Unreal Engine 5.6.1 y Windows PC**. Prioridades: fidelidad geográfica, coherencia
 visual y una base de mundo recorrible antes de incorporar tráfico, NPCs o misiones.
+
+**Estrategia activa FREE-001: presupuesto US$0.** Visor web con Three.js y la
+geometría real GEO-003; Unreal continúa como motor definitivo. No se autorizan
+VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free001/README.md)
+· **[Abrir visor web gratuito](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/dd44f8e0a6eccf8be3362685a2ab847758fb38bb/index.html)**
+· [Resultados](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
 **Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
 cubre 2 × 2 km del centro, con 1.136 edificios, 2.665 tramos OSM y 1.077.198
