@@ -58,6 +58,7 @@ jobs:
           report['workflow_url']='https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']
           report['free_service_sources']=json.loads(Path('/tmp/free001-public-sources.json').read_text())
           report['pages_not_enabled']=True
+          Path('docs/free001').mkdir(parents=True,exist_ok=True)
           Path('docs/free001/public-verification.json').write_text(json.dumps(report,indent=2)+'\n')
           PY
           git config user.name 'github-actions[bot]'

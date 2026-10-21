@@ -21,12 +21,15 @@ const url = external || `http://127.0.0.1:${server.address().port}/`;
 const executablePath = process.env.CHROMIUM_PATH || ['/usr/bin/chromium','/usr/bin/google-chrome'].find(existsSync);
 const browser = await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-dev-shm-usage']});
 const errors = [], requests = [];
+let activePage;
 try {
-  const page = await browser.newPage({viewport:{width:1280,height:800}});
+  const page = await browser.newPage({viewport:{width:1280,height:800}}); activePage=page;
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => {if (response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
   page.on('request', request => requests.push(request.url()));
-  await page.goto(url); await page.waitForFunction(() => window.__MOW__?.snapshot().ready, null, {timeout:90000});
+  const main = await page.goto(url);
+  assert(main.ok(), `Public entry HTTP ${main.status()}`);
+  await page.waitForFunction(() => window.__MOW__?.snapshot().ready, null, {timeout:60000});
   const samples = [];
   for (const quality of ['balanced','low']) {
     await page.locator('details').evaluate(el=>{el.open=true;});
@@ -62,6 +65,6 @@ try {
     browser_errors:errors,external_runtime_requests:0,checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','No external runtime dependencies']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
 } catch (error) {
-  writeFileSync(`${output}/browser-failure.json`,JSON.stringify({status:'failed',tested_url:url,error:String(error),stack:error.stack,browser_errors:errors,requests},null,2)+'\n');
+  writeFileSync(`${output}/browser-failure.json`,JSON.stringify({status:'failed',tested_url:url,error:String(error),stack:error.stack,entry_title:activePage?await activePage.title().catch(()=>null):null,entry_text:activePage?(await activePage.locator('body').innerText({timeout:2000}).catch(()=>'' )).slice(0,400):null,browser_errors:errors,requests},null,2)+'\n');
   throw error;
 } finally {await browser.close(); if(server)await new Promise(resolve=>server.close(resolve));}
