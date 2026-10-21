@@ -24,6 +24,8 @@ importación con procedencia por sector, World Partition y automatización de
 build/importación/juego/cooking. No hay editor instalado en el cloud actual;
 **no se afirma compilación, mapa importado ni ejecutable**.
 
+[PR UE-001 #2](https://github.com/DavrosMTY/MonterreySANDBOX/pull/2) ·
+[Fuentes y evidencia descargables](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/ue001-0.1.0-source-preflight) ·
 [Infraestructura real](docs/ue001/INFRAESTRUCTURA.md) ·
 [Proyecto y niveles A–E](docs/ue001/PROYECTO.md) ·
 [Resultados: 99 pruebas; A/B externas, C/D/E bloqueadas](docs/ue001/RESULTADOS.md).

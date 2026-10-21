@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "run_id": "281f3af138cf478c9f2463ea1b2a6919",
-  "started_at_utc": "2026-10-21T21:07:12.058590+00:00",
-  "source_commit": "4b5ec00ac50e30a39d158494716c2fbd9f028450",
+  "run_id": "010a1855d40b4b10923d8308f8cf3efd",
+  "started_at_utc": "2026-10-21T21:09:58.753893+00:00",
+  "source_commit": "6069021674ef09fc8ac31248d5fa16c9080a6116",
   "source_dirty": false,
   "levels": {
     "A": {
@@ -17,7 +17,7 @@
       "cells": 279,
       "source_parts": 2673,
       "engine_executed": false,
-      "geometry_qa_sha256": "3907ef92e01d7db9add9c8f46039d7898fa2768b17316f73daa5630b1c89a91d",
+      "geometry_qa_sha256": "ac7716a2530d3da90ad08f17e4b12cfd97545a3e08ea778f0150f89495c9290f",
       "world_qa_sha256": "7b0e69e5acac9cd392f2a4ae42bf77569175b1db711fbbdd6eae8b63ff45cc2c",
       "scope": "External tests, numeric/provenance preflight and GLB/OBJ/world audits; known WORLD-001 issues remain"
     },
@@ -49,13 +49,13 @@
       "step": "external-tests",
       "exit_code": 0,
       "log": "external-tests.log",
-      "log_sha256": "185c9c8ecc02e93cd024a3dd0c4e8e658d0682d86a19a1043640d8fdce105efa"
+      "log_sha256": "b08de61b7c3b81d71d40f706055cbdca4e007402c0ff0c2fb0310cb52cc26a52"
     },
     {
       "step": "geometry-qa",
       "exit_code": 0,
       "log": "geometry-qa.log",
-      "log_sha256": "3907ef92e01d7db9add9c8f46039d7898fa2768b17316f73daa5630b1c89a91d"
+      "log_sha256": "ac7716a2530d3da90ad08f17e4b12cfd97545a3e08ea778f0150f89495c9290f"
     },
     {
       "step": "world-qa",
@@ -67,5 +67,5 @@
   "commercial_target": "Win64",
   "engine_executed": false,
   "windows_executable_tested": false,
-  "finished_at_utc": "2026-10-21T21:07:28.387461+00:00"
+  "finished_at_utc": "2026-10-21T21:10:14.645282+00:00"
 }

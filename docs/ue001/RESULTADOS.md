@@ -1,7 +1,7 @@
 # UE-001: resultados verificados
 
 21 de octubre de 2026, America/Mexico_City.
-Código validado: `4b5ec00ac50e30a39d158494716c2fbd9f028450`, checkout limpio.
+Código validado: `6069021674ef09fc8ac31248d5fa16c9080a6116`, checkout limpio.
 [Recibo estructurado](VALIDATION.json). La incorporación posterior de este recibo
 sólo documenta los resultados; no representa otra compilación.
 
@@ -15,7 +15,7 @@ sólo documenta los resultados; no representa otra compilación.
 
 Se ejecutó el pipeline completo hasta el bloqueo con salida 2 prevista. Los logs,
 JUnit, plan de importación, candidatos de spawn y auditorías completas se conservan
-en `artifacts/ue001-validation-001/` y en el paquete de fuentes/evidencia UE-001.
+en `artifacts/ue001-validation-002/` y en el paquete de fuentes/evidencia UE-001.
 
 El QA real leyó 1.077.198 triángulos, 2.673 piezas GLB y los 407 OBJ (compatibilidad
 y sectores). Error máximo de bounds OBJ del preflight: 0,000000005 cm. No se
@@ -34,9 +34,10 @@ un Character no convierte el piloto en una ciudad peatonal o vial certificada.
 
 ## Entrega revisable
 
-La rama `feature/ue001-first-playable` parte de development. El PR se dirige a
-**development**, sin fusión automática ni cambios a la restricción de Actions.
-La prerelease UE-001 distribuye **fuentes y evidencia, no un juego ejecutable**.
+La rama `feature/ue001-first-playable` parte de development. [PR #2](https://github.com/DavrosMTY/MonterreySANDBOX/pull/2)
+se dirige a **development**, sin fusión automática ni cambios a la restricción de Actions.
+La [prerelease UE-001](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/ue001-0.1.0-source-preflight)
+distribuye **fuentes y evidencia, no un juego ejecutable**.
 La Release GEO-003 y sus assets originales no se sobrescriben. No se sube Unreal,
 DDC, dependencias, credenciales ni se activa LFS/almacenamiento de Actions.
 
