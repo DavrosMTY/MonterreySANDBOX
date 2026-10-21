@@ -5,6 +5,6 @@ public class MonterreyOpenWorld : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore" });
-        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities", "PhysicsCore" });
     }
 }

@@ -14,6 +14,7 @@
 #include "Engine/StaticMesh.h"
 #include "PhysicsEngine/BodySetup.h"
 #include "CollisionQueryParams.h"
+#include "CollisionShape.h"
 #include "MonterreySectorMetadata.h"
 
 IMPLEMENT_MODULE(FDefaultModuleImpl, MonterreyGeoEditor)

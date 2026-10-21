@@ -12,6 +12,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "CollisionQueryParams.h"
+#include "CollisionShape.h"
 #include "Misc/CommandLine.h"
 #include "Misc/EngineVersion.h"
 #include "Misc/FileHelper.h"
