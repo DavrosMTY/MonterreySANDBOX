@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark"><meta name="description" content="Explora el centro de Monterrey a escala real. Visualizador gratuito del piloto geográfico GEO-003 de Monterrey Open World.">
+  <title>Monterrey Open World · Explorador</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.min.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div id="viewport" aria-label="Vista tridimensional interactiva del centro de Monterrey"></div>
+  <header><a class="brand" href="./" aria-label="Inicio"><span class="brand-mark">M<span>↗</span></span><span>MONTERREY <b>OPEN WORLD</b></span></a><span class="edition">EXPLORADOR WEB <i>FREE–001</i></span></header>
+  <main>
+    <aside class="panel" aria-label="Opciones de exploración">
+      <div class="eyebrow"><span class="live-dot"></span> MUNDO GEOREFERENCIADO</div>
+      <h1>El centro.<br><em>A escala real.</em></h1>
+      <p class="intro">Una primera mirada a Monterrey Open World.<br>Explora nuestro piloto geográfico de 2 × 2 km.</p>
+      <div class="facts"><span><b>1.136</b> edificios</span><span><b>1:1</b> escala UTM</span></div>
+      <div class="views" role="group" aria-label="Tipo de vista"><button id="aerial" class="active" aria-pressed="true">↗ Vista aérea</button><button id="street" aria-pressed="false">⌖ Nivel de calle</button></div>
+      <button id="explore" class="primary">Explorar la ciudad <span>→</span></button>
+      <p class="hint">Arrastra con el botón derecho para mirar.<br><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> mover · <kbd>Q</kbd>/<kbd>E</kbd> bajar / subir<br><kbd>Shift</kbd> acelerar · <kbd>Esc</kbd> soltar el mouse</p>
+      <details><summary>Opciones gráficas <span>＋</span></summary>
+        <label>Calidad <select id="quality"><option value="low">Baja · equipo limitado</option><option value="balanced" selected>Equilibrada</option><option value="high">Alta · todo el sector</option></select></label>
+        <label>Velocidad <select id="speed"><option value="8">8 m/s · detalle</option><option value="35" selected>35 m/s · explorar</option><option value="100">100 m/s · vuelo</option></select></label>
+        <label class="check"><input type="checkbox" id="fog" checked> Atmósfera</label><label class="check"><input type="checkbox" id="wireframe"> Ver triangulación</label>
+        <p class="hint">Baja reduce resolución y distancia de carga. La geometría cercana conserva su escala y detalle.</p>
+      </details>
+      <div id="notice" role="status" aria-live="polite">Preparando el mundo…</div>
+      <div class="load-track"><div id="progress"></div></div>
+    </aside>
+    <div class="corner"><span class="pill">GEO–003 / WORLD–001</span><p>MONTERREY, NUEVO LEÓN<br><span>EPSG:32614 · EGM2008</span></p></div>
+    <div class="compass" aria-hidden="true"><span>N</span><div id="needle">↑</div><small>250 m / sector</small></div>
+    <div class="touch-controls" aria-label="Controles táctiles"><button data-key="KeyW" aria-label="Avanzar">↑</button><div><button data-key="KeyA" aria-label="Izquierda">←</button><button data-key="KeyS" aria-label="Retroceder">↓</button><button data-key="KeyD" aria-label="Derecha">→</button></div></div>
+    <div id="error" role="alert" hidden><h2>No pudimos abrir el mundo</h2><p id="error-text"></p><button onclick="location.reload()">Reintentar</button></div>
+  </main>
+  <footer><div class="stats" aria-label="Estadísticas de renderizado"><span><b id="fps">—</b> FPS</span><span><b id="sectors">0</b> sectores</span><span><b id="triangles">0</b> triángulos</span><span title="Buffers de geometría residentes; estimación, no memoria GPU total"><b id="memory">0</b> MiB geometría*</span><span title="Heap JavaScript cuando el navegador expone performance.memory"><b id="heap">N/D</b> MiB JS*</span></div><div class="attribution"><a href="./about.html">Datos, licencias y límites</a> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Copernicus</div></footer>
+</body>
+</html>
