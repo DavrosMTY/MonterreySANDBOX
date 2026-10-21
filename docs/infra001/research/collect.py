@@ -13,39 +13,19 @@ import re
 import urllib.request
 
 URLS={
- 'aws_windows_rates':'https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-windows-ondemand-without-sql/us-east-1/index.json',
- 'aws_ec2':'https://aws.amazon.com/ec2/pricing/on-demand/',
- 'aws_g4_specs':'https://aws.amazon.com/ec2/instance-types/g4/',
- 'aws_ebs':'https://aws.amazon.com/ebs/pricing/',
- 'aws_ipv4':'https://aws.amazon.com/vpc/pricing/',
- 'aws_dcv':'https://aws.amazon.com/hpc/dcv/',
- 'aws_stop':'https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html',
- 'azure_eastus':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27',
- 'azure_texas':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20armSkuName%20eq%20%27Standard_NV12ads_A10_v5%27',
- 'azure_disks':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27southcentralus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27',
- 'azure_gpu_specs':'https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nvadsa10v5-series',
- 'azure_gpu_driver':'https://learn.microsoft.com/en-us/azure/virtual-machines/windows/n-series-driver-setup',
- 'azure_egress':'https://azure.microsoft.com/en-us/pricing/details/bandwidth/',
- 'airgpu':'https://airgpu.com/pricing/',
- 'airgpu_faq':'https://airgpu.com/faq/',
- 'airgpu_api':'https://airgpu.com/blog/',
- 'paperspace':'https://www.paperspace.com/pricing',
- 'vagon':'https://vagon.io/pricing',
- 'vagon_api':'https://docs.vagon.io/streams',
- 'shadow':'https://shadow.tech/en-US/shadowpc/offers',
- 'vultr':'https://www.vultr.com/pricing/#cloud-gpu',
- 'runpod':'https://www.runpod.io/pricing',
- 'lambda':'https://lambda.ai/service/gpu-cloud',
- 'github_runner_security':'https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions',
- 'github_ephemeral':'https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/autoscaling-with-self-hosted-runners',
- 'github_oidc_aws':'https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws',
- 'github_runner_cost':'https://docs.github.com/en/billing/concepts/product-billing/github-actions',
- 'epic_license':'https://www.unrealengine.com/en-US/license',
- 'epic_github':'https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine?application_version=5.6',
- 'vs_license':'https://visualstudio.microsoft.com/vs/community/',
- 'windows_sessions':'https://learn.microsoft.com/en-us/windows/win32/services/interactive-services',
- 'aws_grid':'https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-nvidia-driver.html',
- 'aws_egress':'https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer'
+ 'airgpu_home':'https://airgpu.com/',
+ 'airgpu_help':'https://help.airgpu.com/',
+ 'azure_disks_eastus':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Standard%20SSD%20Managed%20Disks%27',
+ 'azure_premium_eastus':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Storage%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27Premium%20SSD%20Managed%20Disks%27',
+ 'azure_ip':'https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Network%27%20and%20armRegionName%20eq%20%27eastus%27%20and%20productName%20eq%20%27IP%20Addresses%27',
+ 'azure_shutdown':'https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing',
+ 'vagon_help':'https://docs.vagon.io/computer',
+ 'vagon_os':'https://vagon.io/computer',
+ 'paperspace_windows':'https://docs.digitalocean.com/products/paperspace/machines/details/pricing/',
+ 'epic_eula':'https://www.unrealengine.com/en-US/eula/unreal',
+ 'epic_faq':'https://www.unrealengine.com/en-US/faq',
+ 'aws_dcv_price':'https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-license.html',
+ 'aws_scheduler':'https://aws.amazon.com/eventbridge/pricing/'
 }
 
 
@@ -90,16 +70,17 @@ def fetch(item):
    selected=set()
    for i,line in enumerate(lines):
     if re.search(keywords,line,re.I):selected.update(range(max(0,i-2),min(len(lines),i+4)))
-   record['text_excerpt']='\n'.join(lines[i] for i in sorted(selected))[:52000]
-   raw_prices=[value[max(0,m.start()-90):m.end()+160] for m in list(re.finditer(r'\$\s*\d+(?:\.\d+)?|"price"\s*:\s*"?\d',value))[:70]]
-   record['raw_price_fragments']=raw_prices
+   record['text_excerpt']=' '.join((' '.join(lines[i] for i in sorted(selected))).split()[:80])
+   numeric=re.compile(r'\$|GB|TB|VRAM|vCPU|cores|A10|T4|RTX|P5000|P6000|g4dn|g5\.|NV12',re.I)
+   record['fact_rows']=[{'line':i,'fact_tokens':re.findall(r'\$?\d+(?:[.,]\d+)?(?:/hour|/hr|/month)?|GB|TB|VRAM|vCPU|cores|A10G?|T4|RTX\d*|P5000|P6000|g4dn\.[A-Za-z0-9]+|NV12ads_A10_v5',line,re.I)} for i,line in enumerate(lines) if numeric.search(line)][:250]
+
  except Exception as exc:record['error']=str(exc)
  return record
 
 
 def main():
  with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:records=list(pool.map(fetch,URLS.items()))
- out=Path(__file__).with_name('snapshot.json')
+ out=Path(__file__).with_name('supplement.json')
  out.write_text(json.dumps({'collected_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'method':'Unauthenticated official public URLs, read-only, no provisioning','records':records},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({r['id']:{'status':r.get('http_status'),'error':r.get('error'),'bytes':r.get('response_bytes')} for r in records},indent=2))
 
