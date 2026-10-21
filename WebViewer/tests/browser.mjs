@@ -77,10 +77,18 @@ try {
   await page.screenshot({path:`${output}/mobile.png`});
   assert(await page.locator('.touch-controls').isVisible());
   assert.equal(errors.length,0,errors.join('\n'));
-  const origin=new URL(url).origin; assert(requests.every(x=>new URL(x).origin===origin),'No external runtime services');
+  const origin=new URL(url).origin;
+  const immutablePrefix = external && /^https:\/\/rawcdn\.githack\.com\/DavrosMTY\/MonterreySANDBOX\/[a-f0-9]{40}\//.test(url)
+    ? new URL(url).pathname.replace(/index\.html$/, '') : null;
+  const staticRedirects = requests.filter(x=>new URL(x).origin!==origin);
+  assert(staticRedirects.every(x=> {
+    const target=new URL(x);
+    return immutablePrefix && target.origin==='https://raw.githubusercontent.com' &&
+      target.pathname.startsWith(immutablePrefix+'assets/cell_') && target.pathname.endsWith('.glb.gz');
+  }),'Only static GLB redirects to the identical immutable GitHub source are allowed');
   const report={status:'passed',tested_url:url,renderer:'Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance',
     viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
-    browser_errors:errors,external_runtime_requests:0,checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','No external runtime dependencies']};
+    browser_errors:errors,external_runtime_requests:staticRedirects.length,unapproved_runtime_requests:0,runtime_origins:[...new Set(requests.map(x=>new URL(x).origin))],checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
 } catch (error) {
   writeFileSync(`${output}/browser-failure.json`,JSON.stringify({status:'failed',tested_url:url,error:String(error),stack:error.stack,entry_title:activePage?await activePage.title().catch(()=>null):null,entry_text:activePage?(await activePage.locator('body').innerText({timeout:2000}).catch(()=>'' )).slice(0,400):null,browser_errors:errors,requests},null,2)+'\n');
