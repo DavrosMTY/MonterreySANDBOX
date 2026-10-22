@@ -30,6 +30,7 @@ def audit(city,terrain,output,baseline=None):
     if m['milestone']=='GEO-003 / WORLD-001':
         with rasterio.open(city/'correction_layers/corrected_DSM.tif')as ds:surface.data=ds.read(1)
     records={p['name']:p for p in m['mesh_parts']};scene=trimesh.load_scene(city/m['glb'],process=False)
+    half=m['extent_m']/2;heat_step=2*half/80
     issues=[];stats=Counter();mesh_rows=[];heat=np.zeros((80,80));to_geo=Transformer.from_crs(32614,4326,always_xy=True)
     def issue(kind,severity,point,record,measurement,threshold,reason):
         x,y,h=map(float,point);e,n=np.array(m['center_easting_northing_m'])+[x,y];lon,lat=to_geo.transform(e,n)
@@ -38,7 +39,7 @@ def audit(city,terrain,output,baseline=None):
             'osm_id':record.get('osm_id'),'position_enu_m':[x,y,h],'measurement_m_or_percent':float(measurement),
             'geometric_threshold':threshold,'cause':reason,'source_model_sha256':m['glb_sha256'],
             'survey_accuracy_certified':False,'vertical_datum':'EGM2008'}})
-        row=min(79,max(0,int((1000-y)/25)));col=min(79,max(0,int((x+1000)/25)));heat[row,col]=max(heat[row,col],severity)
+        row=min(79,max(0,int((half-y)/heat_step)));col=min(79,max(0,int((x+half)/heat_step)));heat[row,col]=max(heat[row,col],severity)
     for node in sorted(scene.graph.nodes_geometry):
         matrix,key=scene.graph[node];mesh=scene.geometry[key];r=records[node]
         xyz=trimesh.transform_points(mesh.vertices,np.linalg.inv(enu_to_gltf())@matrix);tri=xyz[mesh.faces]
@@ -89,13 +90,13 @@ def audit(city,terrain,output,baseline=None):
             'mesh_metrics':mesh_rows,'issues':len(issues),'unreal_executed':False}
     (out/'audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     (out/'issues.geojson').write_text(json.dumps({'type':'FeatureCollection','features':issues},separators=(',',':'))+'\n')
-    (out/'heat.json').write_text(json.dumps({'bounds_enu_m':[-1000,-1000,1000,1000],'n':80,'values':heat.ravel().astype(int).tolist(),
+    (out/'heat.json').write_text(json.dumps({'bounds_enu_m':[-half,-half,half,half],'n':80,'values':heat.ravel().astype(int).tolist(),
             'legend':{'0':'no sampled issue in this bin; not a certificate','2':'review','3':'severe geometric discrepancy'}},separators=(',',':'))+'\n')
     # Standalone scientific plot, based only on numerical source/mesh evidence.
     import matplotlib;matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    fig,axes=plt.subplots(1,2,figsize=(11,5));axes[0].imshow(grade,extent=[-1000,1000,-1000,1000],origin='upper',vmin=0,vmax=50,cmap='magma')
-    axes[0].set_title('Pendiente del campo de soporte (%)');im=axes[1].imshow(heat,extent=[-1000,1000,-1000,1000],origin='upper',vmin=0,vmax=3,cmap='YlOrRd')
+    fig,axes=plt.subplots(1,2,figsize=(11,5));axes[0].imshow(grade,extent=[-half,half,-half,half],origin='upper',vmin=0,vmax=50,cmap='magma')
+    axes[0].set_title('Pendiente del campo de soporte (%)');im=axes[1].imshow(heat,extent=[-half,half,-half,half],origin='upper',vmin=0,vmax=3,cmap='YlOrRd')
     axes[1].set_title('Anomalías geométricas muestreadas');fig.colorbar(im,ax=axes[1],label='Severidad de revisión')
     for ax in axes:ax.set_xlabel('Este local (m)');ax.set_ylabel('Norte local (m)')
     fig.suptitle(m['milestone']+' · no certifica precisión topográfica');fig.tight_layout();fig.savefig(out/'anomaly-map.png',dpi=140);plt.close(fig)

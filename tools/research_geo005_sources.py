@@ -25,8 +25,8 @@ def get(item):
  key,url=item;r={'key':key,'url':url};out=Path('artifacts/geo005-research');out.mkdir(parents=True,exist_ok=True)
  try:
   request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 public geographic research MonterreyOpenWorld'})
-  with urllib.request.urlopen(request,timeout=40)as response:body=response.read(25_000_001);r.update(http_status=response.status,content_type=response.headers.get('Content-Type'))
-  if len(body)>25_000_000:raise ValueError('Metadata size cap')
+  with urllib.request.urlopen(request,timeout=40)as response:body=response.read((150_000_000 if key=='official_metropolis_pdf' else 25_000_000)+1);r.update(http_status=response.status,content_type=response.headers.get('Content-Type'))
+  if len(body)>(150_000_000 if key=='official_metropolis_pdf' else 25_000_000):raise ValueError('Metadata size cap')
   (out/(key+'.body')).write_bytes(body);r.update(bytes=len(body),sha256=hashlib.sha256(body).hexdigest())
   text=body.decode(errors='replace')
   if body.startswith(b'%PDF'):

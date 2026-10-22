@@ -202,15 +202,23 @@ def supports(network,cells,decks):
                 'bridge_deck_role':r['role'],'placement_estimated':True,'structure_surveyed':False,'elevation_estimated':True}
 
 
-def build(terrain,urban,baseline,output):
-    terrain,urban,baseline,out=map(Path,(terrain,urban,baseline,output));start=time.perf_counter()
+def build(terrain,urban,baseline,output,cells_per_axis=None):
+    terrain,urban,out=map(Path,(terrain,urban,output));start=time.perf_counter()
     if out.exists():raise FileExistsError('Preserve earlier model')
-    tm=json.loads((terrain/'manifest.json').read_text());old=json.loads((baseline/'manifest.json').read_text())
+    tm=json.loads((terrain/'manifest.json').read_text());old=json.loads((Path(baseline)/'manifest.json').read_text()) if baseline else None
     if tm['source_vertical_datum']!='EGM2008'or tm.get('native_product_spacing_m')!=5:raise ValueError('Require the validated INEGI DTM')
     if sha256(terrain/tm['reference_geotiff'])!=tm['reference_geotiff_sha256']:raise ValueError('DTM hash mismatch')
     u=json.loads((urban/'urban.json').read_text());buildings=json.loads((urban/'buildings.geojson').read_text())
+    if not np.allclose(u['center_easting_northing_m'],tm['center_easting_northing_m'],rtol=0,atol=1e-4):raise ValueError('Urban/terrain origins differ')
+    if abs(u['extent_m']-tm['extent_m'])>1e-6:raise ValueError('Urban/terrain extents differ')
+    if old is None:
+        old={**tm,'source_crs':tm['crs'],'gltf_enu_matrix':enu_to_gltf().tolist(),'glb_sha256':None,
+             'input_urban_sha256':sha256(urban/'urban.json'),'input_buildings_sha256':sha256(urban/'buildings.geojson')}
     if sha256(urban/'urban.json')!=old['input_urban_sha256']or sha256(urban/'buildings.geojson')!=old['input_buildings_sha256']:raise ValueError('Original OSM provenance changed')
     config=copy.deepcopy(DEFAULT_CONFIG);config['roads']['mesh_edge_spacing_m']=5
+    if cells_per_axis is not None:
+        if not isinstance(cells_per_axis,int) or not 1<=cells_per_axis<=16:raise ValueError('cells_per_axis must be 1..16')
+        config['cells_per_axis']=cells_per_axis
     surface=PlanarDTM(terrain/tm['reference_geotiff'],tm);network=TerrainNetwork(u,surface,config['roads'])
     network.portal_cut_geometry,portal_details=portal_mask(network)
     meshes={};parts=[];scene=trimesh.Scene();by_cell=defaultdict(list);obstacles=[];cells=config['cells_per_axis'];step=2*surface.half/cells

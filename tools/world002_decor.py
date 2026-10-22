@@ -32,7 +32,7 @@ def enu_triangles(mesh):
     return points[mesh.faces]
 
 
-def overlays(sectors, roads, center):
+def overlays(sectors, roads, center, extent_m=2000, cells_per_axis=8):
     source_path=ROOT/'WebViewer/visual/osm-street-inventory.json'
     source=json.loads(source_path.read_text());receipt=json.loads(source_path.with_suffix('.source.json').read_text())
     if hashlib.sha256(source_path.read_bytes()).hexdigest()!=receipt['sha256']:raise ValueError('Street inventory provenance changed')
@@ -56,8 +56,8 @@ def overlays(sectors, roads, center):
     lines=[LineString(np.asarray(r['centerline_enu_m'])[:,:2])for r in available];near=shapely.STRtree(lines)
     cells=defaultdict(list);stats=Counter();skips=Counter()
     def add(kind,x,y,z,source_id,placement='osm_node',**extra):
-        if not np.isfinite([x,y,z]).all() or not(-1000<=x<=1000 and -1000<=y<=1000):return
-        cell=f'{min(7,int((x+1000)//250))}_{min(7,int((y+1000)//250))}'
+        if not np.isfinite([x,y,z]).all() or not(-extent_m/2<=x<=extent_m/2 and -extent_m/2<=y<=extent_m/2):return
+        cell=f'{min(cells_per_axis-1,int((x+extent_m/2)//(extent_m/cells_per_axis)))}_{min(cells_per_axis-1,int((y+extent_m/2)//(extent_m/cells_per_axis)))}'
         cells[cell].append({'kind':kind,'position':[round(x,5),round(z,5),round(-y,5)],
                             'source_id':source_id,'placement':placement,'dimensions_estimated':True,
                             'height_source':'existing_exported_surface_estimate','decorative':placement!='osm_node',**extra})

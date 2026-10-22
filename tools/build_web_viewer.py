@@ -137,7 +137,7 @@ def build(city, output, visual=False):
     overlay_info=None
     if visual:
         from world002_decor import overlays
-        overlay=overlays(sectors,visual_roads,manifest['center_easting_northing_m'])
+        overlay=overlays(sectors,visual_roads,manifest['center_easting_northing_m'],extent_m=manifest['extent_m'],cells_per_axis=max(max(c)for c in sectors)+1)
         overlay_path=assets/'visual-overlay.json.gz'
         overlay_path.write_bytes(gzip.compress(json.dumps(overlay,separators=(',',':')).encode(),mtime=0))
         overlay_info={'url':'assets/'+overlay_path.name,'sha256':sha(overlay_path),'bytes':overlay_path.stat().st_size,'stats':overlay['stats'],'decorative_counts':overlay['decorative_counts'],'source_inventory_sha256':overlay['source_inventory_sha256']}
@@ -145,7 +145,8 @@ def build(city, output, visual=False):
     features = {}
     for (cx, cy), groups in sorted(sectors.items()):
         cell_id = f'{cx}_{cy}'
-        pivot = np.array([-875 + cx * 250, 550., 875 - cy * 250])
+        cell_size = manifest['extent_m']/(max(max(c) for c in sectors)+1)
+        pivot = np.array([-manifest['extent_m']/2+(cx+.5)*cell_size, 550., manifest['extent_m']/2-(cy+.5)*cell_size])
         bounds = np.vstack([m.bounds for parts in groups.values() for _, m, _ in parts])
         ntri = sum(len(m.faces) for parts in groups.values() for _, m, _ in parts)
         binary = glb_bytes(groups, pivot, visual_roads=visual_roads,visual=visual)
@@ -165,7 +166,7 @@ def build(city, output, visual=False):
               'source_crs': manifest['source_crs'], 'vertical_datum': manifest['source_vertical_datum'],
               'center_easting_northing_m': manifest['center_easting_northing_m'],
               'axes': 'X east, Y up (EGM2008), Z south; metres; same as source GLB',
-              'extent_m': manifest['extent_m'], 'sector_size_m': 250,
+              'extent_m': manifest['extent_m'], 'sector_size_m': cell_size,
               'original_bytes': source.stat().st_size, 'original_meshes': len(records),
               'triangles': sum(x['triangles'] for x in index),
               'optimized_meshes': sum(x['meshes'] for x in index),
