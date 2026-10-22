@@ -1,7 +1,7 @@
 # Resultados GEO-004
 
-Validación numérica completada, separada de exactitud topográfica y de pruebas
-Unreal. La comprobación del navegador y publicación se registra al terminar sus
+Validación numérica y Chromium local completadas, separadas de exactitud
+topográfica y de pruebas Unreal. La publicación se registra al terminar sus
 recibos; no se declara éxito por anticipado.
 
 El baseline conserva su GLB SHA256
@@ -28,7 +28,7 @@ por superar un límite de conducción arbitrario.
 
 ## Comprobaciones completas
 
-- 201 cruces entre niveles comprobados: 0 interferencias potenciales de pisos/techos/tableros en las superficies presentes; 15 cruces con superficie ausente permanecen pendientes.
+- 201 cruces entre niveles comprobados: 0 interferencias potenciales de pisos/techos/tableros en los puntos de cruce comprobados con superficies presentes; 15 cruces con superficie ausente permanecen pendientes.
 - 81 apoyos estimados contrastados con el tablero exportado: 0 huecos >25 cm. No demuestra diseño estructural real.
 - 0 piezas de puente con terreno >25 cm por encima de su tablero en los triángulos comprobados.
 - 0 edificios a nivel con base flotante >50 cm en el perímetro muestreado; 0 techos atravesados por los puntos del terreno comprobados (perímetro e interior de retícula nativa). **98 cimentaciones requieren revisión** por variación topográfica, sin aplanar el terreno.
@@ -55,3 +55,37 @@ Nuevo GLB SHA256: `102833aa723739bf9021a1493412ed38a316011153d951724092226f4c563
 Siguiente paso técnico: resolver primero las zonas señaladas con controles
 independientes, trazado de superficies faltantes y cotas estructurales legales;
 no continuar añadiendo personajes o tráfico sobre incidencias sin resolver.
+
+## Navegador real y coste de detalle
+
+Chromium / ANGLE SwiftShader por software, 1280 × 800, calidad baja para los tres
+casos. Mismas cámaras exactas, dos GLB distintos por SHA, sin errores de consola,
+shader ni HTTP; comprobadas consultas por clic, calor, noche, responsive y ciclos
+de descarga/carga. Alta cargó los 64 sectores. Diez capturas PNG originales
+seleccionadas; sitio local completo 49.247.522 bytes (<50 MiB).
+
+| Caso / modelo | FPS observados | Triángulos visibles | Draw calls | Geometría residente |
+| --- | ---: | ---: | ---: | ---: |
+| Caso 0 GEO-003 | 5,74 | 196.484 | 79 | 4,41 MiB |
+| Caso 0 GEO-004 | 4,40 | 236.965 | 76 | 4,99 MiB |
+| Caso 1 GEO-003 | 6,11 | 208.135 | 60 | 4,55 MiB |
+| Caso 1 GEO-004 | 5,24 | 263.782 | 59 | 5,36 MiB |
+| Caso 2 GEO-003 | 4,74 | 207.508 | 62 | 5,06 MiB |
+| Caso 2 GEO-004 | 4,78 | 257.389 | 70 | 5,88 MiB |
+
+Son muestras cortas de integración, **no un benchmark de GPU ni una garantía de
+fluidez**. El mallado que respeta cada plano nativo aumenta geometría; no se elimina
+detalle geográfico para mejorar estas cifras. Las opciones bajas mantienen el
+streaming y reducen resolución/distancia. En esta CPU, alta observó 1,71 FPS y
+27,94 MiB de buffers: no se recomienda como calidad inicial por software.
+Memoria: buffers estimados, no VRAM total. No se probaron Safari, Firefox ni una
+GPU de consumo. El responsive es Chromium con viewport móvil, no un teléfono físico.
+
+[Recibo del navegador local](local-browser-verification.json) ·
+[Integridad de los 64 sectores](web-geometry-verification.json).
+
+La inspección visual del caso 1 muestra que los portales aún conservan bocas y
+collares genéricos; sus bordes de excavación y aproximaciones requieren revisión.
+No se presentan esos elementos como reconstrucción del túnel real. El caso 0 sí
+muestra la eliminación del faldón artificial a nivel con la misma cámara. La
+mejora demostrada de plataformas no se extrapola a todas las estructuras.

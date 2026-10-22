@@ -13,13 +13,16 @@ VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free0
 · [Descarga WORLD-002](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/world002-b175978bcf0d)
 · [Resultados FREE-001](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
+**[Abrir GEO-004](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/index.html)** ·
+[Capturas comparativas reales](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html)
+
 **GEO-004 — auditoría topográfica y nuevo MDT INEGI 5 m:**
 [Diagnóstico, reconstrucción y límites](docs/geo004/README.md) ·
 [Fuentes oficiales](docs/geo004/FUENTES.md) · [QA](docs/geo004/RESULTADOS.md).
 La geometría original y WORLD-002 permanecen disponibles. El nuevo MDT es de 2007,
 con EPV no publicada: no se certifica precisión absoluta ni conducción del mundo.
 
-**Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
+**Referencia conservada: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
 cubre 2 × 2 km del centro, con 1.136 edificios, 2.665 tramos OSM y 1.077.198
 triángulos. Se han generado y revisado imágenes reales en Blender. La entrega
 local GEO-003 pasó 72 pruebas y QA de GLB/407 OBJ; la suite incorpora además cinco

@@ -88,3 +88,10 @@ La captura mencionada en la solicitud no se recibió con el texto; los casos se
 seleccionan por anomalías medidas de las mallas, con coordenadas geográficas.
 No se utiliza contenido geográfico de Google. Las capturas publicadas son PNG
 sin retoques producidos por Chromium, no imágenes generadas ni capturas Unreal.
+
+[Visor GEO-004 desplegado](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/index.html) ·
+[Comparación PNG auténtica](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html) ·
+[PR #6](https://github.com/DavrosMTY/MonterreySANDBOX/pull/6).
+La verificación pública y prerelease se registran por separado; el primer job
+aprobó reconstrucción/QA/WebGL y despliegue, pero falló al empaquetar la Release.
+Se recupera esa entrega sin cambiar el modelo ni sobrescribir el despliegue validado.

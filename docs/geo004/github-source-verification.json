@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-22T18:29:08.649170+00:00",
+  "source_commit": "aa07971086388aad8b1acf03a5edbd9b6db9b319",
+  "all_git_blobs_match_github_tree": true,
+  "blob_count": 202,
+  "preserved_branch_heads": {
+    "development": "2e9036b32823c7e1cc501125a14ad8ffe10091db",
+    "feature/free001-web-viewer": "fab3b60e55d4f17c03e15f7acfe05744c9ca2c12",
+    "feature/ue001-first-playable": "82464719ac658f3a7932c94ee791ea43c2a90b06",
+    "feature/world002-visual-identity": "ce1ce4bba69a83551a424d3f5a47660b29348ee4",
+    "main": "8015d293b945086e4e254d1ba52b3cba690c96f0"
+  },
+  "original_GIS_and_Unreal_diff_files": 0,
+  "pull_request": "https://github.com/DavrosMTY/MonterreySANDBOX/pull/6",
+  "budget_usd": 0
+}
