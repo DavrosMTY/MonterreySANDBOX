@@ -2169,6 +2169,8 @@
     "Mobile controls",
     "Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed"
   ],
-  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39833118802",
-  "pages_not_enabled": true
+  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39834048694",
+  "pages_not_enabled": true,
+  "public_test_workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39833118802",
+  "verified_public_test_reused": true
 }
