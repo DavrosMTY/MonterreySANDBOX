@@ -1,5 +1,7 @@
 # WORLD-002 — identidad visual sobre geografía real
 
+[Abrir WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/index.html) · [Capturas reales](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/evidence/index.html) · [PR #5](https://github.com/DavrosMTY/MonterreySANDBOX/pull/5).
+
 Presupuesto US$0. Primera propuesta visual funcional en Three.js 0.180.0/WebGL2;
 Unreal Engine 5.6.1 sigue siendo el destino del proyecto. No se ejecutó Unreal.
 

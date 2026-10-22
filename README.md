@@ -7,8 +7,9 @@ visual y una base de mundo recorrible antes de incorporar tráfico, NPCs o misio
 **Estrategia activa WORLD-002: presupuesto US$0.** Visor web con Three.js y la
 geometría real GEO-003; Unreal continúa como motor definitivo. No se autorizan
 VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free001/README.md)
-· **[Abrir visor web gratuito](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/dd44f8e0a6eccf8be3362685a2ab847758fb38bb/index.html)**
+· **[Abrir WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/index.html)**
 · [Identidad visual WORLD-002](docs/world002/README.md)
+· [Capturas reales WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/evidence/index.html)
 · [Resultados FREE-001](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
 **Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto

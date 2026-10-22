@@ -17,7 +17,7 @@ Las categorías y alturas desconocidas se conservaron en los registros originale
 - 1.375 grupos/partes con atributos visuales comprobados contra sus registros fuente.
 - 211.403 muestras de los tres LOD cotejadas con el TIFF Copernicus fijado por SHA256.
 - 5.625 segmentos de línea condicionados por carriles/sentido explícitos; 610 rayas
-  peatonales a partir de nodos OSM (no son 610 cruces independientes).
+  peatonales sobre 122 nodos OSM representados (no son 610 cruces independientes).
 - 171 árboles: 43 nodos fuente y 128 propuestas decorativas sobre banqueta.
   12 controles semafóricos representados de 15 etiquetados; se omiten los que carecen
   de superficie válida. No se activa comportamiento de tráfico.
@@ -83,3 +83,20 @@ estén disponibles. No se corrigen categorías a partir de apariencias imaginada
 Unreal 5.6.1 queda intacto: no hay evidencia de compilación, importación ni ejecución
 UE en este trabajo. Pages sigue requiriendo permisos administrativos no disponibles;
 la vista previa CDN gratuita tiene aviso externo y no ofrece SLA.
+
+## Publicación de la construcción verificada
+
+[PR #5 hacia development](https://github.com/DavrosMTY/MonterreySANDBOX/pull/5),
+dependiente de PR #4, sin merge. Implementación `b175978bcf0d657e8c4ae634f4e3bb836dc5cf37`.
+La reconstrucción y el navegador WORLD-002 aprobaron en GitHub:
+[workflow de publicación](https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39813444403)
+y [workflow del PR](https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39813524537).
+También aprobaron la regresión FREE-001 y las suites GIS en Linux y Windows.
+[Recibo CI completo](ci-verification.json).
+
+Hosting generado `a44d909664914f088e01b23c87acb2ef8cab3c44`, descendiente del despliegue FREE-001, sin reescribir historia.
+[Visor público](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/index.html) ·
+[Galería de capturas auténticas](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/evidence/index.html).
+La URL original FREE-001 sigue fijada a `dd44f8e0a6eccf8be3362685a2ab847758fb38bb`.
+La verificación independiente HTTPS se registra en `public-verification.json`;
+la aprobación del build por sí sola no certifica esa URL ni activa Pages.
