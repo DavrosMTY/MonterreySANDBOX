@@ -1,0 +1,53 @@
+{
+  "method": "Intersect official EPSG:3857 coverage polygons with EPSG:4326 pilot footprint transformed to 3857; L=LiDAR category only",
+  "pilot_bbox_lonlat": [
+    -100.32006112,
+    25.65788237,
+    -100.29994038,
+    25.67611702
+  ],
+  "coverage_fraction": {
+    "DTM_5m_LiDAR": 1.0,
+    "DSM_5m_LiDAR": 1.0,
+    "DTM_1_5m": 0.0,
+    "DSM_1_5m": 0.0
+  },
+  "sources": [
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/js/capas/malla10k_T1_5_min.geojson",
+      "path": "artifacts/geo004-research/js_capas_malla10k_T1_5_min.geojson",
+      "bytes": 18892,
+      "sha256": "0776c6af73e059a399414eff55f6a2c90b6f9b941ef8e03a594a42af469614c6"
+    },
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/js/capas/malla10k_T5_min.geojson",
+      "path": "artifacts/geo004-research/js_capas_malla10k_T5_min.geojson",
+      "bytes": 224783,
+      "sha256": "990fb76c451167512d2ef1ba68665b3d00e5774c3515aa3137d7a9163cd29f29"
+    },
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/js/capas/malla10k_S1_5_min.geojson",
+      "path": "artifacts/geo004-research/js_capas_malla10k_S1_5_min.geojson",
+      "bytes": 18605,
+      "sha256": "1f84063d074fdc8ec2d8b8656a39797b486f2bc654b25d123bdd48eebf096096"
+    },
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/js/capas/malla10k_S5_min.geojson",
+      "path": "artifacts/geo004-research/js_capas_malla10k_S5_min.geojson",
+      "bytes": 224676,
+      "sha256": "2c0b5ea2762882d6a4266e462086a14e1e6a9a7bce8b42133af05f7e2d4c33a6"
+    },
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/js/mapa/caneva150k_autocompletar.json",
+      "path": "artifacts/geo004-research/js_mapa_caneva150k_autocompletar.json",
+      "bytes": 35251,
+      "sha256": "1175d001737f2f56901577e88239e60b75d283231ab4263f5941b3300354f733"
+    },
+    {
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/versiones",
+      "path": "artifacts/geo004-research/api_versiones",
+      "bytes": 388,
+      "sha256": "65f5e203752fca909cb222d75e435c8149013eea13f08c678318c0dcd497cdf3"
+    }
+  ]
+}

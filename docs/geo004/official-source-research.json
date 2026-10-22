@@ -1,0 +1,253 @@
+{
+  "checked_at_utc": "2026-10-22T18:24:09.918817+00:00",
+  "paid_services": false,
+  "no_google_geographic_data_requested": true,
+  "records": [
+    {
+      "id": "inegi_terms",
+      "url": "https://www.inegi.org.mx/inegi/terminos.html",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/inegi/terminos.html",
+      "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+      "bytes": 10442,
+      "excerpts": [
+        {
+          "term": "Puede hacer y distribuir",
+          "text": "de la información del INEGI El usuario: Puede hacer y distribuir copias de la información, sin alterar ni suprimir sus metadatos. Puede difundir y publicar la información. Puede adaptar y reordenar la información. Puede extraer total o parcialmente la informac"
+        },
+        {
+          "term": "Puede explotar comercialmente",
+          "text": "er total o parcialmente la información. Puede explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios. Debe otorgar los créditos correspondientes al INEGI como autor, y cuando técnicamente sea posible, menciona"
+        },
+        {
+          "term": "créditos",
+          "text": "productos o servicios. Debe otorgar los créditos correspondientes al INEGI como autor, y cuando técnicamente sea posible, mencionar la fuente de extracción de la información de la siguiente manera: “Fuente: INEGI , nombre del producto de donde se extrae la inf"
+        },
+        {
+          "term": "derive",
+          "text": "perjuicio sufrido por el usuario que se derive del acceso a los servidores institucionales o del uso de información o aplicaciones en ellos contenidos. Aunque el material contenido en este sitio ha sido previamente revisado con las últimas herramientas antivir"
+        }
+      ]
+    },
+    {
+      "id": "inegi_relief",
+      "url": "https://www.inegi.org.mx/temas/relieve/continental/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/temas/relieve/continental/",
+      "sha256": "35e3cada55aec51da9e9a27f83d426eb79f44e5fc8b05c5391b31aa164d6a17d",
+      "bytes": 3067,
+      "excerpts": []
+    },
+    {
+      "id": "inegi_geoid",
+      "url": "https://www.inegi.org.mx/temas/geoide/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/temas/geoide/",
+      "sha256": "55259d040fac2633800ea20ca93cbd627a6d8fcdae3fe2a338df9833c358cdf7",
+      "bytes": 3067,
+      "excerpts": []
+    },
+    {
+      "id": "inegi_cem_versions",
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/versiones",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/versiones",
+      "sha256": "65f5e203752fca909cb222d75e435c8149013eea13f08c678318c0dcd497cdf3",
+      "bytes": 388,
+      "excerpts": [],
+      "metadata": [
+        {
+          "id": 2,
+          "version": "4.0",
+          "urlBase": "https://gaia.inegi.org.mx/geoserver/cem4_hs/wms?",
+          "capa": "cem4_hs:hs",
+          "urlWCS": "https://gaia.inegi.org.mx/geoserver/wcs?",
+          "capaDownload": "cem4_hs:hs_download"
+        },
+        {
+          "id": 1,
+          "version": "3.0",
+          "urlBase": "https://gaia.inegi.org.mx/geoserver/cem30/wms?",
+          "capa": "cem30:hs",
+          "urlWCS": "https://gaia.inegi.org.mx/geoserver/wcs?",
+          "capaDownload": "cem30_hs:hs_download"
+        }
+      ]
+    },
+    {
+      "id": "inegi_cem4_resolutions",
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/resoluciones?version=2",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/resoluciones?version=2",
+      "sha256": "728260ed7a7ff58ef29311cb64afe16813ec6c25a299c6be92de2adc0714c192",
+      "bytes": 81,
+      "excerpts": [
+        {
+          "term": "15",
+          "text": "[{\"id\":1,\"resolucion\":\"15m\",\"opcion\":15,\"capaWCS\":\"cem4_workespace:cem15m_3857\"}]"
+        }
+      ],
+      "metadata": [
+        {
+          "id": 1,
+          "resolucion": "15m",
+          "opcion": 15,
+          "capaWCS": "cem4_workespace:cem15m_3857"
+        }
+      ]
+    },
+    {
+      "id": "inegi_cem4_nuevo_leon",
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/archivo?version=2&opcion=15&clave=19",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/archivo?version=2&opcion=15&clave=19",
+      "sha256": "7f25298cdb27104ef538dea0230fb5ceb244d9b27e1a70cbcf6e4ed224d57ac1",
+      "bytes": 215,
+      "excerpts": [
+        {
+          "term": "15",
+          "text": "{\"titulo_archivo\":\"CEM 4.0 Nuevo León a 15m\",\"nom_archivo\":\"e19_cem_r15_v4_tif.zip\",\"url_archivo\":\"https://www.inegi.org.mx/app/geo2/elevacionesmex/DownloadFile.do?\",\"size_archivo\":\"214 MB\",\"tipo_archivo\":\"TIFF\"}]"
+        }
+      ],
+      "metadata": [
+        {
+          "titulo_archivo": "CEM 4.0 Nuevo León a 15m",
+          "nom_archivo": "e19_cem_r15_v4_tif.zip",
+          "url_archivo": "https://www.inegi.org.mx/app/geo2/elevacionesmex/DownloadFile.do?",
+          "size_archivo": "214 MB",
+          "tipo_archivo": "TIFF"
+        }
+      ]
+    },
+    {
+      "id": "inegi_geodetic_network",
+      "url": "https://www.inegi.org.mx/app/geo2/rgna/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/rgna/",
+      "sha256": "a3b42c68154f43b9c7c672c2cdd45a210b0db661559342598297bd71db4eb9e3",
+      "bytes": 6725,
+      "excerpts": []
+    },
+    {
+      "id": "nuevo_leon_cartography",
+      "url": "https://www.nl.gob.mx/es/servicios/cartografia",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "monterrey_official",
+      "url": "https://www.monterrey.gob.mx/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.monterrey.gob.mx/",
+      "sha256": "597d4ff11f3cde6ab403a6ad0a49b2e7daac6dfbb827269a42aae5950489e341",
+      "bytes": 98924,
+      "excerpts": [
+        {
+          "term": "dataset",
+          "text": "QuickServices(root) { if (!root || root.dataset.qsInit === \"1\") return; const scroller = root.querySelector('[data-qs-scroller]'); const nav = root.querySelector('[data-qs-nav]'); // Si no hay scroller (grid desktop o vlist mobile), no inicializamos carrusel i"
+        }
+      ]
+    },
+    {
+      "id": "google_geo_guidelines",
+      "url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+      "sha256": "d4b80ad0eb551c6c1b2387c8abcb42dcd67b1e81c7e977d488ea0842ca307677",
+      "bytes": 378720,
+      "excerpts": [
+        {
+          "term": "3D",
+          "text": "rth Pro, or Earth Studio to reconstruct 3D models or create similar content, or to create other content, products, or services that may violate our Terms of Service . For gaming purposes, you may be interested in Google Maps Platform gaming services to create "
+        },
+        {
+          "term": "game",
+          "text": "ervices to create immersive, real-world games with millions of customizable 3D structures, up-to-date global data, and seamless integration with Unity. Television, film, and online video You may use Google Earth and Earth Studio content for news broadcasts, te"
+        },
+        {
+          "term": "15",
+          "text": "62270f7884f/google-wordmarks-2x.webp=n-w150-h48-fcrop64=1,00000000ffffffff-rw\", \"width\": 150, \"height\": 48 } }, \"name\": \"Brand Resource Center | Products and Services - Geo Guidelines\" } Jump to Content Brand Resource Center Brand Resource Center Overview Guid"
+        }
+      ]
+    },
+    {
+      "id": "google_maps_platform_terms",
+      "url": "https://cloud.google.com/maps-platform/terms",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://cloud.google.com/maps-platform/terms",
+      "sha256": "e36b91e2504acb74c17e022032fec3945f6326b23f195ad293fff6e405821777",
+      "bytes": 2479491,
+      "excerpts": [
+        {
+          "term": "scrap",
+          "text": " Against Misusing the Services . (a) No Scraping . Customer will not export, extract, or otherwise scrape Google Maps Content for use outside the Services. For example, Customer will not: (i) pre-fetch, index, store, reshare, or rehost Google Maps Content outs"
+        },
+        {
+          "term": "Scrap",
+          "text": " Against Misusing the Services . (a) No Scraping . Customer will not export, extract, or otherwise scrape Google Maps Content for use outside the Services. For example, Customer will not: (i) pre-fetch, index, store, reshare, or rehost Google Maps Content outs"
+        },
+        {
+          "term": "No Scraping",
+          "text": "ons Against Misusing the Services . (a) No Scraping . Customer will not export, extract, or otherwise scrape Google Maps Content for use outside the Services. For example, Customer will not: (i) pre-fetch, index, store, reshare, or rehost Google Maps Content o"
+        },
+        {
+          "term": "create content",
+          "text": "Google Maps Content . Customer will not create content based on Google Maps Content. For example, Customer will not: (i) trace or digitize roadways, building outlines, utility posts, or electrical lines from the Maps JavaScript API Satellite base map type; (ii"
+        },
+        {
+          "term": "create or augment",
+          "text": "n a listings or directory service or to create or augment an advertising product; (iv) combine data from the Directions API, Geolocation API, and Maps SDK for Android to create real-time navigation functionality substantially similar to the functionality provi"
+        },
+        {
+          "term": "dataset",
+          "text": "nalyzing, and activating customer data. Datasets Data from Google, public, and commercial providers to enrich your analytics and AI initiatives. Business Intelligence Solutions for modernizing your BI stack and creating rich data experiences. Data Analytics Ag"
+        },
+        {
+          "term": "3D",
+          "text": "https://cloud.google.com/blog/fr?hl\\\\u003dfr\\\"],[\\\"ja\\\",\\\"https://cloud.google.com/blog/ja?hl\\\\u003dja\\\"],[\\\"ko\\\",\\\"https://cloud.google.com/blog/ko?hl\\\\u003dko\\\"]]],[\\\"https://www.facebook.com/googlecloud\\\",[[\\\"ja\\\",\\\"https://www.facebook.com/GoogleCloudJapan"
+        },
+        {
+          "term": "terrain",
+          "text": "y from Maps JavaScript API; (iii) build terrain models based on elevation values from the Elevation API; (iv) use latitude/longitude values from the Places API as an input for point-in-polygon analysis; (v) construct an index of tree locations within a city fr"
+        },
+        {
+          "term": "game",
+          "text": "oud services to deploy and monetize 5G. Games AI-driven solutions to build and scale games faster. Manufacturing Migration and AI tools to optimize the manufacturing value chain. Supply Chain and Logistics Enable sustainable, efficient, and resilient data-driv"
+        },
+        {
+          "term": "15",
+          "text": "ull,true,null,null,null,\\\"h5BYjc\\\"],[45815772,null,true,null,null,null,\\\"AiR0Db\\\"],[45862259,null,false,null,null,null,\\\"sZycyd\\\"],[45459555,null,false,null,null,null,\\\"Imeoqb\\\"],[45749228,null,true,null,null,null,\\\"uO8Hxf\\\"],[45449440,null,false,null,null,nul"
+        }
+      ]
+    },
+    {
+      "id": "google_maps_earth_additional_terms",
+      "url": "https://www.google.com/help/terms_maps/",
+      "content_use": "Official metadata / legal research only; no Google geographic content",
+      "http_status": 200,
+      "final_url": "https://www.google.com/help/terms_maps/",
+      "sha256": "cace4a851944ad44f5904f5b47205bce9af938032380fabcd8c111aa13594b56",
+      "bytes": 45579,
+      "excerpts": [
+        {
+          "term": "create or augment",
+          "text": " anyone else do so); use Google Maps to create or augment any other mapping-related dataset (including a mapping or navigation dataset, business listings database, mailing list, or telemarketing list) for use in a service that is a substitute for, or a substan"
+        },
+        {
+          "term": "dataset",
+          "text": "te or augment any other mapping-related dataset (including a mapping or navigation dataset, business listings database, mailing list, or telemarketing list) for use in a service that is a substitute for, or a substantially similar service to, Google Maps; or u"
+        }
+      ]
+    }
+  ]
+}

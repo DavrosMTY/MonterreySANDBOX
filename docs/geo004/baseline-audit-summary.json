@@ -1,0 +1,38 @@
+{
+  "status": "geometric_audit_completed_not_survey_certificate",
+  "model_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+  "milestone": "GEO-003 / WORLD-001",
+  "all_source_roads_in_scope": 2665,
+  "scope_not_limited_to_previous_97": true,
+  "counts": {
+    "road_mesh_parts_checked": 1361,
+    "at_grade_parts_checked": 1266,
+    "cap_triangles_checked": 146490,
+    "cap_triangles_support_error_over_25cm": 10569,
+    "parts_with_at_grade_skirt_over_1m": 195,
+    "correction_induced_steep_raster_vertices": 996
+  },
+  "raster": {
+    "height_min_max_m": [
+      515.197021484375,
+      567.842041015625
+    ],
+    "grade_percent_p50_p90_p99_max": [
+      5.358945963580296,
+      14.727347935285533,
+      33.198338422377326,
+      133.3725049417041
+    ],
+    "base_plus_correction_delta_min_max_m": [
+      -6.68896484375,
+      5.59930419921875
+    ]
+  },
+  "native_source_resolution_m": 30,
+  "sampling_spacing_m": 3.9682539682539684,
+  "source_vertical_accuracy_m": null,
+  "no_unit_scale_error_detected": true,
+  "uncertainty": "Geometry thresholds do not establish source absolute accuracy. INEGI is 2007, EPV unspecified; GGM05/GGM10 realization uncertainty retained.",
+  "issues": 1077,
+  "unreal_executed": false
+}

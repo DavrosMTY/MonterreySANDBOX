@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+  "sectors": 64,
+  "source_parts_preserved": 2757,
+  "triangles_preserved": 1386231,
+  "maximum_position_error_m": 7.617187520736479e-06,
+  "source_metadata_ids_and_colors_preserved": true,
+  "unreal_execution": false
+}

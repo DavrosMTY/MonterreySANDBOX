@@ -1,0 +1,88 @@
+{
+  "source_record": {
+    "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/imagen_cartografica/1_10_000/lidar/Terreno_ASCII/702825404925_as.zip",
+    "sha256": "d560ab488b5adf3590c28cb094b471637b564e6688d6ac4eb0f4974e4dec6d02",
+    "bytes": 9267382,
+    "catalog": {
+      "id": 66767,
+      "upc": 702825404925,
+      "titulo": "Modelos Digitales de Elevación de Alta Resolución LiDAR, con resolución de 5m. Terreno. ASCII. G14C26A3",
+      "cve_soft": "19",
+      "edicion": 2012,
+      "cve_carta": "G14C26A3",
+      "res": "5",
+      "mod": "T",
+      "datum": "ITRF92",
+      "url_descarga": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/imagen_cartografica/1_10_000/lidar/Terreno_ASCII/702825404925",
+      "archivo": "|_as.zip,8.84 MB"
+    },
+    "license": "https://www.inegi.org.mx/inegi/terminos.html",
+    "license_reviewed": true,
+    "filename": "702825404925_as.zip",
+    "source_crs": "EPSG:4487",
+    "source_vertical_datum": "NAVD88",
+    "source_vertical_crs": "EPSG:5703",
+    "source_date_year": 2007,
+    "product_edition_year": 2012,
+    "creation_date": "2008-08-29",
+    "horizontal_grid_m": 5,
+    "vertical_accuracy_epv_m": null,
+    "metadata_declared_vertical_resolution_m": 1,
+    "original_ground_point_density_per_m2": 0.012,
+    "metadata_geoid_realization": "GGM05",
+    "metadata_members": [
+      "MT_Auxiliares\\g14c26a3_mt.txt",
+      "MT_Metadatos\\G14C26A3_MT.html"
+    ],
+    "data_member": "MT_XYZ\\G14C26A3_mt.xyz"
+  },
+  "source_date_year": 2007,
+  "vertical_accuracy_epv_m": null,
+  "vertical_accuracy_warning": "EPV absent; GGM05 in source metadata vs registered GGM10 operation remains a realization uncertainty. No exact absolute alignment certified.",
+  "vertical_operation": {
+    "description": "Inverse of UTM zone 14N + Inverse of Mexico ITRF2008 to NAVD88 height using Mexico ITRF92 to WGS 84 (1) + Inverse of Mexico ITRF2008 to WGS 84 (1) + Mexico ITRF92 to WGS 84 (1) + WGS 84 to EGM2008 height (1) + UTM zone 14N",
+    "definition": "proj=pipeline step inv proj=utm zone=14 ellps=GRS80 step proj=vgridshift grids=mx_inegi_ggm10.tif multiplier=1 step inv proj=vgridshift grids=us_nga_egm08_25.tif multiplier=1 step proj=utm zone=14 ellps=WGS84",
+    "published_accuracy_m": null,
+    "numeric_roundtrip_max_m": 3.410605131648481e-13,
+    "delta_min_max_m": [
+      -0.15153957004793028,
+      -0.12626675158401213
+    ],
+    "grids": [
+      {
+        "url": "https://raw.githubusercontent.com/OSGeo/PROJ-data/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/mx_inegi/mx_inegi_ggm10.tif",
+        "file": "mx_inegi_ggm10.tif",
+        "bytes": 566618,
+        "sha256": "39b1ea1e2505f140655c3ee4aae65fa19e180008cc96dda79ded191a9988d651",
+        "license": "CC-BY-4.0",
+        "credit": "INEGI",
+        "readme_url": "https://github.com/OSGeo/PROJ-data/blob/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/mx_inegi/mx_inegi_README.txt"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/OSGeo/PROJ-data/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/us_nga/us_nga_egm08_25.tif",
+        "file": "us_nga_egm08_25.tif",
+        "bytes": 80585622,
+        "sha256": "4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "license": "Public Domain",
+        "credit": "US NGA / GeographicLib / OSGeo PROJ-data",
+        "readme_url": "https://github.com/OSGeo/PROJ-data/blob/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/us_nga/us_nga_README.txt"
+      }
+    ],
+    "warnings": [
+      "Best transformation is not available due to missing Grid(short_name=us_nga_egm08_25.tif, full_name=/workspace/MonterreySANDBOX/artifacts/geo004-inputs/grids/us_nga_egm08_25.tif, package_name=, url=https://cdn.proj.org/us_nga_egm08_25.tif, direct_download=True, open_license=True, available=True)"
+    ],
+    "no_ballpark_fallback": true
+  },
+  "native_product_spacing_m": 5,
+  "sample_spacing_m": 5.0,
+  "resolution_vertices": [
+    401,
+    401
+  ],
+  "no_data_in_pilot": 0,
+  "missing_source_stencil_samples": 0,
+  "height_min_m": 514.1657322136884,
+  "height_max_m": 565.3994878518415,
+  "reference_geotiff_sha256": "97885a519674e6ceafa26ebcb16511109284019362b2081781a9299a1c63715d",
+  "intended_unreal_import": "exported static mesh cells; native 401 grid is not a supported raw Landscape layout"
+}

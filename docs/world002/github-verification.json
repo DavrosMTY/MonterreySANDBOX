@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "verified_source_commit": "cdeda1a2a097332342d667e2908f23ea0324f777",
+  "github_blob_count": 170,
+  "every_blob_matches_git": true,
+  "original_branch_heads_unchanged": {
+    "development": "2e9036b32823c7e1cc501125a14ad8ffe10091db",
+    "docs/infra001-unreal-infrastructure": "91d910b4dcd494a07a2871cf45d116e34ea9af92",
+    "feature/free001-web-viewer": "fab3b60e55d4f17c03e15f7acfe05744c9ca2c12",
+    "feature/ue001-first-playable": "82464719ac658f3a7932c94ee791ea43c2a90b06",
+    "main": "8015d293b945086e4e254d1ba52b3cba690c96f0"
+  },
+  "authoritative_gis_and_unreal_unchanged": true,
+  "prs_1_through_5_open_unmerged": true,
+  "hosting_commit": "a44d909664914f088e01b23c87acb2ef8cab3c44",
+  "free001_deployment_retained_in_history": true,
+  "no_force_push": true
+}

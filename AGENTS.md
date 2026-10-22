@@ -34,3 +34,12 @@ Do not enable that repository setting or retry PR creation through Actions. Use
 existing authenticated direct GitHub access for authorized PR operations. If it
 is unavailable, report the precise blocker without requesting tokens in chat.
 Verify that an actual PR exists before reporting a PR URL; a compare form is not a PR.
+
+
+FREE-001 supersedes earlier paid-infrastructure proposals: current budget is
+strictly USD 0. Do not provision paid cloud, activate card-required trials or
+install Unreal without a compatible authorized environment. UE5.6.1 remains the
+target; Three.js is a separate geographic validation viewer. Source branches keep
+generated models excluded. The dedicated generated gh-pages hosting branch may
+contain the small license-reviewed gzip sectors under the 50 MiB deployment cap;
+never replace authoritative GIS/UE assets or force-push deployment history.

@@ -56,7 +56,7 @@ def densify_polygon(poly, spacing):
     return Polygon(ring(poly.exterior.coords), [ring(r.coords) for r in poly.interiors])
 
 
-def extrude(poly, lower, upper, wall_color, roof_color, module_height=None, interior_points=None):
+def extrude(poly, lower, upper, wall_color, roof_color, module_height=None, interior_points=None, cap_triangles=None):
     """Closed constrained triangulation, including holes, welded at caps and walls.
 
     lower/upper are either scalar elevations or vectorized xy sample functions.
@@ -71,7 +71,8 @@ def extrude(poly, lower, upper, wall_color, roof_color, module_height=None, inte
     if poly.geom_type != 'Polygon' or not poly.is_valid or poly.is_empty:
         raise ValueError('Footprint topology collapsed under 0.1 mm numerical grid')
     poly = shapely.orient_polygons(poly, exterior_cw=False)
-    caps = np.array([np.asarray(t.exterior.coords)[:3,:2] for t in shapely.constrained_delaunay_triangles(poly).geoms])
+    caps = (np.array([np.asarray(t.exterior.coords)[:3,:2] for t in shapely.constrained_delaunay_triangles(poly).geoms])
+            if cap_triangles is None else np.asarray(cap_triangles,dtype=float))
     # Insert critical grade-crossing points into BOTH cap triangulations. A height
     # constraint not represented by a vertex can disappear during tessellation.
     from shapely.geometry import Point

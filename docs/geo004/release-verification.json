@@ -1,0 +1,32 @@
+{
+  "milestone": "GEO-004",
+  "source_commit": "aa07971086388aad8b1acf03a5edbd9b6db9b319",
+  "packager_commit": "d6544122575146459e733385344474552119b47d",
+  "hosting_commit": "eff5f62d9634f7282071a8a40a46ab4b510811d6",
+  "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+  "budget_usd": 0,
+  "unreal_executed": false,
+  "source_year": 2007,
+  "absolute_accuracy_certified": false,
+  "assets": [
+    {
+      "name": "Monterrey_GEO004_Terrain_City_QA.zip",
+      "bytes": 39004277,
+      "sha256": "7343cef11ccc3f4ca222d45a4a12be59ff13e26ea882998e41ca6edf55072a65"
+    },
+    {
+      "name": "Monterrey_GEO004_Web.zip",
+      "bytes": 36011126,
+      "sha256": "5eea62e747e825d6958becf50d08d5550a7a41f1887c72647d7882d59ccb46cc"
+    },
+    {
+      "name": "geo004-release-limits.json",
+      "bytes": 993,
+      "sha256": "00e08d2f5a3b32bbe0c9fd76f3984d1d555ca156b013400ffb507b8168dd0b51"
+    }
+  ],
+  "status": "passed",
+  "all_assets_downloaded_and_hash_verified": true,
+  "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo004-aa0797108638",
+  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39834048694"
+}

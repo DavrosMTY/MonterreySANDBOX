@@ -1,0 +1,82 @@
+name: FREE-001 real city web viewer (zero paid services)
+on:
+  push:
+    branches: [feature/free001-web-viewer]
+    paths: [.github/publication/free001.json]
+  pull_request:
+    branches: [development]
+    paths: ['WebViewer/**', 'tools/*web*.py', '.github/workflows/free001-web.yml']
+permissions:
+  contents: read
+concurrency:
+  group: free001-${{ github.event_name }}
+  cancel-in-progress: false
+jobs:
+  web:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Pinned small dependencies (no cache or browser download)
+        run: |
+          python -m pip install --no-cache-dir -r requirements.lock.txt
+          npm ci --prefix WebViewer --no-audit --no-fund
+      - name: Fetch existing reviewed source, never regenerate a fake city
+        run: |
+          mkdir -p artifacts/input
+          gh release download geo003-world001-3f5c050a07c6 --pattern MonterreyOpenWorld_GEO003_WORLD001.zip --dir artifacts/input
+          python tools/prepare_web_source.py --archive artifacts/input/MonterreyOpenWorld_GEO003_WORLD001.zip --output artifacts/source-city
+      - name: Build and verify every sector against GEO-003
+        run: |
+          python tools/build_web_viewer.py --city artifacts/source-city --output artifacts/free001-site
+          mkdir -p artifacts/free001-site/evidence
+          python tools/validate_web_viewer.py --city artifacts/source-city --site artifacts/free001-site --receipt artifacts/free001-site/evidence/geometry.json
+          npm test --prefix WebViewer
+          python tools/check_publication.py
+      - name: Real browser tests and software-rendered comparison
+        working-directory: WebViewer
+        env:
+          MOW_SITE: ../artifacts/free001-site
+          MOW_EVIDENCE: ../artifacts/free001-site/evidence
+        run: npm run test:browser
+      - name: Read free Pages terms and limits (no account provisioning)
+        run: |
+          python - <<'PY'
+          import datetime,hashlib,json,re,urllib.request
+          from pathlib import Path
+          urls=['https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits','https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages']
+          records=[]
+          for url in urls:
+              req=urllib.request.Request(url,headers={'User-Agent':'MonterreyOpenWorld-free-hosting-check'})
+              with urllib.request.urlopen(req,timeout=30) as response:
+                  body=response.read();status=response.status
+              text=re.sub('<[^>]+>',' ',body.decode(errors='replace'))
+              text=re.sub(r'\s+',' ',text)
+              findings=[]
+              for term in ['1 GB','100 GB','10 builds','GitHub Free','commercial','bandwidth']:
+                  hit=text.find(term)
+                  if hit>=0:findings.append({'term':term,'excerpt':text[max(0,hit-50):hit+100]})
+              records.append({'url':url,'http_status':status,'response_sha256':hashlib.sha256(body).hexdigest(),'findings':findings})
+          Path('artifacts/free001-site/evidence/hosting.json').write_text(json.dumps({'checked_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'records':records},indent=2))
+          print(json.dumps(records,indent=2))
+          PY
+      - name: Record Pages activation result before publication
+        if: github.event_name == 'push'
+        run: python tools/configure_free_pages.py
+      - name: Publish only generated small assets on isolated hosting branch
+        if: github.event_name == 'push'
+        run: python tools/publish_web_viewer.py --site artifacts/free001-site

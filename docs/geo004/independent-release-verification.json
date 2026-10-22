@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-10-22T18:56:57.353132+00:00",
+  "release_url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo004-aa0797108638",
+  "public": true,
+  "prerelease": true,
+  "downloaded_archive_sha256": "7343cef11ccc3f4ca222d45a4a12be59ff13e26ea882998e41ca6edf55072a65",
+  "all_member_crc_valid": true,
+  "DTM_sha256": "97885a519674e6ceafa26ebcb16511109284019362b2081781a9299a1c63715d",
+  "original_INEGI_ZIP_sha256": "d560ab488b5adf3590c28cb094b471637b564e6688d6ac4eb0f4974e4dec6d02",
+  "OBJ_centimetres_documentation_correct": true,
+  "all_public_assets": [
+    {
+      "name": "geo004-release-limits.json",
+      "bytes": 993,
+      "digest": "sha256:00e08d2f5a3b32bbe0c9fd76f3984d1d555ca156b013400ffb507b8168dd0b51",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/geo004-release-limits.json"
+    },
+    {
+      "name": "geo004-release-manifest.json",
+      "bytes": 938,
+      "digest": "sha256:019d51d1697ac28615f7034961b931ecda2d8e5779098d584184cfcf52fef36d",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/geo004-release-manifest.json"
+    },
+    {
+      "name": "GEO004_SHA256SUMS.txt",
+      "bytes": 382,
+      "digest": "sha256:df5bdfd1e0e5e6e8e3d7ccf2eb716083b880bbe7741b9ecaae22a1d6ca786aa2",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/GEO004_SHA256SUMS.txt"
+    },
+    {
+      "name": "Monterrey_GEO004_Terrain_City_QA.zip",
+      "bytes": 39004277,
+      "digest": "sha256:7343cef11ccc3f4ca222d45a4a12be59ff13e26ea882998e41ca6edf55072a65",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/Monterrey_GEO004_Terrain_City_QA.zip"
+    },
+    {
+      "name": "Monterrey_GEO004_Web.zip",
+      "bytes": 36011126,
+      "digest": "sha256:5eea62e747e825d6958becf50d08d5550a7a41f1887c72647d7882d59ccb46cc",
+      "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/Monterrey_GEO004_Web.zip"
+    }
+  ]
+}
