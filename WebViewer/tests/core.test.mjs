@@ -26,3 +26,16 @@ test('network failure stays visible and does not create a tight retry loop', asy
   s.update([sectors[0]]); await s.idle(); s.update([sectors[0]]); await s.idle();
   assert.equal(attempts, 1); assert.equal(s.errors.get('0'), 'offline');
 });
+
+test('evicting an instanced sector releases its own GPU buffers but preserves shared art',async()=>{
+  const {releaseScene,geometryBytes}=await import('../src/core.js');
+  let instances=0,ownGeometry=0,ownMaterial=0;
+  const shared={userData:{shared:true},dispose(){throw new Error('Shared resources must survive eviction');}};
+  const own={userData:{},attributes:{position:{array:new Float32Array(9)}},dispose(){ownGeometry++;}};
+  const material={userData:{},dispose(){ownMaterial++;}};
+  const node={isInstancedMesh:true,dispose(){instances++;},geometry:shared,material:shared,instanceMatrix:{array:new Float32Array(16)}};
+  const root={traverse(fn){fn(node);fn({geometry:own,material});fn({geometry:own,material});}};
+  shared.attributes={};
+  assert.equal(geometryBytes(root),100);
+  releaseScene(root);assert.equal(instances,1);assert.equal(ownGeometry,1);assert.equal(ownMaterial,1);
+});

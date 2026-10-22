@@ -59,14 +59,14 @@ def publish(site, repository):
             shutil.copy2(source, target)
             managed.append(str(name))
         (path / 'free001-deployment.json').write_text(json.dumps({'generator': 'FREE-001',
-            'source_glb_sha256': world['source_glb_sha256'], 'managed_files': managed}, indent=2) + '\n')
+            'milestone':world['milestone'],'source_glb_sha256': world['source_glb_sha256'], 'managed_files': managed}, indent=2) + '\n')
         git('config', 'user.name', 'Monterrey build automation')
         git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
         git('add', '--all')
         if not subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=path).returncode:
             print('Static deployment unchanged')
             return
-        git('commit', '-m', 'deploy(free001): publish validated real GEO-003 web viewer')
+        git('commit', '-m', 'deploy('+world['milestone'].lower()+'): publish validated real GEO-003 web viewer')
         git('push', 'origin', 'HEAD:refs/heads/gh-pages')
 
 

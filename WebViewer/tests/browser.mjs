@@ -1,5 +1,6 @@
 // Real WebGL integration, keyboard/mouse, loading/eviction, and explicitly software-rendered timing.
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {chromium} from 'playwright-core';
 import {existsSync, readFileSync, writeFileSync, mkdirSync, statSync} from 'node:fs';
 import http from 'node:http';
@@ -27,6 +28,7 @@ try {
   let page = await browserContext.newPage(); activePage=page;
   let hostingInterstitial = false;
   function observe(page) {
+  page.on('console',msg=>{if(msg.type()==='error')errors.push(msg.text());});
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => {if (response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
   page.on('request', request => requests.push(request.url()));
@@ -41,7 +43,7 @@ try {
     // The free service's notice has advertising. Test the actual application in
     // a fresh page with the normal consent cookie, separately from that notice.
     const context = page.context();
-    for (const event of ['pageerror','response','request']) page.removeAllListeners(event);
+    for (const event of ['pageerror','response','request','console']) page.removeAllListeners(event);
     await page.goto('about:blank');
     page = await context.newPage(); activePage = page; errors.length=0; requests.length=0;
     observe(page);
@@ -73,6 +75,45 @@ try {
   const rotated = await page.evaluate(()=>window.__MOW__.snapshot());
   assert(Math.abs(rotated.rotation[1]-moved.rotation[1])>.01,'Mouse changes view');
   await page.screenshot({path:`${output}/street.png`});
+  let world002=null;
+  if(process.env.MOW_WORLD002==='1'){
+    const shots={},regions={};const timings=[];
+    async function sample(name){
+      await page.evaluate(()=>window.__MOW__.idle());await page.waitForTimeout(3500);
+      const state=await page.evaluate(()=>window.__MOW__.snapshot());
+      assert.equal(state.errors.length,0);assert.equal(state.pending,0);
+      assert.equal(state.visual.resident_visual_sectors,state.resident.length);
+      assert.equal(state.visual.props.overlay_sectors,state.resident.length);
+      timings.push({name,...state});
+      const png=await page.screenshot({path:`${output}/${name}.png`});shots[name]=createHash('sha256').update(png).digest('hex');
+      regions[name]=createHash('sha256').update(await page.screenshot({clip:{x:380,y:120,width:900,height:610}})).digest('hex');
+      return state;
+    }
+    await page.click('#street');
+    await page.selectOption('#visual-mode','graybox');
+    const gray=await sample('street-graybox');assert.equal(gray.visual.props.visible_instances,0);assert.equal(gray.visual.background.visible,false);
+    await page.selectOption('#visual-mode','city');
+    const city=await sample('street-city-day');assert(city.visual.props.visible_instances>0);assert.equal(city.visual.background.visible,true);
+    assert.deepEqual(city.camera,gray.camera,'Material comparison preserves the camera');assert.deepEqual(city.resident,gray.resident);
+    assert.notEqual(regions['street-graybox'],regions['street-city-day'],'The rendered city region changes, excluding the control panel and FPS HUD');
+    for(const period of ['sunset','night']){await page.selectOption('#lighting',period);const s=await sample(`street-city-${period}`);assert.equal(s.visual.period,period);assert.notEqual(regions[`street-city-${period}`],regions['street-city-day']);}
+    await page.selectOption('#lighting','day');
+    for(const id of ['vegetation','details','paint'])await page.uncheck('#'+id);
+    const bare=await sample('details-disabled');assert.equal(bare.visual.props.visible_instances,0);
+    for(const id of ['vegetation','details','paint'])await page.check('#'+id);
+    await page.selectOption('#shadows','on');await sample('street-shadows');await page.selectOption('#shadows','off');
+    await page.click('#aerial');
+    const residentCounts=[];
+    for(const [profile,spacing] of [['high',90],['balanced',180],['low',360],['balanced',180],['low',360]]){
+      await page.selectOption('#quality',profile);const s=await sample(`aerial-${profile}-${residentCounts.length}`);
+      assert.equal(s.visual.background.lod_spacing_m,spacing);residentCounts.push(s);
+    }
+    assert.equal(residentCounts[0].resident.length,64);
+    assert.equal(residentCounts[2].geometries,residentCounts[4].geometries,'Repeated streaming cycle releases per-sector and instance buffers');
+    assert.equal(residentCounts[2].geometry_bytes,residentCounts[4].geometry_bytes);
+    for(const preset of ['silla','sierra','larga']){await page.selectOption('#panorama',preset);await sample(`landscape-${preset}`);}
+    world002={status:'passed',timings,screenshot_sha256:shots,comparison_region_sha256:regions,checks:['Graybox/city at identical street camera and sectors','Day/sunset/night rendering','Decorations toggled off','Real shadow shader compilation','64 sectors at high quality without simplifying the pilot','Three DEM LODs','Repeated load/eviction preserves buffer counts','Three georeferenced landscape directions','No console, shader, HTTP or page errors']};
+  }
   await page.setViewportSize({width:390,height:844}); await page.click('#aerial'); await page.evaluate(()=>window.__MOW__.idle());
   await page.screenshot({path:`${output}/mobile.png`});
   assert(await page.locator('.touch-controls').isVisible());
@@ -84,10 +125,10 @@ try {
   assert(staticRedirects.every(x=> {
     const target=new URL(x);
     return immutablePrefix && target.origin==='https://raw.githubusercontent.com' &&
-      target.pathname.startsWith(immutablePrefix+'assets/cell_') && target.pathname.endsWith('.glb.gz');
+      target.pathname.startsWith(immutablePrefix+'assets/') && /\/(?:cell_[0-7]_[0-7]\.glb|visual-overlay\.json|background\.json)\.gz$/.test(target.pathname);
   }),'Only static GLB redirects to the identical immutable GitHub source are allowed');
   const report={status:'passed',tested_url:url,renderer:'Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance',
-    viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
+    world002,viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
     browser_errors:errors,external_runtime_requests:staticRedirects.length,unapproved_runtime_requests:0,runtime_origins:[...new Set(requests.map(x=>new URL(x).origin))],checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
 } catch (error) {

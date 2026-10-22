@@ -1,0 +1,15 @@
+{
+  "url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:35];(node[\"natural\"=\"tree\"](25.65788237,-100.32006112,25.67611702,-100.29994038);node[\"highway\"~\"^(traffic_signals|crossing|street_lamp|stop|give_way)$\"](25.65788237,-100.32006112,25.67611702,-100.29994038);node[\"amenity\"~\"^(bench|waste_basket|bicycle_parking)$\"](25.65788237,-100.32006112,25.67611702,-100.29994038);node[\"traffic_sign\"](25.65788237,-100.32006112,25.67611702,-100.29994038););out body;",
+  "retrieved_at_utc": "2026-10-22T15:56:06.363520+00:00",
+  "sha256": "6256eed2c2e99548825d9b63c800270473c75cf7a8679bfc81eaf81adfbcf956",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "bbox": [
+    25.65788237,
+    -100.32006112,
+    25.67611702,
+    -100.29994038
+  ],
+  "notes": "New supplementary inventory, original GEO inputs untouched. Node coordinates/tags are OSM observations, not surveyed object dimensions or tree species."
+}

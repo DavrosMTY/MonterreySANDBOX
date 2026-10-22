@@ -10,18 +10,27 @@
 </head>
 <body>
   <div id="viewport" aria-label="Vista tridimensional interactiva del centro de Monterrey"></div>
-  <header><a class="brand" href="./" aria-label="Inicio"><span class="brand-mark">M<span>↗</span></span><span>MONTERREY <b>OPEN WORLD</b></span></a><span class="edition">EXPLORADOR WEB <i>FREE–001</i></span></header>
+  <header><a class="brand" href="./" aria-label="Inicio"><span class="brand-mark">M<span>↗</span></span><span>MONTERREY <b>OPEN WORLD</b></span></a><span class="edition">EXPLORADOR WEB <i>WORLD–002</i></span></header>
   <main>
     <aside class="panel" aria-label="Opciones de exploración">
       <div class="eyebrow"><span class="live-dot"></span> MUNDO GEOREFERENCIADO</div>
       <h1>El centro.<br><em>A escala real.</em></h1>
-      <p class="intro">Una primera mirada a Monterrey Open World.<br>Explora nuestro piloto geográfico de 2 × 2 km.</p>
+      <p class="intro">Materiales e identidad urbana procedural.<br>Explora nuestro piloto geográfico de 2 × 2 km.</p>
       <div class="facts"><span><b>1.136</b> edificios</span><span><b>1:1</b> escala UTM</span></div>
       <div class="views" role="group" aria-label="Tipo de vista"><button id="aerial" class="active" aria-pressed="true">↗ Vista aérea</button><button id="street" aria-pressed="false">⌖ Nivel de calle</button></div>
       <button id="explore" class="primary">Explorar la ciudad <span>→</span></button>
       <p class="hint">Arrastra con el botón derecho para mirar.<br><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> mover · <kbd>Q</kbd>/<kbd>E</kbd> bajar / subir<br><kbd>Shift</kbd> acelerar · <kbd>Esc</kbd> soltar el mouse</p>
+      <label>Comparar <select id="visual-mode"><option value="city">Ciudad · WORLD-002</option><option value="graybox">Original · Graybox</option></select></label>
+      <label>Iluminación <select id="lighting"><option value="day">Día</option><option value="sunset">Atardecer</option><option value="night">Noche</option></select></label>
+      <p class="hint">Fachadas, alturas sin etiqueta y detalles decorativos son aproximaciones, no arquitectura confirmada.</p>
       <details><summary>Opciones gráficas <span>＋</span></summary>
         <label>Calidad <select id="quality"><option value="low">Baja · equipo limitado</option><option value="balanced" selected>Equilibrada</option><option value="high">Alta · todo el sector</option></select></label>
+        <label>Paisaje <select id="panorama"><option value="">Seleccionar vista</option><option value="silla">Cerro de la Silla · SE</option><option value="sierra">Sierra Madre · SO</option><option value="larga">Loma Larga · sur</option></select></label>
+        <label class="check"><input type="checkbox" id="vegetation" checked> Vegetación (inventario + propuesta)</label>
+        <label class="check"><input type="checkbox" id="details" checked> Mobiliario y controles OSM</label>
+        <label class="check"><input type="checkbox" id="paint" checked> Pintura vial propuesta según etiquetas</label>
+        <label class="check"><input type="checkbox" id="background" checked> Relieve distante DEM · no jugable</label>
+        <label>Sombras <select id="shadows"><option value="auto">Según calidad</option><option value="off">Desactivadas</option><option value="on">Activadas</option></select></label>
         <label>Velocidad <select id="speed"><option value="8">8 m/s · detalle</option><option value="35" selected>35 m/s · explorar</option><option value="100">100 m/s · vuelo</option></select></label>
         <label class="check"><input type="checkbox" id="fog" checked> Atmósfera</label><label class="check"><input type="checkbox" id="wireframe"> Ver triangulación</label>
         <p class="hint">Baja reduce resolución y distancia de carga. La geometría cercana conserva su escala y detalle.</p>

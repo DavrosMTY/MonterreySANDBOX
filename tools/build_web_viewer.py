@@ -22,7 +22,7 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def glb_bytes(groups, pivot):
+def glb_bytes(groups, pivot, visual_roads=None, visual=False):
     """Minimal GLB2: positions float32, original normalized RGBA, uint16 if possible."""
     data = bytearray()
     doc = {'asset': {'version': '2.0', 'generator': 'Monterrey FREE-001'},
@@ -66,6 +66,11 @@ def glb_bytes(groups, pivot):
         index = np.concatenate(indices).reshape(-1).astype(index_type)
         attributes = {'POSITION': accessor(pos, 5126, 'VEC3', 34962, bounds=True),
                       'COLOR_0': accessor(color, 5121, 'VEC4', 34962, normalized=True)}
+        if visual and name in ('Buildings','Roads','Bridges'):
+            from world002_visual import style_attributes
+            style=style_attributes(meshes,visual_roads)
+            if name!='Buildings':style=style.astype('u1')
+            attributes['_MOW_STYLE'] = accessor(style,5126 if name=='Buildings' else 5121,'VEC4',34962)
         i = accessor(index, component, 'SCALAR', 34963)
         doc['meshes'].append({'name': name, 'primitives': [{'attributes': attributes,
                                                        'indices': i, 'material': 0}]})
@@ -82,7 +87,7 @@ def glb_bytes(groups, pivot):
             + struct.pack('<I4s', len(data), b'BIN\0') + data)
 
 
-def build(city, output):
+def build(city, output, visual=False):
     city, out = Path(city), Path(output)
     manifest = json.loads((city / 'manifest.json').read_text())
     source = city / manifest['glb']
@@ -94,6 +99,9 @@ def build(city, output):
         raise ValueError('Source GLB checksum mismatch')
     if out.exists():
         raise FileExistsError('Preserve previous builds: output must be a new directory')
+    visual_roads={}
+    if visual and (city/'road_semantics.json').exists():
+        visual_roads={r['id']:r for r in json.loads((city/'road_semantics.json').read_text())['roads']}
     scene = trimesh.load(source, force='scene', process=False)
     records = {p['name']: p for p in manifest['mesh_parts']}
     sectors = defaultdict(lambda: defaultdict(list))
@@ -126,6 +134,13 @@ def build(city, output):
         shutil.copy2(source_path, licenses / target_name)
     assets = out / 'assets'
     assets.mkdir()
+    overlay_info=None
+    if visual:
+        from world002_decor import overlays
+        overlay=overlays(sectors,visual_roads,manifest['center_easting_northing_m'])
+        overlay_path=assets/'visual-overlay.json.gz'
+        overlay_path.write_bytes(gzip.compress(json.dumps(overlay,separators=(',',':')).encode(),mtime=0))
+        overlay_info={'url':'assets/'+overlay_path.name,'sha256':sha(overlay_path),'bytes':overlay_path.stat().st_size,'stats':overlay['stats'],'decorative_counts':overlay['decorative_counts'],'source_inventory_sha256':overlay['source_inventory_sha256']}
     index = []
     features = {}
     for (cx, cy), groups in sorted(sectors.items()):
@@ -133,7 +148,7 @@ def build(city, output):
         pivot = np.array([-875 + cx * 250, 550., 875 - cy * 250])
         bounds = np.vstack([m.bounds for parts in groups.values() for _, m, _ in parts])
         ntri = sum(len(m.faces) for parts in groups.values() for _, m, _ in parts)
-        binary = glb_bytes(groups, pivot)
+        binary = glb_bytes(groups, pivot, visual_roads=visual_roads,visual=visual)
         payload = gzip.compress(binary, compresslevel=9, mtime=0)
         path = assets / f'cell_{cell_id}.glb.gz'
         path.write_bytes(payload)
@@ -143,7 +158,7 @@ def build(city, output):
                       'uncompressed_bytes': len(binary), 'sha256': sha(path)})
         features[cell_id] = groups
     (assets / 'features.json').write_text(json.dumps(features, separators=(',', ':')))
-    result = {'schema_version': 1, 'milestone': 'FREE-001', 'synthetic': False,
+    result = {'schema_version': 1, 'milestone': 'WORLD-002' if visual else 'FREE-001', 'synthetic': False,
               'source_milestone': manifest['milestone'], 'source_glb_sha256': sha(source),
               'source_manifest_sha256': sha(city / 'manifest.json'),
               'source_release': 'geo003-world001-3f5c050a07c6',
@@ -158,6 +173,7 @@ def build(city, output):
               'geometry_loss': False, 'max_position_rounding_bound_m': 0.0001,
               'features_url': 'assets/features.json', 'sectors': index,
               'limitations': manifest['limitations'], 'unreal_executed': False}
+    if overlay_info:result['visual_overlay']=overlay_info
     if result['triangles'] != sum(p['triangle_count'] for p in records.values()):
         raise ValueError('Triangle preservation failure')
     (out / 'world.json').write_text(json.dumps(result, indent=2) + '\n')
@@ -174,5 +190,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--city', default='Data/city/geo003_world001')
     parser.add_argument('--output', required=True)
+    parser.add_argument('--visual',action='store_true')
     args = parser.parse_args()
-    build(args.city, args.output)
+    build(args.city, args.output,args.visual)
