@@ -36,3 +36,13 @@ The original pilot extract is supplied as `Data/raw/osm.json` with provenance.
 Editable derived databases are supplied in `Data/urban/monterrey_centro_v3/`.
 Retain attribution and the applicable ODbL obligations when sharing databases or
 produced works. This notice also accompanies the downloadable Release packages.
+
+## Complemento WORLD-002
+
+El inventario `WebViewer/visual/osm-street-inventory.json` contiene 200 nodos OSM
+(consulta y SHA256 en el archivo `.source.json` adjunto), © OpenStreetMap contributors,
+ODbL 1.0. Se distribuye como fuente de la capa derivada; no modifica el piloto original.
+El fondo de ±18 km deriva del mismo mosaico Copernicus revisado, conserva su aviso
+y no constituye un DTM ni terreno jugable. Recetas y arte generado originales:
+CC0 1.0 sólo para esos parámetros/texturas/formas, sin relicenciar el código del juego.
+Ver [inventario de licencias visuales](WebViewer/visual/LICENSE.md).

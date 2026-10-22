@@ -1,8 +1,17 @@
 # Monterrey Open World
 
 Mundo abierto georreferenciado de la Zona Metropolitana de Monterrey, México,
-para **Unreal Engine 5 y Windows PC**. Prioridades: fidelidad geográfica, coherencia
+para **Unreal Engine 5.6.1 y Windows PC**. Prioridades: fidelidad geográfica, coherencia
 visual y una base de mundo recorrible antes de incorporar tráfico, NPCs o misiones.
+
+**Estrategia activa WORLD-002: presupuesto US$0.** Visor web con Three.js y la
+geometría real GEO-003; Unreal continúa como motor definitivo. No se autorizan
+VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free001/README.md)
+· **[Abrir WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/index.html)**
+· [Identidad visual WORLD-002](docs/world002/README.md)
+· [Capturas reales WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/evidence/index.html)
+· [Descarga WORLD-002](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/world002-b175978bcf0d)
+· [Resultados FREE-001](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
 **Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
 cubre 2 × 2 km del centro, con 1.136 edificios, 2.665 tramos OSM y 1.077.198
@@ -28,6 +37,7 @@ completa de la metrópoli ni un videojuego jugable validado.
 | GEO-001 | Adquisición con procedencia, DEM georreferenciado, PNG16/R16/GeoTIFF, tiles y extracción OSM |
 | GEO-002 | Edificios con patios, alturas etiquetadas, vías por nivel, GLB y OBJ/MTL, renders y QA geométrico |
 | GEO-003 / WORLD-001 | Perfiles viales conjuntos, capas topográficas reversibles, terreno recortado, túneles y exportación por sistema/celda |
+| FREE-001 / WORLD-002 | Visor web real, streaming, materiales PBR procedurales, mobiliario, vegetación, DEM regional y comparación Graybox; validación en Chromium |
 | Integración UE5.6 | Proyecto C++, importadores, colisión estática, DataAsset, World Partition y sondas preparados; sin ejecución en motor |
 
 Los perfiles motorizados se limitan al 8–12 % por categoría. Aun así, **97 tramos
