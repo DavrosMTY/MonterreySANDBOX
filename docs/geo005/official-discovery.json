@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T20:44:48.899154+00:00",
+  "checked_at_utc": "2026-10-22T20:48:03.560294+00:00",
   "budget_usd": 0,
   "discovery_is_not_source_acceptance": true,
   "records": [
@@ -8,15 +8,25 @@
       "url": "https://www.gob.mx/cms/uploads/sedatu/MM2020_19102023.pdf",
       "http_status": 200,
       "content_type": "application/pdf",
-      "error": "Metadata size cap"
+      "declared_content_length": "189798045",
+      "header_magic": "255044462d312e370d25e2e3",
+      "bytes": 189798045,
+      "sha256": "8320f18a6342be7a3855cc104a4a3416964a4dfffd5b2d83bbd1fc9e37bcb7a2",
+      "links": [],
+      "excerpts": [
+        "\u0004�M�[�a�\b��\\-k����� 緆 }\u00050Ӽ\u0001t+�8�\u001a°T��\u0015\u001b\\Ov\u000f���m�������-��\u0010/v�_���u'\u0012T,\u0010\u0001 �V4��u ^�j ���l6� I d�:�x��\u001bA��/�Ne�U�Q孉�ue]H�\u0007����H&���\u0002����7\u0001t+��KN�\u0013� ���)h� 9\u0019Ri��X�@\u000fsk\\ � �\u001bc\u0000�䭘\u00019^�˅(���G4m�[)P\u0015}[\u0015���c?��/.9ʔj#�?\u0015̪ͨs&S\u00054R�\u0003==J;\u0002{\u0002�#\u001b�{\u0005m�\u001bm�\u001b��U�ǽ\u000e��+��W�q \u0019�U\u0014.\u0019�Dw\u0004���\u0011���7����\"׾\u0003�H�Q��I� \u0006� \u0000�� �:ځ\u001aӨR��3� @ x�T��Gc���0ftM$��� ���\u0002�QqE/\u0007A%D�Bd�2\u001b+;;(���ċ�}#f��\u0011�+� ]Z�Q\u0018�n?\u0015��\u0000��ȳ:~�T\u0015q�-�%� \\�}��",
+        "[��~����Ѩ\u0001��� \u0018�\u000eG�i�Z,�3-\bYiK �� ���U����8�\u0017\u0013�X( ��X\\ת� �b�9\u0016�\u0010F�y\u0004o��\u0004\u0006 \u0004#�\u0000' h� ��5%���V�^㵿���tL��@�\u0017򳕼A>u�gws\u0018җ=�> �o�\u0003\u0003x_\u0017�r���@�}mm�pw�m����,\u0015�RT��6\u0004�M�[�a�\b��\\-k����� 緆 }\u00050Ӽ\u0001t+�8�\u001a°T��\u0015\u001b\\Ov\u000f���m�������-��\u0010/v�_���u'\u0012T,\u0010\u0001 �V4��u ^�j ���l6� I d�:�x��\u001bA��/�Ne�U�Q孉�ue]H�\u0007����H&���\u0002����7\u0001t+��KN�\u0013� ���)h� 9\u0019Ri��X�@\u000fsk\\ � �\u001bc\u0000�䭘\u00019^�˅(���G4m�[)P\u0015}[\u0015���c?��/.9ʔj#�?\u0015̪ͨs&S\u00054R�\u0003==J;\u0002{\u0002�#\u001b�{\u0005m�\u001bm�\u001b��U�"
+      ]
     },
     {
       "key": "conapo",
       "url": "https://www.gob.mx/conapo/documentos/las-metropolis-de-mexico-2020",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "1843",
+      "header_magic": "3c21444f4354595045206874",
       "bytes": 1843,
-      "sha256": "bad961afbc2acc579a257c94386665c41bc055693f1ec77db39cd63965f17269",
+      "sha256": "310eb464e6ee8ef3df049d27aaf2da16827ff4731118fdeed649b05ca7390279",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -26,8 +36,10 @@
       "url": "https://www.gob.mx/sedatu/documentos/metropolis-de-mexico-2020",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "1843",
+      "header_magic": "3c21444f4354595045206874",
       "bytes": 1843,
-      "sha256": "377a18677c8d7f823992009787d99cdd226e4f0f22df44375d437dcc1a83a5cc",
+      "sha256": "ac80945083e596e15cf0e463d6f690127fcc14d4d2c7beaba385f076ab9198b0",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -37,6 +49,8 @@
       "url": "https://www.inegi.org.mx/temas/estructura/",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "3432",
+      "header_magic": "efbbbf3c21444f4354595045",
       "bytes": 3432,
       "sha256": "6ca45c2c9f16e2f814afaf6b15b72e1f6abbb04341e417b98d786330e8c6084b",
       "links": [],
@@ -47,6 +61,8 @@
       "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/19",
       "http_status": 200,
       "content_type": "application/json;charset=utf-8",
+      "declared_content_length": null,
+      "header_magic": "7b226461746f73223a5b7b22",
       "bytes": 9866,
       "sha256": "31f5a3912494ba652d25964af7871190d9e83c258a2b6fbed9e31f5d33fbf19e",
       "links": [],
@@ -628,6 +644,8 @@
       "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/19",
       "http_status": 200,
       "content_type": "application/json;charset=utf-8",
+      "declared_content_length": null,
+      "header_magic": "7b2274797065223a22466561",
       "bytes": 2289819,
       "sha256": "49de26e98b9d224506f0797f2105ff54715026861ba716a0ef3df45e8c287701",
       "links": [],
@@ -664,6 +682,8 @@
       "url": "https://www.inegi.org.mx/inegi/terminos.html",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "10442",
+      "header_magic": "3c21444f4354595045206874",
       "bytes": 10442,
       "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
       "links": [
@@ -679,6 +699,8 @@
       "url": "https://www.inegi.org.mx/temas/viascomunicacion/",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "2992",
+      "header_magic": "efbbbf3c21444f4354595045",
       "bytes": 2992,
       "sha256": "e252ab98cbcbd8570cf51ae887332f654cf7d4976d012af7c056d5a8223ac38e",
       "links": [],
@@ -689,8 +711,10 @@
       "url": "https://en.wikipedia.org/wiki/Monterrey_metropolitan_area",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 154107,
-      "sha256": "b23cee9d8b3ac6799799e7028218b975183ebc51102f3f2b61836abf68f07096",
+      "declared_content_length": null,
+      "header_magic": "3c21444f4354595045206874",
+      "bytes": 154057,
+      "sha256": "06b255dda3a931816bc9f443f139ec7b6d8426d9cc9f473fa1f907d70decb4df",
       "links": [
         "./Category:Metropolitan_areas_of_Mexico",
         "./Category:Monterrey_metropolitan_area#%20",
@@ -759,24 +783,25 @@
       "url": "https://www.bing.com/search?q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 121246,
-      "sha256": "39bffa2d02161dfb81b92c7cbe32bb3f181439f10bc1bee8a98266fa4c8d14e2",
+      "declared_content_length": null,
+      "header_magic": "3c21444f4354595045206874",
+      "bytes": 125049,
+      "sha256": "ecb062d1c402aa5bba2354c304a7be6f665e5c9d1d07b6b3ea61282775d632bc",
       "links": [
         "/copilotsearch?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=CSSCOP",
         "/copilotsearch?q=site:gob.mx Metropolis Mexico 2020 xlsx Monterrey&form=CSBSBX",
         "/search?format=rss&q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=000017&qpvt=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=11&FORM=PERE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=11&FORM=PORE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=21&FORM=PERE1",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=8D0F58BB02974BC886D64FB05202C11D&first=11&FORM=PERE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=8D0F58BB02974BC886D64FB05202C11D&first=11&FORM=PORE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=8D0F58BB02974BC886D64FB05202C11D&first=21&FORM=PERE1",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez1%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez2%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez3%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez5_20383_20748%22&FORM=000017"
       ],
       "excerpts": [
-        "trict\";// site:gob.mx Metropolis Mexico 2020 xlsx Monterrey - Search // 2&&a.substring(0,3)===\"IG=\")){ig='IG='+_G.IG;}if(document.images){_G.GPImg=new Image;_G.GPImg.src=_G.gpUrl+ig+'&CID='+_G.CID+'&'+a;}return true;}_G.BAT=\"0\";_G.NTT=\"600000\";_G.RTO=\"86400000\";_G.CTT=\"3000\";_G.BNFN=\"Default\";_G.LG=\"160\";_G.CBRSHT=\"400\";_G.CBRSHTAM=\"400\";_G.BDVFY=true;_G.multiCBRSType=\"3\";_G.maxMultiCBRS=\"4\";_G.RM",
-        "tropolis (1927) - Full HD Movie - YouTube May 10, 2024  · A full restoration of Metropolis, a 1927 German expressionist science-fiction film directed by Fritz Lang and written by … metropolis.io https://go. metropolis .io › zone Parking at 411-419 North 13th Street | Metropolis 411-419 North 13th Street Entrance: 411 North 13th Street, Philadelphia, PA 19123 Free cancellation & changes Directions "
+        "trict\";// site:gob.mx Metropolis Mexico 2020 xlsx Monterrey - Search // 2&&a.substring(0,3)===\"IG=\")){ig='IG='+_G.IG;}if(document.images){_G.GPImg=new Image;_G.GPImg.src=_G.gpUrl+ig+'&CID='+_G.CID+'&'+a;}return true;}_G.BAT=\"0\";_G.NTT=\"600000\";_G.RTO=\"86400000\";_G.CTT=\"3000\";_G.BNFN=\"Default\";_G.LG=\"160\";_G.CBRSHT=\"400\";_G.CBRSHTAM=\"300\";_G.BDVFY=true;_G.multiCBRSType=\"3\";_G.maxMultiCBRS=\"4\";_G.RM"
       ]
     },
     {
@@ -784,8 +809,10 @@
       "url": "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 165210,
-      "sha256": "c389092f500c3f78b768cad12b828513ef86264e55c59bfabd9273a3eecadaff",
+      "declared_content_length": "163328",
+      "header_magic": "3c21444f4354595045206874",
+      "bytes": 163328,
+      "sha256": "3686e3a412824300aa0656243a7a2ef243984cd496a68ee4445e6769b41d2f85",
       "links": [
         "#Instituciones_que_operan_en_la_Zona_Metropolitana_de_Monterrey",
         "#Municipios_que_conforman_el_área_metropolitana",
@@ -850,8 +877,10 @@
       "url": "https://www.bing.com/search?format=rss&q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey%20municipios",
       "http_status": 200,
       "content_type": "text/xml; charset=utf-8",
-      "bytes": 1239,
-      "sha256": "70c5433cec5264b44b3047d2280f99f38518cd386391d6b5a616aaa6ccc09af6",
+      "declared_content_length": "5075",
+      "header_magic": "3c3f786d6c2076657273696f",
+      "bytes": 5075,
+      "sha256": "e5b38a4ac90b44de9d2b51c8cbbea3230008accdde0f0841739c325041dfdf26",
       "links": [],
       "excerpts": [
         " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright © 2026 Microsoft. All righ",
@@ -859,9 +888,54 @@
       ],
       "search_results": [
         {
-          "title": "Redirecting...",
-          "url": "https://www.jamericaclothing.com/westsocks-reviews",
-          "description": "Redirecting... ... Redirecting..."
+          "title": "Cordless Shop Vacuums - The Home Depot",
+          "url": "https://www.homedepot.com/b/Garage-Shop-Vacuums/Cordless/N-5yc1vZc2a7Z1z140i3",
+          "description": "Get free shipping on qualified Cordless Shop Vacuums products or Buy Online Pick Up in Store today in the Garage Department."
+        },
+        {
+          "title": "Amazon.com: Cordless Shop Vac",
+          "url": "https://www.amazon.com/cordless-shop-vac/s?k=cordless+shop+vac",
+          "description": "Explore a wide range of cordless shop vacs featuring powerful motors and HEPA filtration. Perfect for handling debris, spills, and blowing applications."
+        },
+        {
+          "title": "Amazon.com: Cordless Shop-vac",
+          "url": "https://www.amazon.com/cordless-shop-vac/s?k=cordless+shop-vac",
+          "description": "Cordless Shop Vac, 18.5KPa Brushless Wet Dry Vacuum Cleaner with 2x4.0Ah Batteries, 4.2 Gallon Large Tank, 3-in-1 Suction, Portable Shop Vaccum for Workshop, Garage, Car"
+        },
+        {
+          "title": "Best Cordless Shop Vacs (October 2026) - Reviews & Top Picks",
+          "url": "https://homegrail.com/best-cordless-shop-vacs/",
+          "description": "To save you all that hassle, we have compared the different cordless shop vac models on the market to bring you reviews of the best cordless shop vacs of the year."
+        },
+        {
+          "title": "Shop Vacuums - The Home Depot",
+          "url": "https://www.homedepot.com/b/Garage-Shop-Vacuums/N-5yc1vZc2a7",
+          "description": "Find the right shop vacuum for your needs. Choose from top brands like RIDGID, Milwaukee, DEWALT, RYOBI, and Stanley. Select cordless models or shop vacuums designed for specific tasks like drywall dust cleanup. Browse a variety of shop vacuums to tackle any mess."
+        },
+        {
+          "title": "Our 10 Best Battery Operated Shop Vac in the US - October 2026 ...",
+          "url": "https://www.bestproductsreviews.com/battery-operated-shop-vac",
+          "description": "Easily compare & choose from the 10 best Battery Operated Shop Vac for you. Don't buy Battery Operated Shop Vac in the US before reading our rankings | bestproductsreviews.com"
+        },
+        {
+          "title": "Cordless Shop Vacuum - Walmart.com",
+          "url": "https://www.walmart.com/c/kp/cordless-shop-vacuum",
+          "description": "GEVEELIFE Cordless Shop Vac Wet and Dry, 4.3 Gallon Shop Vac with 5.0Ah Battery Powered, Fast Charger, HEPA Filter, Strap & Wheels, 3-in-1 Wet Dry Vacuum Cleaner for Garage, Car, Workshop"
+        },
+        {
+          "title": "The 7 Best Shop Vacs for 2026, Tested by Popular Mechanics",
+          "url": "https://www.popularmechanics.com/home/g1976/best-shop-vacs/",
+          "description": "Shop vacs come in both cordless and corded electric models and range in size from small, 1.6-gallon portable vacuums for cleaning out cars to large, 12-gallon shop vacs capable of keeping..."
+        },
+        {
+          "title": "20V Cordless, 3-1/2 Gallon Wet/Dry Vacuum – Tool Only",
+          "url": "https://www.harborfreight.com/20v-cordless-3-12-gallon-wetdry-vacuum-tool-only-58310.html",
+          "description": "This wet/dry vac is designed with a sturdy ergonomic top carrying handle for easy maneuverability in the shop, garage, or home. The washable filter and the removable top makes emptying dust, debris, and liquids quick and mess-free."
+        },
+        {
+          "title": "7 Best Cordless Shop Vacs | The Honest Reviewers",
+          "url": "https://www.thehonestreviewers.com/best-cordless-shop-vac/",
+          "description": "The best cordless shop vacs for Milwaukee, Ryobi, RIDGID, Makita, DeWalt and Craftsman batteries, compared on rated airflow, hose size, tank and runtime."
         }
       ]
     },
@@ -870,8 +944,10 @@
       "url": "https://html.duckduckgo.com/html/?q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey",
       "http_status": 202,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 14320,
-      "sha256": "57717ffefde0ee029528d0aed76225b04bf8050bfffbb39d496b62773cf7cd30",
+      "declared_content_length": null,
+      "header_magic": "3c212d2d203c21444f435459",
+      "bytes": 14307,
+      "sha256": "3a6cf5f55fdeb3233536bc797421aa069c475e94e1673d74492a613e337032ab",
       "links": [],
       "excerpts": []
     },
@@ -880,6 +956,8 @@
       "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2023/Metrop/Metrop2020.pdf",
       "http_status": 200,
       "content_type": "text/html",
+      "declared_content_length": "2263",
+      "header_magic": "3c21444f4354595045206874",
       "bytes": 2263,
       "sha256": "fed624b555d1816d475bc5533ed9cca2b25539b0bb3891112ee9f871db8446e5",
       "links": [],
@@ -890,22 +968,20 @@
       "url": "https://copernicus-dem-30m.s3.amazonaws.com/tileList.txt",
       "http_status": 200,
       "content_type": "text/plain",
+      "declared_content_length": "1110900",
+      "header_magic": "436f7065726e696375735f44",
       "bytes": 1110900,
       "sha256": "10604e3052c98a09e9216f1a8f0a555a04148419757575f783d4937fd44316dc",
       "links": [],
       "excerpts": []
     }
   ],
-  "osm_acquisition_error": {
-    "url": "https://overpass.private.coffee/api/interpreter",
-    "error": "The read operation timed out"
-  },
   "licensed_source_snapshot": {
-    "tag": "geo005-inputs-0444a663025c",
+    "tag": "geo005-inputs-26e09e6a9239",
     "file": "GEO005_Licensed_Source_Snapshot.zip",
-    "bytes": 810550,
-    "sha256": "dee15653daebd7729ce1d8791ce7c8b685505d415be915cfca3cd16c4cdc27c3",
-    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-0444a663025c",
+    "bytes": 921488,
+    "sha256": "e75ca5e152f9e8a2c744b9debd3cd8b63238f0a8b1fb9b0ee661b9c54cf7dfc3",
+    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-26e09e6a9239",
     "download_verified": true,
     "files": [
       {
@@ -922,6 +998,16 @@
         "file": "copernicus_tileList.txt",
         "bytes": 1110900,
         "sha256": "10604e3052c98a09e9216f1a8f0a555a04148419757575f783d4937fd44316dc"
+      },
+      {
+        "file": "north/osm.json",
+        "bytes": 1046240,
+        "sha256": "de08acd6d173f1e8443a9afe7b8b8844ae25a9d55275f71268db0caeba50528c"
+      },
+      {
+        "file": "north/osm.json.source.json",
+        "bytes": 1470,
+        "sha256": "a41125d9de0fab533dbe341e4ae0eab8e412f5426cc77eedd94340c209ae05b2"
       }
     ]
   }
