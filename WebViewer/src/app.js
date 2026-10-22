@@ -1,3 +1,4 @@
+import {selectMetroRegion,metroControls} from './metro.js';
 import * as THREE from 'three';
 import {readTopography} from './topography.js';
 import {VisualLayer} from './visual.js';
@@ -26,6 +27,7 @@ async function start() {
   $('viewport').appendChild(canvas);
   canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); fail(new Error('Se perdió el contexto gráfico. Recarga y selecciona calidad baja.')); });
   let world = await fetch('./world.json').then(r => { if (!r.ok) throw new Error('No se encontró el manifiesto del mundo.'); return r.json(); });
+  const metroSelection=await selectMetroRegion(world);world=metroSelection.world;
   if (world.synthetic || !['GEO-003 / WORLD-001','GEO-004'].includes(world.source_milestone)) throw new Error('El visor requiere los datos reales verificados de GEO-003.');
   const scene = new THREE.Scene();
   const sky = new THREE.Color('#cddbe2'); scene.background = sky;
@@ -93,6 +95,7 @@ async function start() {
     attach: value => { materialOptions(value.scene); value.visual.prepare(value.scene,value.sector);materialOptions(value.scene);visual.update(camera); scene.add(value.scene); },
     release: value => { value.visual.release(value.scene);scene.remove(value.scene); releaseScene(value.scene); },
   });
+  const metroUI=metroControls({...metroSelection,world,scene,camera,stream});
   function updateSectors() {
     if(switchingModel)return;
     visual.update(camera);
@@ -222,12 +225,13 @@ async function start() {
       triangles: renderer.info.render.triangles, draw_calls: renderer.info.render.calls,
       geometries: renderer.info.memory.geometries, downloaded_bytes: stream.downloadedBytes,
       drawing_buffer: [canvas.width, canvas.height], renderer: device,
-      source_glb_sha256: world.source_glb_sha256,visual:visual.snapshot()};
+      metro:metroUI.snapshot(),source_glb_sha256: world.source_glb_sha256,visual:visual.snapshot()};
   }
   // Read-only diagnostics, used by the browser tests and downloadable evidence.
   window.__MOW__ = Object.freeze({snapshot,probe:(x,z)=>topo?.sample(x,z,world.current_model),idle:async()=>{while(switchingModel)await new Promise(r=>setTimeout(r,30));await stream.idle();}});
   setView('aerial'); setProfile(profileName);
   function animate(now) {
+    metroUI.update();
     const elapsed = now - frameStart, dt = Math.min(elapsed / 1000, .05); frameStart = now;
     if (!document.hidden) {
       camera.getWorldDirection(forward); forward.y = 0; forward.normalize(); right.crossVectors(forward, camera.up).normalize();

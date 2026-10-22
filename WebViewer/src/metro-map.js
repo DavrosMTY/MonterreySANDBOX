@@ -1,0 +1,18 @@
+const $=id=>document.getElementById(id),ns='http://www.w3.org/2000/svg';
+try{
+ const r=await fetch('metro.json');if(!r.ok)throw new Error('Catálogo no disponible');const data=await r.json(),svg=$('map');
+ const fit=b=>{const pad=Math.max(b[2]-b[0],b[3]-b[1])*.06;svg.setAttribute('viewBox',`${b[0]-pad} ${b[1]-pad} ${b[2]-b[0]+2*pad} ${b[3]-b[1]+2*pad}`);};fit(data.map.bounds);
+ const path=(record,cls)=>{const p=document.createElementNS(ns,'path');p.setAttribute('d',record.path);p.setAttribute('class',cls);p.setAttribute('fill-rule','evenodd');return p;};
+ for(const m of data.map.municipalities){const p=path(m,'municipality');p.onclick=()=>{$('municipality').value=m.code;select(m.code);};const t=document.createElementNS(ns,'title');t.textContent=m.name;p.append(t);$('municipalities').append(p);const o=document.createElement('option');o.value=m.code;o.textContent=m.name;$('municipality').append(o);}
+ $('clip-shape').setAttribute('d',data.map.path);const b=data.map.bounds;$('tile-grid').setAttribute('x',Math.floor(b[0]/500)*500);$('tile-grid').setAttribute('y',Math.floor(b[1]/500)*500);$('tile-grid').setAttribute('width',b[2]-b[0]+1000);$('tile-grid').setAttribute('height',b[3]-b[1]+1000);
+ for(const region of data.regions){const p=path(region,'region');p.onclick=()=>fit(region.map_bounds);$('regions').append(p);const a=document.createElement('a');a.href='./index.html?region='+encodeURIComponent(region.id);a.textContent=`Explorar ${region.label} (${region.area_km2} km²) →`;$('region-links').append(a);}
+ for(const s of data.map.sources){const o=document.createElement('option');o.value=s.id;o.textContent=s.label;$('source').append(o);}
+ function select(code){const m=data.map.municipalities.find(v=>v.code===code);fit(m?.bounds||data.map.bounds);$('selection-info').textContent=m?`${m.name} · ${m.area_grid_km2.toFixed(2)} km² municipales. Procesado: ${m.processed_km2.toFixed(3)} km². Fuera de las áreas procesadas, contenido 3D pendiente.`:`${data.municipality_count} municipios · ${data.area_grid_km2.toFixed(2)} km² de superficie municipal. La extensión urbana construida todavía no está validada.`;}
+ $('municipality').onchange=()=>select($('municipality').value);select('');
+ $('source').onchange=()=>{const s=data.map.sources.find(v=>v.id===$('source').value);$('source-shape').setAttribute('d',s?.path||'');$('source-info').textContent=s?`${s.label}: ${s.percentage.toFixed(2)} % del polígono. ${s.state}`:'';};
+ $('tiles').onchange=()=>{$('tile-grid').style.display=$('tiles').checked?'':'none';$('tile-grid').removeAttribute('hidden');};$('tile-grid').style.display='none';
+ $('coverage').textContent=`Procesado: ${data.processed_coverage.area_km2.toFixed(3)} km² (${data.processed_coverage.percentage.toFixed(4)} %). Índice: ${data.tiles.count.toLocaleString('es-MX')} tiles. Disponibilidad de datos ≠ ciudad reconstruida.`;
+ $('previous').href=data.previous_url;$('zoom-regions').onclick=()=>fit(data.map.regions_bounds);
+ svg.onpointermove=e=>{const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse());const east=p.x,north=-p.y;$('map-coords').textContent=`UTM ${east.toFixed(1)} E / ${north.toFixed(1)} N · utm14n_500_e${Math.floor(east/500)}_n${Math.floor(north/500)} · sin medición de exactitud absoluta`;};
+ window.__METRO__=Object.freeze({summary:()=>({municipalities:data.municipality_count,tiles:data.tiles.count,processed_km2:data.processed_coverage.area_km2,selected:$('municipality').value,source:$('source').value,regions:data.regions.map(r=>r.id),absolute_accuracy_m:null})});
+}catch(e){$('error').hidden=false;$('error').textContent=e.message;}
