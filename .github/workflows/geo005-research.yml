@@ -1,0 +1,24 @@
+name: GEO-005 official metropolitan source discovery (USD 0)
+on:
+  push:
+    branches: [feature/geo005-metropolitan-foundation]
+    paths: [.github/publication/geo005-research.json]
+permissions:
+  contents: read
+jobs:
+  discover:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/research_geo005_sources.py
+      - name: Preserve official source findings
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/geo005/official-discovery.json
+          git commit -m 'docs(geo005): record official metropolitan source discovery'
+          git push origin HEAD:feature/geo005-metropolitan-foundation
