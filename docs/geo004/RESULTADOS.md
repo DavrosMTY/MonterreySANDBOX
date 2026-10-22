@@ -1,8 +1,8 @@
 # Resultados GEO-004
 
-Validación numérica y Chromium local completadas, separadas de exactitud
-topográfica y de pruebas Unreal. La publicación se registra al terminar sus
-recibos; no se declara éxito por anticipado.
+Validación numérica, Chromium local y URL pública completadas, separadas de
+exactitud topográfica y de pruebas Unreal. Prerelease publicada y descargas
+verificadas por SHA256; los recibos identifican cada operación.
 
 El baseline conserva su GLB SHA256
 `c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc`.
@@ -95,3 +95,16 @@ conservados, ejes Unreal y centímetros comprobados contra las dimensiones del
 manifest y pivotes. Error máximo numérico de bounds 5,00e−9 cm, que no representa
 exactitud del terreno. [Recibo de unidades OBJ](obj-centimetre-validation.json).
 Los OBJ y sus pivotes están en centímetros; GLB/web y GIS están en metros.
+
+## Entrega pública verificada
+
+- [Visor gratuito](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/index.html) y [diez capturas auténticas](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html).
+- [Terreno, ciudad, sistemas OBJ, fuente INEGI original y QA — 39.004.277 bytes](https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/Monterrey_GEO004_Terrain_City_QA.zip), SHA256 `7343cef11ccc3f4ca222d45a4a12be59ff13e26ea882998e41ca6edf55072a65`.
+- [Visor estático y evidencias — 36.011.126 bytes](https://github.com/DavrosMTY/MonterreySANDBOX/releases/download/geo004-aa0797108638/Monterrey_GEO004_Web.zip), SHA256 `5eea62e747e825d6958becf50d08d5550a7a41f1887c72647d7882d59ccb46cc`.
+- [Manifest, límites oficiales y checksums](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo004-aa0797108638). Cinco assets publicados, menor de 2 GiB cada uno; sin LFS ni Actions Artifacts.
+- [PR #6 hacia development](https://github.com/DavrosMTY/MonterreySANDBOX/pull/6), dependiente de #5/#4, sin merge automático.
+
+La implementación geométrica validada es `aa07971`; `d654412` empaqueta con
+corrección documental de centímetros y QA de los 279 OBJ. El despliegue inmutable
+es `eff5f62`. [Recibo final](release-verification.json) y [verificación pública](public-verification.json).
+Presupuesto US$0. Se conservan las URLs, Releases, ramas y datos anteriores.

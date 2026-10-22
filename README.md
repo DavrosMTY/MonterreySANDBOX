@@ -14,7 +14,9 @@ VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free0
 · [Resultados FREE-001](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
 **[Abrir GEO-004](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/index.html)** ·
-[Capturas comparativas reales](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html)
+[Capturas comparativas reales](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html) ·
+[Descargar GEO-004](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo004-aa0797108638) ·
+[PR #6, sin fusionar](https://github.com/DavrosMTY/MonterreySANDBOX/pull/6)
 
 **GEO-004 — auditoría topográfica y nuevo MDT INEGI 5 m:**
 [Diagnóstico, reconstrucción y límites](docs/geo004/README.md) ·
@@ -50,7 +52,7 @@ completa de la metrópoli ni un videojuego jugable validado.
 | GEO-004 | MDT INEGI LiDAR 5 m, transformación vertical explícita, plataformas sobre planos nativos, auditoría completa y visor comparativo |
 | Integración UE5.6 | Proyecto C++, importadores, colisión estática, DataAsset, World Partition y sondas preparados; sin ejecución en motor |
 
-Los perfiles motorizados se limitan al 8–12 % por categoría. Aun así, **97 tramos
+En GEO-003, los perfiles motorizados se limitan al 8–12 % por categoría. Aun así, **97 tramos
 motorizados requieren refinamiento geométrico**; uno llega a 15,52 % al muestrear
 la superficie exportada. Hay cruces con superficies ausentes y un déficit nominal
 de separación registrado. Esos tramos quedan excluidos de una ruta candidata de

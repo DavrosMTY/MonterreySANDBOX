@@ -92,6 +92,21 @@ sin retoques producidos por Chromium, no imágenes generadas ni capturas Unreal.
 [Visor GEO-004 desplegado](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/index.html) ·
 [Comparación PNG auténtica](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/eff5f62d9634f7282071a8a40a46ab4b510811d6/evidence/index.html) ·
 [PR #6](https://github.com/DavrosMTY/MonterreySANDBOX/pull/6).
-La verificación pública y prerelease se registran por separado; el primer job
-aprobó reconstrucción/QA/WebGL y despliegue, pero falló al empaquetar la Release.
-Se recupera esa entrega sin cambiar el modelo ni sobrescribir el despliegue validado.
+[Prerelease descargable](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo004-aa0797108638):
+modelo/terreno/QA de 39 MB y sitio estático de 36 MB, ambos descargados y
+verificados por SHA256 después de publicar. [Recibo de descarga](release-verification.json)
+y [prueba pública](public-verification.json) identifican los commits y workflows.
+
+El primer job aprobó reconstrucción, QA, WebGL y despliegue, pero falló en el
+empaquetador. La recuperación conserva esos resultados y publica los archivos
+sin sustituir la geometría validada. El job intermedio pasó la prueba pública y
+se canceló después para corregir una frase sobre unidades antes de empaquetar.
+El job final `39834048694` terminó correctamente; reutilizó la prueba de la misma
+URL inmutable y verificó que el GLB regenerado era idéntico. Los recibos distinguen
+la validación de datos/navegador de la publicación y no ocultan los intentos fallidos.
+
+La vista previa CDN es gratuita y sin SLA; puede mostrar un aviso externo con
+publicidad antes del visor. Si aparece, **Open the page** abre la aplicación.
+La aplicación sólo solicita los estáticos del proyecto. GitHub Pages no está
+activado: la integración disponible no tiene Pages/Administration de escritura;
+la URL alternativa ya funciona y no requiere tareas manuales del supervisor.
