@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T20:41:23.648766+00:00",
+  "checked_at_utc": "2026-10-22T20:44:48.899154+00:00",
   "budget_usd": 0,
   "discovery_is_not_source_acceptance": true,
   "records": [
@@ -16,7 +16,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 1843,
-      "sha256": "ade1a9f0a5e9d83268854f0c162a11f081ca9a242b148d6a069999120690e0ef",
+      "sha256": "bad961afbc2acc579a257c94386665c41bc055693f1ec77db39cd63965f17269",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -27,7 +27,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 1843,
-      "sha256": "9a6115ad9f23dc9ef9c00137daa813fa1ec4135f699ef3b4b5fadd8f3c0d0d79",
+      "sha256": "377a18677c8d7f823992009787d99cdd226e4f0f22df44375d437dcc1a83a5cc",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -689,8 +689,8 @@
       "url": "https://en.wikipedia.org/wiki/Monterrey_metropolitan_area",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 154106,
-      "sha256": "24d227c45de17328b97ac3f73b06aebed01e356bb74096ba8cb1f3f783fea951",
+      "bytes": 154107,
+      "sha256": "b23cee9d8b3ac6799799e7028218b975183ebc51102f3f2b61836abf68f07096",
       "links": [
         "./Category:Metropolitan_areas_of_Mexico",
         "./Category:Monterrey_metropolitan_area#%20",
@@ -759,17 +759,16 @@
       "url": "https://www.bing.com/search?q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 123817,
-      "sha256": "021fec9907821885615ebdbd3ee0609c7ad3cca93c245ea663432feb5b6a426a",
+      "bytes": 121246,
+      "sha256": "39bffa2d02161dfb81b92c7cbe32bb3f181439f10bc1bee8a98266fa4c8d14e2",
       "links": [
         "/copilotsearch?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=CSSCOP",
         "/copilotsearch?q=site:gob.mx Metropolis Mexico 2020 xlsx Monterrey&form=CSBSBX",
         "/search?format=rss&q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=000017&qpvt=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=11&FORM=PERE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=11&FORM=PORE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=21&FORM=PERE1",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=31&FORM=PERE2",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=11&FORM=PERE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=11&FORM=PORE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=0F79AF0E846642058B3F507A338CFC34&first=21&FORM=PERE1",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez1%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez2%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez3%22&FORM=000017",
@@ -785,8 +784,8 @@
       "url": "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 165209,
-      "sha256": "ef14a66cb6f41f9331b5e1cafb420af202bd69f92aca2e16546a5c421fb9114d",
+      "bytes": 165210,
+      "sha256": "c389092f500c3f78b768cad12b828513ef86264e55c59bfabd9273a3eecadaff",
       "links": [
         "#Instituciones_que_operan_en_la_Zona_Metropolitana_de_Monterrey",
         "#Municipios_que_conforman_el_área_metropolitana",
@@ -851,8 +850,8 @@
       "url": "https://www.bing.com/search?format=rss&q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey%20municipios",
       "http_status": 200,
       "content_type": "text/xml; charset=utf-8",
-      "bytes": 5084,
-      "sha256": "655fe47ad451f360942918110edfd90ffd28b4c4e24291b8885f3d7ade399c08",
+      "bytes": 1239,
+      "sha256": "70c5433cec5264b44b3047d2280f99f38518cd386391d6b5a616aaa6ccc09af6",
       "links": [],
       "excerpts": [
         " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright © 2026 Microsoft. All righ",
@@ -860,54 +859,9 @@
       ],
       "search_results": [
         {
-          "title": "Ecco Motors | New & Used Golf Cart Sales, Service, and Parts with ...",
-          "url": "https://www.eccomotors.com/",
-          "description": "Ecco Motors is your trusted source for golf carts and Low Speed Vehicles (LSVs) along the Emerald Coast. We offer a wide selection of new and pre-owned electric carts from respected brands like Alset, Teko, and PDG."
-        },
-        {
-          "title": "Golf Carts & LSVs for Sale in Destin, FL | Ecco Motors Inventory",
-          "url": "https://www.eccomotors.com/inventory/",
-          "description": "Explore our new, used & refurbished electric, lithium-ion 2, 4 & 6 passenger golf carts and low speed vehicles for sale in Destin, FL. Shop top brands and find your perfect ride today."
-        },
-        {
-          "title": "Ecco Motors | Miramar Beach FL - Facebook",
-          "url": "https://www.facebook.com/EccoMotorsCarts/",
-          "description": "Ready to ride into October in style?"
-        },
-        {
-          "title": "Ecco Motors Sales Center - Golf Carts For Sale in Destin,...",
-          "url": "https://golfcartsearch.com/for-sale/ecco-motors-sales-center",
-          "description": "Ecco Motors Sales Center in Destin, Florida. Rated 4.7/5 from 23 reviews. Delivery, Golf cart dealer, In-store pickup. Call (850) 837-2600."
-        },
-        {
-          "title": "Ecco Motors Sales Center - 25 Reviews - Golf Cart Dealers in Destin, FL ...",
-          "url": "https://reviews.birdeye.com/ecco-motors-sales-center-156065108830012",
-          "description": "Read 25 customer reviews of Ecco Motors Sales Center, one of the best Golf Cart Dealers businesses at 36058 Emerald Coast Pkwy, Destin, FL 32541 United States.. Find reviews, ratings, directions, business hours, and book appointments online."
-        },
-        {
-          "title": "Ecco Motors Golf Cart Rental | Destin - Destin Florida",
-          "url": "https://destinflorida.com/destin/services/golf-cart-rental/ecco-motors",
-          "description": "Ecco Motors in Destin, Florida. Golf cart rental services located at 147, Professional Pl, Miramar Beach, FL 32550. Read reviews and contact today!"
-        },
-        {
-          "title": "Ecco Motors - Destin - Golf Cart Resource",
-          "url": "https://golfcartresource.com/dealer-locator/listing/ecco-motors-destin",
-          "description": "Ecco Motors operates from 3 facilities, 30,000 square feet and employs a dedicated team of 20. Our trucks are a familiar sight throughout Destin, Miramar Beach, and the 30A areas. We also offer storage solutions for over 100 golf carts and LSVs."
-        },
-        {
-          "title": "Ecco Motors, 147 Professional Place, Destin, FL (2026)",
-          "url": "https://www.findglocal.com/US/Destin/290090945177604/Ecco-Motors",
-          "description": "With Ecco Motors Mobile Service & Repairs, we come to YOU! From maintenance to repairs, our team helps keep your cart running smooth without ever leaving home. 🧰⚡"
-        },
-        {
-          "title": "Ecco Motors Sales Center in Destin, FL 32541 - 850-837...",
-          "url": "https://www.chamberofcommerce.com/business-directory/florida/destin/golf-cart-dealer/44856332-ecco-motors-sales-center",
-          "description": "Ecco Motors Sales Center located at 36058 Emerald Coast Pkwy, Destin, FL 32541 - reviews, ratings, hours, phone number, directions, and more."
-        },
-        {
-          "title": "Ecco Motors | Golf Cart Sales, Rentals & Services - Destin Chamber",
-          "url": "https://business.destinchamber.com/list/member/ecco-motors-33806",
-          "description": "As our customer you will receive the highest quality and value. In everything we do, Ecco Motors strives to provide only the best products, services and value."
+          "title": "Redirecting...",
+          "url": "https://www.jamericaclothing.com/westsocks-reviews",
+          "description": "Redirecting... ... Redirecting..."
         }
       ]
     },
@@ -916,8 +870,8 @@
       "url": "https://html.duckduckgo.com/html/?q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey",
       "http_status": 202,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 14314,
-      "sha256": "202652746420f272fe24ebde18116b6f83c704b1053ecf82f6b43295424511ed",
+      "bytes": 14320,
+      "sha256": "57717ffefde0ee029528d0aed76225b04bf8050bfffbb39d496b62773cf7cd30",
       "links": [],
       "excerpts": []
     },
@@ -942,12 +896,16 @@
       "excerpts": []
     }
   ],
+  "osm_acquisition_error": {
+    "url": "https://overpass.private.coffee/api/interpreter",
+    "error": "The read operation timed out"
+  },
   "licensed_source_snapshot": {
-    "tag": "geo005-inputs-461d2a0ae5b5",
+    "tag": "geo005-inputs-0444a663025c",
     "file": "GEO005_Licensed_Source_Snapshot.zip",
-    "bytes": 810549,
-    "sha256": "ed3c5b0c506a9fd1deb8000b9ac33a2f7e9702240e8e7ee8de19b632df28b981",
-    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-461d2a0ae5b5",
+    "bytes": 810550,
+    "sha256": "dee15653daebd7729ce1d8791ce7c8b685505d415be915cfca3cd16c4cdc27c3",
+    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-0444a663025c",
     "download_verified": true,
     "files": [
       {
