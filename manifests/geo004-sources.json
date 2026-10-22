@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-22T17:12:48.870296+00:00",
+  "pilot_center_lat_lon": [
+    25.667,
+    -100.31
+  ],
+  "extent_m": 2000,
+  "budget_usd": 0,
+  "inegi_dtm": {
+    "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/imagen_cartografica/1_10_000/lidar/Terreno_ASCII/702825404925_as.zip",
+    "sha256": "d560ab488b5adf3590c28cb094b471637b564e6688d6ac4eb0f4974e4dec6d02",
+    "bytes": 9267382,
+    "catalog": {
+      "id": 66767,
+      "upc": 702825404925,
+      "titulo": "Modelos Digitales de Elevación de Alta Resolución LiDAR, con resolución de 5m. Terreno. ASCII. G14C26A3",
+      "cve_soft": "19",
+      "edicion": 2012,
+      "cve_carta": "G14C26A3",
+      "res": "5",
+      "mod": "T",
+      "datum": "ITRF92",
+      "url_descarga": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/imagen_cartografica/1_10_000/lidar/Terreno_ASCII/702825404925",
+      "archivo": "|_as.zip,8.84 MB"
+    },
+    "license": "https://www.inegi.org.mx/inegi/terminos.html",
+    "license_reviewed": true,
+    "filename": "702825404925_as.zip",
+    "source_crs": "EPSG:4487",
+    "source_vertical_datum": "NAVD88",
+    "source_vertical_crs": "EPSG:5703",
+    "source_date_year": 2007,
+    "product_edition_year": 2012,
+    "creation_date": "2008-08-29",
+    "horizontal_grid_m": 5,
+    "vertical_accuracy_epv_m": null,
+    "metadata_declared_vertical_resolution_m": 1,
+    "original_ground_point_density_per_m2": 0.012,
+    "metadata_geoid_realization": "GGM05",
+    "metadata_members": [
+      "MT_Auxiliares\\g14c26a3_mt.txt",
+      "MT_Metadatos\\G14C26A3_MT.html"
+    ],
+    "data_member": "MT_XYZ\\G14C26A3_mt.xyz"
+  },
+  "terms": {
+    "url": "https://www.inegi.org.mx/inegi/terminos.html",
+    "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+    "permissions": [
+      "copy_and_redistribute_with_metadata",
+      "adapt",
+      "extract",
+      "commercial_products"
+    ],
+    "obligations": [
+      "credit_INEGI_and_product",
+      "identify_transformations_as_project_work",
+      "no_official_endorsement_claim"
+    ]
+  },
+  "grids": [
+    {
+      "url": "https://raw.githubusercontent.com/OSGeo/PROJ-data/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/mx_inegi/mx_inegi_ggm10.tif",
+      "file": "mx_inegi_ggm10.tif",
+      "bytes": 566618,
+      "sha256": "39b1ea1e2505f140655c3ee4aae65fa19e180008cc96dda79ded191a9988d651",
+      "license": "CC-BY-4.0",
+      "credit": "INEGI",
+      "readme_url": "https://github.com/OSGeo/PROJ-data/blob/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/mx_inegi/mx_inegi_README.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OSGeo/PROJ-data/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/us_nga/us_nga_egm08_25.tif",
+      "file": "us_nga_egm08_25.tif",
+      "bytes": 80585622,
+      "sha256": "4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+      "license": "Public Domain",
+      "credit": "US NGA / GeographicLib / OSGeo PROJ-data",
+      "readme_url": "https://github.com/OSGeo/PROJ-data/blob/cdab44864a36a9f3c3e90a36637c5d8a86e624c6/us_nga/us_nga_README.txt"
+    }
+  ],
+  "target_crs": "EPSG:32614",
+  "target_vertical_datum": "EGM2008",
+  "target_vertical_crs": "EPSG:3855",
+  "vertical_operation_policy": "Explicit Mexico ITRF2008/NAVD88 GGM10 plus EGM2008 2.5 minute grids; no USA geoid grid or ballpark fallback. Source metadata mentions GGM05: realization difference remains an uncertainty, not an exact GGM05 inversion.",
+  "precision_warning": "5 m grid is not 5 m measured point spacing or vertical accuracy. EPV is blank. Source epoch 2007 is not current 2026 terrain/engineering."
+}

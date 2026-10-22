@@ -230,7 +230,7 @@ class Network:
                 'clearance_constraint_audit':self.clearance_audit}
 
 
-def generate(network, building_obstacles, cells):
+def generate(network, building_obstacles, cells, *, extruder=extrude, densifier=densify_polygon):
     """Union only same-grade surfaces; clip buildings instead of moving them.
 
     A buffer union fills actual same-level junction footprints. Source graph nodes
@@ -306,7 +306,7 @@ def generate(network, building_obstacles, cells):
                 clipped = geometry.intersection(cell)
                 for part, p in enumerate(polygons(clipped)):
                     if p.area < .05: continue
-                    p = densify_polygon(p, c['mesh_edge_spacing_m'])
+                    p = densifier(p, c['mesh_edge_spacing_m'])
                     name = f'{kind}_{layer}_{role}_{cx}_{cy}_{part}'.replace('-', 'minus')
                     local_critical = {k:v for k,v in critical.items() if p.bounds[0] <= k[0] <= p.bounds[2] and p.bounds[1] <= k[1] <= p.bounds[3]}
                     def bottom(xy):
@@ -315,7 +315,7 @@ def generate(network, building_obstacles, cells):
                             values=np.minimum(values,network.terrain_surface(xy)-.25)
                         return values
                     try:
-                        mesh = extrude(p, bottom, sampler, color, color, interior_points=local_critical)
+                        mesh = extruder(p, bottom, sampler, color, color, interior_points=local_critical)
                     except ValueError as exc:
                         # Never turn a geometry failure into a successful silent omission.
                         raise ValueError(f'Road solid {name}: {exc}') from exc
@@ -328,7 +328,7 @@ def generate(network, building_obstacles, cells):
                     if kind == 'tunnel' and role == 'carriageway':
                         # Roof lining is a closed slab. Portals and terrain excavation are unresolved.
                         roof_z = lambda xy: sampler(xy)+c['tunnel_interior_height_m']
-                        roof = extrude(p, roof_z, lambda xy: roof_z(xy)+.3, [115, 111, 101, 255], [115, 111, 101, 255], interior_points=local_critical)
+                        roof = extruder(p, roof_z, lambda xy: roof_z(xy)+.3, [115, 111, 101, 255], [115, 111, 101, 255], interior_points=local_critical)
                         yield name+'_lining_roof', roof, dict(meta, name=name+'_lining_roof', role='tunnel_lining_roof')
     network.geometry_audit = records
 

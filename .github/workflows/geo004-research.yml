@@ -1,0 +1,25 @@
+name: GEO-004 official source and legal research (USD 0)
+on:
+  push:
+    branches: [feature/geo004-topography-audit]
+    paths: [.github/publication/geo004-research.json]
+permissions:
+  contents: read
+jobs:
+  official-documents:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read official documentation, no Google map/geographic content
+        run: python tools/research_geo004_sources.py
+      - name: Retain source evidence on task branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/geo004/official-source-research.json
+          git commit -m "docs(geo004): record official terrain sources and current legal terms"
+          git push origin HEAD:feature/geo004-topography-audit

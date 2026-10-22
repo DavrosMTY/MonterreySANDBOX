@@ -1,0 +1,56 @@
+         INFORMACIÓN AUXILIAR PARA EL MODELO DIGITAL DE ELEVACIÓN.
+
+___________________________________________________________________________
+___________________________________________________________________________
+CLAVE:                               G14C26A3_MT
+NOMBRE:                              
+ESCALA:                              1:10,000
+LONGITUD_W:                          -100º 20' 5.61" (-100.33489)
+LONGITUD_E:                          -100º 16' 33.95" (-100.2761)
+LATITUD_N:                            25º 41' 20.88" (25.68913)
+LATITUD_S:                            25º 37' 21.55" (25.62265)
+ORDEN_DATOS:                         2 ( Izquierda - Derecha / Abajo - Arriba
+TIPO_DATO:                           I (Intel)
+BITS_POR_PÍXEL:                      16S
+COLUMNAS_RENGLONES:                  1195, 1461
+DATUM_HORIZONTAL:                    ITRF92 Época  1988.0
+SISTEMA_COORDENADO_HORIZONTAL:       UTM
+ZONA_UTM:                            14
+LONGITUD_MERIDIANO_CENTRAL:          99W
+LATITUD_ORIGEN_DE_PROYECCIÓN:        NO APLICA
+LONGITUD_ORIGEN_DE_PROYECCIÓN:       NO APLICA
+FALSO_ESTE:                          NO APLICA
+FALSO_NORTE:                         NO APLICA
+PARALELO_ESTÁNDAR NORTE:             NO APLICA
+PARALELO_ESTÁNDAR SUR:               NO APLICA
+UNIDADES_HORIZONTALES:               METROS
+RESOLUCIÓN_HORIZONTAL:               5
+DATUM_VERTICAL:                      NAVD88
+UNIDADES_VERTICALES:                 METROS
+RESOLUCIÓN_VERTICAL:                 1.00 
+COORDENADA_N_MAX:                    2841915
+COORDENADA_N_MIN:                    2834610
+COORDENADA_E_MAX:                    371945
+COORDENADA_E_MIN:                    365970
+PROCESO_DE_OBTENCIÓN:                6
+EQUIDISTANCIA_FUENTE:                NO APLICA 
+UNIDAD_EQUIDISTANCIA:                METROS
+FECHA_DATOS_FUENTE:                  2007
+SISTEMA_DE_PRODUCCIÓN:               TERRA MODELER
+PRODUCTOR:                            Instituto Nacional de Estadística y
+                                     Geografía (INEGI)
+EXACTITUD_VERTICAL_(EPV):            
+FUENTE_DE_LOS_DATOS_DE_PRUEBA:       NO APLICA
+LIGA_NORTE:                          1
+LIGA_SUR:                            1
+LIGA_ESTE:                           1
+LIGA_OESTE:                          1
+FECHA_DE_CREACIÓN:                   2008-08-29
+OBSERVACIONES:                       DENSIDAD INICIAL:   0.052 PUNTOS/M²
+                                     DENSIDAD TERRENO:    0.012 PUNTOS/M²
+                                     Sistema utilizado para la captura de datos ALS50 II
+TIPO_DE_MODELO:                      TERRENO
+FECHA_DE_GENERACION_DEL_AUXILIAR:    2008-09-29
+FIN_OBSERVACIONES                      
+NORMA_TÉCNICA_MDE:                   NTG-005-2005 Modelos Digitales de Elevación
+METADATOS:                           FGDC-STD-001-1998 Estándar para Metadatos Digitales Geoespaciales
