@@ -1,0 +1,1 @@
+Mapas y perfiles son gráficos científicos de datos y mallas, no capturas del motor. Los puntos QA indican revisión pendiente, no precisión absoluta. Las capturas auténticas se encuentran en ../evidence/.

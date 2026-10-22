@@ -10,7 +10,7 @@ export const LIGHTS={
 };
 export class VisualLayer {
  constructor({scene,renderer,sun,ambient,world}) {
-  Object.assign(this,{scene,renderer,sun,ambient,world});this.city=new CityMaterials();this.enabled=world.milestone==='WORLD-002';
+  Object.assign(this,{scene,renderer,sun,ambient,world});this.city=new CityMaterials();this.enabled=['WORLD-002','GEO-004'].includes(world.milestone);
   this.sectors=new Set();this.period='day';this.shadows='auto';this.profile='low';this.fogEnabled=true;this.props=new Decorations();this.overlay=null;this.background=null;this.backgroundEnabled=true;this.attachments=new Map();
  }
  async load(){
@@ -28,11 +28,11 @@ export class VisualLayer {
   root.traverse(node=>{
    if(!node.isMesh)return;
    node.userData.grayboxMaterial=node.material;
-   if(this.world.milestone!=='WORLD-002')return;
+   if(!['WORLD-002','GEO-004'].includes(this.world.milestone))return;
    node.userData.cityMaterial=this.city.get(node.name);
    node.material=this.enabled?node.userData.cityMaterial:node.userData.grayboxMaterial;
   });this.sectors.add(root);
-  if(this.overlay&&sector){const group=this.props.create(this.overlay.sectors[sector.id]||[],sector.center);root.add(group);this.attachments.set(root,group);}
+  if(this.overlay&&sector){const group=this.props.create(this.overlay.sectors[sector.cell_id||sector.id]||[],sector.center);root.add(group);this.attachments.set(root,group);}
 
  }
  release(root){

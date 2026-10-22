@@ -8,6 +8,8 @@ const shared = `
 varying vec3 vMowPosition;
 varying vec4 vMowStyle;
 uniform float uMowNight;
+uniform float uMowHeat;
+uniform sampler2D uMowHeatMap;
 uniform float uMowFloor;
 uniform float uMowBay;
 uniform vec3 uMowPalette[8];
@@ -83,7 +85,8 @@ float mowWindow=0.0;float mowLit=0.0;`;
 
 export class CityMaterials {
   constructor() {
-    this.uniforms = {uMowNight:{value:0},uMowFloor:{value:3.2},uMowBay:{value:3.1},uMowPalette:{value:['#e6d4b5','#d9a57b','#dca7a1','#a7b6a2','#a7bdc4','#e4ddca','#b98b65','#dad7cb'].map(x=>new THREE.Color(x))}};
+    this.uniforms = {uMowNight:{value:0},uMowHeat:{value:0},uMowHeatMap:{value:new THREE.DataTexture(new Uint8Array(4),1,1)},uMowFloor:{value:3.2},uMowBay:{value:3.1},uMowPalette:{value:['#e6d4b5','#d9a57b','#dca7a1','#a7b6a2','#a7bdc4','#e4ddca','#b98b65','#dad7cb'].map(x=>new THREE.Color(x))}};
+    this.uniforms.uMowHeatMap.value.needsUpdate=true;
     this.materials = new Map(); this.compiled = new Set();
   }
   setCatalog(catalog){
@@ -99,7 +102,8 @@ export class CityMaterials {
       shader.vertexShader=shader.vertexShader.replace('#include <common>',`#include <common>\nattribute vec4 _mow_style;varying vec3 vMowPosition;varying vec4 vMowStyle;`)
         .replace('#include <begin_vertex>',`#include <begin_vertex>\nvMowPosition=(modelMatrix*vec4(position,1.0)).xyz;vMowStyle=_mow_style;`);
       shader.fragmentShader=shader.fragmentShader.replace('#include <common>',`#include <common>\n${shared}`)
-        .replace('#include <color_fragment>',`#include <color_fragment>\n${system==='Buildings'?facade:surface(system)}`)
+        .replace('#include <color_fragment>',`#include <color_fragment>\n${system==='Buildings'?facade:surface(system)}
+${['Buildings','Mountains'].includes(system)?'':`if(uMowHeat>0.5 && abs(vMowPosition.x)<=1000. && abs(vMowPosition.z)<=1000.){vec4 heat=texture2D(uMowHeatMap,(vMowPosition.xz+1000.)/2000.);diffuseColor.rgb=mix(diffuseColor.rgb,heat.rgb,heat.a);}`}`)
         .replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>\nroughnessFactor=mix(.90,.22,mowWindow);`)
         .replace('#include <emissivemap_fragment>',`#include <emissivemap_fragment>\ntotalEmissiveRadiance+=vec3(1.0,.60,.23)*mowLit*1.8;`);
       this.compiled.add(system);

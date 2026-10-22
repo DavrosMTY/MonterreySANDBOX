@@ -1,0 +1,242 @@
+{
+  "status": "passed_geometric_invariants_with_pending_source_and_structural_validation",
+  "source_graph_edges_preserved": 4194,
+  "road_ids_and_tags_preserved": 2665,
+  "buildings_preserved": 1136,
+  "maximum_building_xy_difference_m": 0.0,
+  "maximum_road_source_xy_difference_m": 0.0,
+  "relative_building_height_max_change_m": 4.973799150320701e-14,
+  "shared_endpoint_profile_gap_m": 0.0,
+  "terrain_sector_boundary_support_error_max_m": 9.391442290507257e-08,
+  "portal_hole_missing_seam_samples": 12,
+  "source_replacement_reconstruction_max_m": 3.0517578125e-05,
+  "datum_delta_reconstruction_max_m": 3.0517578125e-05,
+  "at_grade_roads_with_support_error_over_25cm": 0,
+  "roads_missing_centerline_surface_before": 336,
+  "roads_missing_centerline_surface_after": 336,
+  "crossings_checked_before": 201,
+  "crossings_checked_after": 201,
+  "crossings_missing_surface_before": 15,
+  "crossings_missing_surface_after": 15,
+  "crossings_potential_structure_overlap_before": 0,
+  "crossings_potential_structure_overlap_after": 0,
+  "building_foundations_requiring_review": 98,
+  "non_elevated_buildings_floating_over_50cm": 0,
+  "buildings_terrain_above_roof_over_25cm": 0,
+  "estimated_bridge_supports_checked": 81,
+  "estimated_support_gaps_over_25cm": 0,
+  "bridge_parts_terrain_above_deck_over_25cm": 0,
+  "review_map_points": 622,
+  "original_source_epv_m": null,
+  "absolute_accuracy_certified": false,
+  "source_year": 2007,
+  "unreal_executed": false,
+  "full_world_drivable_certified": false,
+  "numerical_geometry_before": {
+    "triangles": 1077198,
+    "post_float32_degenerate_triangles": 0
+  },
+  "numerical_geometry_after": {
+    "triangles": 1386231,
+    "post_float32_degenerate_triangles": 0
+  },
+  "structural_crossings_requiring_review": [
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        158.6713231541132,
+        492.4541469375356
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        165.88679861712643,
+        531.7741024817543
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        140.00365682451314,
+        496.05835106624295
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        146.85954709115123,
+        535.5155417078178
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/204",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        701.2023740472802,
+        468.43803295622837
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/744452670/1245",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        387.19181387723415,
+        436.1898267962283
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614829/2195",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        397.4280906795026,
+        451.84208925923656
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/438",
+      "upper": "way/406673504/702",
+      "xy_enu_m": [
+        48.11943916873235,
+        171.62298383524424
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/599",
+      "upper": "way/1263084516/2427",
+      "xy_enu_m": [
+        -49.35143659968691,
+        190.9670976530814
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/406673510/706",
+      "xy_enu_m": [
+        -71.31986858774847,
+        268.6737482495945
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2312",
+      "upper": "way/1262675403/2309",
+      "xy_enu_m": [
+        -88.16099336592552,
+        258.51216082849965
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/1262675403/2310",
+      "xy_enu_m": [
+        -65.30828909513293,
+        274.31134836534034
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1322900353/2629",
+      "xy_enu_m": [
+        -91.06389602798306,
+        -54.041093439677525
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706308/2318",
+      "upper": "way/1322900353/2626",
+      "xy_enu_m": [
+        11.054070436354717,
+        -7.029162651697247
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406673533/761",
+      "upper": "way/1322909090/2632",
+      "xy_enu_m": [
+        -95.07539959064,
+        -77.60317909375122
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    }
+  ],
+  "geometric_tolerance_note": "25cm cap/support screening, 1mm seam/numeric tolerances; these are NOT source vertical/horizontal accuracy.",
+  "source_model_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf"
+}

@@ -1,0 +1,3 @@
+Fuente: INEGI, MDT LiDAR G14C26A3 5m (datos 2007, edición 2012). https://www.inegi.org.mx/inegi/terminos.html
+El proyecto reproyecta y transforma NAVD88 a EGM2008 (GGM10 / EGM2008); no es trabajo avalado por INEGI. EPV no publicada; GGM05 aparece en los metadatos históricos y su realización permanece incierta. Se conservan originales y se identifican los derivados.
+GGM10 © INEGI, CC BY 4.0 (OSGeo PROJ-data). EGM2008 US NGA: dominio público.

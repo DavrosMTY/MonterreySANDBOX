@@ -1,0 +1,5232 @@
+{
+  "before": [
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        158.6713231541132,
+        492.4541469375356
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        160.20678945870813,
+        512.6766330744264
+      ],
+      "top_surface_gap_m": 8.226775469441236,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        165.88679861712643,
+        531.7741024817543
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        140.00365682451314,
+        496.05835106624295
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        145.12238300933694,
+        515.3132760353108
+      ],
+      "top_surface_gap_m": 10.842860258405608,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        146.85954709115123,
+        535.5155417078178
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/582",
+      "upper": "way/115528829/278",
+      "xy_enu_m": [
+        443.40932196506157,
+        381.963158655058
+      ],
+      "top_surface_gap_m": 7.119986532862981,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/202",
+      "upper": "way/115528829/278",
+      "xy_enu_m": [
+        445.80896295688683,
+        393.89269529089995
+      ],
+      "top_surface_gap_m": 7.11998733072096,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/204",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        701.2023740472802,
+        468.43803295622837
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/577",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        706.1218102367217,
+        448.7432367068943
+      ],
+      "top_surface_gap_m": 7.119973205720271,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2209",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        704.9926926305199,
+        453.26362081989663
+      ],
+      "top_surface_gap_m": 7.119992934518223,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/207",
+      "upper": "way/121925468/334",
+      "xy_enu_m": [
+        971.9408465553196,
+        608.0626797724888
+      ],
+      "top_surface_gap_m": 7.119987422077429,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/571",
+      "upper": "way/121925468/335",
+      "xy_enu_m": [
+        968.4087097958903,
+        587.4526579162344
+      ],
+      "top_surface_gap_m": 7.119960996473083,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/744452670/1245",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        387.19181387723415,
+        436.1898267962283
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614830/2197",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        389.4071597830327,
+        439.57730607543505
+      ],
+      "top_surface_gap_m": 7.119990767088666,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614829/2195",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        397.4280906795026,
+        451.84208925923656
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/361",
+      "upper": "way/406673511/708",
+      "xy_enu_m": [
+        -52.750101252240015,
+        206.67781515791629
+      ],
+      "top_surface_gap_m": 7.280015020983683,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/362",
+      "upper": "way/406673512/710",
+      "xy_enu_m": [
+        -44.14577728455497,
+        205.05174153402228
+      ],
+      "top_surface_gap_m": 7.280000672578694,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/363",
+      "upper": "way/949832340/2070",
+      "xy_enu_m": [
+        -12.953826612945251,
+        199.3801019446328
+      ],
+      "top_surface_gap_m": 7.280267095680074,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/365",
+      "upper": "way/406673492/689",
+      "xy_enu_m": [
+        25.029189156351816,
+        192.4776283413083
+      ],
+      "top_surface_gap_m": 7.280001771478624,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/367",
+      "upper": "way/406673508/703",
+      "xy_enu_m": [
+        56.64199383767638,
+        186.76000575092047
+      ],
+      "top_surface_gap_m": 7.280019370233958,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/98047011/242",
+      "upper": "way/126573562/386",
+      "xy_enu_m": [
+        607.8762734026542,
+        -129.35674783398588
+      ],
+      "top_surface_gap_m": 7.28001383298772,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        681.8055521502326,
+        -360.0065087083819
+      ],
+      "top_surface_gap_m": 7.200000149582479,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        642.7512043507576,
+        -350.55655902339316
+      ],
+      "top_surface_gap_m": 7.119995518667565,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        660.9208705850143,
+        -354.95305880847144
+      ],
+      "top_surface_gap_m": 7.199988162704813,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798518108/1510",
+      "upper": "way/155342197/394",
+      "xy_enu_m": [
+        -997.3671594228941,
+        -372.02214908626706
+      ],
+      "top_surface_gap_m": 7.2000021731047354,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/438",
+      "upper": "way/406673504/702",
+      "xy_enu_m": [
+        48.11943916873235,
+        171.62298383524424
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/441",
+      "upper": "way/840383219/1797",
+      "xy_enu_m": [
+        51.98042889129436,
+        191.0916956326283
+      ],
+      "top_surface_gap_m": 7.28000465063883,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1263084519/2430",
+      "xy_enu_m": [
+        67.79669043526887,
+        270.9713079117126
+      ],
+      "top_surface_gap_m": 7.280004662018882,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1264988927/2444",
+      "xy_enu_m": [
+        63.11255311182709,
+        247.31779234572375
+      ],
+      "top_surface_gap_m": 7.280025854230871,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/406673487/682",
+      "xy_enu_m": [
+        64.24897189123676,
+        253.0563728851384
+      ],
+      "top_surface_gap_m": 7.280033739191367,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1263084520/2431",
+      "xy_enu_m": [
+        75.03926552386868,
+        307.5441815844603
+      ],
+      "top_surface_gap_m": 7.280006737039798,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523623/1533",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -653.4183915350358,
+        -476.36673177326014
+      ],
+      "top_surface_gap_m": 7.280007800632916,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803487812/1784",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -650.7543045691062,
+        -463.29965812053916
+      ],
+      "top_surface_gap_m": 7.280002821006406,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798518098/1502",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -650.3483120582065,
+        -461.30830644537735
+      ],
+      "top_surface_gap_m": 7.2800045573529815,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/287",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -610.8783643088104,
+        -267.83315166282557
+      ],
+      "top_surface_gap_m": 11.691790055651268,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1791",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -608.209023532642,
+        -254.74892786080815
+      ],
+      "top_surface_gap_m": 11.107338673981303,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/778658607/1431",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -605.2085507041094,
+        -240.04160448310677
+      ],
+      "top_surface_gap_m": 8.941287313177213,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523616/1518",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -117.66425885323372,
+        -598.248929460891
+      ],
+      "top_surface_gap_m": 7.199994752659563,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -99.5651338167763,
+        -588.5829093757461
+      ],
+      "top_surface_gap_m": 7.200000243867862,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112662/2664",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -75.18089620752099,
+        -569.5030884190184
+      ],
+      "top_surface_gap_m": 7.200000264475307,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.4581590655844,
+        -578.0471144482972
+      ],
+      "top_surface_gap_m": 7.28052218542507,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.96102909252164,
+        -590.3260161590869
+      ],
+      "top_surface_gap_m": 7.280018878984265,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -152.6104887531877,
+        -569.2176362683425
+      ],
+      "top_surface_gap_m": 7.280009046963755,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060183/2361",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.8756010030271,
+        -595.8121882544357
+      ],
+      "top_surface_gap_m": 7.200023277688729,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -149.14372711850032,
+        -552.6509923150332
+      ],
+      "top_surface_gap_m": 7.280002787428202,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -120.38945658560472,
+        -416.79349728484567
+      ],
+      "top_surface_gap_m": 7.279912833933054,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -104.83882845528758,
+        -369.41890171576046
+      ],
+      "top_surface_gap_m": 7.28000036386743,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111935/2651",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -117.94437012917065,
+        -408.15271968139973
+      ],
+      "top_surface_gap_m": 7.280008946209591,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -101.97982924275522,
+        -362.10584108047664
+      ],
+      "top_surface_gap_m": 7.280012997591143,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -96.4641417471278,
+        -349.778616659979
+      ],
+      "top_surface_gap_m": 7.280008330655505,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121917902/293",
+      "upper": "way/241281837/544",
+      "xy_enu_m": [
+        -641.2271286307396,
+        -223.28416937460904
+      ],
+      "top_surface_gap_m": 7.280025274002014,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/772841545/1265",
+      "upper": "way/241281837/545",
+      "xy_enu_m": [
+        -589.9390941587938,
+        -233.3343843023205
+      ],
+      "top_surface_gap_m": 7.280010499509331,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -228.86900823260981,
+        -382.24989794152395
+      ],
+      "top_surface_gap_m": 7.2000062535311145,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -185.5003900702806,
+        -342.7435804296965
+      ],
+      "top_surface_gap_m": 7.200001331328622,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -164.2603616175921,
+        -335.98130124182535
+      ],
+      "top_surface_gap_m": 7.200011432397446,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/286",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -222.52412536387857,
+        -370.62670737216115
+      ],
+      "top_surface_gap_m": 7.199996900432666,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/744452670/1246",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        339.9925773634561,
+        444.5567322421875
+      ],
+      "top_surface_gap_m": 7.200081752140477,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614831/2199",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        340.14263325564906,
+        446.72590546361437
+      ],
+      "top_surface_gap_m": 7.200030182615933,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614824/2189",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        341.23578419977645,
+        462.5282423150695
+      ],
+      "top_surface_gap_m": 7.20001133973301,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614827/2193",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        341.6425526439408,
+        468.40839272774554
+      ],
+      "top_surface_gap_m": 7.199971053877334,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406646271/587",
+      "upper": "way/406673492/689",
+      "xy_enu_m": [
+        18.312396210905547,
+        188.266983273359
+      ],
+      "top_surface_gap_m": 7.280015841978525,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406646271/587",
+      "upper": "way/949832340/2070",
+      "xy_enu_m": [
+        -13.931463515757665,
+        194.1348962076946
+      ],
+      "top_surface_gap_m": 7.280007468944973,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/592",
+      "upper": "way/406673481/654",
+      "xy_enu_m": [
+        1.8544703117665668,
+        447.7376064698549
+      ],
+      "top_surface_gap_m": 7.2801896246263595,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/593",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        0.3964946557849552,
+        439.2829561774097
+      ],
+      "top_surface_gap_m": 7.280014783986189,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/596",
+      "upper": "way/406673483/666",
+      "xy_enu_m": [
+        -3.972355812336154,
+        417.2081498730337
+      ],
+      "top_surface_gap_m": 7.280013522682793,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/597",
+      "upper": "way/1262675399/2307",
+      "xy_enu_m": [
+        -42.469427457064334,
+        226.73536873139636
+      ],
+      "top_surface_gap_m": 7.280040256389157,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/597",
+      "upper": "way/406673483/668",
+      "xy_enu_m": [
+        -31.821271128625106,
+        279.24094442652427
+      ],
+      "top_surface_gap_m": 7.280021428214241,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/598",
+      "upper": "way/406673512/710",
+      "xy_enu_m": [
+        -47.130000884039596,
+        203.57534111248535
+      ],
+      "top_surface_gap_m": 7.280012881180255,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/599",
+      "upper": "way/1263084516/2427",
+      "xy_enu_m": [
+        -49.35143659968691,
+        190.9670976530814
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084492/2396",
+      "upper": "way/406670489/612",
+      "xy_enu_m": [
+        68.30845972330525,
+        399.5298137233997
+      ],
+      "top_surface_gap_m": 7.20004138289346,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084492/2397",
+      "upper": "way/406670490/613",
+      "xy_enu_m": [
+        16.73462951334932,
+        408.56084158889604
+      ],
+      "top_surface_gap_m": 7.20010627883687,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675392/2296",
+      "upper": "way/406673509/705",
+      "xy_enu_m": [
+        -41.76362732230371,
+        272.3965420822976
+      ],
+      "top_surface_gap_m": 7.199585977618426,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/406673510/706",
+      "xy_enu_m": [
+        -71.31986858774847,
+        268.6737482495945
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675392/2297",
+      "upper": "way/406673510/707",
+      "xy_enu_m": [
+        -48.82866456596322,
+        235.75195354104093
+      ],
+      "top_surface_gap_m": 7.200045904574154,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675394/2301",
+      "upper": "way/406673510/707",
+      "xy_enu_m": [
+        -62.4381672187319,
+        255.7904961821572
+      ],
+      "top_surface_gap_m": 7.200000459637295,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -236.94810490382562,
+        -563.2265698985374
+      ],
+      "top_surface_gap_m": 7.200001706687431,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -250.62420185466874,
+        -543.1942956017342
+      ],
+      "top_surface_gap_m": 7.3661801221508085,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -255.47852010250725,
+        -530.520175168317
+      ],
+      "top_surface_gap_m": 7.200053996911265,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112292/2654",
+      "upper": "way/450007432/1019",
+      "xy_enu_m": [
+        -39.936686267150336,
+        -381.8487367895226
+      ],
+      "top_surface_gap_m": 7.200001288943554,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/450007432/1019",
+      "xy_enu_m": [
+        -37.88757544960879,
+        -390.53939128217337
+      ],
+      "top_surface_gap_m": 7.199998638187822,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/525060084/1092",
+      "xy_enu_m": [
+        -236.61347067724392,
+        -546.6157402539167
+      ],
+      "top_surface_gap_m": 7.200002518190445,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/525060084/1092",
+      "xy_enu_m": [
+        -248.02769032435708,
+        -531.9723228001835
+      ],
+      "top_surface_gap_m": 7.200000726156873,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/543146735/1094",
+      "xy_enu_m": [
+        -222.70259718535445,
+        -384.86186150014794
+      ],
+      "top_surface_gap_m": 7.200003069177114,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/286",
+      "upper": "way/543146735/1094",
+      "xy_enu_m": [
+        -214.51582673611563,
+        -373.9618841033587
+      ],
+      "top_surface_gap_m": 7.19999561110842,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112662/2664",
+      "upper": "way/543146739/1097",
+      "xy_enu_m": [
+        -83.86463877352749,
+        -567.7492760324625
+      ],
+      "top_surface_gap_m": 7.199999029104902,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/263741891/555",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -39.058094297331046,
+        -436.452555097499
+      ],
+      "top_surface_gap_m": 7.11996192277104,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -38.60570109577946,
+        -432.0767248342183
+      ],
+      "top_surface_gap_m": 7.199997613024038,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112215/2653",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -37.212967018154025,
+        -418.6689502303618
+      ],
+      "top_surface_gap_m": 7.200002287354437,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1105",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        0.6776020103928534,
+        438.6565165376898
+      ],
+      "top_surface_gap_m": 7.2800052472991865,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626342/2252",
+      "xy_enu_m": [
+        78.57937716604698,
+        424.306809268081
+      ],
+      "top_surface_gap_m": 7.280107981356309,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406670499/637",
+      "xy_enu_m": [
+        79.64186038834202,
+        424.11102080554195
+      ],
+      "top_surface_gap_m": 7.2799908069195,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626346/2259",
+      "xy_enu_m": [
+        62.61842050924659,
+        427.2480050431415
+      ],
+      "top_surface_gap_m": 7.280000982606111,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        84.61651991543918,
+        423.1943183861272
+      ],
+      "top_surface_gap_m": 7.280006796504836,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626341/2250",
+      "xy_enu_m": [
+        56.99163495807058,
+        428.2848775969705
+      ],
+      "top_surface_gap_m": 7.28002509780913,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626345/2258",
+      "xy_enu_m": [
+        31.87158116125933,
+        432.9138605386036
+      ],
+      "top_surface_gap_m": 7.2800126687692455,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626344/2256",
+      "xy_enu_m": [
+        15.705254104803718,
+        435.8929008216581
+      ],
+      "top_surface_gap_m": 7.28046731861923,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406670498/632",
+      "xy_enu_m": [
+        14.738093512660592,
+        436.07112376333896
+      ],
+      "top_surface_gap_m": 7.280006785904334,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        10.38962017724875,
+        436.8724360954934
+      ],
+      "top_surface_gap_m": 7.2800214716684195,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626341/2247",
+      "xy_enu_m": [
+        37.50390817519201,
+        431.8759668350279
+      ],
+      "top_surface_gap_m": 7.280008391393494,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1107",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        92.00085060508606,
+        421.80238609814455
+      ],
+      "top_surface_gap_m": 7.279283048101547,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2208",
+      "upper": "way/643880913/1125",
+      "xy_enu_m": [
+        771.6575421825345,
+        504.2236937784914
+      ],
+      "top_surface_gap_m": 7.199977336688789,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/205",
+      "upper": "way/643880913/1125",
+      "xy_enu_m": [
+        757.7485960713838,
+        513.7431825902902
+      ],
+      "top_surface_gap_m": 7.199970755539994,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2208",
+      "upper": "way/643880913/1127",
+      "xy_enu_m": [
+        790.0934583408574,
+        524.7383459094586
+      ],
+      "top_surface_gap_m": 7.200000648829587,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/205",
+      "upper": "way/643880913/1127",
+      "xy_enu_m": [
+        776.767006426075,
+        538.1476299827639
+      ],
+      "top_surface_gap_m": 7.199986447291167,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/702345036/1158",
+      "xy_enu_m": [
+        752.673032838178,
+        -305.54810589011663
+      ],
+      "top_surface_gap_m": 7.27999935621358,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/702345036/1158",
+      "xy_enu_m": [
+        743.1096382311657,
+        -293.0990724459473
+      ],
+      "top_surface_gap_m": 7.279912697302848,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111934/2650",
+      "upper": "way/702349133/1160",
+      "xy_enu_m": [
+        613.7848529233696,
+        -161.00010643920092
+      ],
+      "top_surface_gap_m": 7.2800047005655415,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        153.38933368707816,
+        513.8682740469592
+      ],
+      "top_surface_gap_m": 9.405148554629363,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593689/2168",
+      "upper": "way/779416475/1435",
+      "xy_enu_m": [
+        297.6401207115692,
+        522.3149447723855
+      ],
+      "top_surface_gap_m": 10.917140343498204,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593692/2177",
+      "upper": "way/779416475/1435",
+      "xy_enu_m": [
+        258.70576433753706,
+        525.1219424621361
+      ],
+      "top_surface_gap_m": 7.199928981892867,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593689/2168",
+      "upper": "way/779416476/1438",
+      "xy_enu_m": [
+        295.03722436367775,
+        491.7144586567881
+      ],
+      "top_surface_gap_m": 10.670038920610864,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593692/2177",
+      "upper": "way/779416476/1438",
+      "xy_enu_m": [
+        256.1334657387619,
+        494.718690213872
+      ],
+      "top_surface_gap_m": 7.199971069904564,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/222",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        213.42908932192185,
+        -595.1933782772327
+      ],
+      "top_surface_gap_m": 7.280008004984097,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523618/1523",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        209.6471866339405,
+        -577.5746226937446
+      ],
+      "top_surface_gap_m": 7.280011968236977,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        206.9304734254698,
+        -564.9182668962803
+      ],
+      "top_surface_gap_m": 7.198307642750478,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/801417594/1613",
+      "upper": "way/671135161/1139",
+      "xy_enu_m": [
+        103.64172077888864,
+        419.6273204248252
+      ],
+      "top_surface_gap_m": 7.280007487985017,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/801709937/1635",
+      "upper": "way/789139069/1470",
+      "xy_enu_m": [
+        99.41521973923639,
+        428.5138316826785
+      ],
+      "top_surface_gap_m": 7.280024856667865,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1704",
+      "upper": "way/406670498/634",
+      "xy_enu_m": [
+        2.784809413994554,
+        420.88540057562864
+      ],
+      "top_surface_gap_m": 7.280003003255956,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626344/2257",
+      "xy_enu_m": [
+        21.09587924985834,
+        417.6154075045664
+      ],
+      "top_surface_gap_m": 7.280016219310255,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626341/2249",
+      "xy_enu_m": [
+        45.362052733636396,
+        413.2802662797286
+      ],
+      "top_surface_gap_m": 7.280011086664331,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626341/2248",
+      "xy_enu_m": [
+        42.73306242896798,
+        413.7499342418853
+      ],
+      "top_surface_gap_m": 7.279993692684684,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626347/2260",
+      "xy_enu_m": [
+        32.30761658573826,
+        415.61243555848193
+      ],
+      "top_surface_gap_m": 7.28000167140101,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1706",
+      "upper": "way/1262626342/2253",
+      "xy_enu_m": [
+        66.6590220755248,
+        409.47840569456076
+      ],
+      "top_surface_gap_m": 7.280025848192395,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1706",
+      "upper": "way/1262626348/2261",
+      "xy_enu_m": [
+        55.78485817790623,
+        411.41960493992417
+      ],
+      "top_surface_gap_m": 7.28180908894376,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1707",
+      "upper": "way/406670499/639",
+      "xy_enu_m": [
+        86.52831651106554,
+        405.9318203844093
+      ],
+      "top_surface_gap_m": 7.2800135087642275,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        149.88154059299092,
+        494.151208050472
+      ],
+      "top_surface_gap_m": 7.199986928656358,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        156.9442335910633,
+        533.5325310979136
+      ],
+      "top_surface_gap_m": 7.2000386513471994,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/263741891/555",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -36.17042659809754,
+        -436.6021666675609
+      ],
+      "top_surface_gap_m": 7.119992700169064,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -34.94348315059415,
+        -432.54231188052825
+      ],
+      "top_surface_gap_m": 7.199999496868941,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112215/2653",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -31.908933623841612,
+        -418.85423154480526
+      ],
+      "top_surface_gap_m": 7.199996253419954,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112292/2654",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -31.91352027350988,
+        -384.61577810029655
+      ],
+      "top_surface_gap_m": 7.20000184822743,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -30.502738341111545,
+        -392.6736789427199
+      ],
+      "top_surface_gap_m": 7.200001577054536,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626326/2229",
+      "upper": "way/406673481/660",
+      "xy_enu_m": [
+        86.36228399898614,
+        431.09415236485745
+      ],
+      "top_surface_gap_m": 7.200026050465908,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626326/2229",
+      "upper": "way/406673477/648",
+      "xy_enu_m": [
+        87.10850009050476,
+        435.29822706186013
+      ],
+      "top_surface_gap_m": 7.199994367746854,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/406670499/636",
+      "xy_enu_m": [
+        77.22982850691523,
+        430.4644069217305
+      ],
+      "top_surface_gap_m": 7.200009656977045,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/406670498/631",
+      "xy_enu_m": [
+        19.015814438064478,
+        441.4542222772061
+      ],
+      "top_surface_gap_m": 7.200000672308761,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/1262626341/2251",
+      "xy_enu_m": [
+        60.96871632789492,
+        433.53422822130193
+      ],
+      "top_surface_gap_m": 7.199957724563433,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/1262626341/2246",
+      "xy_enu_m": [
+        35.44685129056336,
+        438.3523220905189
+      ],
+      "top_surface_gap_m": 7.20000778265819,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2234",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        8.755572851704734,
+        443.39003097796194
+      ],
+      "top_surface_gap_m": 7.19998109315452,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2235",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        -2.3917594228593795,
+        445.4965000489663
+      ],
+      "top_surface_gap_m": 7.1999710460503366,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626336/2238",
+      "upper": "way/406673481/653",
+      "xy_enu_m": [
+        -7.217690425657984,
+        449.52203976635803
+      ],
+      "top_surface_gap_m": 7.200041921765205,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2240",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        85.05794391396854,
+        423.75113268678183
+      ],
+      "top_surface_gap_m": 7.199983395225331,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2242",
+      "upper": "way/406670499/638",
+      "xy_enu_m": [
+        83.37024053835559,
+        414.27072500247806
+      ],
+      "top_surface_gap_m": 7.200029319245914,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2243",
+      "upper": "way/406670500/647",
+      "xy_enu_m": [
+        81.51540051922784,
+        403.8560967748699
+      ],
+      "top_surface_gap_m": 7.200000428341696,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675376/2282",
+      "upper": "way/406673502/700",
+      "xy_enu_m": [
+        -33.63477871629572,
+        314.5426174126321
+      ],
+      "top_surface_gap_m": 7.2000050309309245,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2312",
+      "upper": "way/1262675403/2309",
+      "xy_enu_m": [
+        -88.16099336592552,
+        258.51216082849965
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/1262675403/2310",
+      "xy_enu_m": [
+        -65.30828909513293,
+        274.31134836534034
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1322900353/2629",
+      "xy_enu_m": [
+        -91.06389602798306,
+        -54.041093439677525
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1268455766/2511",
+      "xy_enu_m": [
+        -74.25972693242782,
+        -10.39288793597732
+      ],
+      "top_surface_gap_m": 7.280171638686511,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1268455766/2512",
+      "xy_enu_m": [
+        -71.07556596229685,
+        7.1353576235713
+      ],
+      "top_surface_gap_m": 7.280029325087753,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706308/2318",
+      "upper": "way/1322900353/2626",
+      "xy_enu_m": [
+        11.054070436354717,
+        -7.029162651697247
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2350",
+      "upper": "way/671135161/1139",
+      "xy_enu_m": [
+        104.73218424167153,
+        425.059623893445
+      ],
+      "top_surface_gap_m": 7.2000203592840535,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2351",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        96.32391686542215,
+        426.6924826475923
+      ],
+      "top_surface_gap_m": 7.199648398601653,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2351",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        88.6383113816342,
+        428.2674249913157
+      ],
+      "top_surface_gap_m": 7.199993103231918,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -131.87689242706608,
+        -414.0521665621103
+      ],
+      "top_surface_gap_m": 7.280006936285645,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -169.25373472124693,
+        -573.8785582411913
+      ],
+      "top_surface_gap_m": 7.280026731413727,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -178.07717629327522,
+        -583.1677081900906
+      ],
+      "top_surface_gap_m": 7.2800285426591245,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -165.14320369641135,
+        -565.794248126343
+      ],
+      "top_surface_gap_m": 7.280006326316311,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -121.1681465438877,
+        -365.2049295450837
+      ],
+      "top_surface_gap_m": 7.280844828504087,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060183/2361",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -183.64581061539917,
+        -589.0302595320502
+      ],
+      "top_surface_gap_m": 7.200009543554415,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -161.63470979448945,
+        -549.7904849341301
+      ],
+      "top_surface_gap_m": 7.280016290551771,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111935/2651",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -129.9351857950991,
+        -405.19520001309434
+      ],
+      "top_surface_gap_m": 7.280383825655804,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -119.44057043545273,
+        -357.3247052355094
+      ],
+      "top_surface_gap_m": 7.280027615923132,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -116.81394668382707,
+        -345.34353448499667
+      ],
+      "top_surface_gap_m": 7.280011781729854,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084494/2400",
+      "upper": "way/406670500/644",
+      "xy_enu_m": [
+        45.094009273529814,
+        410.5459576055787
+      ],
+      "top_surface_gap_m": 7.199992621438582,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084503/2411",
+      "upper": "way/406673483/669",
+      "xy_enu_m": [
+        -9.688240980172193,
+        363.0193082337926
+      ],
+      "top_surface_gap_m": 7.200021403049277,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084507/2418",
+      "upper": "way/1263084508/2420",
+      "xy_enu_m": [
+        -32.761326801908325,
+        206.59445431464692
+      ],
+      "top_surface_gap_m": 7.200025954008993,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084511/2422",
+      "upper": "way/406673488/683",
+      "xy_enu_m": [
+        12.3284828431796,
+        198.35568700177143
+      ],
+      "top_surface_gap_m": 7.280019659180425,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084512/2423",
+      "upper": "way/406673488/683",
+      "xy_enu_m": [
+        -5.170977974443456,
+        201.5485520885677
+      ],
+      "top_surface_gap_m": 7.280005430022129,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084512/2423",
+      "upper": "way/406673485/677",
+      "xy_enu_m": [
+        -4.64363856563252,
+        204.19743294721093
+      ],
+      "top_surface_gap_m": 7.2800108499731095,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303235/2560",
+      "upper": "way/406673481/655",
+      "xy_enu_m": [
+        11.620529099858551,
+        445.81617366353976
+      ],
+      "top_surface_gap_m": 7.199994221329689,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303235/2560",
+      "upper": "way/406673478/650",
+      "xy_enu_m": [
+        12.388447290200379,
+        449.99010050823426
+      ],
+      "top_surface_gap_m": 7.200033832543795,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2561",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        10.151077990327959,
+        437.8238903847443
+      ],
+      "top_surface_gap_m": 7.199995857480758,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2563",
+      "upper": "way/406670498/633",
+      "xy_enu_m": [
+        8.29127245177994,
+        427.715182845654
+      ],
+      "top_surface_gap_m": 7.200107794232849,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2564",
+      "upper": "way/406670500/640",
+      "xy_enu_m": [
+        6.440623350589774,
+        417.63567153306184
+      ],
+      "top_surface_gap_m": 7.2000003005059625,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2565",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        85.4608481988673,
+        414.4045713818964
+      ],
+      "top_surface_gap_m": 7.280003296965447,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/406670499/638",
+      "xy_enu_m": [
+        83.15875007983216,
+        414.8293888755695
+      ],
+      "top_surface_gap_m": 7.280054950244676,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626342/2252",
+      "xy_enu_m": [
+        72.40091491688398,
+        416.8105271588684
+      ],
+      "top_surface_gap_m": 7.28001460710766,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626346/2259",
+      "xy_enu_m": [
+        66.92883091571923,
+        417.8182536149749
+      ],
+      "top_surface_gap_m": 7.28000472934923,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626348/2261",
+      "xy_enu_m": [
+        52.0836730128961,
+        420.55210389223083
+      ],
+      "top_surface_gap_m": 7.280006392193059,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626341/2249",
+      "xy_enu_m": [
+        51.053970326282055,
+        420.7417315805127
+      ],
+      "top_surface_gap_m": 7.280036271057384,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626341/2248",
+      "xy_enu_m": [
+        40.37492680415902,
+        422.70835977570573
+      ],
+      "top_surface_gap_m": 7.280174595591234,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626347/2260",
+      "xy_enu_m": [
+        39.47922703751729,
+        422.8733097931727
+      ],
+      "top_surface_gap_m": 7.2801026220845415,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/406670498/633",
+      "xy_enu_m": [
+        8.932889442933332,
+        428.4986533596583
+      ],
+      "top_surface_gap_m": 7.280012568151051,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626345/2258",
+      "xy_enu_m": [
+        24.026131329013996,
+        425.7191165042702
+      ],
+      "top_surface_gap_m": 7.280008715780809,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626344/2256",
+      "xy_enu_m": [
+        18.373715625054164,
+        426.76005243372214
+      ],
+      "top_surface_gap_m": 7.2800413696194255,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2567",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        4.90308805900845,
+        429.24014263445895
+      ],
+      "top_surface_gap_m": 7.280017825313394,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2584",
+      "upper": "way/1263084509/2421",
+      "xy_enu_m": [
+        43.2495305607474,
+        195.13002469428218
+      ],
+      "top_surface_gap_m": 7.20000683170872,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2586",
+      "upper": "way/406673508/704",
+      "xy_enu_m": [
+        57.78248834649285,
+        192.48264431226298
+      ],
+      "top_surface_gap_m": 7.200025842299851,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2589",
+      "upper": "way/406673508/703",
+      "xy_enu_m": [
+        55.84990250009276,
+        182.695760131695
+      ],
+      "top_surface_gap_m": 7.199977524877113,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321097/2592",
+      "upper": "way/840383219/1797",
+      "xy_enu_m": [
+        44.45984744962788,
+        192.48371440229232
+      ],
+      "top_surface_gap_m": 7.199982577039123,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321097/2595",
+      "upper": "way/406673504/702",
+      "xy_enu_m": [
+        40.98643842981314,
+        173.01806021414203
+      ],
+      "top_surface_gap_m": 7.2000034371423,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406673533/761",
+      "upper": "way/1322909090/2632",
+      "xy_enu_m": [
+        -95.07539959064,
+        -77.60317909375122
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        676.0572468370267,
+        -364.4238172288778
+      ],
+      "top_surface_gap_m": 7.280020553872305,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        636.4718384389639,
+        -355.1973864046374
+      ],
+      "top_surface_gap_m": 7.200002677988323,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        654.9725680235147,
+        -359.5094728177257
+      ],
+      "top_surface_gap_m": 7.280015826880231,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1792",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -964.9729175568937,
+        -161.12061952200685
+      ],
+      "top_surface_gap_m": 7.1999984250211355,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/429765064/774",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -968.9679395934262,
+        -188.18331566532453
+      ],
+      "top_surface_gap_m": 7.199995358796173,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/290",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -966.8937005332245,
+        -176.35317462359117
+      ],
+      "top_surface_gap_m": 7.20000052950968,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121917935/307",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -964.458903476751,
+        -153.77827200073614
+      ],
+      "top_surface_gap_m": 7.199994657256184,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    }
+  ],
+  "after": [
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        158.6713231541132,
+        492.4541469375356
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        160.20678945870813,
+        512.6766330744264
+      ],
+      "top_surface_gap_m": 8.258490560295172,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150693/231",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        165.88679861712643,
+        531.7741024817543
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        140.00365682451314,
+        496.05835106624295
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        145.12238300933694,
+        515.3132760353108
+      ],
+      "top_surface_gap_m": 10.84317412629946,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/92150709/236",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        146.85954709115123,
+        535.5155417078178
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/582",
+      "upper": "way/115528829/278",
+      "xy_enu_m": [
+        443.40932196506157,
+        381.963158655058
+      ],
+      "top_surface_gap_m": 6.019999067875801,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/202",
+      "upper": "way/115528829/278",
+      "xy_enu_m": [
+        445.80896295688683,
+        393.89269529089995
+      ],
+      "top_surface_gap_m": 6.0200015280546495,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/204",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        701.2023740472802,
+        468.43803295622837
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/577",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        706.1218102367217,
+        448.7432367068943
+      ],
+      "top_surface_gap_m": 6.020001275989671,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2209",
+      "upper": "way/121925467/333",
+      "xy_enu_m": [
+        704.9926926305199,
+        453.26362081989663
+      ],
+      "top_surface_gap_m": 6.020464159749167,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/207",
+      "upper": "way/121925468/334",
+      "xy_enu_m": [
+        971.9408465553196,
+        608.0626797724888
+      ],
+      "top_surface_gap_m": 6.020026559107805,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/345504896/571",
+      "upper": "way/121925468/335",
+      "xy_enu_m": [
+        968.4087097958903,
+        587.4526579162344
+      ],
+      "top_surface_gap_m": 6.020000121067596,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/744452670/1245",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        387.19181387723415,
+        436.1898267962283
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614830/2197",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        389.4071597830327,
+        439.57730607543505
+      ],
+      "top_surface_gap_m": 6.020804005135346,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614829/2195",
+      "upper": "way/121925474/349",
+      "xy_enu_m": [
+        397.4280906795026,
+        451.84208925923656
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/361",
+      "upper": "way/406673511/708",
+      "xy_enu_m": [
+        -52.750101252240015,
+        206.67781515791629
+      ],
+      "top_surface_gap_m": 6.179999885719667,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/362",
+      "upper": "way/406673512/710",
+      "xy_enu_m": [
+        -44.14577728455497,
+        205.05174153402228
+      ],
+      "top_surface_gap_m": 6.180000197738877,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/363",
+      "upper": "way/949832340/2070",
+      "xy_enu_m": [
+        -12.953826612945251,
+        199.3801019446328
+      ],
+      "top_surface_gap_m": 6.1799998004872805,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/365",
+      "upper": "way/406673492/689",
+      "xy_enu_m": [
+        25.029189156351816,
+        192.4776283413083
+      ],
+      "top_surface_gap_m": 6.1800001404932345,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121934233/367",
+      "upper": "way/406673508/703",
+      "xy_enu_m": [
+        56.64199383767638,
+        186.76000575092047
+      ],
+      "top_surface_gap_m": 6.179989324182657,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/98047011/242",
+      "upper": "way/126573562/386",
+      "xy_enu_m": [
+        607.8762734026542,
+        -129.35674783398588
+      ],
+      "top_surface_gap_m": 6.180001031221423,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        681.8055521502326,
+        -360.0065087083819
+      ],
+      "top_surface_gap_m": 6.099999515689774,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        642.7512043507576,
+        -350.55655902339316
+      ],
+      "top_surface_gap_m": 6.019999936757699,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/155213519/391",
+      "xy_enu_m": [
+        660.9208705850143,
+        -354.95305880847144
+      ],
+      "top_surface_gap_m": 6.101568071583188,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798518108/1510",
+      "upper": "way/155342197/394",
+      "xy_enu_m": [
+        -997.3671594228941,
+        -372.02214908626706
+      ],
+      "top_surface_gap_m": 6.099903679989211,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/438",
+      "upper": "way/406673504/702",
+      "xy_enu_m": [
+        48.11943916873235,
+        171.62298383524424
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/441",
+      "upper": "way/840383219/1797",
+      "xy_enu_m": [
+        51.98042889129436,
+        191.0916956326283
+      ],
+      "top_surface_gap_m": 6.179998512488282,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1263084519/2430",
+      "xy_enu_m": [
+        67.79669043526887,
+        270.9713079117126
+      ],
+      "top_surface_gap_m": 6.179999899097879,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1264988927/2444",
+      "xy_enu_m": [
+        63.11255311182709,
+        247.31779234572375
+      ],
+      "top_surface_gap_m": 6.179999952349021,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/406673487/682",
+      "xy_enu_m": [
+        64.24897189123676,
+        253.0563728851384
+      ],
+      "top_surface_gap_m": 6.18000018767907,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/158242445/443",
+      "upper": "way/1263084520/2431",
+      "xy_enu_m": [
+        75.03926552386868,
+        307.5441815844603
+      ],
+      "top_surface_gap_m": 6.179997584465582,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523623/1533",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -653.4183915350358,
+        -476.36673177326014
+      ],
+      "top_surface_gap_m": 6.1800000837293965,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803487812/1784",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -650.7543045691062,
+        -463.29965812053916
+      ],
+      "top_surface_gap_m": 6.179999998114226,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798518098/1502",
+      "upper": "way/189260481/503",
+      "xy_enu_m": [
+        -650.3483120582065,
+        -461.30830644537735
+      ],
+      "top_surface_gap_m": 6.180000150731189,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/287",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -610.8783643088104,
+        -267.83315166282557
+      ],
+      "top_surface_gap_m": 11.078835587101025,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1791",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -608.209023532642,
+        -254.74892786080815
+      ],
+      "top_surface_gap_m": 11.083127809019857,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/778658607/1431",
+      "upper": "way/189260481/504",
+      "xy_enu_m": [
+        -605.2085507041094,
+        -240.04160448310677
+      ],
+      "top_surface_gap_m": 8.914730562764817,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523616/1518",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -117.66425885323372,
+        -598.248929460891
+      ],
+      "top_surface_gap_m": 6.100004113996647,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -99.5651338167763,
+        -588.5829093757461
+      ],
+      "top_surface_gap_m": 6.099999908172435,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112662/2664",
+      "upper": "way/227255033/537",
+      "xy_enu_m": [
+        -75.18089620752099,
+        -569.5030884190184
+      ],
+      "top_surface_gap_m": 6.100000317520426,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.4581590655844,
+        -578.0471144482972
+      ],
+      "top_surface_gap_m": 6.180000634333055,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.96102909252164,
+        -590.3260161590869
+      ],
+      "top_surface_gap_m": 6.180004218080171,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -152.6104887531877,
+        -569.2176362683425
+      ],
+      "top_surface_gap_m": 6.179999937096568,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060183/2361",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -154.8756010030271,
+        -595.8121882544357
+      ],
+      "top_surface_gap_m": 6.101140360904765,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/227255035/538",
+      "xy_enu_m": [
+        -149.14372711850032,
+        -552.6509923150332
+      ],
+      "top_surface_gap_m": 6.1800000816176635,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -120.38945658560472,
+        -416.79349728484567
+      ],
+      "top_surface_gap_m": 6.180000088327347,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -104.83882845528758,
+        -369.41890171576046
+      ],
+      "top_surface_gap_m": 6.180004578728813,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111935/2651",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -117.94437012917065,
+        -408.15271968139973
+      ],
+      "top_surface_gap_m": 6.188971067167358,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -101.97982924275522,
+        -362.10584108047664
+      ],
+      "top_surface_gap_m": 6.179999837850119,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/227255035/539",
+      "xy_enu_m": [
+        -96.4641417471278,
+        -349.778616659979
+      ],
+      "top_surface_gap_m": 6.1799999355839645,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121917902/293",
+      "upper": "way/241281837/544",
+      "xy_enu_m": [
+        -641.2271286307396,
+        -223.28416937460904
+      ],
+      "top_surface_gap_m": 6.180000416395615,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/772841545/1265",
+      "upper": "way/241281837/545",
+      "xy_enu_m": [
+        -589.9390941587938,
+        -233.3343843023205
+      ],
+      "top_surface_gap_m": 6.18000013894698,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -228.86900823260981,
+        -382.24989794152395
+      ],
+      "top_surface_gap_m": 6.099999842557963,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -185.5003900702806,
+        -342.7435804296965
+      ],
+      "top_surface_gap_m": 6.099999998614294,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -164.2603616175921,
+        -335.98130124182535
+      ],
+      "top_surface_gap_m": 6.100001148269712,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/286",
+      "upper": "way/300050118/569",
+      "xy_enu_m": [
+        -222.52412536387857,
+        -370.62670737216115
+      ],
+      "top_surface_gap_m": 6.100000161308458,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/744452670/1246",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        339.9925773634561,
+        444.5567322421875
+      ],
+      "top_surface_gap_m": 6.102320385184271,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614831/2199",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        340.14263325564906,
+        446.72590546361437
+      ],
+      "top_surface_gap_m": 6.097726518135005,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614824/2189",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        341.23578419977645,
+        462.5282423150695
+      ],
+      "top_surface_gap_m": 6.100000641154679,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614827/2193",
+      "upper": "way/345504936/583",
+      "xy_enu_m": [
+        341.6425526439408,
+        468.40839272774554
+      ],
+      "top_surface_gap_m": 6.100108939162737,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406646271/587",
+      "upper": "way/406673492/689",
+      "xy_enu_m": [
+        18.312396210905547,
+        188.266983273359
+      ],
+      "top_surface_gap_m": 6.180000048216016,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406646271/587",
+      "upper": "way/949832340/2070",
+      "xy_enu_m": [
+        -13.931463515757665,
+        194.1348962076946
+      ],
+      "top_surface_gap_m": 6.180000044093617,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/592",
+      "upper": "way/406673481/654",
+      "xy_enu_m": [
+        1.8544703117665668,
+        447.7376064698549
+      ],
+      "top_surface_gap_m": 6.180000161567818,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/593",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        0.3964946557849552,
+        439.2829561774097
+      ],
+      "top_surface_gap_m": 6.1799949838009525,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/596",
+      "upper": "way/406673483/666",
+      "xy_enu_m": [
+        -3.972355812336154,
+        417.2081498730337
+      ],
+      "top_surface_gap_m": 6.179999113693498,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/597",
+      "upper": "way/1262675399/2307",
+      "xy_enu_m": [
+        -42.469427457064334,
+        226.73536873139636
+      ],
+      "top_surface_gap_m": 6.1800000899161205,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/597",
+      "upper": "way/406673483/668",
+      "xy_enu_m": [
+        -31.821271128625106,
+        279.24094442652427
+      ],
+      "top_surface_gap_m": 6.18000005268334,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/598",
+      "upper": "way/406673512/710",
+      "xy_enu_m": [
+        -47.130000884039596,
+        203.57534111248535
+      ],
+      "top_surface_gap_m": 6.180000259666144,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406670427/599",
+      "upper": "way/1263084516/2427",
+      "xy_enu_m": [
+        -49.35143659968691,
+        190.9670976530814
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084492/2396",
+      "upper": "way/406670489/612",
+      "xy_enu_m": [
+        68.30845972330525,
+        399.5298137233997
+      ],
+      "top_surface_gap_m": 6.10000008636257,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084492/2397",
+      "upper": "way/406670490/613",
+      "xy_enu_m": [
+        16.73462951334932,
+        408.56084158889604
+      ],
+      "top_surface_gap_m": 6.099999915030253,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675392/2296",
+      "upper": "way/406673509/705",
+      "xy_enu_m": [
+        -41.76362732230371,
+        272.3965420822976
+      ],
+      "top_surface_gap_m": 6.097697060518499,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/406673510/706",
+      "xy_enu_m": [
+        -71.31986858774847,
+        268.6737482495945
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675392/2297",
+      "upper": "way/406673510/707",
+      "xy_enu_m": [
+        -48.82866456596322,
+        235.75195354104093
+      ],
+      "top_surface_gap_m": 6.097720452390718,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675394/2301",
+      "upper": "way/406673510/707",
+      "xy_enu_m": [
+        -62.4381672187319,
+        255.7904961821572
+      ],
+      "top_surface_gap_m": 9.570719677945362,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -236.94810490382562,
+        -563.2265698985374
+      ],
+      "top_surface_gap_m": 6.100000102058971,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -250.62420185466874,
+        -543.1942956017342
+      ],
+      "top_surface_gap_m": 6.099999905563095,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/429765075/778",
+      "xy_enu_m": [
+        -255.47852010250725,
+        -530.520175168317
+      ],
+      "top_surface_gap_m": 6.100000616029092,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112292/2654",
+      "upper": "way/450007432/1019",
+      "xy_enu_m": [
+        -39.936686267150336,
+        -381.8487367895226
+      ],
+      "top_surface_gap_m": 6.100005696939206,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/450007432/1019",
+      "xy_enu_m": [
+        -37.88757544960879,
+        -390.53939128217337
+      ],
+      "top_surface_gap_m": 6.076336287490221,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/525060084/1092",
+      "xy_enu_m": [
+        -236.61347067724392,
+        -546.6157402539167
+      ],
+      "top_surface_gap_m": 6.100000707553136,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/525060084/1092",
+      "xy_enu_m": [
+        -248.02769032435708,
+        -531.9723228001835
+      ],
+      "top_surface_gap_m": 6.10000109476664,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/543146735/1094",
+      "xy_enu_m": [
+        -222.70259718535445,
+        -384.86186150014794
+      ],
+      "top_surface_gap_m": 6.100002337161413,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/286",
+      "upper": "way/543146735/1094",
+      "xy_enu_m": [
+        -214.51582673611563,
+        -373.9618841033587
+      ],
+      "top_surface_gap_m": 6.100004498603084,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112662/2664",
+      "upper": "way/543146739/1097",
+      "xy_enu_m": [
+        -83.86463877352749,
+        -567.7492760324625
+      ],
+      "top_surface_gap_m": 6.099999497782051,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/263741891/555",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -39.058094297331046,
+        -436.452555097499
+      ],
+      "top_surface_gap_m": 6.019999882657089,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -38.60570109577946,
+        -432.0767248342183
+      ],
+      "top_surface_gap_m": 6.100000274129684,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112215/2653",
+      "upper": "way/543146740/1098",
+      "xy_enu_m": [
+        -37.212967018154025,
+        -418.6689502303618
+      ],
+      "top_surface_gap_m": 6.100000237426002,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1105",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        0.6776020103928534,
+        438.6565165376898
+      ],
+      "top_surface_gap_m": 6.179999881820095,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626342/2252",
+      "xy_enu_m": [
+        78.57937716604698,
+        424.306809268081
+      ],
+      "top_surface_gap_m": 6.179998765017103,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406670499/637",
+      "xy_enu_m": [
+        79.64186038834202,
+        424.11102080554195
+      ],
+      "top_surface_gap_m": 6.17916293732651,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626346/2259",
+      "xy_enu_m": [
+        62.61842050924659,
+        427.2480050431415
+      ],
+      "top_surface_gap_m": 6.176759443631454,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        84.61651991543918,
+        423.1943183861272
+      ],
+      "top_surface_gap_m": 6.179287040169015,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626341/2250",
+      "xy_enu_m": [
+        56.99163495807058,
+        428.2848775969705
+      ],
+      "top_surface_gap_m": 6.1799993316395785,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626345/2258",
+      "xy_enu_m": [
+        31.87158116125933,
+        432.9138605386036
+      ],
+      "top_surface_gap_m": 6.1800995693295135,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626344/2256",
+      "xy_enu_m": [
+        15.705254104803718,
+        435.8929008216581
+      ],
+      "top_surface_gap_m": 6.1799975794773445,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/406670498/632",
+      "xy_enu_m": [
+        14.738093512660592,
+        436.07112376333896
+      ],
+      "top_surface_gap_m": 6.180000115215421,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        10.38962017724875,
+        436.8724360954934
+      ],
+      "top_surface_gap_m": 6.182790023095436,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1106",
+      "upper": "way/1262626341/2247",
+      "xy_enu_m": [
+        37.50390817519201,
+        431.8759668350279
+      ],
+      "top_surface_gap_m": 6.179999957454243,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/570044971/1107",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        92.00085060508606,
+        421.80238609814455
+      ],
+      "top_surface_gap_m": 6.179993147706455,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2208",
+      "upper": "way/643880913/1125",
+      "xy_enu_m": [
+        771.6575421825345,
+        504.2236937784914
+      ],
+      "top_surface_gap_m": 6.10000020567918,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/205",
+      "upper": "way/643880913/1125",
+      "xy_enu_m": [
+        757.7485960713838,
+        513.7431825902902
+      ],
+      "top_surface_gap_m": 6.100000243086583,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262614842/2208",
+      "upper": "way/643880913/1127",
+      "xy_enu_m": [
+        790.0934583408574,
+        524.7383459094586
+      ],
+      "top_surface_gap_m": 6.100321252208914,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90091792/205",
+      "upper": "way/643880913/1127",
+      "xy_enu_m": [
+        776.767006426075,
+        538.1476299827639
+      ],
+      "top_surface_gap_m": 6.100000246332911,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/702345036/1158",
+      "xy_enu_m": [
+        752.673032838178,
+        -305.54810589011663
+      ],
+      "top_surface_gap_m": 6.180000457444407,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/702345036/1158",
+      "xy_enu_m": [
+        743.1096382311657,
+        -293.0990724459473
+      ],
+      "top_surface_gap_m": 6.180000516164114,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111934/2650",
+      "upper": "way/702349133/1160",
+      "xy_enu_m": [
+        613.7848529233696,
+        -161.00010643920092
+      ],
+      "top_surface_gap_m": 6.18000000576194,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/744442137/1227",
+      "xy_enu_m": [
+        153.38933368707816,
+        513.8682740469592
+      ],
+      "top_surface_gap_m": 9.394406555047453,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593689/2168",
+      "upper": "way/779416475/1435",
+      "xy_enu_m": [
+        297.6401207115692,
+        522.3149447723855
+      ],
+      "top_surface_gap_m": 10.910737866482577,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593692/2177",
+      "upper": "way/779416475/1435",
+      "xy_enu_m": [
+        258.70576433753706,
+        525.1219424621361
+      ],
+      "top_surface_gap_m": 6.674623512254584,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593689/2168",
+      "upper": "way/779416476/1438",
+      "xy_enu_m": [
+        295.03722436367775,
+        491.7144586567881
+      ],
+      "top_surface_gap_m": 10.777757735730233,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262593692/2177",
+      "upper": "way/779416476/1438",
+      "xy_enu_m": [
+        256.1334657387619,
+        494.718690213872
+      ],
+      "top_surface_gap_m": 6.165390426547333,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/222",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        213.42908932192185,
+        -595.1933782772327
+      ],
+      "top_surface_gap_m": 6.1800004886749775,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523618/1523",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        209.6471866339405,
+        -577.5746226937446
+      ],
+      "top_surface_gap_m": 6.180000490877092,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/798523620/1525",
+      "xy_enu_m": [
+        206.9304734254698,
+        -564.9182668962803
+      ],
+      "top_surface_gap_m": 6.099999965764823,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/801417594/1613",
+      "upper": "way/671135161/1139",
+      "xy_enu_m": [
+        103.64172077888864,
+        419.6273204248252
+      ],
+      "top_surface_gap_m": 6.180000157765676,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/801709937/1635",
+      "upper": "way/789139069/1470",
+      "xy_enu_m": [
+        99.41521973923639,
+        428.5138316826785
+      ],
+      "top_surface_gap_m": 6.179998508445465,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1704",
+      "upper": "way/406670498/634",
+      "xy_enu_m": [
+        2.784809413994554,
+        420.88540057562864
+      ],
+      "top_surface_gap_m": 6.179999910658125,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626344/2257",
+      "xy_enu_m": [
+        21.09587924985834,
+        417.6154075045664
+      ],
+      "top_surface_gap_m": 6.180000077424552,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626341/2249",
+      "xy_enu_m": [
+        45.362052733636396,
+        413.2802662797286
+      ],
+      "top_surface_gap_m": 6.1799623369316805,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626341/2248",
+      "xy_enu_m": [
+        42.73306242896798,
+        413.7499342418853
+      ],
+      "top_surface_gap_m": 6.179999939577442,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1705",
+      "upper": "way/1262626347/2260",
+      "xy_enu_m": [
+        32.30761658573826,
+        415.61243555848193
+      ],
+      "top_surface_gap_m": 6.179999949564717,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1706",
+      "upper": "way/1262626342/2253",
+      "xy_enu_m": [
+        66.6590220755248,
+        409.47840569456076
+      ],
+      "top_surface_gap_m": 6.179999962634042,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1706",
+      "upper": "way/1262626348/2261",
+      "xy_enu_m": [
+        55.78485817790623,
+        411.41960493992417
+      ],
+      "top_surface_gap_m": 6.179999930275471,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/802655543/1707",
+      "upper": "way/406670499/639",
+      "xy_enu_m": [
+        86.52831651106554,
+        405.9318203844093
+      ],
+      "top_surface_gap_m": 6.179999681816753,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/956461866/2081",
+      "xy_enu_m": [
+        149.88154059299092,
+        494.151208050472
+      ],
+      "top_surface_gap_m": 6.099998993340137,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803441987/1781",
+      "upper": "way/956461866/2082",
+      "xy_enu_m": [
+        156.9442335910633,
+        533.5325310979136
+      ],
+      "top_surface_gap_m": 6.099984712964783,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/263741891/555",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -36.17042659809754,
+        -436.6021666675609
+      ],
+      "top_surface_gap_m": 6.020008049522517,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -34.94348315059415,
+        -432.54231188052825
+      ],
+      "top_surface_gap_m": 6.100658820762305,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112215/2653",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -31.908933623841612,
+        -418.85423154480526
+      ],
+      "top_surface_gap_m": 6.1000004432172545,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112292/2654",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -31.91352027350988,
+        -384.61577810029655
+      ],
+      "top_surface_gap_m": 6.100000972527482,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/1259711058/2156",
+      "xy_enu_m": [
+        -30.502738341111545,
+        -392.6736789427199
+      ],
+      "top_surface_gap_m": 6.100001545711393,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626326/2229",
+      "upper": "way/406673481/660",
+      "xy_enu_m": [
+        86.36228399898614,
+        431.09415236485745
+      ],
+      "top_surface_gap_m": 6.100074165838919,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626326/2229",
+      "upper": "way/406673477/648",
+      "xy_enu_m": [
+        87.10850009050476,
+        435.29822706186013
+      ],
+      "top_surface_gap_m": 6.099999945720242,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/406670499/636",
+      "xy_enu_m": [
+        77.22982850691523,
+        430.4644069217305
+      ],
+      "top_surface_gap_m": 6.099999778758047,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/406670498/631",
+      "xy_enu_m": [
+        19.015814438064478,
+        441.4542222772061
+      ],
+      "top_surface_gap_m": 6.099999834612618,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/1262626341/2251",
+      "xy_enu_m": [
+        60.96871632789492,
+        433.53422822130193
+      ],
+      "top_surface_gap_m": 6.099999968580505,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2233",
+      "upper": "way/1262626341/2246",
+      "xy_enu_m": [
+        35.44685129056336,
+        438.3523220905189
+      ],
+      "top_surface_gap_m": 6.1000001101945145,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2234",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        8.755572851704734,
+        443.39003097796194
+      ],
+      "top_surface_gap_m": 6.10000013723004,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626334/2235",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        -2.3917594228593795,
+        445.4965000489663
+      ],
+      "top_surface_gap_m": 6.099999956250713,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626336/2238",
+      "upper": "way/406673481/653",
+      "xy_enu_m": [
+        -7.217690425657984,
+        449.52203976635803
+      ],
+      "top_surface_gap_m": 6.099999992843209,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2240",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        85.05794391396854,
+        423.75113268678183
+      ],
+      "top_surface_gap_m": 6.099854222512249,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2242",
+      "upper": "way/406670499/638",
+      "xy_enu_m": [
+        83.37024053835559,
+        414.27072500247806
+      ],
+      "top_surface_gap_m": 6.099872701749291,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262626338/2243",
+      "upper": "way/406670500/647",
+      "xy_enu_m": [
+        81.51540051922784,
+        403.8560967748699
+      ],
+      "top_surface_gap_m": 6.100000053145095,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675376/2282",
+      "upper": "way/406673502/700",
+      "xy_enu_m": [
+        -33.63477871629572,
+        314.5426174126321
+      ],
+      "top_surface_gap_m": 6.1000000203115405,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2312",
+      "upper": "way/1262675403/2309",
+      "xy_enu_m": [
+        -88.16099336592552,
+        258.51216082849965
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262675405/2313",
+      "upper": "way/1262675403/2310",
+      "xy_enu_m": [
+        -65.30828909513293,
+        274.31134836534034
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1322900353/2629",
+      "xy_enu_m": [
+        -91.06389602798306,
+        -54.041093439677525
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1268455766/2511",
+      "xy_enu_m": [
+        -74.25972693242782,
+        -10.39288793597732
+      ],
+      "top_surface_gap_m": 6.180000022226523,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706307/2317",
+      "upper": "way/1268455766/2512",
+      "xy_enu_m": [
+        -71.07556596229685,
+        7.1353576235713
+      ],
+      "top_surface_gap_m": 6.179999667179459,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1262706308/2318",
+      "upper": "way/1322900353/2626",
+      "xy_enu_m": [
+        11.054070436354717,
+        -7.029162651697247
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2350",
+      "upper": "way/671135161/1139",
+      "xy_enu_m": [
+        104.73218424167153,
+        425.059623893445
+      ],
+      "top_surface_gap_m": 6.099999889040305,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2351",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        96.32391686542215,
+        426.6924826475923
+      ],
+      "top_surface_gap_m": 6.099999981807741,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060170/2351",
+      "upper": "way/406673477/649",
+      "xy_enu_m": [
+        88.6383113816342,
+        428.2674249913157
+      ],
+      "top_surface_gap_m": 6.099393463639444,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/155213529/392",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -131.87689242706608,
+        -414.0521665621103
+      ],
+      "top_surface_gap_m": 6.1800004340983605,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255039/541",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -169.25373472124693,
+        -573.8785582411913
+      ],
+      "top_surface_gap_m": 6.1800332972770775,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112569/2662",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -178.07717629327522,
+        -583.1677081900906
+      ],
+      "top_surface_gap_m": 6.180009095578953,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255032/535",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -165.14320369641135,
+        -565.794248126343
+      ],
+      "top_surface_gap_m": 6.177218580632712,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/227255036/540",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -121.1681465438877,
+        -365.2049295450837
+      ],
+      "top_surface_gap_m": 6.1800014866973925,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263060183/2361",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -183.64581061539917,
+        -589.0302595320502
+      ],
+      "top_surface_gap_m": 6.100097981881618,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550112442/2656",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -161.63470979448945,
+        -549.7904849341301
+      ],
+      "top_surface_gap_m": 6.179133122603048,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1550111935/2651",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -129.9351857950991,
+        -405.19520001309434
+      ],
+      "top_surface_gap_m": 6.170731003529681,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1789",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -119.44057043545273,
+        -357.3247052355094
+      ],
+      "top_surface_gap_m": 6.180000227853952,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/543146734/1093",
+      "upper": "way/1263060172/2352",
+      "xy_enu_m": [
+        -116.81394668382707,
+        -345.34353448499667
+      ],
+      "top_surface_gap_m": 6.180002693292863,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084494/2400",
+      "upper": "way/406670500/644",
+      "xy_enu_m": [
+        45.094009273529814,
+        410.5459576055787
+      ],
+      "top_surface_gap_m": 6.099999924098938,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084503/2411",
+      "upper": "way/406673483/669",
+      "xy_enu_m": [
+        -9.688240980172193,
+        363.0193082337926
+      ],
+      "top_surface_gap_m": 6.0999997449613375,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084507/2418",
+      "upper": "way/1263084508/2420",
+      "xy_enu_m": [
+        -32.761326801908325,
+        206.59445431464692
+      ],
+      "top_surface_gap_m": 6.099999938311953,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084511/2422",
+      "upper": "way/406673488/683",
+      "xy_enu_m": [
+        12.3284828431796,
+        198.35568700177143
+      ],
+      "top_surface_gap_m": 6.179996695386535,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084512/2423",
+      "upper": "way/406673488/683",
+      "xy_enu_m": [
+        -5.170977974443456,
+        201.5485520885677
+      ],
+      "top_surface_gap_m": 6.18002678557184,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1263084512/2423",
+      "upper": "way/406673485/677",
+      "xy_enu_m": [
+        -4.64363856563252,
+        204.19743294721093
+      ],
+      "top_surface_gap_m": 6.180000059023769,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303235/2560",
+      "upper": "way/406673481/655",
+      "xy_enu_m": [
+        11.620529099858551,
+        445.81617366353976
+      ],
+      "top_surface_gap_m": 6.100462431631968,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303235/2560",
+      "upper": "way/406673478/650",
+      "xy_enu_m": [
+        12.388447290200379,
+        449.99010050823426
+      ],
+      "top_surface_gap_m": 6.099999855214946,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2561",
+      "upper": "way/1264170613/2432",
+      "xy_enu_m": [
+        10.151077990327959,
+        437.8238903847443
+      ],
+      "top_surface_gap_m": 6.099915909010747,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2563",
+      "upper": "way/406670498/633",
+      "xy_enu_m": [
+        8.29127245177994,
+        427.715182845654
+      ],
+      "top_surface_gap_m": 6.100000174849242,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303236/2564",
+      "upper": "way/406670500/640",
+      "xy_enu_m": [
+        6.440623350589774,
+        417.63567153306184
+      ],
+      "top_surface_gap_m": 6.099999977688412,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2565",
+      "upper": "way/1262626350/2264",
+      "xy_enu_m": [
+        85.4608481988673,
+        414.4045713818964
+      ],
+      "top_surface_gap_m": 6.179998089506057,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/406670499/638",
+      "xy_enu_m": [
+        83.15875007983216,
+        414.8293888755695
+      ],
+      "top_surface_gap_m": 6.180000036419983,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626342/2252",
+      "xy_enu_m": [
+        72.40091491688398,
+        416.8105271588684
+      ],
+      "top_surface_gap_m": 6.179999923223249,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626346/2259",
+      "xy_enu_m": [
+        66.92883091571923,
+        417.8182536149749
+      ],
+      "top_surface_gap_m": 6.177696507449241,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626348/2261",
+      "xy_enu_m": [
+        52.0836730128961,
+        420.55210389223083
+      ],
+      "top_surface_gap_m": 6.180000020265652,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626341/2249",
+      "xy_enu_m": [
+        51.053970326282055,
+        420.7417315805127
+      ],
+      "top_surface_gap_m": 6.17999303598674,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626341/2248",
+      "xy_enu_m": [
+        40.37492680415902,
+        422.70835977570573
+      ],
+      "top_surface_gap_m": 6.179999987033511,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626347/2260",
+      "xy_enu_m": [
+        39.47922703751729,
+        422.8733097931727
+      ],
+      "top_surface_gap_m": 6.180047201666184,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/406670498/633",
+      "xy_enu_m": [
+        8.932889442933332,
+        428.4986533596583
+      ],
+      "top_surface_gap_m": 6.179925681760778,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626345/2258",
+      "xy_enu_m": [
+        24.026131329013996,
+        425.7191165042702
+      ],
+      "top_surface_gap_m": 6.17977368214963,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2566",
+      "upper": "way/1262626344/2256",
+      "xy_enu_m": [
+        18.373715625054164,
+        426.76005243372214
+      ],
+      "top_surface_gap_m": 6.179999978794854,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283303237/2567",
+      "upper": "way/1262626351/2265",
+      "xy_enu_m": [
+        4.90308805900845,
+        429.24014263445895
+      ],
+      "top_surface_gap_m": 6.179999758737949,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2584",
+      "upper": "way/1263084509/2421",
+      "xy_enu_m": [
+        43.2495305607474,
+        195.13002469428218
+      ],
+      "top_surface_gap_m": 6.099777097835499,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2586",
+      "upper": "way/406673508/704",
+      "xy_enu_m": [
+        57.78248834649285,
+        192.48264431226298
+      ],
+      "top_surface_gap_m": 6.0999998942045295,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321095/2589",
+      "upper": "way/406673508/703",
+      "xy_enu_m": [
+        55.84990250009276,
+        182.695760131695
+      ],
+      "top_surface_gap_m": 6.100000099501244,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321097/2592",
+      "upper": "way/840383219/1797",
+      "xy_enu_m": [
+        44.45984744962788,
+        192.48371440229232
+      ],
+      "top_surface_gap_m": 6.099755047440112,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1283321097/2595",
+      "upper": "way/406673504/702",
+      "xy_enu_m": [
+        40.98643842981314,
+        173.01806021414203
+      ],
+      "top_surface_gap_m": 6.099666248492326,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/406673533/761",
+      "upper": "way/1322909090/2632",
+      "xy_enu_m": [
+        -95.07539959064,
+        -77.60317909375122
+      ],
+      "top_surface_gap_m": null,
+      "missing_surface": true,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": true,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/90526192/225",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        676.0572468370267,
+        -364.4238172288778
+      ],
+      "top_surface_gap_m": 6.180002404386187,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/1513127383/2637",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        636.4718384389639,
+        -355.1973864046374
+      ],
+      "top_surface_gap_m": 6.100000091568063,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/798523609/1514",
+      "upper": "way/1513116258/2636",
+      "xy_enu_m": [
+        654.9725680235147,
+        -359.5094728177257
+      ],
+      "top_surface_gap_m": 6.171932316275161,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/803870136/1792",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -964.9729175568937,
+        -161.12061952200685
+      ],
+      "top_surface_gap_m": 6.100027788631223,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/429765064/774",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -968.9679395934262,
+        -188.18331566532453
+      ],
+      "top_surface_gap_m": 6.100000328499732,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121085645/290",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -966.8937005332245,
+        -176.35317462359117
+      ],
+      "top_surface_gap_m": 6.099781654003095,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    },
+    {
+      "lower": "way/121917935/307",
+      "upper": "way/1525868880/2641",
+      "xy_enu_m": [
+        -964.458903476751,
+        -153.77827200073614
+      ],
+      "top_surface_gap_m": 6.100309937445218,
+      "missing_surface": false,
+      "potential_lining_or_deck_overlap": false,
+      "geometry_clearance_review": false,
+      "surveyed_clearance": false
+    }
+  ]
+}

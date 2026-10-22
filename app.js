@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {readTopography} from './topography.js';
 import {VisualLayer} from './visual.js';
 import {GLTFLoader} from './vendor/three/examples/jsm/loaders/GLTFLoader.js';
 import {PROFILES, nearby, geometryBytes, releaseScene, SectorStream} from './core.js';
@@ -24,8 +25,8 @@ async function start() {
   canvas.setAttribute('aria-label', 'Escenario Monterrey; WASD para moverte, arrastra para mirar');
   $('viewport').appendChild(canvas);
   canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); fail(new Error('Se perdió el contexto gráfico. Recarga y selecciona calidad baja.')); });
-  const world = await fetch('./world.json').then(r => { if (!r.ok) throw new Error('No se encontró el manifiesto del mundo.'); return r.json(); });
-  if (world.synthetic || world.source_milestone !== 'GEO-003 / WORLD-001') throw new Error('El visor requiere los datos reales verificados de GEO-003.');
+  let world = await fetch('./world.json').then(r => { if (!r.ok) throw new Error('No se encontró el manifiesto del mundo.'); return r.json(); });
+  if (world.synthetic || !['GEO-003 / WORLD-001','GEO-004'].includes(world.source_milestone)) throw new Error('El visor requiere los datos reales verificados de GEO-003.');
   const scene = new THREE.Scene();
   const sky = new THREE.Color('#cddbe2'); scene.background = sky;
   scene.fog = new THREE.Fog(sky, 650, 2400);
@@ -61,12 +62,23 @@ async function start() {
       }
     });
   }
-  const visual=new VisualLayer({scene,renderer,sun,ambient,world});
+  let visual=new VisualLayer({scene,renderer,sun,ambient,world});
   visual.setLight('day');
   await visual.load();
   camera.layers.enable(1);
+  const topo=world.topography?await readTopography(world.topography):null;
+  let switchingModel=false,comparisonLock=false;
+  const models=new Map();
+  function register(key,w,v){w.current_model=key;w.sectors=w.sectors.map(s=>({...s,cell_id:s.cell_id||s.id,id:key+'/'+(s.cell_id||s.id)}));models.set(key,{world:w,visual:v});}
+  register(world.current_model||'geo003',world,visual);
+  if(topo){
+    document.querySelector('.intro').textContent='Topografía comparada con MDT INEGI. Fuente 2007; precisión vertical no publicada.';document.querySelector('.attribution').insertAdjacentHTML('beforeend',' · Fuente: <a href="https://www.inegi.org.mx/">INEGI</a>');$('geo-tools').hidden=false;document.querySelector('.edition i').textContent='GEO–004';document.querySelector('.corner .pill').textContent='GEO–004 · DTM';$('model-source').textContent=topo.data.models[world.current_model].label;
+    visual.city.uniforms.uMowHeatMap.value=topo.texture(world.current_model);
+  }
+
   const stream = new SectorStream({
     load: async (sector, signal) => {
+      const layer=visual;
       const response = await fetch(new URL(sector.url, location.href), {signal});
       if (!response.ok) throw new Error(`Sector ${sector.id}: HTTP ${response.status}`);
       const compressed = await response.arrayBuffer();
@@ -76,12 +88,13 @@ async function start() {
       const binary = await new Response(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
       if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
       const gltf = await loader.parseAsync(binary, './');
-      return {scene: gltf.scene, sector, bytes: geometryBytes(gltf.scene)};
+      return {scene: gltf.scene, sector, visual:layer,bytes: geometryBytes(gltf.scene)};
     },
-    attach: value => { materialOptions(value.scene); visual.prepare(value.scene,value.sector);materialOptions(value.scene);visual.update(camera); scene.add(value.scene); },
-    release: value => { visual.release(value.scene);scene.remove(value.scene); releaseScene(value.scene); },
+    attach: value => { materialOptions(value.scene); value.visual.prepare(value.scene,value.sector);materialOptions(value.scene);visual.update(camera); scene.add(value.scene); },
+    release: value => { value.visual.release(value.scene);scene.remove(value.scene); releaseScene(value.scene); },
   });
   function updateSectors() {
+    if(switchingModel)return;
     visual.update(camera);
     stream.update(nearby(world.sectors, mode === 'aerial' ? focus : camera.position, panoramaMode?1500:PROFILES[profileName].radius));
   }
@@ -96,13 +109,13 @@ async function start() {
     updateSectors();
   }
   function setView(next) {
-    panoramaMode=false;mode = next;
+    panoramaMode=false;comparisonLock=false;mode = next;
     if (next === 'aerial') {
       focus.set(0, 535, 0); camera.position.set(410, 1050, 580); camera.lookAt(focus);
     } else {
       // Real GEO-003 centerline: Calle Ignacio Zaragoza, way/801774599/1687.
-      camera.position.set(-76.36123249, 539.05541892, -48.25964916);
-      camera.lookAt(-80.70601185, 540.01604524, -23.73362797); focus.copy(camera.position);
+      camera.position.set(...(world.street_camera_m||[-76.36123249,539.05541892,-48.25964916]));
+      camera.lookAt(-80.70601185,camera.position.y+.96,-23.73362797); focus.copy(camera.position);
     }
     for (const id of ['aerial', 'street']) {
       $(id).classList.toggle('active', id === next); $(id).setAttribute('aria-pressed', String(id === next));
@@ -124,6 +137,43 @@ async function start() {
     for(const id of ['aerial','street']){$(id).classList.toggle('active',id==='aerial');$(id).setAttribute('aria-pressed',String(id==='aerial'));}
     panoramaMode=true;mode='aerial';focus.set(0,535,0);camera.position.set(e.target.value==='sierra'?-600:500,660,650);camera.lookAt(...preset.target);keys.clear();updateSectors();
   };
+  if(topo){
+    $('topography-model').value=world.current_model;
+    $('topography-model').onchange=async e=>{
+      const key=e.target.value;if(key===world.current_model)return;
+      switchingModel=true;e.target.disabled=true;keys.clear();stream.update([]);
+      try{
+        await stream.idle();
+        if(!models.has(key)){
+          const descriptor=await fetch(world.comparison[key].url).then(r=>{if(!r.ok)throw new Error('Modelo de comparación no disponible');return r.json();});
+          const layer=new VisualLayer({scene,renderer,sun,ambient,world:descriptor});await layer.load();register(key,descriptor,layer);
+        }
+        const next=models.get(key);world=next.world;visual=next.visual;comparisonLock=true;
+        visual.setLight($('lighting').value);visual.setMode($('visual-mode').value);visual.setShadows($('shadows').value);
+        for(const name of ['vegetation','details','paint','background'])visual.setFlag(name,$(name).checked);
+        visual.city.uniforms.uMowHeatMap.value=topo.texture(key);visual.city.uniforms.uMowHeat.value=$('anomalies').checked?1:0;
+        stream.errors.clear();stream.retryAfter.clear();$('model-source').textContent=topo.data.models[key].label;document.querySelector('.corner .pill').textContent=key==='geo004'?'GEO–004 · MDT':'GEO–003 · DSM';
+      }catch(error){fail(error);}finally{switchingModel=false;e.target.disabled=false;setProfile(profileName);}
+    };
+    $('anomalies').onchange=e=>{visual.city.uniforms.uMowHeat.value=e.target.checked?1:0;};
+    for(const [i,c]of topo.data.cases.entries()){
+      const option=document.createElement('option');option.value=String(i);option.textContent=c.label;$('case-view').appendChild(option);
+    }
+    $('case-view').onchange=e=>{
+      if(e.target.value==='')return;const c=topo.data.cases[Number(e.target.value)];if(!c)return;
+      for(const id of ['aerial','street']){$(id).classList.toggle('active',id==='aerial');$(id).setAttribute('aria-pressed',String(id==='aerial'));}
+      mode='aerial';panoramaMode=false;comparisonLock=true;camera.position.fromArray(c.camera);focus.fromArray(c.target);camera.lookAt(focus);keys.clear();updateSectors();
+    };
+    $('return-case').onclick=()=>{$('case-view').onchange({target:$('case-view')});};
+    $('probe-close').onclick=()=>{$('probe').hidden=true;};
+    canvas.addEventListener('click',event=>{
+      if(event.button!==0||dragging||document.pointerLockElement===canvas)return;
+      const rect=canvas.getBoundingClientRect();ray.setFromCamera(new THREE.Vector2((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1),camera);
+      const hit=ray.intersectObjects([...stream.resident.values()].flatMap(v=>v.scene.children),true)[0];if(!hit)return;
+      const p=topo.inspect(hit.point,world.current_model,hit.object.name);if(!p)return;
+      $('probe').hidden=false;$('probe-content').textContent=`${p.lat.toFixed(6)}, ${p.lon.toFixed(6)}\nSuperficie seleccionada: ${p.rendered_height_m.toFixed(1)} m · ${p.system}\nTerreno del modelo: ${p.ground_m.toFixed(1)} m EGM2008\nPendiente del terreno: ${p.slope_percent.toFixed(1)} %\nDSM original: ${p.heights_m.geo001.toFixed(1)} m\nGEO-003: ${p.heights_m.geo003.toFixed(1)} m · GEO-004: ${p.heights_m.geo004.toFixed(1)} m\nMuestreo fuente: ${p.native_resolution_m} m · exactitud vertical no verificada`;
+    });
+  }
   $('wireframe').onchange = () => { for (const value of stream.resident.values()) materialOptions(value.scene); };
   $('explore').onclick = async () => {
     canvas.focus();
@@ -165,7 +215,7 @@ async function start() {
     camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight);
   });
   function snapshot() {
-    return {ready: stream.resident.size > 0, quality: profileName, mode, camera: camera.position.toArray(),
+    return {ready: stream.resident.size > 0&&!switchingModel,topography_model:world.current_model,switching_model:switchingModel,last_probe:topo?.lastProbe, quality: profileName, mode, camera: camera.position.toArray(),
       rotation: camera.rotation.toArray().slice(0, 3), resident: [...stream.resident.keys()], wanted: [...stream.wanted.keys()],
       pending: stream.pending.size, errors: [...stream.errors.entries()], fps, frame_ms: frameMs,
       geometry_bytes: bytes, heap_bytes: performance.memory?.usedJSHeapSize ?? null,
@@ -175,7 +225,7 @@ async function start() {
       source_glb_sha256: world.source_glb_sha256,visual:visual.snapshot()};
   }
   // Read-only diagnostics, used by the browser tests and downloadable evidence.
-  window.__MOW__ = Object.freeze({snapshot, idle: () => stream.idle()});
+  window.__MOW__ = Object.freeze({snapshot,probe:(x,z)=>topo?.sample(x,z,world.current_model),idle:async()=>{while(switchingModel)await new Promise(r=>setTimeout(r,30));await stream.idle();}});
   setView('aerial'); setProfile(profileName);
   function animate(now) {
     const elapsed = now - frameStart, dt = Math.min(elapsed / 1000, .05); frameStart = now;
@@ -195,7 +245,7 @@ async function start() {
       }
       // Prevent diving through an already-loaded ground surface. This is a free
       // camera aid, not swept player collision or proof of walkable roads/tunnels.
-      if (mode === 'street' && now - lastStats > 200) {
+      if (mode === 'street'&&!comparisonLock && now - lastStats > 200) {
         ray.set(new THREE.Vector3(camera.position.x, camera.position.y + 2, camera.position.z), down);
         const hits = ray.intersectObjects([...stream.resident.values()].flatMap(v => v.scene.children), true);
         if (hits.length && hits[0].distance < 3.7) camera.position.y = hits[0].point.y + 1.7;
@@ -209,7 +259,7 @@ async function start() {
       const span = frames.length > 1 ? (frames.at(-1) - frames[0]) / 1000 : 0;
       fps = span > 0 ? (frames.length - 1) / span : 0;
       frameMs = frameTimes.length ? frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length : 0;
-      bytes = geometryBytes(scene)+(visual.background?.bytes()||0);
+      bytes = geometryBytes(scene)+[...models.values()].reduce((n,m)=>n+(m.visual.background?.bytes()||0),0);
       $('fps').textContent = fps.toFixed(0); $('sectors').textContent = `${stream.resident.size}/${world.sectors.length}`;
       $('triangles').textContent = renderer.info.render.triangles.toLocaleString('es-MX');
       $('memory').textContent = (bytes / 1048576).toFixed(1);
