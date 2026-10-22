@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "milestone": "WORLD-002",
+  "license": "CC0-1.0 for original visual recipe parameters and generated art only; no change to game source license",
+  "geography_changed": false,
+  "classification_policy": "Tagged category/material when available; generic unknown remains unknown. All facade layout/color proposals are procedural, never surveyed architecture.",
+  "styles": {"residential":0,"commercial":1,"corporate":2,"industrial":3,"civic":4,"unknown":5},
+  "floor_height_default_m": 3.2,
+  "bay_width_default_m": 3.1,
+  "surface_codes": {"asphalt":0,"concrete":1,"paving_stones":2,"cobblestone":2,"unhewn_cobblestone":2,"unknown":0},
+  "palette": ["#e6d4b5","#d9a57b","#dca7a1","#a7b6a2","#a7bdc4","#e4ddca","#b98b65","#dad7cb"],
+  "vegetation": "Sparse generic broadleaf/crown silhouettes, illustrative regional palette; not botanical species identification",
+  "street_furniture": "Generic regional forms; tagged locations only when sourced from OSM (not a survey), remaining details labelled decorative"
+}

@@ -1,0 +1,3 @@
+Original visual recipe parameters, generated textures, vegetation and furniture art: CC0 1.0 Universal. https://creativecommons.org/publicdomain/zero/1.0/
+No change to the game source code license. Geographic data retain ODbL and Copernicus conditions.
+Street positions from OSM when tagged; facade layouts, dimensions, decorative planting and markings are estimates.

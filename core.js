@@ -16,6 +16,8 @@ export function nearby(sectors, position, radius) {
 export function geometryBytes(scene) {
   const buffers = new Set();
   scene.traverse(node => {
+    if(node.instanceMatrix)buffers.add(node.instanceMatrix.array.buffer);
+    if(node.instanceColor)buffers.add(node.instanceColor.array.buffer);
     if (!node.geometry) return;
     for (const a of Object.values(node.geometry.attributes)) buffers.add(a.array.buffer);
     if (node.geometry.index) buffers.add(node.geometry.index.array.buffer);
@@ -25,11 +27,12 @@ export function geometryBytes(scene) {
 export function releaseScene(scene) {
   const geometries = new Set(), materials = new Set();
   scene.traverse(node => {
+    if(node.isInstancedMesh)node.dispose();
     if (node.geometry) geometries.add(node.geometry);
     for (const m of Array.isArray(node.material) ? node.material : [node.material]) if (m) materials.add(m);
   });
-  for (const g of geometries) g.dispose();
-  for (const m of materials) m.dispose();
+  for (const g of geometries) if(!g.userData?.shared)g.dispose();
+  for (const m of materials) if(!m.userData?.shared)m.dispose();
 }
 export class SectorStream {
   constructor({load, attach, release, concurrency = 2}) {

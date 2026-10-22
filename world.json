@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "milestone": "FREE-001",
+  "milestone": "WORLD-002",
   "synthetic": false,
   "source_milestone": "GEO-003 / WORLD-001",
   "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
@@ -19,7 +19,7 @@
   "original_meshes": 2673,
   "triangles": 1077198,
   "optimized_meshes": 279,
-  "transport_bytes": 9136230,
+  "transport_bytes": 9163466,
   "geometry_loss": false,
   "max_position_rounding_bound_m": 0.0001,
   "features_url": "assets/features.json",
@@ -50,9 +50,9 @@
       ],
       "triangles": 13949,
       "meshes": 3,
-      "bytes": 116749,
-      "uncompressed_bytes": 210880,
-      "sha256": "e9e8c40b747277ed0fd3d4d384f944573a0f7c8102fccd4de461f1580b499450"
+      "bytes": 116869,
+      "uncompressed_bytes": 216684,
+      "sha256": "1f358e134c72b871075a8f0040704b78601ea0b46d0de82101561690b093bf1e"
     },
     {
       "id": "0_1",
@@ -80,9 +80,9 @@
       ],
       "triangles": 13690,
       "meshes": 3,
-      "bytes": 113731,
-      "uncompressed_bytes": 206628,
-      "sha256": "c848ab1b2c85e610db1739c313475a3b170136a5ecf9ef23f55b7cae3c329a27"
+      "bytes": 113816,
+      "uncompressed_bytes": 212236,
+      "sha256": "8fc3b975aa0c68e199aab9983978e6c1ee5f0a9a2a6d81e3f09b57366fe777d0"
     },
     {
       "id": "0_2",
@@ -110,9 +110,9 @@
       ],
       "triangles": 13222,
       "meshes": 6,
-      "bytes": 105872,
-      "uncompressed_bytes": 201316,
-      "sha256": "70bec601b497f5f927347649ac43cf32fdf8a2b7306fa38fcab58f879dfe7c6b"
+      "bytes": 106313,
+      "uncompressed_bytes": 210076,
+      "sha256": "9cbbc9b772db527afeb7d9ab45f05f59c892853b6b0c1fc88fa229b88e398255"
     },
     {
       "id": "0_3",
@@ -140,9 +140,9 @@
       ],
       "triangles": 19770,
       "meshes": 5,
-      "bytes": 174706,
-      "uncompressed_bytes": 309200,
-      "sha256": "1480d0208c45febf8c7e735d50d9608f9762dfa2eb7e5ff877f2cb4f12534752"
+      "bytes": 175040,
+      "uncompressed_bytes": 324436,
+      "sha256": "2af0045455dbad8d547eb8e1ac81a3cd45b71189143b1a1b29167c287afd383a"
     },
     {
       "id": "0_4",
@@ -170,9 +170,9 @@
       ],
       "triangles": 14108,
       "meshes": 4,
-      "bytes": 120881,
-      "uncompressed_bytes": 218456,
-      "sha256": "0eac6fa61f47efcb29c4ac80a3d0b8cc6f18ffe0cda52a0195b40e04b7dcce78"
+      "bytes": 121336,
+      "uncompressed_bytes": 231256,
+      "sha256": "c8d57a068e454b3cb7ebc66580b00cab6371c8d95ca6288dc86bafaf631de4fc"
     },
     {
       "id": "0_5",
@@ -200,9 +200,9 @@
       ],
       "triangles": 19630,
       "meshes": 5,
-      "bytes": 171561,
-      "uncompressed_bytes": 307232,
-      "sha256": "15ee5ac334483c10d445bb5fcc5c9b9aa50c62720233dee291edb207c3608a42"
+      "bytes": 172168,
+      "uncompressed_bytes": 326732,
+      "sha256": "e820a44c530ba4359f49057d2693d64ab1304c9a5069852aefdfa2cc8244ce3c"
     },
     {
       "id": "0_6",
@@ -230,9 +230,9 @@
       ],
       "triangles": 16251,
       "meshes": 4,
-      "bytes": 139895,
-      "uncompressed_bytes": 251936,
-      "sha256": "65da3f64668483306424a816ac16ac2550ab0c0255cc9248ddc03967579fac7a"
+      "bytes": 140682,
+      "uncompressed_bytes": 268368,
+      "sha256": "5780242930d90b5121fecb8e0aaf73ba41e5311c0880146f842418dd2815ecb0"
     },
     {
       "id": "0_7",
@@ -260,9 +260,9 @@
       ],
       "triangles": 15831,
       "meshes": 4,
-      "bytes": 136375,
-      "uncompressed_bytes": 246996,
-      "sha256": "098a9048086e1bfdd3026cdb8ae5d284e20827eacd339c383ad8c3d607ff729c"
+      "bytes": 137426,
+      "uncompressed_bytes": 264912,
+      "sha256": "dd737720964aa68629f128e1ea1a8d318e2f9828ebbaea549da7990e41753962"
     },
     {
       "id": "1_0",
@@ -290,9 +290,9 @@
       ],
       "triangles": 13812,
       "meshes": 3,
-      "bytes": 115139,
-      "uncompressed_bytes": 208736,
-      "sha256": "9f86d470fdbdd6df4556ad2e1c3bc446ec852e0a57ec67edc831130cbf15aa0f"
+      "bytes": 115270,
+      "uncompressed_bytes": 214412,
+      "sha256": "e1d93be02faca6faa83da41f304c316e03beb14673c0ea3a0de6128e77af63c8"
     },
     {
       "id": "1_1",
@@ -320,9 +320,9 @@
       ],
       "triangles": 13931,
       "meshes": 4,
-      "bytes": 116109,
-      "uncompressed_bytes": 211292,
-      "sha256": "07c967c22b9d91f3b89f6bb8ecd227ef9e10eec3ac3be002f79625924ca3879a"
+      "bytes": 116216,
+      "uncompressed_bytes": 217656,
+      "sha256": "bc28b80313ee44ac439ae53bddd3623d421056716a680155038267bf0b64cf7d"
     },
     {
       "id": "1_2",
@@ -350,9 +350,9 @@
       ],
       "triangles": 11839,
       "meshes": 5,
-      "bytes": 96033,
-      "uncompressed_bytes": 181820,
-      "sha256": "422f8d70216467a17fd0f34e62282f999ae7a36d4e23ed653fd8e74edfc97437"
+      "bytes": 96269,
+      "uncompressed_bytes": 188944,
+      "sha256": "16f26ab3fefaabd986435643a165233bbc67dca15a679634597ca37f2995a5f8"
     },
     {
       "id": "1_3",
@@ -380,9 +380,9 @@
       ],
       "triangles": 17346,
       "meshes": 5,
-      "bytes": 148564,
-      "uncompressed_bytes": 267588,
-      "sha256": "cd5e9d63144504c8e4aa0d04dca46138adbbfe08504df24953ba03dd38af01ed"
+      "bytes": 148963,
+      "uncompressed_bytes": 281124,
+      "sha256": "206ba0a728bf00b5c74dbccbb657e099cc962539b5c69eb7b6179a20ef5ee899"
     },
     {
       "id": "1_4",
@@ -410,9 +410,9 @@
       ],
       "triangles": 15889,
       "meshes": 4,
-      "bytes": 135962,
-      "uncompressed_bytes": 245024,
-      "sha256": "9cff094f9fa086d78be1ce4a4625742ef114ac42b2cd631eb2d34cb32fbc2755"
+      "bytes": 136610,
+      "uncompressed_bytes": 258432,
+      "sha256": "9cf24d8f60eae01a021ef8d7e449062498ec888dad96f3c0ccd41eac47dcdbb6"
     },
     {
       "id": "1_5",
@@ -440,9 +440,9 @@
       ],
       "triangles": 20254,
       "meshes": 4,
-      "bytes": 173654,
-      "uncompressed_bytes": 311192,
-      "sha256": "d792ea9518293dd1b0b83ccb992c679bdb5258bb95ddaabd8d1265d5c2a96bbb"
+      "bytes": 174686,
+      "uncompressed_bytes": 333096,
+      "sha256": "ae16dee455950b8e81f21fab0b1b8dc1452dbe72c4e82ca30190a58beeaec0bd"
     },
     {
       "id": "1_6",
@@ -470,9 +470,9 @@
       ],
       "triangles": 17698,
       "meshes": 4,
-      "bytes": 150090,
-      "uncompressed_bytes": 272128,
-      "sha256": "a5c01408b7182dd0fcf08d9b1ef131ecaf52abcb199bc9d8eca9532375216173"
+      "bytes": 150918,
+      "uncompressed_bytes": 294576,
+      "sha256": "b4c5684f1ca6198f214049653f1d8421486386f8d363943a9e358de3f6a70b6b"
     },
     {
       "id": "1_7",
@@ -500,9 +500,9 @@
       ],
       "triangles": 20384,
       "meshes": 4,
-      "bytes": 176178,
-      "uncompressed_bytes": 316356,
-      "sha256": "4c6fba5969e7e9ee85d95f6e65f9376117533ac345bff2999b299d188f0cf1ec"
+      "bytes": 177533,
+      "uncompressed_bytes": 334100,
+      "sha256": "337aaefb349bb65a414f072d14e17ca38b0d82955d789a38f2b87cb631a6ec7d"
     },
     {
       "id": "2_0",
@@ -530,9 +530,9 @@
       ],
       "triangles": 19141,
       "meshes": 4,
-      "bytes": 165253,
-      "uncompressed_bytes": 295548,
-      "sha256": "af1ce7d8aeb282f0819a8c50e396b9aa9d9d1702385a21eed929d272db09fc50"
+      "bytes": 166066,
+      "uncompressed_bytes": 314684,
+      "sha256": "6a80b9c0dda11b4f4399d18e94f4a3db8a5fa75c80d4029c6b9dd4098f3c077e"
     },
     {
       "id": "2_1",
@@ -560,9 +560,9 @@
       ],
       "triangles": 15461,
       "meshes": 5,
-      "bytes": 132334,
-      "uncompressed_bytes": 239644,
-      "sha256": "7a2c2bea030c06b52e62274ad46c8122f2e5a5cc2ac578f677499860369f8b7e"
+      "bytes": 133197,
+      "uncompressed_bytes": 254576,
+      "sha256": "6008f7cebefcfae5f423052274f2b1cce7622b0a369e18668694296da20188d7"
     },
     {
       "id": "2_2",
@@ -590,9 +590,9 @@
       ],
       "triangles": 12442,
       "meshes": 4,
-      "bytes": 103450,
-      "uncompressed_bytes": 192804,
-      "sha256": "2bcae67ff350b697de3bf56898661668434c8cfdf716e4baf25de772e777f407"
+      "bytes": 103547,
+      "uncompressed_bytes": 200348,
+      "sha256": "cc29be1d24478c12664bdad6ea57ce2f4bbc9e9ea1f6c4abc185648310501d12"
     },
     {
       "id": "2_3",
@@ -620,9 +620,9 @@
       ],
       "triangles": 18066,
       "meshes": 4,
-      "bytes": 154975,
-      "uncompressed_bytes": 278360,
-      "sha256": "39585b00f7d1f9daa92189fb46ae55ddda0f9f4087cc64de8e9e7bb38c1c7732"
+      "bytes": 155412,
+      "uncompressed_bytes": 291028,
+      "sha256": "64a7d6e4a41b1c05cd4b60e82632a32ece159c49c300797f8850270fd523cb6e"
     },
     {
       "id": "2_4",
@@ -650,9 +650,9 @@
       ],
       "triangles": 17620,
       "meshes": 4,
-      "bytes": 154344,
-      "uncompressed_bytes": 275124,
-      "sha256": "95edcc2c98c9615fbb27f4abecdcc65d7d105033cbd1f2c4c25a18d9649fad86"
+      "bytes": 154931,
+      "uncompressed_bytes": 288468,
+      "sha256": "e33e4f97b8fe1ceede073c331151835280bd9e1514f05d83256a77e904c73ecf"
     },
     {
       "id": "2_5",
@@ -680,9 +680,9 @@
       ],
       "triangles": 21532,
       "meshes": 5,
-      "bytes": 185236,
-      "uncompressed_bytes": 331724,
-      "sha256": "5c8a9c31694702492b753d0b059b5235afed07f26a5802ab76e473e657708974"
+      "bytes": 186163,
+      "uncompressed_bytes": 353308,
+      "sha256": "1b67b49dea86060c840ce572f9664351afbabda292ad2e8a1bfa455ca413b4cd"
     },
     {
       "id": "2_6",
@@ -710,9 +710,9 @@
       ],
       "triangles": 18560,
       "meshes": 4,
-      "bytes": 160318,
-      "uncompressed_bytes": 286416,
-      "sha256": "d24e4ffeddb0f4c35b6e714978b78b302c1a7547a1a44f87aea8f1906b2ee473"
+      "bytes": 161051,
+      "uncompressed_bytes": 302684,
+      "sha256": "46495792bf6fd9c302e68251c4eef7dcc61adcd3ad1e62c95bba7dac11fd88af"
     },
     {
       "id": "2_7",
@@ -740,9 +740,9 @@
       ],
       "triangles": 17787,
       "meshes": 4,
-      "bytes": 152397,
-      "uncompressed_bytes": 274064,
-      "sha256": "b4b09313b15ae4e77a54c016683f638b0e7763b69957071fb0193cbcdcd57b85"
+      "bytes": 153272,
+      "uncompressed_bytes": 290432,
+      "sha256": "52b3a1f5be0f0cffce87aca33a164304c54fb94fa996e78894b1e293fb30c664"
     },
     {
       "id": "3_0",
@@ -770,9 +770,9 @@
       ],
       "triangles": 14515,
       "meshes": 4,
-      "bytes": 119886,
-      "uncompressed_bytes": 221004,
-      "sha256": "7be4df625c126a1f5eadbb9b82ba530156bd80a087ee72c9370971fa2ec5b9b5"
+      "bytes": 120536,
+      "uncompressed_bytes": 230976,
+      "sha256": "d5342bae6f9f57b4d303f16c09316cb5625e8d16df78547cf5e07d002af123aa"
     },
     {
       "id": "3_1",
@@ -800,9 +800,9 @@
       ],
       "triangles": 19911,
       "meshes": 5,
-      "bytes": 173093,
-      "uncompressed_bytes": 309832,
-      "sha256": "98dbebed489c1f878990ee9c4dfdd02bbc2ffad7b0dd70d2dac1d98658e33647"
+      "bytes": 173354,
+      "uncompressed_bytes": 325832,
+      "sha256": "48f545bfc74a46d3c43367d5b6ed15b8a7368ecf315ae1e01e50e271959e4629"
     },
     {
       "id": "3_2",
@@ -830,9 +830,9 @@
       ],
       "triangles": 19866,
       "meshes": 5,
-      "bytes": 172200,
-      "uncompressed_bytes": 308952,
-      "sha256": "f83fa872a69e66f25f7bd86ca9555db73638a329735de7af16a724fab5bf28cb"
+      "bytes": 172437,
+      "uncompressed_bytes": 326328,
+      "sha256": "ebda9672693911268f47ecf13f696ec00320655508b5699108195590d5fff540"
     },
     {
       "id": "3_3",
@@ -860,9 +860,9 @@
       ],
       "triangles": 21892,
       "meshes": 6,
-      "bytes": 190171,
-      "uncompressed_bytes": 339796,
-      "sha256": "6afb71dffc54043b91214f16a3704568fe5d87ec77ba22ba712f8ab62335310c"
+      "bytes": 190710,
+      "uncompressed_bytes": 349236,
+      "sha256": "bb3134e68ce10851ef47d1226d87995af213fdf8415c0cde4ae3f1a5452acec0"
     },
     {
       "id": "3_4",
@@ -890,9 +890,9 @@
       ],
       "triangles": 24831,
       "meshes": 6,
-      "bytes": 217318,
-      "uncompressed_bytes": 386644,
-      "sha256": "3a87acf70ead87773eb12c70d2322ba6e6c3a835b5da9bb6b2e6da4696032710"
+      "bytes": 217868,
+      "uncompressed_bytes": 398696,
+      "sha256": "71a65544661e364ef294f6b9a03d2cb183b51872d4b9a289e2d7381768118d99"
     },
     {
       "id": "3_5",
@@ -920,9 +920,9 @@
       ],
       "triangles": 28042,
       "meshes": 6,
-      "bytes": 243501,
-      "uncompressed_bytes": 432748,
-      "sha256": "3fe933cdad1268db7ac490c840c5b6d844754856059150ee3dd1be6831092bb5"
+      "bytes": 244201,
+      "uncompressed_bytes": 446828,
+      "sha256": "2f57eb0b7d9615f4d36ce95b2864cc7a34a3c9b545ed446878b7ab4e8287e7b8"
     },
     {
       "id": "3_6",
@@ -950,9 +950,9 @@
       ],
       "triangles": 18614,
       "meshes": 4,
-      "bytes": 158566,
-      "uncompressed_bytes": 286432,
-      "sha256": "1452ab9a098ab4fdd1a1f29ddf66ed33c65688ac49af83ea7ce8bbe819221662"
+      "bytes": 159201,
+      "uncompressed_bytes": 298272,
+      "sha256": "71503058c5fc144a41b6d4eaefe98d55627e152286b281ed5af531aa171c878c"
     },
     {
       "id": "3_7",
@@ -980,9 +980,9 @@
       ],
       "triangles": 18275,
       "meshes": 4,
-      "bytes": 156984,
-      "uncompressed_bytes": 281220,
-      "sha256": "cf238a78cc30c660a5e406ec304c9506f40158af547dcd44b8b0e450649e16c6"
+      "bytes": 157605,
+      "uncompressed_bytes": 295176,
+      "sha256": "5112df78bcd0f9497ee2e3465030e03ef41904325db56b7a17dda12cc5d3e839"
     },
     {
       "id": "4_0",
@@ -1010,9 +1010,9 @@
       ],
       "triangles": 14172,
       "meshes": 3,
-      "bytes": 117574,
-      "uncompressed_bytes": 214204,
-      "sha256": "f56c5d87f1f32d2097b571bc4d8101351a75c35d0a5fff7453f7206a0e23ee86"
+      "bytes": 117638,
+      "uncompressed_bytes": 220332,
+      "sha256": "699c2c20068152e9f84370974cd5e8d3be1cd42065d9a731f7407c34923a6a5a"
     },
     {
       "id": "4_1",
@@ -1040,9 +1040,9 @@
       ],
       "triangles": 13850,
       "meshes": 5,
-      "bytes": 116879,
-      "uncompressed_bytes": 214564,
-      "sha256": "63809c11d1b44741766cb6d396b30d62ee70f1bda57dea0cdf8108623b005c2e"
+      "bytes": 117068,
+      "uncompressed_bytes": 223792,
+      "sha256": "a3d564f75d34bdd4eb6e53d5751f86384a2355b224b47e71d7d6398a7278c67c"
     },
     {
       "id": "4_2",
@@ -1070,9 +1070,9 @@
       ],
       "triangles": 16248,
       "meshes": 4,
-      "bytes": 141959,
-      "uncompressed_bytes": 254132,
-      "sha256": "02afe7854b5270bbcfe6f52f5c3fbca0e4e8b08088abd526f725700f9032fd49"
+      "bytes": 142189,
+      "uncompressed_bytes": 266296,
+      "sha256": "35f09712237f8df3d41c437230a142d40fc4ddd2ef6b937ab9f61b5529cd325c"
     },
     {
       "id": "4_3",
@@ -1100,9 +1100,9 @@
       ],
       "triangles": 18386,
       "meshes": 5,
-      "bytes": 158904,
-      "uncompressed_bytes": 284028,
-      "sha256": "d7f5eea50b4a6501dd540c125e37d42a330715ed6afb2a685dd574c456a5ea6d"
+      "bytes": 159233,
+      "uncompressed_bytes": 295864,
+      "sha256": "30aef187b88380fdf4d6633b12db0c781e8a03d7c6ae966fe53f6d8eaf9acdfc"
     },
     {
       "id": "4_4",
@@ -1130,9 +1130,9 @@
       ],
       "triangles": 22875,
       "meshes": 5,
-      "bytes": 194036,
-      "uncompressed_bytes": 350596,
-      "sha256": "6ad28e8a7cf62339fc77a34b286095c7503fdc42eef3f64c00dd5bcf50b14432"
+      "bytes": 194232,
+      "uncompressed_bytes": 360328,
+      "sha256": "24d4b69fdea156e5a1e1ded3714f967b64b8cbd77a726a9a1218eaaef8ffbcdb"
     },
     {
       "id": "4_5",
@@ -1160,9 +1160,9 @@
       ],
       "triangles": 29823,
       "meshes": 6,
-      "bytes": 256455,
-      "uncompressed_bytes": 458616,
-      "sha256": "f11ee1d5842b0ba57e9e879288639b4f4c93c55b5856f8e1defd005b1dae482e"
+      "bytes": 256919,
+      "uncompressed_bytes": 465504,
+      "sha256": "9e9180eceadd26c4e2bac871aeeae4d2f348f65c59b0d9a61715e91487434848"
     },
     {
       "id": "4_6",
@@ -1190,9 +1190,9 @@
       ],
       "triangles": 23573,
       "meshes": 6,
-      "bytes": 204031,
-      "uncompressed_bytes": 365464,
-      "sha256": "bb763ac50b4103016a523debbbe930787add73c64f3e10f79f66d2250704f5db"
+      "bytes": 204283,
+      "uncompressed_bytes": 373592,
+      "sha256": "cc9c642b1edaad6f00bcad6d5b2293045f014e3282a474a687090a14036f0933"
     },
     {
       "id": "4_7",
@@ -1220,9 +1220,9 @@
       ],
       "triangles": 16342,
       "meshes": 4,
-      "bytes": 136787,
-      "uncompressed_bytes": 249088,
-      "sha256": "a7c4e53b3c3b5cd64964c957cb00e807691cafeca121fc02774f1b14a700e45e"
+      "bytes": 137082,
+      "uncompressed_bytes": 258044,
+      "sha256": "39dc7c1a6c4dba9a686cdffc0677ff7c051789b73efc44580569056e55e7075a"
     },
     {
       "id": "5_0",
@@ -1250,9 +1250,9 @@
       ],
       "triangles": 14221,
       "meshes": 3,
-      "bytes": 117640,
-      "uncompressed_bytes": 215596,
-      "sha256": "15ff9736c6435c5ac6efe72c1eacedf141e43a946d25c6854c735995704ca01a"
+      "bytes": 117722,
+      "uncompressed_bytes": 221984,
+      "sha256": "7d5fed5ed09f2dc7a8496e7f04734a2df6daa0bf9a8dcb00d8b0422f3baaa144"
     },
     {
       "id": "5_1",
@@ -1280,9 +1280,9 @@
       ],
       "triangles": 15024,
       "meshes": 4,
-      "bytes": 127979,
-      "uncompressed_bytes": 231604,
-      "sha256": "601b5ccef50d9cb691583a8d4666e45af642a35c347b60b1d1905122656d359c"
+      "bytes": 128136,
+      "uncompressed_bytes": 240808,
+      "sha256": "7a5eba15b0dd3613fc8362fd1da71812d351ae47bbee8e845429adf001e1b3c3"
     },
     {
       "id": "5_2",
@@ -1310,9 +1310,9 @@
       ],
       "triangles": 13482,
       "meshes": 5,
-      "bytes": 111595,
-      "uncompressed_bytes": 207496,
-      "sha256": "3a89af0161fec851cee793334722653d7ae201efe3805cf327f61d5b26c44304"
+      "bytes": 111774,
+      "uncompressed_bytes": 216180,
+      "sha256": "208b097a9e54389a28b5881572e420900318f963c28e30eb60b234010187b144"
     },
     {
       "id": "5_3",
@@ -1340,9 +1340,9 @@
       ],
       "triangles": 14879,
       "meshes": 4,
-      "bytes": 124316,
-      "uncompressed_bytes": 226332,
-      "sha256": "ff83c6ced0ef62a2f9a56d4083e2b6d8ea63f0c0b2d27e6d11ab4a71bde5968a"
+      "bytes": 124542,
+      "uncompressed_bytes": 236064,
+      "sha256": "ee058da5d534120c9c9d5e723e8fab98aa15a8f58b1f89d6be61e8881b9e7016"
     },
     {
       "id": "5_4",
@@ -1370,9 +1370,9 @@
       ],
       "triangles": 14158,
       "meshes": 4,
-      "bytes": 115695,
-      "uncompressed_bytes": 214280,
-      "sha256": "70318984dff1dc1ab5822343e7ea0c54aad9f638e5e7eab043038ab8b34c31f3"
+      "bytes": 115853,
+      "uncompressed_bytes": 220836,
+      "sha256": "9ec286d128c003ee2e92c7c8ff313831939df3201246d0cc27d029b907479691"
     },
     {
       "id": "5_5",
@@ -1400,9 +1400,9 @@
       ],
       "triangles": 22519,
       "meshes": 6,
-      "bytes": 197459,
-      "uncompressed_bytes": 351172,
-      "sha256": "027d0b61f3db4a35afd45c1103e759da88d561fa7ac6d83414b0230d64c5d54e"
+      "bytes": 197685,
+      "uncompressed_bytes": 361988,
+      "sha256": "a7f30da36bb08ce5535916b3d96963d306901abc43e9e314319534c4b1501907"
     },
     {
       "id": "5_6",
@@ -1430,9 +1430,9 @@
       ],
       "triangles": 15701,
       "meshes": 6,
-      "bytes": 130427,
-      "uncompressed_bytes": 240960,
-      "sha256": "c2be425c203e5d77cc7e33fb1c19fea2b2b759ed662e59d7d73ec548124f287f"
+      "bytes": 130636,
+      "uncompressed_bytes": 248724,
+      "sha256": "5a5ee38a0deb3491597df17a5166cb5d263663ceba63c60ba5d4fdc75714460b"
     },
     {
       "id": "5_7",
@@ -1460,9 +1460,9 @@
       ],
       "triangles": 15368,
       "meshes": 4,
-      "bytes": 127147,
-      "uncompressed_bytes": 232836,
-      "sha256": "fa88c3cd66d082274e45f522515c178a91e794e90d07a148c34927a4aa3589fd"
+      "bytes": 127665,
+      "uncompressed_bytes": 244400,
+      "sha256": "110d75548dd9dce3c561c101f82555a69fe15d57643a90ac7d11ff30e848fe2a"
     },
     {
       "id": "6_0",
@@ -1490,9 +1490,9 @@
       ],
       "triangles": 14252,
       "meshes": 3,
-      "bytes": 118115,
-      "uncompressed_bytes": 215840,
-      "sha256": "3c768a351cb5a0fdfded6c86a627421b5be24c751f5c78b404958dc5b1135dee"
+      "bytes": 118185,
+      "uncompressed_bytes": 222300,
+      "sha256": "be654fbf58b0fada4c7e1e864ef0b6ac588121ca30c0bfba5b40409e48ef68c2"
     },
     {
       "id": "6_1",
@@ -1520,9 +1520,9 @@
       ],
       "triangles": 13693,
       "meshes": 3,
-      "bytes": 112925,
-      "uncompressed_bytes": 206688,
-      "sha256": "230c2c52e4b8d9c4f8e92d4766c17cd11a450b71fae1c84878587f8f413a2fc1"
+      "bytes": 113049,
+      "uncompressed_bytes": 212360,
+      "sha256": "de0c7de604d9bb70aae07ee9bc51ae499127d2e86d0667da7c9d6d289237415d"
     },
     {
       "id": "6_2",
@@ -1550,9 +1550,9 @@
       ],
       "triangles": 13520,
       "meshes": 4,
-      "bytes": 111231,
-      "uncompressed_bytes": 206020,
-      "sha256": "30aa5c02f9bf76e7cc3e25f76727eae1ee622281f81f8a98c1645c639ea10bd7"
+      "bytes": 111532,
+      "uncompressed_bytes": 213712,
+      "sha256": "2a93dad611c60b916e6f7e1caefd33fa11b95ac5507fdac9d37ed755e26f6860"
     },
     {
       "id": "6_3",
@@ -1580,9 +1580,9 @@
       ],
       "triangles": 14991,
       "meshes": 5,
-      "bytes": 126593,
-      "uncompressed_bytes": 230536,
-      "sha256": "cfcfd2025aba091770cac6c854fd79b570b698e1755d68b1c124f4b1da890076"
+      "bytes": 126849,
+      "uncompressed_bytes": 240752,
+      "sha256": "880a34f4c56fb58b596c0d0178e02db03e34564bfdfc2b5ea1eaffcfa0922e47"
     },
     {
       "id": "6_4",
@@ -1610,9 +1610,9 @@
       ],
       "triangles": 13568,
       "meshes": 4,
-      "bytes": 110052,
-      "uncompressed_bytes": 204356,
-      "sha256": "dd87be139297b2370779f4b144d51ddaa24685604f8c67df1273324e2d89c8fb"
+      "bytes": 110426,
+      "uncompressed_bytes": 211264,
+      "sha256": "4843963a3b84e90b1c0bbc390cd78b1f6198c6ca59e7e1b98238b98c3b71f1eb"
     },
     {
       "id": "6_5",
@@ -1640,9 +1640,9 @@
       ],
       "triangles": 16834,
       "meshes": 5,
-      "bytes": 143047,
-      "uncompressed_bytes": 259772,
-      "sha256": "43d3b1db708e6f70153282db0de8174932ef78eccb5615303bdec1e9c60af5d4"
+      "bytes": 143214,
+      "uncompressed_bytes": 266356,
+      "sha256": "45ab9914a15a15eee6c950a1dcc853675519d470a96ab0883f755f7e098c36f1"
     },
     {
       "id": "6_6",
@@ -1670,9 +1670,9 @@
       ],
       "triangles": 12874,
       "meshes": 4,
-      "bytes": 103723,
-      "uncompressed_bytes": 194676,
-      "sha256": "65dcaab62795f383e1e2ef515c25ebbecfd49614f3d07299bf08599a8130e541"
+      "bytes": 104258,
+      "uncompressed_bytes": 201824,
+      "sha256": "3c3e071c554c9fb8088db4a65494f9b52462357fc9648289a95f61ce72038034"
     },
     {
       "id": "6_7",
@@ -1700,9 +1700,9 @@
       ],
       "triangles": 15410,
       "meshes": 4,
-      "bytes": 128648,
-      "uncompressed_bytes": 234756,
-      "sha256": "f0e0a6cf562f745db24561cbe6ec07b5d632c2da512e0961022e36d4af804d9b"
+      "bytes": 129506,
+      "uncompressed_bytes": 247356,
+      "sha256": "072e16444712f73206f4d9f796aee2fcad364e6c6c551ec5aafee1dd51cdaa4f"
     },
     {
       "id": "7_0",
@@ -1730,9 +1730,9 @@
       ],
       "triangles": 13518,
       "meshes": 3,
-      "bytes": 110817,
-      "uncompressed_bytes": 204076,
-      "sha256": "1398aea0b39e28fd60bd21eca9fb3210e3bd9347abcd5e4e8f61774cc0e34255"
+      "bytes": 111054,
+      "uncompressed_bytes": 209524,
+      "sha256": "0690bb4f34b6637bc3c3c2e759300a7be69260d220a4af3caa92ff8c685f243b"
     },
     {
       "id": "7_1",
@@ -1760,9 +1760,9 @@
       ],
       "triangles": 14852,
       "meshes": 4,
-      "bytes": 124132,
-      "uncompressed_bytes": 226408,
-      "sha256": "23dfd661376fb52faf44c1ddc9d03fa0d27040891448925dfa121dc44c5c6ad6"
+      "bytes": 124277,
+      "uncompressed_bytes": 233608,
+      "sha256": "109638fd7dd00e55490ff8645001caeee5c593dfb0170c11b0d6bd6ccfefbe40"
     },
     {
       "id": "7_2",
@@ -1790,9 +1790,9 @@
       ],
       "triangles": 14760,
       "meshes": 4,
-      "bytes": 121042,
-      "uncompressed_bytes": 223608,
-      "sha256": "90a0c10de1c1868942af1c8037caa5c5328e77f9eb66ab8f9cc8dd4ddf2559c2"
+      "bytes": 121136,
+      "uncompressed_bytes": 230264,
+      "sha256": "44f5719fdb26a6073206df05b9f15efb0d477a4c12443637e9b06e540de1f91c"
     },
     {
       "id": "7_3",
@@ -1820,9 +1820,9 @@
       ],
       "triangles": 11423,
       "meshes": 4,
-      "bytes": 90922,
-      "uncompressed_bytes": 174660,
-      "sha256": "c9830133fd9c14a748e511edf6dbcb125fc547688ed9c4c08291f88b0b5f58f7"
+      "bytes": 91238,
+      "uncompressed_bytes": 179820,
+      "sha256": "fdc09095fea9589719757addee5df0257304839dfa947ecbd7209c3003058980"
     },
     {
       "id": "7_4",
@@ -1850,9 +1850,9 @@
       ],
       "triangles": 12363,
       "meshes": 4,
-      "bytes": 99148,
-      "uncompressed_bytes": 188520,
-      "sha256": "b39ba8637e9cefa2da959408374fd87438483af99f63fd3fc7573a20d0b0e92a"
+      "bytes": 99553,
+      "uncompressed_bytes": 197452,
+      "sha256": "85ac9b2e58701b1e2f5f5912faaa8d07b6528ccaa4d0dc8887e1f9976065c4c9"
     },
     {
       "id": "7_5",
@@ -1880,9 +1880,9 @@
       ],
       "triangles": 15905,
       "meshes": 4,
-      "bytes": 133870,
-      "uncompressed_bytes": 242944,
-      "sha256": "92d9df8717c164b45e194119ab2932158aa27bb4ea4d1646d8acc814dc82cc21"
+      "bytes": 134142,
+      "uncompressed_bytes": 253264,
+      "sha256": "70380667c4d5d3efe3145ca5f0d0940b63114e6f1f7563b382a49b6a403226e4"
     },
     {
       "id": "7_6",
@@ -1910,9 +1910,9 @@
       ],
       "triangles": 19176,
       "meshes": 5,
-      "bytes": 164953,
-      "uncompressed_bytes": 297392,
-      "sha256": "e1ca111a9c626dc80d2ab5aad735aaede4dca8e3118b55562b4f292f8c637eb3"
+      "bytes": 165192,
+      "uncompressed_bytes": 307696,
+      "sha256": "a52c62fc7434f02e2fc7e7c5a74d4a0227855c0b0b2ff3a97eecfcbcb0544310"
     },
     {
       "id": "7_7",
@@ -1940,9 +1940,9 @@
       ],
       "triangles": 15279,
       "meshes": 4,
-      "bytes": 126604,
-      "uncompressed_bytes": 232624,
-      "sha256": "6ede2593d7ac53187ca4a680af0f06a245ee70832f6037670517214a8e408d6f"
+      "bytes": 127532,
+      "uncompressed_bytes": 247312,
+      "sha256": "899a5caaf94b13dc41d20326f09c576dc8ab2124c4c01ba2c74df91dc8df421d"
     }
   ],
   "limitations": [
@@ -1957,5 +1957,39 @@
     "Static mesh terrain is mandatory in WORLD001; importing original Landscape would close the excavated corridors",
     "UE compile, import, collision cooking, runtime traversal and streaming remain unverified without a licensed editor"
   ],
-  "unreal_executed": false
+  "unreal_executed": false,
+  "visual_overlay": {
+    "url": "assets/visual-overlay.json.gz",
+    "sha256": "4028f351c98bf7f746eab53b5af3a586859bebb2d22e8d02824a7f6758043ad8",
+    "bytes": 213852,
+    "stats": {
+      "lane_white": 5595,
+      "lane_yellow": 30,
+      "signal": 12,
+      "crossing": 610,
+      "bike_rack": 2,
+      "stop": 1,
+      "tree": 171,
+      "bin": 1,
+      "lamp": 81,
+      "bench": 36
+    },
+    "decorative_counts": {
+      "lamp": 80,
+      "tree": 128,
+      "bench": 32
+    },
+    "source_inventory_sha256": "6256eed2c2e99548825d9b63c800270473c75cf7a8679bfc81eaf81adfbcf956"
+  },
+  "background": {
+    "url": "assets/background.json.gz",
+    "sha256": "735a91ecbe6788fd8cb261bea1b23d0c5042a081e444087672a070f80cb2d670",
+    "bytes": 594145,
+    "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8",
+    "non_playable": true
+  },
+  "visual_catalog": {
+    "url": "visual-catalog.json",
+    "sha256": "6036d68192e46744c2f85c891bf2a3ae422fb7c5acd2814f747b4fc36879d6d7"
+  }
 }

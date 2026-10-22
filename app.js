@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {VisualLayer} from './visual.js';
 import {GLTFLoader} from './vendor/three/examples/jsm/loaders/GLTFLoader.js';
 import {PROFILES, nearby, geometryBytes, releaseScene, SectorStream} from './core.js';
 
@@ -28,7 +29,7 @@ async function start() {
   const scene = new THREE.Scene();
   const sky = new THREE.Color('#cddbe2'); scene.background = sky;
   scene.fog = new THREE.Fog(sky, 650, 2400);
-  scene.add(new THREE.HemisphereLight('#eff7ff', '#6d7254', 1.2));
+  const ambient=new THREE.HemisphereLight('#eff7ff', '#6d7254', 1.2);scene.add(ambient);
   const sun = new THREE.DirectionalLight('#fff1da', 2.0);
   sun.position.set(-650, 1600, 550); scene.add(sun); scene.add(sun.target);
   sun.target.position.set(0, 530, 0);
@@ -42,6 +43,7 @@ async function start() {
   const debug = context.getExtension('WEBGL_debug_renderer_info');
   const device = debug ? context.getParameter(debug.UNMASKED_RENDERER_WEBGL) : context.getParameter(context.RENDERER);
   let profileName = matchMedia('(max-width: 700px)').matches || /swiftshader|llvmpipe|software/i.test(device) ? 'low' : 'balanced';
+  let panoramaMode=false;
   let mode = 'aerial', focus = new THREE.Vector3(0, 535, 0), lastSectorUpdate = -1;
   let speed = 35, dragging = false, pointerX = 0, pointerY = 0;
   const keys = new Set(), ray = new THREE.Raycaster(), down = new THREE.Vector3(0, -1, 0);
@@ -59,6 +61,10 @@ async function start() {
       }
     });
   }
+  const visual=new VisualLayer({scene,renderer,sun,ambient,world});
+  visual.setLight('day');
+  await visual.load();
+  camera.layers.enable(1);
   const stream = new SectorStream({
     load: async (sector, signal) => {
       const response = await fetch(new URL(sector.url, location.href), {signal});
@@ -72,24 +78,25 @@ async function start() {
       const gltf = await loader.parseAsync(binary, './');
       return {scene: gltf.scene, sector, bytes: geometryBytes(gltf.scene)};
     },
-    attach: value => { materialOptions(value.scene); scene.add(value.scene); },
-    release: value => { scene.remove(value.scene); releaseScene(value.scene); },
+    attach: value => { materialOptions(value.scene); visual.prepare(value.scene,value.sector);materialOptions(value.scene);visual.update(camera); scene.add(value.scene); },
+    release: value => { visual.release(value.scene);scene.remove(value.scene); releaseScene(value.scene); },
   });
   function updateSectors() {
-    stream.update(nearby(world.sectors, mode === 'aerial' ? focus : camera.position, PROFILES[profileName].radius));
+    visual.update(camera);
+    stream.update(nearby(world.sectors, mode === 'aerial' ? focus : camera.position, panoramaMode?1500:PROFILES[profileName].radius));
   }
   function setProfile(name) {
     profileName = name; const p = PROFILES[name];
     $('quality').value = name;
     renderer.setPixelRatio(Math.min(devicePixelRatio || 1, p.dpr));
-    renderer.shadowMap.enabled = p.shadows; sun.castShadow = p.shadows;
+    visual.setProfile(name);
     scene.traverse(node => { if (node.material) {
       for (const m of Array.isArray(node.material) ? node.material : [node.material]) m.needsUpdate = true;
     }});
     updateSectors();
   }
   function setView(next) {
-    mode = next;
+    panoramaMode=false;mode = next;
     if (next === 'aerial') {
       focus.set(0, 535, 0); camera.position.set(410, 1050, 580); camera.lookAt(focus);
     } else {
@@ -106,7 +113,17 @@ async function start() {
   $('street').onclick = () => setView('street');
   $('quality').onchange = e => setProfile(e.target.value);
   $('speed').onchange = e => { speed = Number(e.target.value); };
-  $('fog').onchange = e => { scene.fog = e.target.checked ? new THREE.Fog(sky, 650, 2400) : null; };
+  $('fog').onchange = e => visual.setFog(e.target.checked);
+  $('visual-mode').onchange=e=>{visual.setMode(e.target.value);visual.update(camera);};
+  $('lighting').onchange=e=>visual.setLight(e.target.value);
+  $('shadows').onchange=e=>visual.setShadows(e.target.value);
+  $('visual-mode').value=visual.enabled?'city':'graybox';
+  for(const key of ['vegetation','details','paint','background'])$(key).onchange=e=>{visual.setFlag(key,e.target.checked);visual.update(camera);};
+  $('panorama').onchange=e=>{
+    const preset=visual.background?.data.camera_presets[e.target.value];if(!preset)return;
+    for(const id of ['aerial','street']){$(id).classList.toggle('active',id==='aerial');$(id).setAttribute('aria-pressed',String(id==='aerial'));}
+    panoramaMode=true;mode='aerial';focus.set(0,535,0);camera.position.set(e.target.value==='sierra'?-600:500,660,650);camera.lookAt(...preset.target);keys.clear();updateSectors();
+  };
   $('wireframe').onchange = () => { for (const value of stream.resident.values()) materialOptions(value.scene); };
   $('explore').onclick = async () => {
     canvas.focus();
@@ -155,7 +172,7 @@ async function start() {
       triangles: renderer.info.render.triangles, draw_calls: renderer.info.render.calls,
       geometries: renderer.info.memory.geometries, downloaded_bytes: stream.downloadedBytes,
       drawing_buffer: [canvas.width, canvas.height], renderer: device,
-      source_glb_sha256: world.source_glb_sha256};
+      source_glb_sha256: world.source_glb_sha256,visual:visual.snapshot()};
   }
   // Read-only diagnostics, used by the browser tests and downloadable evidence.
   window.__MOW__ = Object.freeze({snapshot, idle: () => stream.idle()});
@@ -184,15 +201,15 @@ async function start() {
         if (hits.length && hits[0].distance < 3.7) camera.position.y = hits[0].point.y + 1.7;
       }
       if (now - lastSectorUpdate > 300) { updateSectors(); lastSectorUpdate = now; }
-      renderer.render(scene, camera);
+      visual.render(renderer,camera);
       frames.push(now); frameTimes.push(elapsed);
-      while (frames.length && frames[0] < now - 2000) { frames.shift(); frameTimes.shift(); }
+      while (frames.length>2 && frames[0] < now - 2000) { frames.shift(); frameTimes.shift(); }
     }
     if (now - lastStats > 500) {
       const span = frames.length > 1 ? (frames.at(-1) - frames[0]) / 1000 : 0;
       fps = span > 0 ? (frames.length - 1) / span : 0;
       frameMs = frameTimes.length ? frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length : 0;
-      bytes = [...stream.resident.values()].reduce((n, v) => n + v.bytes, 0);
+      bytes = geometryBytes(scene)+(visual.background?.bytes()||0);
       $('fps').textContent = fps.toFixed(0); $('sectors').textContent = `${stream.resident.size}/${world.sectors.length}`;
       $('triangles').textContent = renderer.info.render.triangles.toLocaleString('es-MX');
       $('memory').textContent = (bytes / 1048576).toFixed(1);
