@@ -1,0 +1,21 @@
+{
+  "milestone": "WORLD-002",
+  "source_commit": "b175978bcf0d657e8c4ae634f4e3bb836dc5cf37",
+  "hosting_commit": "a44d909664914f088e01b23c87acb2ef8cab3c44",
+  "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+  "archive": {
+    "name": "Monterrey_WORLD002_Web.zip",
+    "bytes": 21039996,
+    "sha256": "53ab49e15d33946da65137669026174c18279af3a0c6ba02d3ca534f7d14fc71"
+  },
+  "unreal_executed": false,
+  "paid_services_provisioned": false,
+  "budget_usd": 0,
+  "public_browser_workflow": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39814161898",
+  "build_workflow": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39813444403",
+  "limits_verification_file": "world002-release-limits.json",
+  "status": "passed",
+  "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/world002-b175978bcf0d",
+  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39814996488",
+  "all_assets_downloaded_and_hash_verified": true
+}
