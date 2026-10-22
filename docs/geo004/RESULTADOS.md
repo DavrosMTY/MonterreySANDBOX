@@ -89,3 +89,9 @@ collares genéricos; sus bordes de excavación y aproximaciones requieren revisi
 No se presentan esos elementos como reconstrucción del túnel real. El caso 0 sí
 muestra la eliminación del faldón artificial a nivel con la misma cámara. La
 mejora demostrada de plataformas no se extrapola a todas las estructuras.
+
+Comprobación independiente de **279 OBJ**: 2.757 nombres y 1.386.231 triángulos
+conservados, ejes Unreal y centímetros comprobados contra las dimensiones del
+manifest y pivotes. Error máximo numérico de bounds 5,00e−9 cm, que no representa
+exactitud del terreno. [Recibo de unidades OBJ](obj-centimetre-validation.json).
+Los OBJ y sus pivotes están en centímetros; GLB/web y GIS están en metros.

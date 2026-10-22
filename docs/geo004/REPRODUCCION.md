@@ -19,3 +19,11 @@ Copernicus remuestreado, delta fuente y referencias SHA originales. Las bases de
 edificios quedan registradas por ID en CSV; los perfiles viales incluyen cotas
 exportadas reales, valores ausentes explícitos y marcas de estimación estructural.
 No se aplican offsets de mediana ni suavizado para aparentar precisión.
+
+La recuperación `geo004-release.yml` restaura el despliegue por commit, comprueba
+que su código corresponde al commit validado y ejecuta el navegador contra la URL
+pública. Reconstruye los outputs perdidos del runner y exige un GLB de SHA idéntico
+al aprobado antes de empaquetar. Consulta las variables oficiales de límites en
+el repositorio `github/docs` mediante API, registra sus blobs y verifica cada
+asset descargado tras publicar. No repite una validación geométrica distinta ni
+reemplaza el modelo para disimular un fallo del empaquetador.

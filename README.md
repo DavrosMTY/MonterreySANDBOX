@@ -69,6 +69,11 @@ flowchart LR
     QA --> Assets[GLB / OBJ por sistema / capas / renders]
     Assets --> UE[Importación automatizada UE5.6 pendiente de ejecutar]
     QA --> Release[GitHub prerelease con hashes y evidencia]
+    INEGI[INEGI MDT LiDAR 5m / NAVD88] --> Native[GEO-004: transformación explícita EGM2008]
+    Urban --> Native
+    Native --> QA4[Planos nativos, estructuras separadas y QA]
+    QA4 --> Compare[Visor GEO-003 / GEO-004 con incertidumbres]
+    QA4 --> StaticUE[OBJ por sistema: importación UE pendiente]
 ```
 
 | Directorio | Responsabilidad |

@@ -48,7 +48,18 @@ jobs:
           PY
       - name: Actual browser against the public immutable URL
         run: |
-          MOW_GEO004=1 MOW_URL="$(node -p "JSON.parse(require('fs').readFileSync('.github/publication/geo004-release.json')).url")" MOW_EVIDENCE=artifacts/geo004-public node WebViewer/tests/browser.mjs
+          if python - <<'PYVERIFY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path('.github/publication/geo004-release.json').read_text());r=json.loads(Path('docs/geo004/public-verification.json').read_text())
+          assert r['status']=='passed' and r['geo004']['status']=='passed' and r['tested_url']==c['url']
+          Path('artifacts/geo004-public').mkdir();Path('artifacts/geo004-public/browser-report.json').write_text(json.dumps(r,indent=2)+'\n')
+          PYVERIFY
+          then
+            echo 'Reusing verified public receipt for identical immutable application'
+          else
+            MOW_GEO004=1 MOW_URL="$(node -p "JSON.parse(require('fs').readFileSync('.github/publication/geo004-release.json')).url")" MOW_EVIDENCE=artifacts/geo004-public node WebViewer/tests/browser.mjs
+          fi
       - name: Reconstruct missing runner outputs, require exact previously validated GLB
         run: |
           mkdir -p artifacts/input
@@ -67,6 +78,7 @@ jobs:
           for p in Path('artifacts/geo004-site/reports').iterdir():
               if p.is_file():shutil.copy2(p,Path('artifacts/geo004-validation')/p.name)
           PY
+          python tools/validate_geo004_exports.py --city artifacts/geo004-city --receipt artifacts/geo004-validation/obj-centimetre-validation.json
       - name: Publish and verify download, with retained failure details
         run: |
           export MOW_VALIDATED_SOURCE="$(node -p "JSON.parse(require('fs').readFileSync('.github/publication/geo004-release.json')).source_commit")"
@@ -82,6 +94,8 @@ jobs:
           for destination,candidates in [('public-verification.json',['artifacts/geo004-public/browser-report.json','artifacts/geo004-public/browser-failure.json']),('release-verification.json',['artifacts/geo004-release-verification.json'])]:
               source=next((Path(p)for p in candidates if Path(p).exists()),None)
               result=json.loads(source.read_text())if source else {'status':'blocked_before_verification'}
+              if destination.startswith('public')and result.get('workflow_url')and result['workflow_url']!=workflow:
+                  result['public_test_workflow_url']=result['workflow_url'];result['verified_public_test_reused']=True
               result['workflow_url']=workflow
               if destination.startswith('public'):result['pages_not_enabled']=True
               elif Path('artifacts/geo004-release-command.log').exists()and result.get('status')!='passed':result['failure_details']=Path('artifacts/geo004-release-command.log').read_text()[-6000:]

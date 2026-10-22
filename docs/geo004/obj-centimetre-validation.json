@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+  "obj_system_cells_checked": 279,
+  "mesh_names_preserved": 2757,
+  "triangles_checked": 1386231,
+  "maximum_bounds_error_cm": 4.998582880944014e-09,
+  "obj_units": "centimetres",
+  "axes": "X east / Y south / Z up",
+  "pivot_units": "centimetres",
+  "glb_and_gis_units": "metres",
+  "unreal_import_executed": false,
+  "absolute_survey_accuracy_certified": false
+}

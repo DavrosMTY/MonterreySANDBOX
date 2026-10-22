@@ -67,8 +67,8 @@ excavación de todo el corredor. Las cimentaciones se revisan sin aplanar sus pa
 Cada terreno se exporta a GeoTIFF y GLB, con OBJ/MTL por sistema/celda para futura
 integración UE. La cuadrícula nativa de 401 vértices **no** se presenta como un
 Landscape RAW válido. El proyecto UE5.6.1 permanece sin modificar y no se ha
-compilado, importado ni ejecutado Unreal. Los OBJ usan metros locales con pivotes
-Unreal en centímetros; la adaptación del importador GEO-003 al nuevo manifest y
+compilado, importado ni ejecutado Unreal. Los OBJ usan ejes Unreal y centímetros locales, con pivotes
+también en centímetros (GLB/web y cálculos GIS permanecen en metros); la adaptación del importador GEO-003 al nuevo manifest y
 las colisiones necesitan validación en el motor.
 
 [Fuentes y legalidad](FUENTES.md) · [Resultados y límites](RESULTADOS.md) ·
