@@ -1,6 +1,6 @@
 """Discover official metropolitan delimitation and INEGI boundaries; public metadata only."""
 from concurrent.futures import ThreadPoolExecutor
-import datetime,hashlib,html,json,re,urllib.request
+import datetime,hashlib,html,json,re,urllib.request,urllib.parse,xml.etree.ElementTree as ET
 from pathlib import Path
 
 URLS={
@@ -13,6 +13,10 @@ URLS={
  'rnc':'https://www.inegi.org.mx/temas/viascomunicacion/',
  'wikipedia_reference_discovery':'https://en.wikipedia.org/wiki/Monterrey_metropolitan_area',
  'search_reference_discovery':'https://www.bing.com/search?q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey',
+ 'spanish_reference_discovery':'https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey',
+ 'bing_rss':'https://www.bing.com/search?format=rss&q='+urllib.parse.quote('"Metrópolis de México 2020" Monterrey municipios'),
+ 'ddg_reference_discovery':'https://html.duckduckgo.com/html/?q='+urllib.parse.quote('"Metrópolis de México 2020" Monterrey'),
+ 'inegi_press':'https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2023/Metrop/Metrop2020.pdf',
  'copernicus_catalog':'https://copernicus-dem-30m.s3.amazonaws.com/tileList.txt'}
 
 
@@ -29,9 +33,13 @@ def get(item):
   for term in ['Monterrey','16 municipios','18 municipios','metrópolis','Puede explotar comercialmente','2025','2024']:
    i=plain.lower().find(term.lower())
    if i>=0:r['excerpts'].append(plain[max(0,i-50):i+350])
+  if key in ('conapo','sedatu'):r['response_preview']=plain[:600]
+  if key=='bing_rss':
+   try:r['search_results']=[{'title':i.findtext('title'),'url':i.findtext('link'),'description':i.findtext('description')}for i in ET.fromstring(body).findall('.//item')]
+   except ET.ParseError:pass
   if key=='municipalities':r['data']=json.loads(body)
   if key=='boundaries':
-   data=json.loads(body);r['json_keys']=list(data);r['features_count']=len(data.get('features',[]));r['first_feature_properties']=(data.get('features')or[{}])[0].get('properties')
+   data=json.loads(body);r['service_metadata']=data.get('metadatos');r['json_keys']=list(data);r['features_count']=len(data.get('features',[]));r['first_feature_properties']=(data.get('features')or[{}])[0].get('properties')
  except Exception as e:r['error']=str(e)
  return r
 

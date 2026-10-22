@@ -9,12 +9,20 @@ jobs:
   discover:
     if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
       - run: python tools/research_geo005_sources.py
+      - name: Acquire bounded additional OSM sector
+        run: |
+          python -m pip install --no-cache-dir pyproj==3.8.0
+          python tools/acquire_geo005_osm.py
+      - name: Preserve license-reviewed raw snapshot after checking release limits
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/publish_geo005_source_snapshot.py
       - name: Preserve official source findings
         run: |
           git config user.name 'github-actions[bot]'
