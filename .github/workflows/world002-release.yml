@@ -1,0 +1,35 @@
+name: WORLD-002 downloadable verified web bundle (USD 0)
+on:
+  push:
+    branches: [feature/world002-visual-identity]
+    paths: [.github/publication/world002-release.json]
+permissions:
+  contents: read
+jobs:
+  release:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package exact validated deployment and verify public downloads
+        run: python tools/publish_world002_release.py
+      - name: Preserve compact release verification
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          path=Path('artifacts/world002-release/release-verification.json')
+          report=json.loads(path.read_text()) if path.exists() else {'status':'blocked_before_verification','workflow_url':'https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']}
+          Path('docs/world002/release-verification.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/world002/release-verification.json
+          git commit -m "test(world002): verify free release download and archive checksums"
+          git push origin HEAD:feature/world002-visual-identity

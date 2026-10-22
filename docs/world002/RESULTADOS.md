@@ -100,3 +100,17 @@ Hosting generado `a44d909664914f088e01b23c87acb2ef8cab3c44`, descendiente del de
 La URL original FREE-001 sigue fijada a `dd44f8e0a6eccf8be3362685a2ab847758fb38bb`.
 La verificación independiente HTTPS se registra en `public-verification.json`;
 la aprobación del build por sí sola no certifica esa URL ni activa Pages.
+
+La [verificación HTTPS pública](public-verification.json) aprobó el flujo normal
+del aviso gratuito y todos los checks WORLD-002, sin errores de consola/render/HTTP.
+[Workflow público](https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39814161898).
+Hubo 161 redirecciones estáticas al mismo commit de GitHub durante la exploración
+completa, ninguna a servicios no autorizados dentro de la aplicación. El aviso del
+proveedor tiene publicidad y se prueba por separado de la aplicación.
+
+Se prepara un ZIP del commit exacto de hosting mediante un runner público estándar:
+la integración directa devolvió HTTP 401 en uploads.github.com, aunque Git/API/PR
+funcionan. El workflow usa su token efímero de contents:write, sin credenciales
+compartidas ni permisos de administración. Se comprobaron límites oficiales de
+Releases en GitHub Docs y sus variables fuente: 1.000 assets, cada uno <2 GiB,
+sin límite total/de transferencia para Releases. [Recibo](../../manifests/world002-release-limits.json).

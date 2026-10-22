@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-22T16:29:25.716873+00:00",
+  "records": [
+    {
+      "url": "https://github.com/github/docs/blob/main/content/repositories/releasing-projects-on-github/about-releases.md",
+      "blob_sha": "f331649901068843eafd6e9eba27f919d062c8be",
+      "findings": [
+        "Up to {% data variables.releases.release_asset_limit %} release assets may be associated with a single release. Each file included in a release must be under {% data variables.large_files.max_file_size %}. There is no limit on the total size of a release, nor bandwidth usage."
+      ]
+    },
+    {
+      "url": "https://github.com/github/docs/blob/main/data/variables/releases.yml",
+      "blob_sha": "847545e27be5b28275c49dc92c676a32e262cefd",
+      "findings": [
+        "release_asset_limit: '1000'"
+      ]
+    },
+    {
+      "url": "https://github.com/github/docs/blob/main/data/variables/large_files.yml",
+      "blob_sha": "95cb9c1eff04c9b88d15ff694e870cd5893c74e6",
+      "findings": [
+        "max_file_size: '2 GiB'"
+      ]
+    }
+  ],
+  "asset_bytes": 21039996,
+  "release_asset_limit": 1000,
+  "individual_asset_limit_bytes": 2147483648,
+  "no_total_size_or_bandwidth_cap_per_official_docs": true
+}
