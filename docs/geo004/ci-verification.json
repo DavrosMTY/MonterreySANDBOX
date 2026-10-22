@@ -1,0 +1,2463 @@
+{
+  "source_commit": "aa07971086388aad8b1acf03a5edbd9b6db9b319",
+  "workflow_url": "https://github.com/DavrosMTY/MonterreySANDBOX/actions/runs/39830935970",
+  "budget_usd": 0,
+  "unreal_executed": false,
+  "audit": {
+    "status": "geometric_audit_completed_not_survey_certificate",
+    "model_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+    "milestone": "GEO-004",
+    "all_source_roads_in_scope": 2665,
+    "scope_not_limited_to_previous_97": true,
+    "counts": {
+      "road_mesh_parts_checked": 1362,
+      "at_grade_parts_checked": 1266,
+      "cap_triangles_checked": 277794,
+      "cap_triangles_support_error_over_25cm": 0,
+      "parts_with_at_grade_skirt_over_1m": 0
+    },
+    "raster": {
+      "height_min_max_m": [
+        514.1657104492188,
+        565.3994750976562
+      ],
+      "grade_percent_p50_p90_p99_max": [
+        3.3140743783273017,
+        9.254211659059441,
+        25.957825901850306,
+        59.23633604003407
+      ]
+    },
+    "native_source_resolution_m": 5,
+    "sampling_spacing_m": 5.0,
+    "source_vertical_accuracy_m": null,
+    "no_unit_scale_error_detected": true,
+    "uncertainty": "Geometry thresholds do not establish source absolute accuracy. INEGI is 2007, EPV unspecified; GGM05/GGM10 realization uncertainty retained.",
+    "issues": 64,
+    "unreal_executed": false
+  },
+  "validation": {
+    "status": "passed_geometric_invariants_with_pending_source_and_structural_validation",
+    "source_graph_edges_preserved": 4194,
+    "road_ids_and_tags_preserved": 2665,
+    "buildings_preserved": 1136,
+    "maximum_building_xy_difference_m": 0.0,
+    "maximum_road_source_xy_difference_m": 0.0,
+    "relative_building_height_max_change_m": 4.973799150320701e-14,
+    "shared_endpoint_profile_gap_m": 0.0,
+    "terrain_sector_boundary_support_error_max_m": 9.391442290507257e-08,
+    "portal_hole_missing_seam_samples": 12,
+    "source_replacement_reconstruction_max_m": 3.0517578125e-05,
+    "datum_delta_reconstruction_max_m": 3.0517578125e-05,
+    "at_grade_roads_with_support_error_over_25cm": 0,
+    "roads_missing_centerline_surface_before": 336,
+    "roads_missing_centerline_surface_after": 336,
+    "crossings_checked_before": 201,
+    "crossings_checked_after": 201,
+    "crossings_missing_surface_before": 15,
+    "crossings_missing_surface_after": 15,
+    "crossings_potential_structure_overlap_before": 0,
+    "crossings_potential_structure_overlap_after": 0,
+    "building_foundations_requiring_review": 98,
+    "non_elevated_buildings_floating_over_50cm": 0,
+    "buildings_terrain_above_roof_over_25cm": 0,
+    "estimated_bridge_supports_checked": 81,
+    "estimated_support_gaps_over_25cm": 0,
+    "bridge_parts_terrain_above_deck_over_25cm": 0,
+    "review_map_points": 622,
+    "original_source_epv_m": null,
+    "absolute_accuracy_certified": false,
+    "source_year": 2007,
+    "unreal_executed": false,
+    "full_world_drivable_certified": false,
+    "numerical_geometry_before": {
+      "triangles": 1077198,
+      "post_float32_degenerate_triangles": 0
+    },
+    "numerical_geometry_after": {
+      "triangles": 1386231,
+      "post_float32_degenerate_triangles": 0
+    },
+    "structural_crossings_requiring_review": [
+      {
+        "lower": "way/92150693/231",
+        "upper": "way/956461866/2081",
+        "xy_enu_m": [
+          158.6713231541132,
+          492.4541469375356
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/92150693/231",
+        "upper": "way/956461866/2082",
+        "xy_enu_m": [
+          165.88679861712643,
+          531.7741024817543
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/92150709/236",
+        "upper": "way/956461866/2081",
+        "xy_enu_m": [
+          140.00365682451314,
+          496.05835106624295
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/92150709/236",
+        "upper": "way/956461866/2082",
+        "xy_enu_m": [
+          146.85954709115123,
+          535.5155417078178
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/90091792/204",
+        "upper": "way/121925467/333",
+        "xy_enu_m": [
+          701.2023740472802,
+          468.43803295622837
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/744452670/1245",
+        "upper": "way/121925474/349",
+        "xy_enu_m": [
+          387.19181387723415,
+          436.1898267962283
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262614829/2195",
+        "upper": "way/121925474/349",
+        "xy_enu_m": [
+          397.4280906795026,
+          451.84208925923656
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/158242445/438",
+        "upper": "way/406673504/702",
+        "xy_enu_m": [
+          48.11943916873235,
+          171.62298383524424
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/406670427/599",
+        "upper": "way/1263084516/2427",
+        "xy_enu_m": [
+          -49.35143659968691,
+          190.9670976530814
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262675405/2313",
+        "upper": "way/406673510/706",
+        "xy_enu_m": [
+          -71.31986858774847,
+          268.6737482495945
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262675405/2312",
+        "upper": "way/1262675403/2309",
+        "xy_enu_m": [
+          -88.16099336592552,
+          258.51216082849965
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262675405/2313",
+        "upper": "way/1262675403/2310",
+        "xy_enu_m": [
+          -65.30828909513293,
+          274.31134836534034
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262706307/2317",
+        "upper": "way/1322900353/2629",
+        "xy_enu_m": [
+          -91.06389602798306,
+          -54.041093439677525
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/1262706308/2318",
+        "upper": "way/1322900353/2626",
+        "xy_enu_m": [
+          11.054070436354717,
+          -7.029162651697247
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      },
+      {
+        "lower": "way/406673533/761",
+        "upper": "way/1322909090/2632",
+        "xy_enu_m": [
+          -95.07539959064,
+          -77.60317909375122
+        ],
+        "top_surface_gap_m": null,
+        "missing_surface": true,
+        "potential_lining_or_deck_overlap": false,
+        "geometry_clearance_review": true,
+        "surveyed_clearance": false
+      }
+    ],
+    "geometric_tolerance_note": "25cm cap/support screening, 1mm seam/numeric tolerances; these are NOT source vertical/horizontal accuracy.",
+    "source_model_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf"
+  },
+  "geometry": {
+    "status": "passed",
+    "source_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+    "sectors": 64,
+    "source_parts_preserved": 2757,
+    "triangles_preserved": 1386231,
+    "maximum_position_error_m": 7.617187520736479e-06,
+    "source_metadata_ids_and_colors_preserved": true,
+    "unreal_execution": false
+  },
+  "browser": {
+    "status": "passed",
+    "tested_url": "http://127.0.0.1:36503/",
+    "renderer": "Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance",
+    "world002": null,
+    "geo004": {
+      "status": "passed",
+      "measurements": [
+        {
+          "name": "geo003-case0",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_2",
+            "geo003/2_3",
+            "geo003/3_1",
+            "geo003/3_4",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "wanted": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4,
+          "frame_ms": 249.98888888888905,
+          "geometry_bytes": 4620316,
+          "heap_bytes": 32366861,
+          "triangles": 196484,
+          "draw_calls": 79,
+          "geometries": 61,
+          "downloaded_bytes": 7965477,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1712,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo004-case0",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "wanted": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 3,
+          "frame_ms": 447.6142857142856,
+          "geometry_bytes": 5227782,
+          "heap_bytes": 60114199,
+          "triangles": 236965,
+          "draw_calls": 76,
+          "geometries": 61,
+          "downloaded_bytes": 10041230,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1708,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo003-case1",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            203.70100019836426,
+            583.8609652732239,
+            -428.89099761962893
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/4_5",
+            "geo003/4_6",
+            "geo003/5_5",
+            "geo003/5_6",
+            "geo003/3_5",
+            "geo003/3_6",
+            "geo003/4_4",
+            "geo003/4_7",
+            "geo003/5_4",
+            "geo003/5_7",
+            "geo003/3_7",
+            "geo003/3_4"
+          ],
+          "wanted": [
+            "geo003/4_5",
+            "geo003/4_6",
+            "geo003/5_5",
+            "geo003/5_6",
+            "geo003/3_5",
+            "geo003/3_6",
+            "geo003/4_4",
+            "geo003/4_7",
+            "geo003/5_4",
+            "geo003/5_7",
+            "geo003/3_7",
+            "geo003/3_4"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.779099405267637,
+          "frame_ms": 264.98999999999944,
+          "geometry_bytes": 4767386,
+          "heap_bytes": 44423523,
+          "triangles": 208135,
+          "draw_calls": 60,
+          "geometries": 58,
+          "downloaded_bytes": 12467573,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 12,
+              "visible_instances": 1063,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 12
+          }
+        },
+        {
+          "name": "geo004-case1",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            203.70100019836426,
+            583.8609652732239,
+            -428.89099761962893
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/4_5",
+            "geo004/4_6",
+            "geo004/5_5",
+            "geo004/5_6",
+            "geo004/3_5",
+            "geo004/3_6",
+            "geo004/4_4",
+            "geo004/4_7",
+            "geo004/5_4",
+            "geo004/5_7",
+            "geo004/3_7",
+            "geo004/3_4"
+          ],
+          "wanted": [
+            "geo004/4_5",
+            "geo004/4_6",
+            "geo004/5_5",
+            "geo004/5_6",
+            "geo004/3_5",
+            "geo004/3_6",
+            "geo004/4_4",
+            "geo004/4_7",
+            "geo004/5_4",
+            "geo004/5_7",
+            "geo004/3_7",
+            "geo004/3_4"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.033884630899547,
+          "frame_ms": 225.92222222222256,
+          "geometry_bytes": 5624114,
+          "heap_bytes": 42069719,
+          "triangles": 263782,
+          "draw_calls": 59,
+          "geometries": 58,
+          "downloaded_bytes": 14799653,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 12,
+              "visible_instances": 1052,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 12
+          }
+        },
+        {
+          "name": "geo003-case2",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            -3.8400000534057597,
+            591.954080204075,
+            -128.13099816894533
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/3_4",
+            "geo003/3_5",
+            "geo003/4_4",
+            "geo003/4_5",
+            "geo003/4_3",
+            "geo003/3_3",
+            "geo003/2_4",
+            "geo003/2_5",
+            "geo003/2_3",
+            "geo003/3_6",
+            "geo003/5_4",
+            "geo003/5_5",
+            "geo003/4_6"
+          ],
+          "wanted": [
+            "geo003/3_4",
+            "geo003/3_5",
+            "geo003/4_4",
+            "geo003/4_5",
+            "geo003/4_3",
+            "geo003/3_3",
+            "geo003/2_4",
+            "geo003/2_5",
+            "geo003/2_3",
+            "geo003/3_6",
+            "geo003/5_4",
+            "geo003/5_5",
+            "geo003/4_6"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 3.364548870072346,
+          "frame_ms": 299.9857142857145,
+          "geometry_bytes": 5303326,
+          "heap_bytes": 42537901,
+          "triangles": 207508,
+          "draw_calls": 62,
+          "geometries": 59,
+          "downloaded_bytes": 17408578,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1095,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo004-case2",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            -3.8400000534057597,
+            591.954080204075,
+            -128.13099816894533
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_4",
+            "geo004/3_5",
+            "geo004/4_4",
+            "geo004/4_5",
+            "geo004/4_3",
+            "geo004/3_3",
+            "geo004/2_4",
+            "geo004/2_5",
+            "geo004/2_3",
+            "geo004/3_6",
+            "geo004/5_4",
+            "geo004/5_5",
+            "geo004/4_6"
+          ],
+          "wanted": [
+            "geo004/3_4",
+            "geo004/3_5",
+            "geo004/4_4",
+            "geo004/4_5",
+            "geo004/4_3",
+            "geo004/3_3",
+            "geo004/2_4",
+            "geo004/2_5",
+            "geo004/2_3",
+            "geo004/3_6",
+            "geo004/5_4",
+            "geo004/5_5",
+            "geo004/4_6"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.615473374487983,
+          "frame_ms": 224.0666666666665,
+          "geometry_bytes": 6167660,
+          "heap_bytes": 39383514,
+          "triangles": 257389,
+          "draw_calls": 70,
+          "geometries": 59,
+          "downloaded_bytes": 19995837,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1094,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo003-heatmap",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "wanted": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.696060527002348,
+          "frame_ms": 213.3199999999997,
+          "geometry_bytes": 4620316,
+          "heap_bytes": 48564612,
+          "triangles": 196484,
+          "draw_calls": 79,
+          "geometries": 61,
+          "downloaded_bytes": 22188934,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1712,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo004-heatmap",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": null,
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "wanted": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.03347786629022,
+          "frame_ms": 244.44444444444446,
+          "geometry_bytes": 5227782,
+          "heap_bytes": 55616198,
+          "triangles": 236965,
+          "draw_calls": 76,
+          "geometries": 61,
+          "downloaded_bytes": 24264687,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1708,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geographic-query",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "wanted": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.528472772557459,
+          "frame_ms": 248.133333333333,
+          "geometry_bytes": 5227782,
+          "heap_bytes": 54609418,
+          "triangles": 236965,
+          "draw_calls": 76,
+          "geometries": 61,
+          "downloaded_bytes": 24264687,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1708,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "stream-geo003-0",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "wanted": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.375,
+          "frame_ms": 258.3249999999989,
+          "geometry_bytes": 4620316,
+          "heap_bytes": 39431416,
+          "triangles": 196484,
+          "draw_calls": 79,
+          "geometries": 61,
+          "downloaded_bytes": 26281984,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1712,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "stream-geo004-1",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "wanted": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.200168006720291,
+          "frame_ms": 258.33749999999964,
+          "geometry_bytes": 5227782,
+          "heap_bytes": 40562207,
+          "triangles": 236965,
+          "draw_calls": 76,
+          "geometries": 61,
+          "downloaded_bytes": 28357737,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1708,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "stream-geo003-2",
+          "ready": true,
+          "topography_model": "geo003",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "wanted": [
+            "geo003/3_2",
+            "geo003/3_3",
+            "geo003/4_2",
+            "geo003/4_3",
+            "geo003/2_3",
+            "geo003/2_2",
+            "geo003/3_4",
+            "geo003/3_1",
+            "geo003/4_1",
+            "geo003/4_4",
+            "geo003/2_4",
+            "geo003/5_2",
+            "geo003/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.403588924973826,
+          "frame_ms": 240.74444444444575,
+          "geometry_bytes": 4620316,
+          "heap_bytes": 30157241,
+          "triangles": 196484,
+          "draw_calls": 79,
+          "geometries": 61,
+          "downloaded_bytes": 30375034,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "c07d1a91e37bea063c638cb51275a770ed0ab222c7a2b6c49f6a7dc30436bcfc",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1712,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "stream-geo004-3",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "aerial",
+          "camera": [
+            2.376799827575681,
+            604.4703120703796,
+            320.8156998138428
+          ],
+          "rotation": [
+            -0.6078349559829154,
+            0.60554466360497,
+            3.3811714168143896e-17
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "wanted": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_2",
+            "geo004/3_4",
+            "geo004/3_1",
+            "geo004/4_1",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_2",
+            "geo004/5_3"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.158745247148261,
+          "frame_ms": 266.65000000000146,
+          "geometry_bytes": 5227782,
+          "heap_bytes": 39166530,
+          "triangles": 236965,
+          "draw_calls": 76,
+          "geometries": 61,
+          "downloaded_bytes": 32450787,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 13,
+              "visible_instances": 1708,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "auto",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 13
+          }
+        },
+        {
+          "name": "geo004-high",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "high",
+          "mode": "aerial",
+          "camera": [
+            410,
+            1050,
+            580
+          ],
+          "rotation": [
+            -0.6273504705613469,
+            0.6153395418053919,
+            0
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/3_4",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/5_3",
+            "geo004/3_5",
+            "geo004/4_5",
+            "geo004/5_4",
+            "geo004/2_5",
+            "geo004/5_2",
+            "geo004/2_2",
+            "geo004/5_5",
+            "geo004/1_3",
+            "geo004/1_4",
+            "geo004/3_6",
+            "geo004/3_1",
+            "geo004/4_6",
+            "geo004/6_3",
+            "geo004/6_4",
+            "geo004/4_1",
+            "geo004/2_6",
+            "geo004/1_5",
+            "geo004/6_5",
+            "geo004/2_1",
+            "geo004/1_2",
+            "geo004/5_6",
+            "geo004/5_1",
+            "geo004/6_2",
+            "geo004/6_6",
+            "geo004/1_6",
+            "geo004/1_1",
+            "geo004/6_1",
+            "geo004/7_4",
+            "geo004/0_4",
+            "geo004/3_7",
+            "geo004/7_3",
+            "geo004/3_0",
+            "geo004/0_3",
+            "geo004/4_7",
+            "geo004/4_0",
+            "geo004/0_5",
+            "geo004/2_7",
+            "geo004/2_0",
+            "geo004/7_2",
+            "geo004/7_5",
+            "geo004/5_7",
+            "geo004/5_0",
+            "geo004/0_2",
+            "geo004/1_7",
+            "geo004/0_6",
+            "geo004/6_7",
+            "geo004/7_6",
+            "geo004/0_1",
+            "geo004/6_0",
+            "geo004/7_1",
+            "geo004/1_0",
+            "geo004/0_7",
+            "geo004/7_7",
+            "geo004/7_0",
+            "geo004/0_0"
+          ],
+          "wanted": [
+            "geo004/3_3",
+            "geo004/3_4",
+            "geo004/4_3",
+            "geo004/4_4",
+            "geo004/4_2",
+            "geo004/2_3",
+            "geo004/3_5",
+            "geo004/2_4",
+            "geo004/3_2",
+            "geo004/4_5",
+            "geo004/5_3",
+            "geo004/5_4",
+            "geo004/2_5",
+            "geo004/5_2",
+            "geo004/2_2",
+            "geo004/5_5",
+            "geo004/1_3",
+            "geo004/1_4",
+            "geo004/3_6",
+            "geo004/3_1",
+            "geo004/4_6",
+            "geo004/6_3",
+            "geo004/6_4",
+            "geo004/4_1",
+            "geo004/2_6",
+            "geo004/1_5",
+            "geo004/6_5",
+            "geo004/2_1",
+            "geo004/1_2",
+            "geo004/5_6",
+            "geo004/5_1",
+            "geo004/6_2",
+            "geo004/6_6",
+            "geo004/1_6",
+            "geo004/1_1",
+            "geo004/6_1",
+            "geo004/7_4",
+            "geo004/0_4",
+            "geo004/3_7",
+            "geo004/7_3",
+            "geo004/3_0",
+            "geo004/0_3",
+            "geo004/4_7",
+            "geo004/4_0",
+            "geo004/0_5",
+            "geo004/2_7",
+            "geo004/2_0",
+            "geo004/7_2",
+            "geo004/7_5",
+            "geo004/5_7",
+            "geo004/5_0",
+            "geo004/0_2",
+            "geo004/1_7",
+            "geo004/0_6",
+            "geo004/6_7",
+            "geo004/7_6",
+            "geo004/0_1",
+            "geo004/6_0",
+            "geo004/7_1",
+            "geo004/1_0",
+            "geo004/0_7",
+            "geo004/7_7",
+            "geo004/7_0",
+            "geo004/0_0"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 1.7308025154329862,
+          "frame_ms": 583.3250000000007,
+          "geometry_bytes": 29294518,
+          "heap_bytes": 63560599,
+          "triangles": 1331405,
+          "draw_calls": 370,
+          "geometries": 220,
+          "downloaded_bytes": 40776988,
+          "drawing_buffer": [
+            1280,
+            800
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 64,
+              "visible_instances": 6805,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 90,
+              "triangles": 319032,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "day",
+            "shadows": "off",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 64
+          }
+        },
+        {
+          "name": "geo004-street-night",
+          "ready": true,
+          "topography_model": "geo004",
+          "switching_model": false,
+          "last_probe": {
+            "model": "geo004",
+            "x": -10.5909952520513,
+            "z": 271.2573459706957,
+            "lon": -100.31007873880218,
+            "lat": 25.66455016672646,
+            "ground_m": 534.7862102185633,
+            "slope_percent": 3.6634706448355563,
+            "heights_m": {
+              "geo001": 543.7747059131798,
+              "geo003": 543.7747059131798,
+              "geo004": 534.7862102185633
+            },
+            "datum": "EGM2008",
+            "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+            "native_resolution_m": 5,
+            "absolute_vertical_accuracy_m": null,
+            "source_year": 2007,
+            "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy.",
+            "rendered_height_m": 542.4866418838501,
+            "system": "Buildings"
+          },
+          "quality": "low",
+          "mode": "street",
+          "camera": [
+            -76.36123249,
+            536.2223242245417,
+            -48.25964916
+          ],
+          "rotation": [
+            0.03852294161335039,
+            2.966261847940385,
+            4.340028629908577e-19
+          ],
+          "resident": [
+            "geo004/3_2",
+            "geo004/3_3",
+            "geo004/4_2",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/3_4",
+            "geo004/4_4",
+            "geo004/2_4",
+            "geo004/3_5",
+            "geo004/4_5",
+            "geo004/2_5"
+          ],
+          "wanted": [
+            "geo004/3_4",
+            "geo004/3_3",
+            "geo004/4_4",
+            "geo004/4_3",
+            "geo004/2_3",
+            "geo004/2_4",
+            "geo004/3_5",
+            "geo004/4_5",
+            "geo004/2_5",
+            "geo004/4_2",
+            "geo004/3_2"
+          ],
+          "pending": 0,
+          "errors": [],
+          "fps": 4.102774501256457,
+          "frame_ms": 249.9777777777781,
+          "geometry_bytes": 5361486,
+          "heap_bytes": 54715633,
+          "triangles": 171639,
+          "draw_calls": 50,
+          "geometries": 72,
+          "downloaded_bytes": 40985230,
+          "drawing_buffer": [
+            896,
+            560
+          ],
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+          "visual": {
+            "props": {
+              "overlay_sectors": 11,
+              "visible_instances": 1220,
+              "vegetation": true,
+              "details": true,
+              "markings": true,
+              "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+            },
+            "background": {
+              "visible": true,
+              "lod_spacing_m": 360,
+              "triangles": 19968,
+              "not_playable": true,
+              "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+            },
+            "mode": "city",
+            "period": "night",
+            "shadows": "off",
+            "compiled_materials": [
+              "Mountains",
+              "Bridges",
+              "Buildings",
+              "Landscape",
+              "Roads",
+              "Sidewalks",
+              "Tunnels"
+            ],
+            "resident_visual_sectors": 11
+          }
+        }
+      ],
+      "screenshot_sha256": {
+        "geo003-case0": "318b41155a88184e8333b0343dccfe57318bebcec8df588b2dfb6080da53dae6",
+        "geo004-case0": "59c3ea893467a2b4c617c636284e547ea621906d9dc2f84c257ce4b87bc19fae",
+        "geo003-case1": "f33109dcb219946e1d1f58ecc605f4320d9a10cdd3207f7f0315def538cefb16",
+        "geo004-case1": "e176482ebceb66b9c5d8313761bc20ccc818883275c8f4fb4deacc6e859d3944",
+        "geo003-case2": "d3c3df225dab013d793cb1111bfd164e9d43a373a373350e8abd5f57dfbc761d",
+        "geo004-case2": "3bca64495968389b7f2657f5a2829df6951a9a4763439dc4d302e08c2eff67a1",
+        "geo003-heatmap": "bf03455f024285bd09edd8b7296e13c9b7536ec346d3c710fb841109263d27bc",
+        "geo004-heatmap": "07b158cebb334829c1885adff9665e9d9c989ed86c3bdbf4886a6a59db13f285",
+        "geographic-query": "441ec8c7d956464eeac6facb1d1adbecc158273297da179590f461ba061f1164",
+        "stream-geo003-0": "f5d1d132751b174a6474958a4f240c78f748ab69e1f3cbb6b70375a31dd65a19",
+        "stream-geo004-1": "dde694b117af9c066004747ed2499f58c8c37a3a72ca83f06e15226948dd5faa",
+        "stream-geo003-2": "53f7eca900cfed2d66cab89a81b5da8e5d4fb489e062c684349f305448eef69b",
+        "stream-geo004-3": "4e549311a9f0207b69a367588231cbc42684309df7c55cc8b93058b7f379cadd",
+        "geo004-high": "1e865cd566bd6461c737eda193ff667f74945009f56f70ecd75f54a5110f2403",
+        "geo004-street-night": "b7b69f4cebd3bd3a41465c2ceb77c00545732fe077dbb5dde05bf21b96f01641"
+      },
+      "comparison_region_sha256": {
+        "geo003-case0": "eedee9536c2389d4d1a426f213046f748d5c31cf3fe4cbce0758c9980949bea5",
+        "geo004-case0": "21272e50b250ed8750079c9d4a08b6deb73f846c459222a878e3e0f5187ad74b",
+        "geo003-case1": "a8fb49fcd32894fa7efdc97f64d14d689e2843a6dbb3d6c8085a7e52b56788f8",
+        "geo004-case1": "e9b1bbd058a4a9eba44e5619e39b1250ec5ef21a1271ef642bfa4b10c5f3b472",
+        "geo003-case2": "2ae15c60a27ff1f164d072d0a2d331010e47f1c3a055b286dfb7bf7d22cd6bf2",
+        "geo004-case2": "feb5b37e60f1fa82c893a0d7e054f54a7327ba14c3e4aca34e3db694d1251d1e",
+        "geo003-heatmap": "ada3fed30755b9a260752db9f9eaf39eb2a3368a435c97564de1081a3fe70957",
+        "geo004-heatmap": "a482860022c4356b50861f673f4db3c008885ec9977c4205215bb9dd4deb75cc",
+        "geographic-query": "2fa3237aaeeb49a3aaa19fa75172dcf5404ea9ae337ba892001c5d9a72440795",
+        "stream-geo003-0": "8dd6632ee67cfbea6c09adcd3cb2c964188439c52d509db26c4c32065d07b199",
+        "stream-geo004-1": "cdab8103de2c76ad2aa36c23048c5ad1cdaa4971d4317b9d8e5116d1c0a8cf5b",
+        "stream-geo003-2": "8dd6632ee67cfbea6c09adcd3cb2c964188439c52d509db26c4c32065d07b199",
+        "stream-geo004-3": "cdab8103de2c76ad2aa36c23048c5ad1cdaa4971d4317b9d8e5116d1c0a8cf5b",
+        "geo004-high": "8a43a33f06c3147e0754ab48fce65ec2353dfe9491e184a9ff530fc935171ce4",
+        "geo004-street-night": "3407737049e942ffd1d571a1abc1c9acbcb2cd19853ecb3b1af76ab9d4d071f0"
+      },
+      "numerical_probe": {
+        "model": "geo004",
+        "x": -76.36123249,
+        "z": -48.25964916,
+        "lon": -100.31076545208526,
+        "lat": 25.66742885249187,
+        "ground_m": 534.4022988750044,
+        "slope_percent": 0.5004086082714602,
+        "heights_m": {
+          "geo001": 537.2354211123799,
+          "geo003": 537.2370079066028,
+          "geo004": 534.4022988750044
+        },
+        "datum": "EGM2008",
+        "source": "INEGI G14C26A3_MT LiDAR 5m, source NAVD88, project GGM10/EGM2008 transform",
+        "native_resolution_m": 5,
+        "absolute_vertical_accuracy_m": null,
+        "source_year": 2007,
+        "source_warning": "2007 source, no EPV; GGM05/GGM10 realization uncertainty; model sampling/decimals are not survey accuracy."
+      },
+      "checks": [
+        "Real GEO-003/GEO-004 GLB switching",
+        "Three audit cases at identical cameras",
+        "Original mode retained",
+        "Before/after heatmaps",
+        "Actual click elevation and slope query",
+        "Unknown accuracy and 2007 source visible",
+        "Repeated model streaming releases instances and sector buffers",
+        "All 64 new sectors at high quality",
+        "Night materials retained",
+        "No browser, shader or HTTP errors"
+      ]
+    },
+    "viewport": [
+      1280,
+      800
+    ],
+    "hosting_interstitial": false,
+    "service_notice_can_include_advertising": false,
+    "samples": [
+      {
+        "ready": true,
+        "topography_model": "geo004",
+        "switching_model": false,
+        "last_probe": null,
+        "quality": "balanced",
+        "mode": "aerial",
+        "camera": [
+          410,
+          1050,
+          580
+        ],
+        "rotation": [
+          -0.6273504705613469,
+          0.6153395418053919,
+          0
+        ],
+        "resident": [
+          "geo004/3_3",
+          "geo004/3_4",
+          "geo004/4_3",
+          "geo004/4_4",
+          "geo004/4_2",
+          "geo004/2_3",
+          "geo004/3_5",
+          "geo004/2_4",
+          "geo004/3_2",
+          "geo004/4_5",
+          "geo004/5_3",
+          "geo004/5_4",
+          "geo004/2_5",
+          "geo004/5_2",
+          "geo004/2_2",
+          "geo004/5_5",
+          "geo004/1_3",
+          "geo004/1_4",
+          "geo004/3_6",
+          "geo004/3_1",
+          "geo004/4_6",
+          "geo004/6_3",
+          "geo004/6_4",
+          "geo004/4_1",
+          "geo004/2_6",
+          "geo004/1_5",
+          "geo004/6_5",
+          "geo004/2_1",
+          "geo004/1_2",
+          "geo004/5_6",
+          "geo004/5_1",
+          "geo004/6_2"
+        ],
+        "wanted": [
+          "geo004/3_3",
+          "geo004/3_4",
+          "geo004/4_3",
+          "geo004/4_4",
+          "geo004/4_2",
+          "geo004/2_3",
+          "geo004/3_5",
+          "geo004/2_4",
+          "geo004/3_2",
+          "geo004/4_5",
+          "geo004/5_3",
+          "geo004/5_4",
+          "geo004/2_5",
+          "geo004/5_2",
+          "geo004/2_2",
+          "geo004/5_5",
+          "geo004/1_3",
+          "geo004/1_4",
+          "geo004/3_6",
+          "geo004/3_1",
+          "geo004/4_6",
+          "geo004/6_3",
+          "geo004/6_4",
+          "geo004/4_1",
+          "geo004/2_6",
+          "geo004/1_5",
+          "geo004/6_5",
+          "geo004/2_1",
+          "geo004/1_2",
+          "geo004/5_6",
+          "geo004/5_1",
+          "geo004/6_2"
+        ],
+        "pending": 0,
+        "errors": [],
+        "fps": 1.5254754398454182,
+        "frame_ms": 574.9749999999999,
+        "geometry_bytes": 12649534,
+        "heap_bytes": 57393071,
+        "triangles": 786491,
+        "draw_calls": 252,
+        "geometries": 152,
+        "downloaded_bytes": 5238212,
+        "drawing_buffer": [
+          1280,
+          800
+        ],
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+        "visual": {
+          "props": {
+            "overlay_sectors": 32,
+            "visible_instances": 3334,
+            "vegetation": true,
+            "details": true,
+            "markings": true,
+            "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+          },
+          "background": {
+            "visible": true,
+            "lod_spacing_m": 180,
+            "triangles": 79800,
+            "not_playable": true,
+            "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+          },
+          "mode": "city",
+          "period": "day",
+          "shadows": "auto",
+          "compiled_materials": [
+            "Mountains",
+            "Bridges",
+            "Buildings",
+            "Landscape",
+            "Roads",
+            "Sidewalks",
+            "Tunnels"
+          ],
+          "resident_visual_sectors": 32
+        }
+      },
+      {
+        "ready": true,
+        "topography_model": "geo004",
+        "switching_model": false,
+        "last_probe": null,
+        "quality": "low",
+        "mode": "aerial",
+        "camera": [
+          410,
+          1050,
+          580
+        ],
+        "rotation": [
+          -0.6273504705613469,
+          0.6153395418053919,
+          0
+        ],
+        "resident": [
+          "geo004/3_3",
+          "geo004/3_4",
+          "geo004/4_3",
+          "geo004/4_4",
+          "geo004/4_2",
+          "geo004/2_3",
+          "geo004/3_5",
+          "geo004/2_4",
+          "geo004/3_2",
+          "geo004/4_5",
+          "geo004/5_3",
+          "geo004/5_4"
+        ],
+        "wanted": [
+          "geo004/3_3",
+          "geo004/3_4",
+          "geo004/4_3",
+          "geo004/4_4",
+          "geo004/4_2",
+          "geo004/2_3",
+          "geo004/3_5",
+          "geo004/2_4",
+          "geo004/3_2",
+          "geo004/4_5",
+          "geo004/5_3",
+          "geo004/5_4"
+        ],
+        "pending": 0,
+        "errors": [],
+        "fps": 2.5863852679495154,
+        "frame_ms": 369.4166666666667,
+        "geometry_bytes": 5114558,
+        "heap_bytes": 56254188,
+        "triangles": 337403,
+        "draw_calls": 115,
+        "geometries": 69,
+        "downloaded_bytes": 5238212,
+        "drawing_buffer": [
+          896,
+          560
+        ],
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+        "visual": {
+          "props": {
+            "overlay_sectors": 12,
+            "visible_instances": 1211,
+            "vegetation": true,
+            "details": true,
+            "markings": true,
+            "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+          },
+          "background": {
+            "visible": true,
+            "lod_spacing_m": 360,
+            "triangles": 19968,
+            "not_playable": true,
+            "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+          },
+          "mode": "city",
+          "period": "day",
+          "shadows": "auto",
+          "compiled_materials": [
+            "Mountains",
+            "Bridges",
+            "Buildings",
+            "Landscape",
+            "Roads",
+            "Sidewalks",
+            "Tunnels"
+          ],
+          "resident_visual_sectors": 12
+        }
+      }
+    ],
+    "street_initial": {
+      "ready": true,
+      "topography_model": "geo004",
+      "switching_model": false,
+      "last_probe": null,
+      "quality": "low",
+      "mode": "street",
+      "camera": [
+        -76.36123249,
+        536.2223242245417,
+        -48.25964916
+      ],
+      "rotation": [
+        0.03852294161335039,
+        2.966261847940385,
+        4.340028629908577e-19
+      ],
+      "resident": [
+        "geo004/3_3",
+        "geo004/3_4",
+        "geo004/4_3",
+        "geo004/4_4",
+        "geo004/4_2",
+        "geo004/2_3",
+        "geo004/3_5",
+        "geo004/2_4",
+        "geo004/3_2",
+        "geo004/4_5",
+        "geo004/2_5"
+      ],
+      "wanted": [
+        "geo004/3_4",
+        "geo004/3_3",
+        "geo004/4_4",
+        "geo004/4_3",
+        "geo004/2_3",
+        "geo004/2_4",
+        "geo004/3_5",
+        "geo004/4_5",
+        "geo004/2_5",
+        "geo004/4_2",
+        "geo004/3_2"
+      ],
+      "pending": 0,
+      "errors": [],
+      "fps": 3.396354579418087,
+      "frame_ms": 292.8428571428573,
+      "geometry_bytes": 4996854,
+      "heap_bytes": 59202747,
+      "triangles": 171639,
+      "draw_calls": 50,
+      "geometries": 61,
+      "downloaded_bytes": 5446454,
+      "drawing_buffer": [
+        896,
+        560
+      ],
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+      "visual": {
+        "props": {
+          "overlay_sectors": 11,
+          "visible_instances": 1220,
+          "vegetation": true,
+          "details": true,
+          "markings": true,
+          "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+        },
+        "background": {
+          "visible": true,
+          "lod_spacing_m": 360,
+          "triangles": 19968,
+          "not_playable": true,
+          "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+        },
+        "mode": "city",
+        "period": "day",
+        "shadows": "auto",
+        "compiled_materials": [
+          "Mountains",
+          "Bridges",
+          "Buildings",
+          "Landscape",
+          "Roads",
+          "Sidewalks",
+          "Tunnels"
+        ],
+        "resident_visual_sectors": 11
+      }
+    },
+    "street_after_controls": {
+      "ready": true,
+      "topography_model": "geo004",
+      "switching_model": false,
+      "last_probe": null,
+      "quality": "low",
+      "mode": "street",
+      "camera": [
+        -77.887528950179,
+        536.2304733266539,
+        -39.64379638063772
+      ],
+      "rotation": [
+        -0.011477058386649615,
+        2.741261847940385,
+        4.340028629908577e-19
+      ],
+      "resident": [
+        "geo004/3_3",
+        "geo004/3_4",
+        "geo004/4_3",
+        "geo004/4_4",
+        "geo004/4_2",
+        "geo004/2_3",
+        "geo004/3_5",
+        "geo004/2_4",
+        "geo004/3_2",
+        "geo004/4_5",
+        "geo004/2_5"
+      ],
+      "wanted": [
+        "geo004/3_4",
+        "geo004/3_3",
+        "geo004/4_4",
+        "geo004/4_3",
+        "geo004/2_3",
+        "geo004/2_4",
+        "geo004/3_5",
+        "geo004/4_5",
+        "geo004/4_2",
+        "geo004/2_5",
+        "geo004/3_2"
+      ],
+      "pending": 0,
+      "errors": [],
+      "fps": 4.909180166912128,
+      "frame_ms": 203.32999999999993,
+      "geometry_bytes": 4996854,
+      "heap_bytes": 53567513,
+      "triangles": 172179,
+      "draw_calls": 49,
+      "geometries": 61,
+      "downloaded_bytes": 5446454,
+      "drawing_buffer": [
+        896,
+        560
+      ],
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "source_glb_sha256": "102833aa723739bf9021a1493412ed38a316011153d951724092226f4c5638cf",
+      "visual": {
+        "props": {
+          "overlay_sectors": 11,
+          "visible_instances": 1220,
+          "vegetation": true,
+          "details": true,
+          "markings": true,
+          "tree_lod": "20 triangles far, 3x80 triangles near; existing GIS unchanged"
+        },
+        "background": {
+          "visible": true,
+          "lod_spacing_m": 360,
+          "triangles": 19968,
+          "not_playable": true,
+          "source_sha256": "f0c2c202b07b59f18bb6b996ac07ea0fb6df8ea0b3ff061e10d590f0ddde54c8"
+        },
+        "mode": "city",
+        "period": "day",
+        "shadows": "auto",
+        "compiled_materials": [
+          "Mountains",
+          "Bridges",
+          "Buildings",
+          "Landscape",
+          "Roads",
+          "Sidewalks",
+          "Tunnels"
+        ],
+        "resident_visual_sectors": 11
+      }
+    },
+    "browser_errors": [],
+    "external_runtime_requests": 0,
+    "unapproved_runtime_requests": 0,
+    "runtime_origins": [
+      "http://127.0.0.1:36503"
+    ],
+    "checks": [
+      "Verified geographic source GLB loaded and rendered",
+      "Two quality profiles rendered",
+      "Sector eviction and memory reduction",
+      "Keyboard translation",
+      "Mouse rotation",
+      "Street and aerial presets",
+      "Mobile controls",
+      "Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed"
+    ]
+  },
+  "hosting_head": "eff5f62d9634f7282071a8a40a46ab4b510811d6"
+}

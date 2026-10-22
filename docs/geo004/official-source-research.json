@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T17:23:40.324312+00:00",
+  "checked_at_utc": "2026-10-22T18:24:09.918817+00:00",
   "paid_services": false,
   "no_google_geographic_data_requested": true,
   "records": [
@@ -103,15 +103,37 @@
     },
     {
       "id": "inegi_cem4_nuevo_leon",
-      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/archivos?version=2&opcion=15&clave=19",
+      "url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/archivo?version=2&opcion=15&clave=19",
       "content_use": "Official metadata / legal research only; no Google geographic content",
-      "error": "HTTP Error 404: "
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/elevacionesmex/api/archivo?version=2&opcion=15&clave=19",
+      "sha256": "7f25298cdb27104ef538dea0230fb5ceb244d9b27e1a70cbcf6e4ed224d57ac1",
+      "bytes": 215,
+      "excerpts": [
+        {
+          "term": "15",
+          "text": "{\"titulo_archivo\":\"CEM 4.0 Nuevo León a 15m\",\"nom_archivo\":\"e19_cem_r15_v4_tif.zip\",\"url_archivo\":\"https://www.inegi.org.mx/app/geo2/elevacionesmex/DownloadFile.do?\",\"size_archivo\":\"214 MB\",\"tipo_archivo\":\"TIFF\"}]"
+        }
+      ],
+      "metadata": [
+        {
+          "titulo_archivo": "CEM 4.0 Nuevo León a 15m",
+          "nom_archivo": "e19_cem_r15_v4_tif.zip",
+          "url_archivo": "https://www.inegi.org.mx/app/geo2/elevacionesmex/DownloadFile.do?",
+          "size_archivo": "214 MB",
+          "tipo_archivo": "TIFF"
+        }
+      ]
     },
     {
       "id": "inegi_geodetic_network",
-      "url": "https://www.inegi.org.mx/app/geo2/rgp/",
+      "url": "https://www.inegi.org.mx/app/geo2/rgna/",
       "content_use": "Official metadata / legal research only; no Google geographic content",
-      "error": "HTTP Error 404: "
+      "http_status": 200,
+      "final_url": "https://www.inegi.org.mx/app/geo2/rgna/",
+      "sha256": "a3b42c68154f43b9c7c672c2cdd45a210b0db661559342598297bd71db4eb9e3",
+      "bytes": 6725,
+      "excerpts": []
     },
     {
       "id": "nuevo_leon_cartography",
@@ -140,7 +162,7 @@
       "content_use": "Official metadata / legal research only; no Google geographic content",
       "http_status": 200,
       "final_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
-      "sha256": "d255860618c13d058bcacbc7ce57221b073b2b9f4797b1e64ce6e28d9251e703",
+      "sha256": "d4b80ad0eb551c6c1b2387c8abcb42dcd67b1e81c7e977d488ea0842ca307677",
       "bytes": 378720,
       "excerpts": [
         {
@@ -163,8 +185,8 @@
       "content_use": "Official metadata / legal research only; no Google geographic content",
       "http_status": 200,
       "final_url": "https://cloud.google.com/maps-platform/terms",
-      "sha256": "adb0dbcd9b87f6c9ef9ade9fe104c78678cffcb91db762fca27f476d381d4abe",
-      "bytes": 2479493,
+      "sha256": "e36b91e2504acb74c17e022032fec3945f6326b23f195ad293fff6e405821777",
+      "bytes": 2479491,
       "excerpts": [
         {
           "term": "scrap",
@@ -214,7 +236,7 @@
       "content_use": "Official metadata / legal research only; no Google geographic content",
       "http_status": 200,
       "final_url": "https://www.google.com/help/terms_maps/",
-      "sha256": "61840ab3f3215d3e3ab53e59d324bd4cb119ea00ad805983899a8fff5a9ef05e",
+      "sha256": "cace4a851944ad44f5904f5b47205bce9af938032380fabcd8c111aa13594b56",
       "bytes": 45579,
       "excerpts": [
         {
