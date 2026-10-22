@@ -17,3 +17,6 @@
 *.r16 -text
 # LFS filters are deliberately inactive until account quotas are verified.
 # Large deliverables are published as GitHub Release assets instead.
+
+# Preserve provider metadata bytes, including original whitespace and CRLF.
+docs/geo004/source-metadata/** -text -whitespace

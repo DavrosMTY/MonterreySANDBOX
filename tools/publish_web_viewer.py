@@ -18,8 +18,8 @@ def publish(site, repository):
     if not (site / 'world.json').is_file() or not (site / 'index.html').is_file():
         raise ValueError('Missing validated real world deployment')
     world = json.loads((site / 'world.json').read_text())
-    if world.get('synthetic') is not False or world.get('source_milestone') != 'GEO-003 / WORLD-001':
-        raise ValueError('Only real GEO-003 may be published')
+    if world.get('synthetic') is not False or world.get('source_milestone') not in ('GEO-003 / WORLD-001','GEO-004'):
+        raise ValueError('Only provenance-validated real GEO-003/GEO-004 may be published')
     files = [p for p in site.rglob('*') if p.is_file()]
     if any('.git' in p.relative_to(site).parts or p.is_symlink() for p in files):
         raise ValueError('Unexpected deployment path')
@@ -66,7 +66,7 @@ def publish(site, repository):
         if not subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=path).returncode:
             print('Static deployment unchanged')
             return
-        git('commit', '-m', 'deploy('+world['milestone'].lower()+'): publish validated real GEO-003 web viewer')
+        git('commit', '-m', 'deploy('+world['milestone'].lower()+'): publish validated real geospatial web viewer')
         git('push', 'origin', 'HEAD:refs/heads/gh-pages')
 
 

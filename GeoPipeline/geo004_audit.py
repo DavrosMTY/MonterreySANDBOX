@@ -24,7 +24,8 @@ def audit(city,terrain,output,baseline=None):
     out.mkdir(parents=True)
     m=json.loads((city/'manifest.json').read_text());tm=json.loads((terrain/'manifest.json').read_text())
     if sha256(city/m['glb'])!=m['glb_sha256']:raise ValueError('Model hash mismatch')
-    surface=Surface(terrain/tm['reference_geotiff'],tm)
+    from .geo004 import PlanarDTM
+    surface=(PlanarDTM if m['milestone']=='GEO-004'else Surface)(terrain/tm['reference_geotiff'],tm)
     # GEO-003's intended support surface is its own procedural corrected raster.
     if m['milestone']=='GEO-003 / WORLD-001':
         with rasterio.open(city/'correction_layers/corrected_DSM.tif')as ds:surface.data=ds.read(1)

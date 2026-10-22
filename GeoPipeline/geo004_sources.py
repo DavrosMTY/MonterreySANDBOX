@@ -50,6 +50,14 @@ def xyz_grid(points,spacing=5.):
     return result,from_origin(x[0]-spacing/2,y[-1]+spacing/2,spacing,spacing)
 
 
+def require_valid_stencil(values,transform,east,north):
+    col,row=(~transform)@(np.asarray(east),np.asarray(north));col-=.5;row-=.5
+    c,r=np.floor(col).astype(int),np.floor(row).astype(int)
+    if (c<0).any()or(r<0).any()or(c+1>=values.shape[1]).any()or(r+1>=values.shape[0]).any():raise ValueError('Source coverage missing at interpolation stencil')
+    if not all(np.isfinite(values[r+dr,c+dc]).all()for dr,dc in ((0,0),(0,1),(1,0),(1,1))):
+        raise ValueError('Source NoData inside required interpolation stencil; do not normalize over missing neighbours')
+
+
 def vertical_transform(grids):
     pyproj.datadir.append_data_dir(str(Path(grids).resolve()))
     with warnings.catch_warnings(record=True)as found:
@@ -91,6 +99,7 @@ def build(output,inputs='artifacts/geo004-inputs',reference='Data/unreal/monterr
     # Query the same physical locations in the source horizontal frame.
     to_source=pyproj.Transformer.from_crs(32614,4487,always_xy=True,allow_ballpark=False)
     sx,sy=to_source.transform(east,north,errcheck=True)
+    require_valid_stencil(values,source_transform,sx,sy)
     tx,ty,height=op.transform(sx,sy,target.astype(float),errcheck=True)
     if not np.isfinite(height).all()or np.max(abs(tx-east))>.001 or np.max(abs(ty-north))>.001:raise ValueError('Invalid datum transformation or horizontal registration')
     rx,ry,rz=op.transform(tx,ty,height,direction=pyproj.enums.TransformDirection.INVERSE,errcheck=True)
@@ -119,11 +128,14 @@ def build(output,inputs='artifacts/geo004-inputs',reference='Data/unreal/monterr
         'vertical_operation':{'description':op.description,'definition':op.definition,'published_accuracy_m':None if op.accuracy<0 else op.accuracy,
             'numeric_roundtrip_max_m':roundtrip,'delta_min_max_m':[float((height-target).min()),float((height-target).max())],
             'grids':config['grids'],'warnings':warnings_seen,'no_ballpark_fallback':True},
-        'no_data_in_pilot':0,'original_source_missing_cells':int(np.isnan(values).sum()),'source_original_grid_shape':list(values.shape),
+        'no_data_in_pilot':0,'missing_source_stencil_samples':0,'original_source_missing_cells':int(np.isnan(values).sum()),'source_original_grid_shape':list(values.shape),
         'resampling':'bilinear at product 5 m spacing, no invented finer measurements','new_engine_import_verified':False,'unreal_x_scale_cm':500.,'unreal_y_scale_cm':500.}
     # GEO-001 landscape-specific quantization metadata cannot describe this new grid.
     for k in ('tiles','r16_sha256','heightmap_png_sha256','unreal_topology','unreal_z_scale_cm','unreal_landscape_actor_z_cm','max_quantization_error_m'):
         result.pop(k,None)
+    for key in list(result):
+        if key.startswith('unreal_'):result.pop(key)
+    result['intended_unreal_import']='exported static mesh cells; native 401 grid is not a supported raw Landscape layout'
     result['files']=[{'file':p.name,'sha256':sha(p)}for p in sorted(out.glob('*.tif'))]
     (out/'manifest.json').write_text(json.dumps(result,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
     return result

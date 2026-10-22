@@ -1,0 +1,85 @@
+name: GEO-004 DTM reconstruction and real browser (USD 0)
+on:
+  push:
+    branches: [feature/geo004-topography-audit]
+    paths: [.github/publication/geo004.json]
+permissions:
+  contents: read
+concurrency:
+  group: geo004-build
+  cancel-in-progress: false
+jobs:
+  terrain:
+    if: github.repository == 'DavrosMTY/MonterreySANDBOX' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      MPLCONFIGDIR: /tmp/mow-mpl
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Pinned free dependencies, no cache or paid runner
+        run: |
+          python -m pip install --no-cache-dir -r requirements.lock.txt
+          npm ci --prefix WebViewer --no-audit --no-fund
+      - name: Preserve exact historical source and acquire licensed INEGI DTM
+        run: |
+          mkdir -p artifacts/input
+          gh release download geo003-world001-3f5c050a07c6 --pattern MonterreyOpenWorld_GEO003_WORLD001.zip --dir artifacts/input
+          python tools/prepare_web_source.py --archive artifacts/input/MonterreyOpenWorld_GEO003_WORLD001.zip --output artifacts/source-city --visual --topography
+          python tools/research_geo004_sources.py
+          python -m GeoPipeline.geo004_sources --output artifacts/geo004-dtm
+          python -m GeoPipeline.geo004 --terrain artifacts/geo004-dtm --baseline artifacts/source-city --output artifacts/geo004-city
+      - name: Complete numerical and exported-mesh audit
+        run: |
+          python -m pytest -q
+          npm test --prefix WebViewer
+          python -m GeoPipeline.geo004_audit --city artifacts/source-city --terrain Data/unreal/monterrey_centro_single_v3 --baseline Data/unreal/monterrey_centro_single_v3 --output artifacts/geo003-audit
+          python -m GeoPipeline.geo004_audit --city artifacts/geo004-city --terrain artifacts/geo004-dtm --output artifacts/geo004-audit
+          python -m GeoPipeline.geo004_validation --before artifacts/source-city --after artifacts/geo004-city --terrain artifacts/geo004-dtm --output artifacts/geo004-validation
+          python tools/check_geo004_acceptance.py --audit artifacts/geo004-audit/audit.json --validation artifacts/geo004-validation/validation.json
+          python tools/build_geo004_web.py --city artifacts/geo004-city --terrain artifacts/geo004-dtm --before artifacts/geo003-audit --after artifacts/geo004-audit --baseline artifacts/source-city --validation artifacts/geo004-validation --dem artifacts/world002-inputs/regional-dem.tif --output artifacts/geo004-site
+          python tools/validate_web_viewer.py --city artifacts/geo004-city --site artifacts/geo004-site --receipt artifacts/geometry.json
+          python tools/check_publication.py
+      - name: Actual WebGL comparisons, heatmaps, probes and streaming
+        env:
+          MOW_SITE: artifacts/geo004-site
+          MOW_EVIDENCE: artifacts/geo004-browser
+          MOW_GEO004: '1'
+        run: |
+          node WebViewer/tests/browser.mjs
+          python tools/prepare_geo004_evidence.py --site artifacts/geo004-site --browser artifacts/geo004-browser
+      - name: Publish generated free site preserving hosting history
+        run: python tools/publish_web_viewer.py --site artifacts/geo004-site
+      - name: Publish licensed model and web prerelease after checking current limits
+        run: python tools/publish_geo004_release.py --city artifacts/geo004-city --terrain artifacts/geo004-dtm --validation artifacts/geo004-validation --site artifacts/geo004-site --browser artifacts/geo004-browser --inputs artifacts/geo004-inputs
+      - name: Retain compact evidence (no Actions artifact storage)
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          result={'source_commit':os.environ['GITHUB_SHA'],'workflow_url':'https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID'],'budget_usd':0,'unreal_executed':False}
+          for name,path in [('audit','artifacts/geo004-audit/audit.json'),('validation','artifacts/geo004-validation/validation.json'),('geometry','artifacts/geometry.json'),('browser','artifacts/geo004-browser/browser-report.json'),('failure','artifacts/geo004-browser/browser-failure.json')]:
+              if Path(path).exists():
+                  value=json.loads(Path(path).read_text());value.pop('mesh_metrics',None);result[name]=value
+          result['hosting_head']=subprocess.check_output(['git','ls-remote','origin','refs/heads/gh-pages'],text=True).split()[0]
+          Path('docs/geo004/ci-verification.json').write_text(json.dumps(result,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if test -f artifacts/geo004-release-verification.json; then cp artifacts/geo004-release-verification.json docs/geo004/release-verification.json; fi
+          git add docs/geo004/ci-verification.json docs/geo004/official-source-research.json
+          if test -f docs/geo004/release-verification.json; then git add docs/geo004/release-verification.json; fi
+          git commit -m "test(geo004): retain real DTM, mesh and Chromium build evidence"
+          git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push origin HEAD:feature/geo004-topography-audit

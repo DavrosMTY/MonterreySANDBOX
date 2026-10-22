@@ -114,6 +114,42 @@ try {
     for(const preset of ['silla','sierra','larga']){await page.selectOption('#panorama',preset);await sample(`landscape-${preset}`);}
     world002={status:'passed',timings,screenshot_sha256:shots,comparison_region_sha256:regions,checks:['Graybox/city at identical street camera and sectors','Day/sunset/night rendering','Decorations toggled off','Real shadow shader compilation','64 sectors at high quality without simplifying the pilot','Three DEM LODs','Repeated load/eviction preserves buffer counts','Three georeferenced landscape directions','No console, shader, HTTP or page errors']};
   }
+  let geo004=null;
+  if(process.env.MOW_GEO004==='1'){
+    const measurements=[],images={},regions={};
+    async function geographicSample(name){
+      await page.waitForFunction(()=>window.__MOW__.snapshot().ready,null,{timeout:60000});await page.evaluate(()=>window.__MOW__.idle());await page.waitForTimeout(2200);
+      const state=await page.evaluate(()=>window.__MOW__.snapshot());
+      assert.equal(state.errors.length,0);assert.equal(state.pending,0);assert(await page.locator('#error').isHidden());
+      assert.equal(state.visual.resident_visual_sectors,state.resident.length);
+      const capture=await page.screenshot({path:`${output}/${name}.png`});images[name]=createHash('sha256').update(capture).digest('hex');regions[name]=createHash('sha256').update(await page.screenshot({clip:{x:380,y:120,width:900,height:610}})).digest('hex');measurements.push({name,...state});return state;
+    }
+    assert.equal((await page.evaluate(()=>window.__MOW__.snapshot())).topography_model,'geo004');
+    await page.locator('details').evaluate(e=>{e.open=true;});await page.selectOption('#quality','low');await page.selectOption('#visual-mode','city');
+    await page.selectOption('#case-view','0');
+    for(let c=0;c<3;c++){
+      await page.selectOption('#case-view',String(c));
+      await page.selectOption('#topography-model','geo003');const old=await geographicSample(`geo003-case${c}`);
+      await page.selectOption('#topography-model','geo004');const next=await geographicSample(`geo004-case${c}`);
+      assert.deepEqual(old.camera,next.camera,'Geographic comparison preserves the exact camera');assert.deepEqual(old.rotation,next.rotation);
+      assert.notEqual(old.source_glb_sha256,next.source_glb_sha256,'Two actual source models, not a material-only substitute');
+      assert.notEqual(regions[`geo003-case${c}`],regions[`geo004-case${c}`],'Actual scene changes outside the control panel and FPS HUD');
+    }
+    await page.selectOption('#case-view','0');await page.selectOption('#topography-model','geo003');await page.check('#anomalies');await geographicSample('geo003-heatmap');
+    await page.selectOption('#topography-model','geo004');await geographicSample('geo004-heatmap');await page.uncheck('#anomalies');
+    const control=await page.evaluate(()=>window.__MOW__.probe(-76.36123249,-48.25964916));
+    assert.equal(control.source_year,2007);assert.equal(control.native_resolution_m,5);assert.equal(control.absolute_vertical_accuracy_m,null);
+    assert(Math.abs(control.lat-25.667)<.002 && Math.abs(control.lon+100.310)<.002);assert(Number.isFinite(control.slope_percent));
+    await page.mouse.click(820,640);await page.waitForFunction(()=>window.__MOW__.snapshot().last_probe!==null);
+    assert(await page.locator('#probe').isVisible());await geographicSample('geographic-query');await page.click('#probe-close');
+    const memory=[];
+    for(const key of ['geo003','geo004','geo003','geo004']){await page.selectOption('#topography-model',key);memory.push(await geographicSample(`stream-${key}-${memory.length}`));}
+    assert.equal(memory[1].geometries,memory[3].geometries);assert.equal(memory[1].geometry_bytes,memory[3].geometry_bytes);
+    await page.click('#aerial');await page.selectOption('#shadows','off');
+    await page.selectOption('#quality','high');const high=await geographicSample('geo004-high');assert.equal(high.resident.length,64);
+    await page.selectOption('#quality','low');await page.click('#street');await page.selectOption('#lighting','night');await geographicSample('geo004-street-night');await page.selectOption('#lighting','day');
+    geo004={status:'passed',measurements,screenshot_sha256:images,comparison_region_sha256:regions,numerical_probe:control,checks:['Real GEO-003/GEO-004 GLB switching','Three audit cases at identical cameras','Original mode retained','Before/after heatmaps','Actual click elevation and slope query','Unknown accuracy and 2007 source visible','Repeated model streaming releases instances and sector buffers','All 64 new sectors at high quality','Night materials retained','No browser, shader or HTTP errors']};
+  }
   await page.setViewportSize({width:390,height:844}); await page.click('#aerial'); await page.evaluate(()=>window.__MOW__.idle());
   await page.screenshot({path:`${output}/mobile.png`});
   assert(await page.locator('.touch-controls').isVisible());
@@ -125,11 +161,11 @@ try {
   assert(staticRedirects.every(x=> {
     const target=new URL(x);
     return immutablePrefix && target.origin==='https://raw.githubusercontent.com' &&
-      target.pathname.startsWith(immutablePrefix+'assets/') && /\/(?:cell_[0-7]_[0-7]\.glb|visual-overlay\.json|background\.json)\.gz$/.test(target.pathname);
+      (target.pathname.startsWith(immutablePrefix+'assets/')||target.pathname.startsWith(immutablePrefix+'geo003/assets/')) && /\/(?:cell_[0-7]_[0-7]\.glb|visual-overlay\.json|background\.json|topography\.json)\.gz$/.test(target.pathname);
   }),'Only static GLB redirects to the identical immutable GitHub source are allowed');
   const report={status:'passed',tested_url:url,renderer:'Chromium / ANGLE SwiftShader SOFTWARE; not user GPU or Unreal performance',
-    world002,viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
-    browser_errors:errors,external_runtime_requests:staticRedirects.length,unapproved_runtime_requests:0,runtime_origins:[...new Set(requests.map(x=>new URL(x).origin))],checks:['Real GEO-003 GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed']};
+    world002,geo004,viewport:[1280,800],hosting_interstitial:hostingInterstitial,service_notice_can_include_advertising:hostingInterstitial,samples,street_initial:street,street_after_controls:rotated,
+    browser_errors:errors,external_runtime_requests:staticRedirects.length,unapproved_runtime_requests:0,runtime_origins:[...new Set(requests.map(x=>new URL(x).origin))],checks:['Verified geographic source GLB loaded and rendered','Two quality profiles rendered','Sector eviction and memory reduction','Keyboard translation','Mouse rotation','Street and aerial presets','Mobile controls','Only project static assets; preview GLB redirects to the identical pinned GitHub source allowed']};
   writeFileSync(`${output}/browser-report.json`,JSON.stringify(report,null,2)+'\n'); console.log(JSON.stringify(report,null,2));
 } catch (error) {
   writeFileSync(`${output}/browser-failure.json`,JSON.stringify({status:'failed',tested_url:url,error:String(error),stack:error.stack,entry_title:activePage?await activePage.title().catch(()=>null):null,entry_text:activePage?(await activePage.locator('body').innerText({timeout:2000}).catch(()=>'' )).slice(0,400):null,browser_errors:errors,requests},null,2)+'\n');

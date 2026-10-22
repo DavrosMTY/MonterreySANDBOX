@@ -62,7 +62,7 @@ def build_world(city,output,dem):
     (out/'licenses/WORLD002_VISUALS.txt').write_text('Original visual recipe parameters, generated textures, vegetation and furniture art: CC0 1.0 Universal. https://creativecommons.org/publicdomain/zero/1.0/\nNo change to the game source code license. Geographic data retain ODbL and Copernicus conditions.\nStreet positions from OSM when tagged; facade layouts, dimensions, decorative planting and markings are estimates.\n')
     size=sum(p.stat().st_size for p in out.rglob('*')if p.is_file())
     if size>50*1024**2:raise ValueError('Deployment exceeds 50 MiB cap')
-    print(json.dumps({'milestone':'WORLD-002','site_bytes':size,'background_bytes':result['background']['bytes'],'background_lods':[x['spacing_m']for x in mountain['lods']],'visual_stats':result['visual_overlay']['stats']},indent=2))
+    print(json.dumps({'milestone':result['milestone'],'site_bytes':size,'background_bytes':result['background']['bytes'],'background_lods':[x['spacing_m']for x in mountain['lods']],'visual_stats':result['visual_overlay']['stats']},indent=2))
     return result
 
 

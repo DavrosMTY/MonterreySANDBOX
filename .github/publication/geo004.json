@@ -1,0 +1,7 @@
+{
+  "milestone": "GEO-004",
+  "budget_usd": 0,
+  "run": 1,
+  "source_policy": "pinned INEGI bare-earth 5m; no Google geographic content",
+  "requires_complete_browser_and_geometry_checks": true
+}

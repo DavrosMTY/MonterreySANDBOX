@@ -246,7 +246,8 @@ def generate(network, building_obstacles, cells, *, extruder=extrude, densifier=
         trimmed = 0.
         if r['kind'] == 'surface':
             before = poly.area; poly = poly.difference(obstacle); trimmed = max(0., before-poly.area)
-        groups[r['kind'], r['layer'], r['role']].append((poly, r))
+        group=(r['kind'],r['layer'],r['role'],r['component']) if getattr(network,'separate_structure_components',False) and r['kind']!='surface' else (r['kind'],r['layer'],r['role'])
+        groups[group].append((poly,r))
         records.append({'road_id': r['id'], 'building_overlap_removed_m2': trimmed})
     ground_vehicle = shapely.union_all([p for key, pairs in groups.items() if key[0] == 'surface' and key[2] == 'carriageway' for p, _ in pairs])
     sidewalks = []
@@ -263,7 +264,9 @@ def generate(network, building_obstacles, cells, *, extruder=extrude, densifier=
         source = [r for r in network.roads if r['kind'] == 'surface' and r['sidewalk_m']]
         groups['surface', 0, 'sidewalk'] = [(sidewalk, source[0])]
     step = 2*half/cells
-    for (kind, layer, role), pairs in sorted(groups.items()):
+    for group,pairs in sorted(groups.items()):
+        kind,layer,role=group[:3]
+        suffix='_c'+str(group[3])if len(group)>3 else ''
         geometry = shapely.union_all([p for p, _ in pairs])
         if kind == 'surface' and role == 'walkway':
             geometry = geometry.difference(ground_vehicle)
@@ -282,9 +285,13 @@ def generate(network, building_obstacles, cells, *, extruder=extrude, densifier=
                 elif kind in ('tunnel','depressed_inferred'):critical[key]=min(critical[key],value)
         if hasattr(network, 'profiles'):
             for r in roads:
-                for point in network.profiles[r['id']]['xy']:
-                    key=tuple(np.round(point,4))
-                    critical[key]=float(network.z([point],[r])[0])+extra
+                points=network.profiles[r['id']]['xy']
+                if getattr(network,'continuous_cap_field',False):
+                    values=network.z(points,roads)+extra
+                    for point,value in zip(points,values):critical[tuple(np.round(point,4))]=float(value)
+                else:
+                    for point in points:
+                        key=tuple(np.round(point,4));critical[key]=float(network.z([point],[r])[0])+extra
         def sampler(xy,selected=roads,lift=extra):
             xy=np.asarray(xy); values=network.z(xy,selected)+lift
             if hasattr(network, 'profiles'):
@@ -307,7 +314,7 @@ def generate(network, building_obstacles, cells, *, extruder=extrude, densifier=
                 for part, p in enumerate(polygons(clipped)):
                     if p.area < .05: continue
                     p = densifier(p, c['mesh_edge_spacing_m'])
-                    name = f'{kind}_{layer}_{role}_{cx}_{cy}_{part}'.replace('-', 'minus')
+                    name = (f'{kind}_{layer}_{role}_{cx}_{cy}_{part}'+suffix).replace('-', 'minus')
                     local_critical = {k:v for k,v in critical.items() if p.bounds[0] <= k[0] <= p.bounds[2] and p.bounds[1] <= k[1] <= p.bounds[3]}
                     def bottom(xy):
                         values=sampler(xy)-depth

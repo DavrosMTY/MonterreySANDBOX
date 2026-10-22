@@ -50,21 +50,41 @@ no publica una exactitud compuesta. El texto de 2008 menciona GGM05: se conserva
 esa incertidumbre de realización; no se afirma invertir exactamente GGM05 ni obtener
 alineación absoluta centimétrica. No se resta una mediana arbitraria como datum.
 
-## Implementación en validación
+## Reconstrucción y validación
 
-`GeoPipeline.geo004_sources` reconstruye el mosaico 5 m, rechaza NoData en el piloto,
-registra la operación vertical, conserva el ZIP y exporta deltas reversibles.
-`geo004_audit` mide todas las tapas y faldones a nivel y genera puntos GeoJSON,
-mapa de calor y métricas del campo de soporte. `geo004` genera terreno natural sin
-LP ni deformación por vías cercanas, plataformas sobre ese mismo campo, perfiles
-estructurales separados y portales locales estimados. Reutiliza huellas, IDs,
-alturas relativas y grafo OSM; las estructuras siguen pendientes de control vertical.
+El terreno natural conserva los planos de la retícula INEGI de 5 m y sus pendientes.
+No se aplica el LP de GEO-003 ni su deformación por vía más cercana. Las plataformas
+a nivel se recortan contra cada triángulo nativo del MDT: así no interpolan una tapa
+a través de varios planos distintos. La base delgada no se prolonga hasta una
+superficie independiente, origen de los faldones artificiales anteriores.
 
-La reconstrucción, QA de intersecciones/edificios y actualización del visor están
-pendientes de terminar. No se presenta un prototipo nuevo como validado por este
-primer diagnóstico. La captura mencionada por el usuario no llegó con el texto;
-se usan casos localizados por las métricas mientras tanto.
+Puentes y túneles conservan geometría independiente, componentes identificados,
+perfiles de centro de vía estimados, transiciones y apoyos procedurales señalados.
+Los perfiles estructurales no son mediciones del MDT. El terreno no se deforma
+para satisfacerlos. Los portales usan máscaras locales explícitas, nunca una
+excavación de todo el corredor. Las cimentaciones se revisan sin aplanar sus parcelas.
 
-No se solicita ni utiliza contenido geográfico de Google. Se investigan únicamente
-sus documentos legales; la geometría distribuible usa fuentes INEGI/OSM/Copernicus
-con sus avisos, o elaboración independiente.
+Cada terreno se exporta a GeoTIFF y GLB, con OBJ/MTL por sistema/celda para futura
+integración UE. La cuadrícula nativa de 401 vértices **no** se presenta como un
+Landscape RAW válido. El proyecto UE5.6.1 permanece sin modificar y no se ha
+compilado, importado ni ejecutado Unreal. Los OBJ usan metros locales con pivotes
+Unreal en centímetros; la adaptación del importador GEO-003 al nuevo manifest y
+las colisiones necesitan validación en el motor.
+
+[Fuentes y legalidad](FUENTES.md) · [Resultados y límites](RESULTADOS.md) ·
+[Reproducción](REPRODUCCION.md). Los recibos de CI y verificación pública se añaden
+cuando las operaciones correspondientes terminan; su ausencia no significa éxito.
+
+## Visor
+
+Se conserva WORLD-002 y su URL histórica. GEO-004 contiene ambos modelos reales,
+streaming de 64 sectores por modelo, controles originales de calidad/iluminación,
+mapa de calor con las revisiones pendientes y consulta de cota EGM2008/pendiente.
+Los tres casos auditados restablecen cámaras idénticas antes/después. El calor no
+certifica la exactitud fuera de sus celdas coloreadas. La pendiente consultada es
+una derivada por diferencias a escala de la retícula; no una pendiente levantada.
+
+La captura mencionada en la solicitud no se recibió con el texto; los casos se
+seleccionan por anomalías medidas de las mallas, con coordenadas geográficas.
+No se utiliza contenido geográfico de Google. Las capturas publicadas son PNG
+sin retoques producidos por Chromium, no imágenes generadas ni capturas Unreal.

@@ -91,7 +91,7 @@ def build(city, output, visual=False):
     city, out = Path(city), Path(output)
     manifest = json.loads((city / 'manifest.json').read_text())
     source = city / manifest['glb']
-    if manifest.get('synthetic') is not False or manifest.get('milestone') != 'GEO-003 / WORLD-001':
+    if manifest.get('synthetic') is not False or manifest.get('milestone') not in ('GEO-003 / WORLD-001','GEO-004'):
         raise ValueError('The public viewer requires real GEO-003, never synthetic fixtures')
     if manifest.get('source_crs') != 'EPSG:32614' or manifest.get('source_vertical_datum') != 'EGM2008':
         raise ValueError('Unexpected geospatial contract')
@@ -158,10 +158,10 @@ def build(city, output, visual=False):
                       'uncompressed_bytes': len(binary), 'sha256': sha(path)})
         features[cell_id] = groups
     (assets / 'features.json').write_text(json.dumps(features, separators=(',', ':')))
-    result = {'schema_version': 1, 'milestone': 'WORLD-002' if visual else 'FREE-001', 'synthetic': False,
+    result = {'schema_version': 1, 'milestone': 'GEO-004' if manifest['milestone']=='GEO-004' else ('WORLD-002' if visual else 'FREE-001'), 'synthetic': False,
               'source_milestone': manifest['milestone'], 'source_glb_sha256': sha(source),
               'source_manifest_sha256': sha(city / 'manifest.json'),
-              'source_release': 'geo003-world001-3f5c050a07c6',
+              'source_release': 'geo003-world001-3f5c050a07c6' if manifest['milestone']!='GEO-004' else None,
               'source_crs': manifest['source_crs'], 'vertical_datum': manifest['source_vertical_datum'],
               'center_easting_northing_m': manifest['center_easting_northing_m'],
               'axes': 'X east, Y up (EGM2008), Z south; metres; same as source GLB',
