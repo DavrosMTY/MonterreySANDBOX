@@ -1,15 +1,22 @@
 {
-  "checked_at_utc": "2026-10-22T20:34:16.586565+00:00",
+  "checked_at_utc": "2026-10-22T20:41:23.648766+00:00",
   "budget_usd": 0,
   "discovery_is_not_source_acceptance": true,
   "records": [
+    {
+      "key": "official_metropolis_pdf",
+      "url": "https://www.gob.mx/cms/uploads/sedatu/MM2020_19102023.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "error": "Metadata size cap"
+    },
     {
       "key": "conapo",
       "url": "https://www.gob.mx/conapo/documentos/las-metropolis-de-mexico-2020",
       "http_status": 200,
       "content_type": "text/html",
-      "bytes": 1847,
-      "sha256": "c5c5f1c4e91330ab2b1460a7cd441409169f620d1ba1b9ac124c1c5d0dc5bb11",
+      "bytes": 1843,
+      "sha256": "ade1a9f0a5e9d83268854f0c162a11f081ca9a242b148d6a069999120690e0ef",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -19,8 +26,8 @@
       "url": "https://www.gob.mx/sedatu/documentos/metropolis-de-mexico-2020",
       "http_status": 200,
       "content_type": "text/html",
-      "bytes": 1847,
-      "sha256": "763e0d3b43d42d76118493ad48421f26f30b227737a8e56c2c1496cd399d0134",
+      "bytes": 1843,
+      "sha256": "9a6115ad9f23dc9ef9c00137daa813fa1ec4135f699ef3b4b5fadd8f3c0d0d79",
       "links": [],
       "excerpts": [],
       "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
@@ -682,8 +689,8 @@
       "url": "https://en.wikipedia.org/wiki/Monterrey_metropolitan_area",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 154108,
-      "sha256": "279dc29b5d60788dfbf8bfd27763fe8d39eb26a3c2590a75d80030397c9b6862",
+      "bytes": 154106,
+      "sha256": "24d227c45de17328b97ac3f73b06aebed01e356bb74096ba8cb1f3f783fea951",
       "links": [
         "./Category:Metropolitan_areas_of_Mexico",
         "./Category:Monterrey_metropolitan_area#%20",
@@ -752,24 +759,24 @@
       "url": "https://www.bing.com/search?q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 124906,
-      "sha256": "1b62e0380309faf6f4dd5b378d781f2bf7e2557271f013e424160fa1496b4c77",
+      "bytes": 123817,
+      "sha256": "021fec9907821885615ebdbd3ee0609c7ad3cca93c245ea663432feb5b6a426a",
       "links": [
         "/copilotsearch?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=CSSCOP",
         "/copilotsearch?q=site:gob.mx Metropolis Mexico 2020 xlsx Monterrey&form=CSBSBX",
         "/search?format=rss&q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=000017&qpvt=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=11&FORM=PERE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=11&FORM=PORE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=21&FORM=PERE1",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=31&FORM=PERE2",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=11&FORM=PERE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=11&FORM=PORE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=21&FORM=PERE1",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=F98CE297F89E4036A8F5F3DA47F4743D&first=31&FORM=PERE2",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez1%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez2%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez3%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez5_20383_20748%22&FORM=000017"
       ],
       "excerpts": [
-        "trict\";// site:gob.mx Metropolis Mexico 2020 xlsx Monterrey - Search // 2&&a.substring(0,3)===\"IG=\")){ig='IG='+_G.IG;}if(document.images){_G.GPImg=new Image;_G.GPImg.src=_G.gpUrl+ig+'&CID='+_G.CID+'&'+a;}return true;}_G.BAT=\"0\";_G.NTT=\"600000\";_G.RTO=\"86400000\";_G.CTT=\"3000\";_G.BNFN=\"Default\";_G.LG=\"160\";_G.CBRSHT=\"400\";_G.CBRSHTAM=\"300\";_G.BDVFY=true;_G.multiCBRSType=\"3\";_G.maxMultiCBRS=\"4\";_G.RM",
+        "trict\";// site:gob.mx Metropolis Mexico 2020 xlsx Monterrey - Search // 2&&a.substring(0,3)===\"IG=\")){ig='IG='+_G.IG;}if(document.images){_G.GPImg=new Image;_G.GPImg.src=_G.gpUrl+ig+'&CID='+_G.CID+'&'+a;}return true;}_G.BAT=\"0\";_G.NTT=\"600000\";_G.RTO=\"86400000\";_G.CTT=\"3000\";_G.BNFN=\"Default\";_G.LG=\"160\";_G.CBRSHT=\"400\";_G.CBRSHTAM=\"400\";_G.BDVFY=true;_G.multiCBRSType=\"3\";_G.maxMultiCBRS=\"4\";_G.RM",
         "tropolis (1927) - Full HD Movie - YouTube May 10, 2024  · A full restoration of Metropolis, a 1927 German expressionist science-fiction film directed by Fritz Lang and written by … metropolis.io https://go. metropolis .io › zone Parking at 411-419 North 13th Street | Metropolis 411-419 North 13th Street Entrance: 411 North 13th Street, Philadelphia, PA 19123 Free cancellation & changes Directions "
       ]
     },
@@ -778,8 +785,8 @@
       "url": "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 165210,
-      "sha256": "3a0c47885cac6b34d95305acf02017e8fff6c9b0455d8cdbf15b5ce02a3c62f1",
+      "bytes": 165209,
+      "sha256": "ef14a66cb6f41f9331b5e1cafb420af202bd69f92aca2e16546a5c421fb9114d",
       "links": [
         "#Instituciones_que_operan_en_la_Zona_Metropolitana_de_Monterrey",
         "#Municipios_que_conforman_el_área_metropolitana",
@@ -844,49 +851,63 @@
       "url": "https://www.bing.com/search?format=rss&q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey%20municipios",
       "http_status": 200,
       "content_type": "text/xml; charset=utf-8",
-      "bytes": 4072,
-      "sha256": "f036f292c607985b30fa973461973190ccf6dc6eef9dd008885f7dab4710eb91",
+      "bytes": 5084,
+      "sha256": "655fe47ad451f360942918110edfd90ffd28b4c4e24291b8885f3d7ade399c08",
       "links": [],
       "excerpts": [
         " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright © 2026 Microsoft. All righ",
-        " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright",
-        "'accueil Page1de/1 Table des matières Mon, 22 Dec 2025 08:00:00 GMT Pourquoi poncer? - sanilec.pmg.be https://sanilec.pmg.be/fr/fichier/EVDbe2045W00_01 Presque tous les supports nécessitant une couche de finition ont besoin d'un prétraitement, notamment de ponçage. Thu, 10 Sep 2026 04:51:00 GMT "
+        " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright"
       ],
       "search_results": [
         {
-          "title": "Sanilec - Betrouwbare en onmisbare vakkennis",
-          "url": "https://sanilec.pmg.be/nl/guides",
-          "description": "Betrouwbare en onmisbare vakkennis Ontdek onze collectie van vakgidsen met uitgebreide informatie, trends en inzichten voor professionals in de sector."
+          "title": "Ecco Motors | New & Used Golf Cart Sales, Service, and Parts with ...",
+          "url": "https://www.eccomotors.com/",
+          "description": "Ecco Motors is your trusted source for golf carts and Low Speed Vehicles (LSVs) along the Emerald Coast. We offer a wide selection of new and pre-owned electric carts from respected brands like Alset, Teko, and PDG."
         },
         {
-          "title": "Perfect Protection - sanilec.pmg.be",
-          "url": "https://sanilec.pmg.be/fr/fichier/EVDbe1702S39_00",
-          "description": "Perfect Protection Le film de protection autocollant convient pour la protection de surfaces comme des escaliers ou des sols durs. Le film a un effet antidérapant très puissant et est étanche aux liquides et résistant aux coups. Le Perfect Protection est disponible en deux variantes: la première est un film de qualité standard pour la protection d'escaliers ou de sols à couche étanche ..."
+          "title": "Golf Carts & LSVs for Sale in Destin, FL | Ecco Motors Inventory",
+          "url": "https://www.eccomotors.com/inventory/",
+          "description": "Explore our new, used & refurbished electric, lithium-ion 2, 4 & 6 passenger golf carts and low speed vehicles for sale in Destin, FL. Shop top brands and find your perfect ride today."
         },
         {
-          "title": "T-Palm - sanilec.pmg.be",
-          "url": "https://sanilec.pmg.be/fr/fichier/MVAbe1701W01_03",
-          "description": "T-Palm est une référence dans la construction. Les 550 travailleurs construisent depuis déjà cinquante ans des habitations particulières en Belgique. Il était donc temps que votre magazine professionnel s'entretienne avec Johan Vanden Driessche, directeur du siège flamand de T-Palm. Ces dernières décennies, il a vu le marché de la construction belge évoluer fortement. Les ..."
+          "title": "Ecco Motors | Miramar Beach FL - Facebook",
+          "url": "https://www.facebook.com/EccoMotorsCarts/",
+          "description": "Ready to ride into October in style?"
         },
         {
-          "title": "Van stookolietank tot regenwaterput - sanilec.pmg.be",
-          "url": "https://sanilec.pmg.be/nl/dossier/ESNbe2007W02_00",
-          "description": "Van oude tanks ontmantelen tot nieuwe tanks plaatsen en alles daartussen: bij het West-Vlaamse bedrijf Tank-Service gebeurt het maar heel zelden dat een klant op een ‘nee’ stoot. Als een van de weinige bedrijven in België hebben ze nog een andere troef in handen: ongebruikte ondergrondse stookolietanks krijgen na een behandeling van Tank-Service een tweede leven als regenwatertank ..."
+          "title": "Ecco Motors Sales Center - Golf Carts For Sale in Destin,...",
+          "url": "https://golfcartsearch.com/for-sale/ecco-motors-sales-center",
+          "description": "Ecco Motors Sales Center in Destin, Florida. Rated 4.7/5 from 23 reviews. Delivery, Golf cart dealer, In-store pickup. Call (850) 837-2600."
         },
         {
-          "title": "Sanilec - Betrouwbare en onmisbare vakkennis",
-          "url": "https://sanilec.pmg.be/nl/leverancier/31172645",
-          "description": "Betrouwbare en onmisbare vakkennis Mis nooit meer een belangrijk nieuwsbericht of exclusieve update."
+          "title": "Ecco Motors Sales Center - 25 Reviews - Golf Cart Dealers in Destin, FL ...",
+          "url": "https://reviews.birdeye.com/ecco-motors-sales-center-156065108830012",
+          "description": "Read 25 customer reviews of Ecco Motors Sales Center, one of the best Golf Cart Dealers businesses at 36058 Emerald Coast Pkwy, Destin, FL 32541 United States.. Find reviews, ratings, directions, business hours, and book appointments online."
         },
         {
-          "title": "Sanilec - Des expertises fiables et indispensables",
-          "url": "https://sanilec.pmg.be/fr/magazine/MSNbe1805E01",
-          "description": "Des expertises fiables et indispensables Page d'accueil Page1de/1 Table des matières"
+          "title": "Ecco Motors Golf Cart Rental | Destin - Destin Florida",
+          "url": "https://destinflorida.com/destin/services/golf-cart-rental/ecco-motors",
+          "description": "Ecco Motors in Destin, Florida. Golf cart rental services located at 147, Professional Pl, Miramar Beach, FL 32550. Read reviews and contact today!"
         },
         {
-          "title": "Pourquoi poncer? - sanilec.pmg.be",
-          "url": "https://sanilec.pmg.be/fr/fichier/EVDbe2045W00_01",
-          "description": "Presque tous les supports nécessitant une couche de finition ont besoin d'un prétraitement, notamment de ponçage."
+          "title": "Ecco Motors - Destin - Golf Cart Resource",
+          "url": "https://golfcartresource.com/dealer-locator/listing/ecco-motors-destin",
+          "description": "Ecco Motors operates from 3 facilities, 30,000 square feet and employs a dedicated team of 20. Our trucks are a familiar sight throughout Destin, Miramar Beach, and the 30A areas. We also offer storage solutions for over 100 golf carts and LSVs."
+        },
+        {
+          "title": "Ecco Motors, 147 Professional Place, Destin, FL (2026)",
+          "url": "https://www.findglocal.com/US/Destin/290090945177604/Ecco-Motors",
+          "description": "With Ecco Motors Mobile Service & Repairs, we come to YOU! From maintenance to repairs, our team helps keep your cart running smooth without ever leaving home. 🧰⚡"
+        },
+        {
+          "title": "Ecco Motors Sales Center in Destin, FL 32541 - 850-837...",
+          "url": "https://www.chamberofcommerce.com/business-directory/florida/destin/golf-cart-dealer/44856332-ecco-motors-sales-center",
+          "description": "Ecco Motors Sales Center located at 36058 Emerald Coast Pkwy, Destin, FL 32541 - reviews, ratings, hours, phone number, directions, and more."
+        },
+        {
+          "title": "Ecco Motors | Golf Cart Sales, Rentals & Services - Destin Chamber",
+          "url": "https://business.destinchamber.com/list/member/ecco-motors-33806",
+          "description": "As our customer you will receive the highest quality and value. In everything we do, Ecco Motors strives to provide only the best products, services and value."
         }
       ]
     },
@@ -896,7 +917,7 @@
       "http_status": 202,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 14314,
-      "sha256": "073b3463df3cd67aa6159479088c8c07f46dd0cae1188300c31e454d282f664d",
+      "sha256": "202652746420f272fe24ebde18116b6f83c704b1053ecf82f6b43295424511ed",
       "links": [],
       "excerpts": []
     },
@@ -922,11 +943,11 @@
     }
   ],
   "licensed_source_snapshot": {
-    "tag": "geo005-inputs-e31ec1889276",
+    "tag": "geo005-inputs-461d2a0ae5b5",
     "file": "GEO005_Licensed_Source_Snapshot.zip",
-    "bytes": 810550,
-    "sha256": "a11cf6371cf3d3b7bb68c5d7903173e721afae44c328493b4381f1609ca6ec5d",
-    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-e31ec1889276",
+    "bytes": 810549,
+    "sha256": "ed3c5b0c506a9fd1deb8000b9ac33a2f7e9702240e8e7ee8de19b632df28b981",
+    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-461d2a0ae5b5",
     "download_verified": true,
     "files": [
       {
