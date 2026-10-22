@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T20:31:19.303132+00:00",
+  "checked_at_utc": "2026-10-22T20:34:16.586565+00:00",
   "budget_usd": 0,
   "discovery_is_not_source_acceptance": true,
   "records": [
@@ -9,9 +9,10 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 1847,
-      "sha256": "ca38420de0fb4d90bfe7a903586c6c59e4b012ab56ed9ff3c3b0e20c25f2b4be",
+      "sha256": "c5c5f1c4e91330ab2b1460a7cd441409169f620d1ba1b9ac124c1c5d0dc5bb11",
       "links": [],
-      "excerpts": []
+      "excerpts": [],
+      "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
     },
     {
       "key": "sedatu",
@@ -19,9 +20,10 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 1847,
-      "sha256": "00f90d67735001efb91202eba476898e408c36ff4ed58791b6ae6e55fa077534",
+      "sha256": "763e0d3b43d42d76118493ad48421f26f30b227737a8e56c2c1496cd399d0134",
       "links": [],
-      "excerpts": []
+      "excerpts": [],
+      "response_preview": " Challenge Validation function cp_clge_done(){location.reload(true);} sessionStorage.setItem('data-duration', 30); "
     },
     {
       "key": "inegi_metro",
@@ -627,6 +629,10 @@
         "orial\":\"INEGI. Marco Geoestadístico, diciembre de 2025\",\"Fuente_informacion_estadistica\":\"INEGI. Censo de Población y Vivienda, 2020\"},\"totalReg\":51,\"features\":[{\"type\":\"Feature\",\"properties\":{\"cvegeo\":\"19035\",\"cve_ent\":\"19\",\"cve_mun\":\"035\",\"nomgeo\":\"Melchor Ocampo\",\"cve_cab\":\"0001\",\"pob_total\":\"1483\",\"pob_femenina\":\"719\",\"pob_masculina\":\"764\",\"total_viviendas_habitadas\":\"462\"},\"numReg\":1,\"geometr",
         "6.08286954],[-99.596428772,26.082990719],[-99.596220248,26.083198169],[-99.587142725,26.092228059],[-99.57377157,26.09496866],[-99.55814214,26.09717298],[-99.54624272,26.09721371],[-99.54153354,26.09734891],[-99.53864366,26.09737406],[-99.53529646,26.09744445],[-99.53270655,26.09744148],[-99.52564562,26.09759482],[-99.52520182,26.09761343],[-99.52260011,26.09765406],[-99.52163558,26.09767749],[-99"
       ],
+      "service_metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
       "json_keys": [
         "type",
         "metadatos",
@@ -676,8 +682,8 @@
       "url": "https://en.wikipedia.org/wiki/Monterrey_metropolitan_area",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 154107,
-      "sha256": "4db8c18b40684e1a322e285058514d94ffacde1528c974fc31936d06f6c98e01",
+      "bytes": 154108,
+      "sha256": "279dc29b5d60788dfbf8bfd27763fe8d39eb26a3c2590a75d80030397c9b6862",
       "links": [
         "./Category:Metropolitan_areas_of_Mexico",
         "./Category:Monterrey_metropolitan_area#%20",
@@ -746,16 +752,17 @@
       "url": "https://www.bing.com/search?q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 125133,
-      "sha256": "8217efd3bba0245a7b449a0974bea614e8353e7ed30607ed4276115f91ed315a",
+      "bytes": 124906,
+      "sha256": "1b62e0380309faf6f4dd5b378d781f2bf7e2557271f013e424160fa1496b4c77",
       "links": [
         "/copilotsearch?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=CSSCOP",
         "/copilotsearch?q=site:gob.mx Metropolis Mexico 2020 xlsx Monterrey&form=CSBSBX",
         "/search?format=rss&q=site%3Agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FORM=000017&qpvt=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=07A24C1F99644AF1B7799716B1F9DB16&first=11&FORM=PERE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=07A24C1F99644AF1B7799716B1F9DB16&first=11&FORM=PORE",
-        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=07A24C1F99644AF1B7799716B1F9DB16&first=21&FORM=PERE1",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=11&FORM=PERE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=11&FORM=PORE",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=21&FORM=PERE1",
+        "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&FPIG=594032A830AC4341BD44564FB35F2937&first=31&FORM=PERE2",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez1%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez2%22&FORM=000017",
         "/search?q=site%3agob.mx+Metropolis+Mexico+2020+xlsx+Monterrey&filters=ex1%3a%22ez3%22&FORM=000017",
@@ -767,6 +774,143 @@
       ]
     },
     {
+      "key": "spanish_reference_discovery",
+      "url": "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 165210,
+      "sha256": "3a0c47885cac6b34d95305acf02017e8fff6c9b0455d8cdbf15b5ce02a3c62f1",
+      "links": [
+        "#Instituciones_que_operan_en_la_Zona_Metropolitana_de_Monterrey",
+        "#Municipios_que_conforman_el_área_metropolitana",
+        "./Categoría:Zona_Metropolitana_de_Monterrey#%20",
+        "//es.wikipedia.org/w/index.php?title=Zona_metropolitana_de_Monterrey&mobileaction=toggle_view_mobile",
+        "//thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/%C3%81rea_metropolitana_de_Monterrey.png/250px-%C3%81rea_metropolitana_de_Monterrey.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+        "/w/index.php?title=Especial:Acortador_de_URL&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FZona_metropolitana_de_Monterrey",
+        "/w/index.php?title=Especial:Citar&page=Zona_metropolitana_de_Monterrey&id=175188266&wpFormIdentifier=titleform",
+        "/w/index.php?title=Especial:Crear_una_cuenta&returnto=Zona+metropolitana+de+Monterrey",
+        "/w/index.php?title=Especial:DownloadAsPdf&page=Zona_metropolitana_de_Monterrey&action=show-download-screen",
+        "/w/index.php?title=Especial:Entrar&returnto=Zona+metropolitana+de+Monterrey",
+        "/w/index.php?title=Especial:Libro&bookcmd=book_creator&referer=Zona+metropolitana+de+Monterrey",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=1",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=2",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=3",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=4",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=5",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=6",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=edit&section=7",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=history",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&action=info",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&oldid=175188266",
+        "/w/index.php?title=Zona_metropolitana_de_Monterrey&useparsoid=0",
+        "/wiki/Categor%C3%ADa:Zona_Metropolitana_de_Monterrey",
+        "/wiki/Discusi%C3%B3n:Zona_metropolitana_de_Monterrey",
+        "/wiki/Especial:CambiosEnEnlazadas/Zona_metropolitana_de_Monterrey",
+        "/wiki/Especial:LoQueEnlazaAqu%C3%AD/Zona_metropolitana_de_Monterrey",
+        "/wiki/Zona_metropolitana_de_Monterrey",
+        "http://tools.wmflabs.org/geohack/geohack.php?language=es&pagename=Zona_metropolitana_de_Monterrey&params=25.666667_N_-100.3_E_type:city",
+        "https://ast.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
+        "https://ca.wikipedia.org/wiki/%C3%80rea_metropolitana_de_Monterrey",
+        "https://commons.wikimedia.org/wiki/Category:Monterrey_metropolitan_area",
+        "https://de.wikipedia.org/wiki/Zona_Metropolitana_de_Monterrey",
+        "https://en.wikipedia.org/wiki/Monterrey_metropolitan_area",
+        "https://es.wikipedia.org/w/index.php?title=Zona_metropolitana_de_Monterrey&oldid=175188266",
+        "https://es.wikipedia.org/wiki/Archivo:Área_metropolitana_de_Monterrey.png",
+        "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Guadalajara",
+        "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Monterrey",
+        "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Puebla-Tlaxcala",
+        "https://es.wikipedia.org/wiki/Zona_metropolitana_de_Saltillo",
+        "https://es.wikipedia.org/wiki/Zona_metropolitana_del_valle_de_México",
+        "https://es.wikipedia.org/wiki/Áreas_metropolitanas_de_México",
+        "https://maps.wikimedia.org/img/osm-intl,9,25.8,-100.28,450x500.png?lang=es&domain=es.wikipedia.org&title=Zona_metropolitana_de_Monterrey&revid=175188266&groups=_0f6ca8a0d8dc50da5307619f43170af62a39dead&parser=parsoid",
+        "https://nl.wikipedia.org/wiki/Metropoolregio_Monterrey",
+        "https://pt.wikipedia.org/wiki/Regi%C3%A3o_Metropolitana_de_Monterrei",
+        "https://sco.wikipedia.org/wiki/Monterrey_metropolitan_aurie",
+        "https://web.archive.org/web/20131203054458/http://www.internationalhradviser.co.uk/storage/downloads/2012%20Quality%20Of%20Living%20Worldwide%20City%20Rankings%20Survey.pdf",
+        "https://www.banamex.com/sitios/analisis-financiero/pdf/revistas//IRAE/IRAE2025.pdf",
+        "https://www.gob.mx/cms/uploads/sedatu/MM2020_19102023.pdf"
+      ],
+      "excerpts": [
+        " Zona metropolitana de Monterrey - Wikipedia, la enciclopedia libre (function(){var className=\"client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vecto",
+        "a • País México • Estado Nuevo León Subdivisiones 16 municipios Superficie • Total 7440 km² Población (2020) Puesto 2 .º • Total 5 322 117 hab. [ 1 ] • Densidad 715 hab./km² Gentilicio Regiomontano PPA Puesto 2/48.º • Total (2024) USD 296,499 millones [ 2 ] [ 3 ] • PIB per cápita USD 55 710 IDH (2020) 0,830 (1/48.º) – Muy Alto PIB (Nominal) USD 152,922 Millones PIB per cápita (Nominal) USD 28,733 ",
+        "025 . Consultado el 21 de septiembre de 2025 . ↑ «Metrópolis de México» . ↑ INEGI , CONAPO , [[SECRETARÍA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO(México)|SEDESOL]] (19 de octubre de 2023). Instituto Nacional de Estadística y Geografía, ed. «Metropolis de México 2020» (PDF) . Consultado el 19 de octubre de 2023 . ↑ «¿Cómo se convirtió Monterrey en una ciudad industrial? Así creció la región en ",
+        "lo= Indicadores Regionales de Actividad Económica 2025 |url= https://www.banamex.com/sitios/analisis-financiero/pdf/revistas//IRAE/IRAE2025.pdf |sitioweb= Citibanamex |fecha= mayo de 2025 |editorial= |isbn= |ubicación= |idioma= |fechaacceso=2025-09-21 |cita= }}</ref><ref>{{cita web |título= Ficha estatal: Nuevo León |url= https://mexicocomovamos.mx/fichas-por-estado/nuevo-leon/ |sitioweb= México c",
+        "eso=2025-09-21 |cita= }}</ref>\"},\"PIB año\":{\"wt\":\"2024\"},\"PIB puesto\":{\"wt\":\"2/48\"},\"PIB per capita\":{\"wt\":\"{{Incremento}} [[Dólar estadounidense|USD]] {{formatnum|55,710}}\"},\"población\":{\"wt\":\"5322117\"},\"gentilicio\":{\"wt\":\"Regiomontano\"},\"población_puesto\":{\"wt\":\"[[Áreas metropolitanas de México|2]]\"},\"IDH\":{\"wt\":\"{{creciente}} '''{{Cuadro color|#006400|0,830|#FFFFFF}}'''\"},\"IDH categoría\":{\"wt\":"
+      ]
+    },
+    {
+      "key": "bing_rss",
+      "url": "https://www.bing.com/search?format=rss&q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey%20municipios",
+      "http_status": 200,
+      "content_type": "text/xml; charset=utf-8",
+      "bytes": 4072,
+      "sha256": "f036f292c607985b30fa973461973190ccf6dc6eef9dd008885f7dab4710eb91",
+      "links": [],
+      "excerpts": [
+        " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright © 2026 Microsoft. All righ",
+        " Bing: \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Search results http://www.bing.com:80/s/a/rsslogo.gif \"Metrópolis de México 2020\" Monterrey municipios http://www.bing.com:80/search?q=%22Metr%c3%b3polis+de+M%c3%a9xico+2020%22+Monterrey+municipios Copyright",
+        "'accueil Page1de/1 Table des matières Mon, 22 Dec 2025 08:00:00 GMT Pourquoi poncer? - sanilec.pmg.be https://sanilec.pmg.be/fr/fichier/EVDbe2045W00_01 Presque tous les supports nécessitant une couche de finition ont besoin d'un prétraitement, notamment de ponçage. Thu, 10 Sep 2026 04:51:00 GMT "
+      ],
+      "search_results": [
+        {
+          "title": "Sanilec - Betrouwbare en onmisbare vakkennis",
+          "url": "https://sanilec.pmg.be/nl/guides",
+          "description": "Betrouwbare en onmisbare vakkennis Ontdek onze collectie van vakgidsen met uitgebreide informatie, trends en inzichten voor professionals in de sector."
+        },
+        {
+          "title": "Perfect Protection - sanilec.pmg.be",
+          "url": "https://sanilec.pmg.be/fr/fichier/EVDbe1702S39_00",
+          "description": "Perfect Protection Le film de protection autocollant convient pour la protection de surfaces comme des escaliers ou des sols durs. Le film a un effet antidérapant très puissant et est étanche aux liquides et résistant aux coups. Le Perfect Protection est disponible en deux variantes: la première est un film de qualité standard pour la protection d'escaliers ou de sols à couche étanche ..."
+        },
+        {
+          "title": "T-Palm - sanilec.pmg.be",
+          "url": "https://sanilec.pmg.be/fr/fichier/MVAbe1701W01_03",
+          "description": "T-Palm est une référence dans la construction. Les 550 travailleurs construisent depuis déjà cinquante ans des habitations particulières en Belgique. Il était donc temps que votre magazine professionnel s'entretienne avec Johan Vanden Driessche, directeur du siège flamand de T-Palm. Ces dernières décennies, il a vu le marché de la construction belge évoluer fortement. Les ..."
+        },
+        {
+          "title": "Van stookolietank tot regenwaterput - sanilec.pmg.be",
+          "url": "https://sanilec.pmg.be/nl/dossier/ESNbe2007W02_00",
+          "description": "Van oude tanks ontmantelen tot nieuwe tanks plaatsen en alles daartussen: bij het West-Vlaamse bedrijf Tank-Service gebeurt het maar heel zelden dat een klant op een ‘nee’ stoot. Als een van de weinige bedrijven in België hebben ze nog een andere troef in handen: ongebruikte ondergrondse stookolietanks krijgen na een behandeling van Tank-Service een tweede leven als regenwatertank ..."
+        },
+        {
+          "title": "Sanilec - Betrouwbare en onmisbare vakkennis",
+          "url": "https://sanilec.pmg.be/nl/leverancier/31172645",
+          "description": "Betrouwbare en onmisbare vakkennis Mis nooit meer een belangrijk nieuwsbericht of exclusieve update."
+        },
+        {
+          "title": "Sanilec - Des expertises fiables et indispensables",
+          "url": "https://sanilec.pmg.be/fr/magazine/MSNbe1805E01",
+          "description": "Des expertises fiables et indispensables Page d'accueil Page1de/1 Table des matières"
+        },
+        {
+          "title": "Pourquoi poncer? - sanilec.pmg.be",
+          "url": "https://sanilec.pmg.be/fr/fichier/EVDbe2045W00_01",
+          "description": "Presque tous les supports nécessitant une couche de finition ont besoin d'un prétraitement, notamment de ponçage."
+        }
+      ]
+    },
+    {
+      "key": "ddg_reference_discovery",
+      "url": "https://html.duckduckgo.com/html/?q=%22Metr%C3%B3polis%20de%20M%C3%A9xico%202020%22%20Monterrey",
+      "http_status": 202,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 14314,
+      "sha256": "073b3463df3cd67aa6159479088c8c07f46dd0cae1188300c31e454d282f664d",
+      "links": [],
+      "excerpts": []
+    },
+    {
+      "key": "inegi_press",
+      "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2023/Metrop/Metrop2020.pdf",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 2263,
+      "sha256": "fed624b555d1816d475bc5533ed9cca2b25539b0bb3891112ee9f871db8446e5",
+      "links": [],
+      "excerpts": []
+    },
+    {
       "key": "copernicus_catalog",
       "url": "https://copernicus-dem-30m.s3.amazonaws.com/tileList.txt",
       "http_status": 200,
@@ -776,5 +920,30 @@
       "links": [],
       "excerpts": []
     }
-  ]
+  ],
+  "licensed_source_snapshot": {
+    "tag": "geo005-inputs-e31ec1889276",
+    "file": "GEO005_Licensed_Source_Snapshot.zip",
+    "bytes": 810550,
+    "sha256": "a11cf6371cf3d3b7bb68c5d7903173e721afae44c328493b4381f1609ca6ec5d",
+    "url": "https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/geo005-inputs-e31ec1889276",
+    "download_verified": true,
+    "files": [
+      {
+        "file": "inegi_nl_municipal.geojson",
+        "bytes": 2289819,
+        "sha256": "49de26e98b9d224506f0797f2105ff54715026861ba716a0ef3df45e8c287701"
+      },
+      {
+        "file": "inegi_nl_municipal_catalog.json",
+        "bytes": 9866,
+        "sha256": "31f5a3912494ba652d25964af7871190d9e83c258a2b6fbed9e31f5d33fbf19e"
+      },
+      {
+        "file": "copernicus_tileList.txt",
+        "bytes": 1110900,
+        "sha256": "10604e3052c98a09e9216f1a8f0a555a04148419757575f783d4937fd44316dc"
+      }
+    ]
+  }
 }
