@@ -4,6 +4,7 @@ import datetime,hashlib,html,json,re,urllib.request,urllib.parse,xml.etree.Eleme
 from pathlib import Path
 
 URLS={
+ 'official_metropolis_pdf':'https://www.gob.mx/cms/uploads/sedatu/MM2020_19102023.pdf',
  'conapo':'https://www.gob.mx/conapo/documentos/las-metropolis-de-mexico-2020',
  'sedatu':'https://www.gob.mx/sedatu/documentos/metropolis-de-mexico-2020',
  'inegi_metro':'https://www.inegi.org.mx/temas/estructura/',
@@ -27,7 +28,14 @@ def get(item):
   with urllib.request.urlopen(request,timeout=40)as response:body=response.read(25_000_001);r.update(http_status=response.status,content_type=response.headers.get('Content-Type'))
   if len(body)>25_000_000:raise ValueError('Metadata size cap')
   (out/(key+'.body')).write_bytes(body);r.update(bytes=len(body),sha256=hashlib.sha256(body).hexdigest())
-  text=body.decode(errors='replace');r['links']=sorted(set(html.unescape(x)for x in re.findall(r'(?:href|src)=[\"\x27]([^\"\x27]+)',text)if any(w in x.lower()for w in ['metrop','xlsx','.zip','.pdf','conapo','sedatu'])))[:100]
+  text=body.decode(errors='replace')
+  if body.startswith(b'%PDF'):
+   import subprocess,shutil
+   if shutil.which('pdftotext'):
+    subprocess.run(['pdftotext','-layout',str(out/(key+'.body')),str(out/(key+'.txt'))],check=True)
+    text=(out/(key+'.txt')).read_text();r['pdf_text_excerpts']=[text[max(0,m.start()-400):m.start()+4500] for m in list(re.finditer(r'(?:Zona metropolitana de Monterrey|19\.1 Monterrey|19\.01 Monterrey|19006 Apodaca)',text))[:10]]
+    r['monterrey_matches']=[text[max(0,m.start()-150):m.start()+1800] for m in list(re.finditer('Monterrey',text))[-12:]]
+  r['links']=sorted(set(html.unescape(x)for x in re.findall(r'(?:href|src)=[\"\x27]([^\"\x27]+)',text)if any(w in x.lower()for w in ['metrop','xlsx','.zip','.pdf','conapo','sedatu'])))[:100]
   plain=html.unescape(re.sub(r'\s+',' ',re.sub('<[^>]+>',' ',text)))
   r['excerpts']=[]
   for term in ['Monterrey','16 municipios','18 municipios','metrópolis','Puede explotar comercialmente','2025','2024']:
