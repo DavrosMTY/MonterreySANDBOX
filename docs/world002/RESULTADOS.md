@@ -108,9 +108,21 @@ Hubo 161 redirecciones estáticas al mismo commit de GitHub durante la exploraci
 completa, ninguna a servicios no autorizados dentro de la aplicación. El aviso del
 proveedor tiene publicidad y se prueba por separado de la aplicación.
 
-Se prepara un ZIP del commit exacto de hosting mediante un runner público estándar:
+Se publicó un ZIP del commit exacto de hosting mediante un runner público estándar:
 la integración directa devolvió HTTP 401 en uploads.github.com, aunque Git/API/PR
 funcionan. El workflow usa su token efímero de contents:write, sin credenciales
 compartidas ni permisos de administración. Se comprobaron límites oficiales de
 Releases en GitHub Docs y sus variables fuente: 1.000 assets, cada uno <2 GiB,
 sin límite total/de transferencia para Releases. [Recibo](../../manifests/world002-release-limits.json).
+
+[Prerelease WORLD-002](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/world002-b175978bcf0d)
+con ZIP de 21.039.996 bytes, manifest, SHA256 y revisión de límites. El workflow
+[descargó los cuatro assets y verificó sus hashes](release-verification.json).
+El SHA256 del ZIP es `53ab49e15d33946da65137669026174c18279af3a0c6ba02d3ca534f7d14fc71`.
+Son recursos del visor, no un ejecutable Unreal/Windows.
+
+[Verificación de publicación GitHub](github-verification.json): todos los blobs
+del snapshot fuente coinciden con GitHub; los heads previos permanecen intactos,
+GIS/Unreal no cambiaron y PR #1–#5 permanecen abiertos sin merge. Las comprobaciones
+se fijan al commit indicado; commits posteriores de documentación no alteran el
+build del visor, fijado a `b175978`/hosting `a44d909`.

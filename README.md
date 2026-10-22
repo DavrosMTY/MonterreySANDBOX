@@ -10,6 +10,7 @@ VM de pago ni servicios con cargos. [Visor, controles y publicación](docs/free0
 · **[Abrir WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/index.html)**
 · [Identidad visual WORLD-002](docs/world002/README.md)
 · [Capturas reales WORLD-002](https://rawcdn.githack.com/DavrosMTY/MonterreySANDBOX/a44d909664914f088e01b23c87acb2ef8cab3c44/evidence/index.html)
+· [Descarga WORLD-002](https://github.com/DavrosMTY/MonterreySANDBOX/releases/tag/world002-b175978bcf0d)
 · [Resultados FREE-001](docs/free001/RESULTADOS.md) · [Compatibilidad Unreal](docs/free001/ARQUITECTURA.md).
 
 **Estado: GEO-003 / WORLD-001 — graybox candidato para integración.** El piloto
